@@ -1,0 +1,1 @@
+<?require_once '../wp-load.php';//echo "<pre>".print_r($wpdb, 1);$wpdb->update(    "dollar_course",    array("value" => $_REQUEST['dollar_value']),    array( 'id' => 1 ),    array("%s"),    array("%d"));echo 'done';?>

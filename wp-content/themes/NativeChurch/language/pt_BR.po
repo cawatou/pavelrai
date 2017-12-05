@@ -1,0 +1,5177 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NativeChurch\n"
+"POT-Creation-Date: 2014-06-06 18:31+0530\n"
+"PO-Revision-Date: 2014-06-08 23:32+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:12 header.php:216
+msgid "Error 404 - Not Found"
+msgstr "Erro 404 - não encontrado"
+
+#: 404.php:16
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr "Desculpe, mas você está procurando por algo que não está aqui."
+
+#: comments.php:5
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Por favor, não carregar esta página diretamente. Thanks!"
+
+#: comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Este post é protegido por senha. Digite a senha para ver os comentários."
+
+#: comments.php:19
+msgid "No Comments"
+msgstr "No Comments"
+
+#: comments.php:19
+msgid "Comment(1)"
+msgstr "Comentário (1)"
+
+#: comments.php:19
+msgid "Comments(%)"
+msgstr "Comentários(%)"
+
+#: comments.php:30
+msgid "Comments are now closed for this article."
+msgstr "Os comentários estão agora fechados para este artigo."
+
+#: comments.php:35
+msgid "Comments are closed."
+msgstr "Os comentários estão fechados."
+
+#: comments.php:48
+msgid "Post a comment"
+msgstr "Publicar um comentário"
+
+#: comments.php:48
+#, php-format
+msgid "Post a comment to %s"
+msgstr "Publicar um comentário para %s"
+
+#: comments.php:50
+msgid "Cancel Reply"
+msgstr "Cancelar resposta"
+
+#: comments.php:53
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Você deve ser %1$slogged em %2$s para publicar um comentário."
+
+#: comments.php:57
+#, php-format
+msgid "Logged in as %1$s. %2$sLog out &raquo;%3$s"
+msgstr "Logado como %1$s. %2$sLog fora »%3$s"
+
+#: comments.php:57
+msgid "Log out of this account"
+msgstr "Sair dessa conta"
+
+#: comments.php:62 imic-framework/shortcodes.php:912
+msgid "Your name"
+msgstr "seu nome"
+
+#: comments.php:65
+msgid "Your email"
+msgstr "seu e-mail"
+
+#: comments.php:68
+msgid "Website (optional)"
+msgstr "Website (opcional)"
+
+#: comments.php:75
+msgid "Your comment"
+msgstr "O seu comentário"
+
+#: comments.php:82
+msgid "Submit your comment"
+msgstr "Envie seu comentário"
+
+#: footer.php:24
+msgid "&copy; "
+msgstr "©"
+
+#: footer.php:24
+msgid ". "
+msgstr "."
+
+#: functions.php:30
+msgid "Primary Menu"
+msgstr "menu principal"
+
+#: functions.php:31
+msgid "Top Menu"
+msgstr "menu Superior"
+
+#: functions.php:32
+msgid "Footer Menu"
+msgstr "menu de Rodapé"
+
+#: functions.php:157
+msgid " at "
+msgstr "em"
+
+#: functions.php:162
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando moderação."
+
+#: functions.php:187
+msgid "read more"
+msgstr "leia mais"
+
+#: header.php:115
+msgid "Type your keywords..."
+msgstr "Digite as palavras-chave ..."
+
+#: header.php:211
+#, php-format
+msgid "Search Results for :  %s"
+msgstr "Resultados da busca para:%s"
+
+#: header.php:223 header.php:259 header.php:283 header.php:310 header.php:337
+#: header.php:361
+msgid "All Posts For - "
+msgstr "Todas as mensagens Para -"
+
+#: header.php:236
+msgid "All Posts For "
+msgstr "Todas as mensagens Para"
+
+#: header.php:247
+msgid "Show All"
+msgstr "mostrar todos"
+
+#: header.php:263
+msgid "Blog"
+msgstr "Blog"
+
+#: header.php:297
+msgid "All sermons"
+msgstr "Todos os sermões"
+
+#: header.php:324
+msgid "All staff"
+msgstr "Todos os funcionários"
+
+#: header.php:352 template-events.php:19
+#: imic-framework/imic-theme-functions.php:556
+msgid "All events"
+msgstr "Todos os eventos"
+
+#: index.php:25 single.php:17
+msgid " Posted By: "
+msgstr "Publicado por:"
+
+#: index.php:26 search.php:20 single.php:7 tag.php:20
+#: template-blog-full-width.php:26 template-event-category.php:125
+msgid "No comments yet"
+msgstr "Ainda não há comentários"
+
+#: index.php:26 search.php:20 single.php:7 tag.php:20
+#: template-blog-full-width.php:26 template-event-category.php:125
+msgid "Comments are off for this post"
+msgstr "Comentários estão desligados para este post"
+
+#: index.php:29 search.php:23 tag.php:23 template-blog-full-width.php:68
+#: template-event-category.php:128 template-h-second.php:105
+#: imic-framework/shortcodes.php:359
+msgid "Continue reading"
+msgstr "continue lendo"
+
+#: index.php:37 search.php:31 tag.php:31 template-blog-full-width.php:77
+#: template-blog-masonry.php:46 template-blog-timeline.php:49
+msgid "No posts to display"
+msgstr "continuar lendo"
+
+#: index.php:38 search.php:32 tag.php:32 template-blog-full-width.php:78
+#: template-blog-masonry.php:47 template-blog-timeline.php:50
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+"Pronto para publicar o seu primeiro post? <a href=\"%s\">Comece aqui</ a>."
+
+#: index.php:40 search.php:34 tag.php:34 template-blog-full-width.php:80
+#: template-blog-masonry.php:49 template-blog-timeline.php:52
+msgid "Nothing Found"
+msgstr "nada foi encontrado"
+
+#: index.php:41 search.php:35 tag.php:35 template-blog-full-width.php:81
+#: template-blog-masonry.php:50 template-blog-timeline.php:53
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post.."
+msgstr ""
+"Desculpas, mas nenhum resultado foi encontrado. Talvez a pesquisa vai ajudar "
+"a encontrar um post relacionado .."
+
+#: single-event.php:46 single-event.php:54
+msgid " to "
+msgstr "para"
+
+#: single-event.php:90
+msgid "Event details"
+msgstr "Detalhes do evento"
+
+#: single-sermons.php:12 taxonomy-sermons-category.php:28
+#: template-sermons.php:40 imic-framework/shortcodes.php:152
+#: imic-framework/widgets/recent_sermons.php:76
+msgid "Video"
+msgstr "vídeo"
+
+#: single-sermons.php:16 taxonomy-sermons-category.php:32
+#: template-sermons.php:45 imic-framework/meta-boxes.php:302
+#: imic-framework/meta-boxes.php:474 imic-framework/meta-boxes.php:481
+#: imic-framework/shortcodes.php:156
+#: imic-framework/widgets/recent_sermons.php:80
+msgid "Audio"
+msgstr "Áudio"
+
+#: single-sermons.php:19 imic-framework/widgets/recent_sermons.php:83
+msgid "Download Audio"
+msgstr "baixar Áudio"
+
+#: single-sermons.php:23 taxonomy-sermons-category.php:37
+#: template-sermons.php:51 imic-framework/shortcodes.php:161
+#: imic-framework/widgets/recent_sermons.php:87
+msgid "Download PDF"
+msgstr "download PDF"
+
+#: single-staff.php:10 single.php:13 taxonomy-sermons-category.php:22
+#: template-sermons.php:34 imic-framework/shortcodes.php:146
+msgid "Posted on "
+msgstr "Postado em"
+
+#: single-staff.php:11
+msgid "Categories"
+msgstr "Categorias"
+
+#: single-staff.php:32
+msgid "Position "
+msgstr "posição"
+
+#: single.php:19
+msgid "Categories: "
+msgstr "Categorias:"
+
+#: taxonomy-sermons-category.php:34 template-sermons.php:47
+#: imic-framework/shortcodes.php:158
+msgid "Read online"
+msgstr "Leia on-line"
+
+#: taxonomy-sermons-category.php:56 template-sermons.php:70
+#: imic-framework/shortcodes.php:179
+msgid "Continue reading "
+msgstr "continue lendo"
+
+#: template-blog-masonry.php:61 template-blog-timeline.php:64
+#: template-events_grid.php:85 template-gallery-masonry.php:83
+msgid "&larr;Older"
+msgstr "← Older"
+
+#: template-blog-masonry.php:62 template-blog-timeline.php:65
+#: template-events_grid.php:86 template-gallery-masonry.php:84
+msgid " Newer &rarr;"
+msgstr "recentes →"
+
+#: template-contact.php:8 mail/contact.php:37
+msgid "Contact Form"
+msgstr "Formulário de Contato"
+
+#: template-contact.php:34
+msgid "Name*"
+msgstr "Nome *"
+
+#: template-contact.php:37
+msgid "Email*"
+msgstr "E-mail *"
+
+#: template-contact.php:40
+msgid "Phone"
+msgstr "telefone"
+
+#: template-contact.php:48
+msgid "Message"
+msgstr "mensagem"
+
+#: template-contact.php:52
+msgid "Submit now!"
+msgstr "Enviar agora!"
+
+#: template-event-category.php:62
+msgid "There are no future events to show."
+msgstr "Não há eventos futuros para mostrar."
+
+#: template-events.php:99 imic-framework/imic-theme-functions.php:644
+msgid "Sorry, there are no events for this month."
+msgstr "Desculpe, não há eventos para este mês."
+
+#: template-home.php:105 template-events.php:122
+#: imic-framework/imic-theme-functions.php:667
+msgid "Details"
+msgstr "Detalhes"
+
+#: template-h-second.php:35
+msgid "Search Posts..."
+msgstr "Pesquisar mensagens ..."
+
+#: template-h-second.php:74
+msgid "More"
+msgstr "mais"
+
+#: template-h-second.php:102 template-home.php:291
+msgid "on "
+msgstr "em"
+
+#: template-h-second.php:154 template-home.php:333
+msgid "Updates from our gallery"
+msgstr "Atualizações de nossa galeria"
+
+#: template-h-second.php:156 template-home.php:335
+msgid "More Galleries"
+msgstr "mais Galerias"
+
+#: template-home.php:117 imic-framework/widgets/upcoming_events.php:136
+msgid "No Upcoming Events Found"
+msgstr "Nenhum evento próximo encontrados"
+
+#: template-home.php:132
+msgid "Next"
+msgstr "próximo"
+
+#: template-home.php:132
+msgid "Upcoming Event"
+msgstr "próximo Evento"
+
+#: template-home.php:137
+msgid "days"
+msgstr "dias"
+
+#: template-home.php:138
+msgid "hrs"
+msgstr "horas"
+
+#: template-home.php:139
+msgid "mins"
+msgstr "minutos"
+
+#: template-home.php:140
+msgid "secs"
+msgstr "seg"
+
+#: template-home.php:150
+msgid "All Events"
+msgstr "Todos os Eventos"
+
+#: template-home.php:163 imic-framework/meta-boxes.php:680
+msgid "Latest Sermon"
+msgstr "Último Sermão"
+
+#: template-home.php:183
+msgid "All Sermons"
+msgstr "Todos os Sermões"
+
+#: template-home.php:229
+msgid "More Coming Events"
+msgstr "Eventos mais próximos"
+
+#: template-home.php:262
+msgid "Latest News"
+msgstr "Últimas Notícias"
+
+#: imic-framework/class-tgm-plugin-activation.php:145
+#: imic-framework/plugin-includes.php:78
+msgid "Install Required Plugins"
+msgstr "Instale Obrigatório Plugins"
+
+#: imic-framework/class-tgm-plugin-activation.php:146
+#: imic-framework/plugin-includes.php:79
+msgid "Install Plugins"
+msgstr "instalar Plugins"
+
+#: imic-framework/class-tgm-plugin-activation.php:147
+#: imic-framework/plugin-includes.php:80
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando o plugin: %s"
+
+#: imic-framework/class-tgm-plugin-activation.php:148
+msgid "Something went wrong."
+msgstr "Algo deu errado."
+
+#: imic-framework/class-tgm-plugin-activation.php:159
+#: imic-framework/class-tgm-plugin-activation.php:414
+#: imic-framework/plugin-includes.php:92
+msgid "Return to Required Plugins Installer"
+msgstr "Retornar para Required Plugins Installer"
+
+#: imic-framework/class-tgm-plugin-activation.php:160
+#: imic-framework/class-tgm-plugin-activation.php:1546
+#: imic-framework/plugin-includes.php:93
+msgid "Plugin activated successfully."
+msgstr "Plugin ativado com sucesso."
+
+#: imic-framework/class-tgm-plugin-activation.php:161
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins instalado e ativado com sucesso. %1$s"
+
+#: imic-framework/class-tgm-plugin-activation.php:438
+#: imic-framework/class-tgm-plugin-activation.php:1720
+msgid "Return to the Dashboard"
+msgstr "Voltar para o Painel"
+
+#: imic-framework/class-tgm-plugin-activation.php:462
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr "O seguinte plug-in foi ativado com sucesso: %s."
+
+#: imic-framework/class-tgm-plugin-activation.php:601
+msgid "Dismiss this notice"
+msgstr "Ignorar este aviso"
+
+#: imic-framework/class-tgm-plugin-activation.php:918
+msgid "External Link"
+msgstr "External Link"
+
+#: imic-framework/class-tgm-plugin-activation.php:923
+msgid "Private Repository"
+msgstr "Repositório privada"
+
+#: imic-framework/class-tgm-plugin-activation.php:926
+msgid "Pre-Packaged"
+msgstr "Pré-embalados"
+
+#: imic-framework/class-tgm-plugin-activation.php:930
+msgid "WordPress Repository"
+msgstr "Repositório WordPress"
+
+#: imic-framework/class-tgm-plugin-activation.php:932
+msgid "Required"
+msgstr "necessário"
+
+#: imic-framework/class-tgm-plugin-activation.php:932
+msgid "Recommended"
+msgstr "recomendados"
+
+#: imic-framework/class-tgm-plugin-activation.php:934
+msgid "Not Installed"
+msgstr "não Instalado"
+
+#: imic-framework/class-tgm-plugin-activation.php:936
+msgid "Installed But Not Activated"
+msgstr "Instalado, mas não ativado"
+
+#: imic-framework/class-tgm-plugin-activation.php:1084
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"Não há plugins para instalar ou ativar. <a href=\"%1$s\" title=\"Return ao "
+"Dashboard\">Retornar ao Painel</ a>"
+
+#: imic-framework/class-tgm-plugin-activation.php:1097
+msgid "Plugin"
+msgstr "Plugin"
+
+#: imic-framework/class-tgm-plugin-activation.php:1098
+msgid "Source"
+msgstr "fonte"
+
+#: imic-framework/class-tgm-plugin-activation.php:1099
+#: imic-framework/imic-shortcodes/imic-interface.php:145
+msgid "Type"
+msgstr "tipo"
+
+#: imic-framework/class-tgm-plugin-activation.php:1100
+#: woocommerce/myaccount/my-orders.php:27
+msgid "Status"
+msgstr "estado"
+
+#: imic-framework/class-tgm-plugin-activation.php:1114
+msgid "Install"
+msgstr "instalar"
+
+#: imic-framework/class-tgm-plugin-activation.php:1115
+msgid "Activate"
+msgstr "ativar"
+
+#: imic-framework/class-tgm-plugin-activation.php:1532
+msgid "Install package not available."
+msgstr "Instalar pacote não disponível."
+
+#: imic-framework/class-tgm-plugin-activation.php:1533
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr "Baixando o pacote de instalação do <span class=\"code\">%s</ span>..."
+
+#: imic-framework/class-tgm-plugin-activation.php:1534
+msgid "Unpacking the package&#8230;"
+msgstr "Descompactar o pacote ..."
+
+#: imic-framework/class-tgm-plugin-activation.php:1535
+msgid "Installing the plugin&#8230;"
+msgstr "Instalando o plugin ..."
+
+#: imic-framework/class-tgm-plugin-activation.php:1536
+msgid "Plugin install failed."
+msgstr "Plugin instalação falhou."
+
+#: imic-framework/class-tgm-plugin-activation.php:1537
+msgid "Plugin installed successfully."
+msgstr "Plugin instalado com sucesso."
+
+#: imic-framework/class-tgm-plugin-activation.php:1545
+msgid "Plugin activation failed."
+msgstr "Ativação falhou Plugin."
+
+#: imic-framework/class-tgm-plugin-activation.php:1636
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"O processo de instalação e ativação está começando. Este processo pode "
+"demorar um pouco em alguns exércitos, por favor seja paciente."
+
+#: imic-framework/class-tgm-plugin-activation.php:1637
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado e ativado com sucesso."
+
+#: imic-framework/class-tgm-plugin-activation.php:1637
+#: imic-framework/class-tgm-plugin-activation.php:1646
+msgid "Show Details"
+msgstr "Mostrar Detalhes"
+
+#: imic-framework/class-tgm-plugin-activation.php:1637
+#: imic-framework/class-tgm-plugin-activation.php:1646
+msgid "Hide Details"
+msgstr "Ocultar detalhes"
+
+#: imic-framework/class-tgm-plugin-activation.php:1638
+msgid "All installations and activations have been completed."
+msgstr "Todas as instalações e ativações foram concluídos."
+
+#: imic-framework/class-tgm-plugin-activation.php:1639
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalação e ativação Plugin %1$s (%2$d/%3$d)"
+
+#: imic-framework/class-tgm-plugin-activation.php:1643
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"O processo de instalação é iniciado. Este processo pode demorar um pouco em "
+"alguns exércitos, por favor seja paciente."
+
+#: imic-framework/class-tgm-plugin-activation.php:1644
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Ocorreu um erro ao instalar %1$s: <strong>%2$s</ strong>."
+
+#: imic-framework/class-tgm-plugin-activation.php:1645
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "A instalação de %1$s falhou."
+
+#: imic-framework/class-tgm-plugin-activation.php:1646
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado com sucesso."
+
+#: imic-framework/class-tgm-plugin-activation.php:1647
+msgid "All installations have been completed."
+msgstr "Todas as instalações foram concluídos."
+
+#: imic-framework/class-tgm-plugin-activation.php:1648
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando o Plugin %1$s (%2$d/%3$d)"
+
+#: imic-framework/imic-theme-functions.php:83
+msgid "We are currently in maintenance mode, please check back shortly."
+msgstr "Estamos atualmente em modo de manutenção, por favor, volte em breve."
+
+#: imic-framework/imic-theme-functions.php:83
+msgid "Maintenance Mode"
+msgstr "Modo de Manutenção"
+
+#: imic-framework/imic-theme-functions.php:121
+#: includes/sample/sample-config.php:735
+msgid "Theme Options"
+msgstr "Opções Tema"
+
+#: imic-framework/imic-theme-functions.php:128
+msgid "Color Customizer"
+msgstr "Cor Customizer"
+
+#: imic-framework/imic-theme-functions.php:463
+msgid "Home Page Sidebar"
+msgstr "Página Inicial Sidebar"
+
+#: imic-framework/imic-theme-functions.php:473
+msgid "Contact Sidebar"
+msgstr "Contato Sidebar"
+
+#: imic-framework/imic-theme-functions.php:483
+msgid "Inner Page Sidebar"
+msgstr "Sidebar página interna"
+
+#: imic-framework/imic-theme-functions.php:493
+msgid "Sermons Sidebar"
+msgstr "Sermões Sidebar"
+
+#: imic-framework/imic-theme-functions.php:503
+msgid "Event Page Sidebar"
+msgstr "Evento Página Sidebar"
+
+#: imic-framework/imic-theme-functions.php:513
+msgid "Single Event Page Sidebar"
+msgstr "Single Event Página Sidebar"
+
+#: imic-framework/imic-theme-functions.php:523
+msgid "Post Sidebar"
+msgstr "Mensagem Sidebar"
+
+#: imic-framework/imic-theme-functions.php:533
+msgid "Footer Sidebar"
+msgstr "Rodapé Sidebar"
+
+#: imic-framework/imic-theme-functions.php:653
+#: imic-framework/imic-theme-functions.php:716
+#: imic-framework/imic-theme-functions.php:1109
+#: imic-framework/shortcodes.php:296 imic-framework/shortcodes.php:333
+#: imic-framework/widgets/selected_post.php:140
+#: imic-framework/widgets/upcoming_events.php:122
+msgid "Recurring"
+msgstr "Retornado"
+
+#: imic-framework/imic-theme-functions.php:713
+#: imic-framework/custom-post-types/event-type.php:24
+msgid "Event"
+msgstr "evento"
+
+#: imic-framework/imic-theme-functions.php:714
+#: imic-framework/meta-boxes.php:200
+msgid "Attendees"
+msgstr "participantes"
+
+#: imic-framework/imic-theme-functions.php:715
+#: imic-framework/custom-post-types/staff-type.php:23
+#: imic-framework/custom-post-types/staff-type.php:24
+#: imic-framework/imic-shortcodes/imic-interface.php:55
+#: imic-framework/imic-shortcodes/imic-interface.php:505
+msgid "Staff"
+msgstr "pessoal"
+
+#: imic-framework/imic-theme-functions.php:863
+#: imic-framework/imic-shortcodes/imic-interface.php:541
+msgid "Select Sidebar"
+msgstr "Selecione Sidebar"
+
+#: imic-framework/imic-theme-functions.php:870
+msgid "Select Sidebar from list"
+msgstr "Selecione Sidebar da lista"
+
+#: imic-framework/imic-theme-functions.php:937
+msgid "Mega Menu"
+msgstr "mega menu"
+
+#: imic-framework/imic-theme-functions.php:955
+msgid "Create Column"
+msgstr "criar Coluna"
+
+#: imic-framework/imic-theme-functions.php:961
+msgid "Column"
+msgstr "coluna"
+
+#: imic-framework/imic-theme-functions.php:968
+msgid "Add to Menu"
+msgstr "Adicionar ao menu"
+
+#: imic-framework/imic-theme-functions.php:1011
+#: imic-framework/imic-shortcodes/imic-interface.php:477
+msgid "Image URL"
+msgstr "URL da Imagem"
+
+#: imic-framework/meta-boxes.php:11
+msgid "Staff Member Meta"
+msgstr "Staff Member Meta"
+
+#: imic-framework/meta-boxes.php:16 includes/sample/sample-config.php:411
+msgid "Facebook"
+msgstr "Facebook"
+
+#: imic-framework/meta-boxes.php:18
+msgid "Enter the staff member's Facebook URL."
+msgstr "Digite Facebook URL do funcionário."
+
+#: imic-framework/meta-boxes.php:25 includes/sample/sample-config.php:419
+msgid "Twitter"
+msgstr "chilro"
+
+#: imic-framework/meta-boxes.php:27
+msgid "Enter the staff member's Twitter username."
+msgstr "Digite o nome de usuário do Twitter do funcionário."
+
+#: imic-framework/meta-boxes.php:34 includes/sample/sample-config.php:435
+msgid "Google+"
+msgstr "Google+"
+
+#: imic-framework/meta-boxes.php:36
+msgid "Enter the staff member's Google+ URL."
+msgstr "Digite Google+ URL do funcionário."
+
+#: imic-framework/meta-boxes.php:42 includes/sample/sample-config.php:427
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: imic-framework/meta-boxes.php:44
+msgid "Enter the staff member's Pinterest URL."
+msgstr "Digite Pinterest URL do funcionário."
+
+#: imic-framework/meta-boxes.php:50 imic-framework/meta-boxes.php:498
+#: woocommerce/single-product-reviews.php:53
+msgid "Email"
+msgstr "Email"
+
+#: imic-framework/meta-boxes.php:52
+msgid "Enter the staff member's Email."
+msgstr "Digite o e-mail do funcionário."
+
+#: imic-framework/meta-boxes.php:57
+msgid "Job Title"
+msgstr "cargo"
+
+#: imic-framework/meta-boxes.php:59
+msgid "Enter the staff job title."
+msgstr "Digite o título do trabalho pessoal."
+
+#: imic-framework/meta-boxes.php:64
+msgid "Social Icon"
+msgstr "Ícone social"
+
+#: imic-framework/meta-boxes.php:66
+msgid "Enter Social Icon and Url."
+msgstr "Digite o ícone social e Url."
+
+#: imic-framework/meta-boxes.php:70
+msgid "Social"
+msgstr "social"
+
+#: imic-framework/meta-boxes.php:71
+#: imic-framework/widgets/Advertisement.php:44
+msgid "Url"
+msgstr "Url"
+
+#: imic-framework/meta-boxes.php:80
+msgid "Event Details Meta Box"
+msgstr "Detalhes do evento Meta Box"
+
+#: imic-framework/meta-boxes.php:85
+msgid "Event Start Date"
+msgstr "Evento Data de Início"
+
+#: imic-framework/meta-boxes.php:87
+msgid "Insert date of Event start."
+msgstr "Inserir a data de início do evento."
+
+#: imic-framework/meta-boxes.php:98
+msgid " Event End Date"
+msgstr "Data Final Evento"
+
+#: imic-framework/meta-boxes.php:100
+msgid "Insert date of Event end."
+msgstr "Inserir a data de fim do evento."
+
+#: imic-framework/meta-boxes.php:111
+msgid "Event Start Time"
+msgstr "Evento Início"
+
+#: imic-framework/meta-boxes.php:124
+msgid "Event End Time"
+msgstr "Evento End Time"
+
+#: imic-framework/meta-boxes.php:137
+msgid "Address"
+msgstr "endereço"
+
+#: imic-framework/meta-boxes.php:139
+msgid "Enter event's address."
+msgstr "Digite o endereço do evento."
+
+#: imic-framework/meta-boxes.php:146
+msgid "Contact Number"
+msgstr "Número de contato"
+
+#: imic-framework/meta-boxes.php:148
+msgid "Enter event's contact number."
+msgstr "Digite o número de contato do evento."
+
+#: imic-framework/meta-boxes.php:156
+msgid "Event Recurrence Box"
+msgstr "Evento Recorrência Box"
+
+#: imic-framework/meta-boxes.php:161
+msgid "Event Frequency"
+msgstr "Frequência Evento"
+
+#: imic-framework/meta-boxes.php:163
+msgid "Select Frequency."
+msgstr "Selecione Freqüência."
+
+#: imic-framework/meta-boxes.php:166
+msgid "Not Required"
+msgstr "não é necessário"
+
+#: imic-framework/meta-boxes.php:167
+msgid "Every Day"
+msgstr "cada Dia"
+
+#: imic-framework/meta-boxes.php:168
+msgid "Every Second Day"
+msgstr "Cada segundo dia"
+
+#: imic-framework/meta-boxes.php:169
+msgid "Every Third Day"
+msgstr "Cada Terceiro dia"
+
+#: imic-framework/meta-boxes.php:170
+msgid "Every Fourth Day"
+msgstr "Cada quarto dia"
+
+#: imic-framework/meta-boxes.php:171
+msgid "Every Fifth Day"
+msgstr "Todo quinto dia"
+
+#: imic-framework/meta-boxes.php:172
+msgid "Every Sixth Day"
+msgstr "Cada Sexto Dia"
+
+#: imic-framework/meta-boxes.php:173
+msgid "Every Week"
+msgstr "todas as semanas"
+
+#: imic-framework/meta-boxes.php:174
+msgid "Every Month"
+msgstr "todos os meses"
+
+#: imic-framework/meta-boxes.php:179
+msgid "Number of times to repeat event"
+msgstr "Número de vezes para repetir evento"
+
+#: imic-framework/meta-boxes.php:181
+msgid "Enter the number of how many time this event should repeat."
+msgstr "Digite o número de quantas vez que este evento deve repetir."
+
+#: imic-framework/meta-boxes.php:185
+msgid "Do not change"
+msgstr "Não altere"
+
+#: imic-framework/meta-boxes.php:187
+msgid ""
+"If any changes done in this file, may your theme will not work like running "
+"now."
+msgstr ""
+"Se as alterações feitas neste arquivo, pode o seu tema não irá funcionar "
+"como correr agora."
+
+#: imic-framework/meta-boxes.php:195
+msgid "Total Persons Details Meta Box"
+msgstr "Total de pessoas Detalhes Meta Box"
+
+#: imic-framework/meta-boxes.php:202
+msgid "Enter number of attendees."
+msgstr "Digite o número de participantes."
+
+#: imic-framework/meta-boxes.php:207
+#: imic-framework/custom-post-types/staff-type.php:25
+msgid "Staff Members"
+msgstr "Membros do pessoal"
+
+#: imic-framework/meta-boxes.php:209
+msgid "Enter number of staff members."
+msgstr "Digite o número de membros da equipe."
+
+#: imic-framework/meta-boxes.php:218
+msgid "Post Meta Box"
+msgstr "Mensagem Meta Box"
+
+#: imic-framework/meta-boxes.php:223
+msgid "Video Url"
+msgstr "Url Vídeo"
+
+#: imic-framework/meta-boxes.php:225
+msgid "Enter the Video URL."
+msgstr "Digite a URL do vídeo."
+
+#: imic-framework/meta-boxes.php:230
+msgid "Link Url"
+msgstr "Endereço do Link"
+
+#: imic-framework/meta-boxes.php:232
+msgid "Enter the Link URL."
+msgstr "Digite a URL do link."
+
+#: imic-framework/meta-boxes.php:237
+msgid "Gallery Image"
+msgstr "Galeria de Imagens"
+
+#: imic-framework/meta-boxes.php:239
+msgid "Enter Gallery Image."
+msgstr "Digite Galeria de Imagens."
+
+#: imic-framework/meta-boxes.php:243 imic-framework/meta-boxes.php:363
+#: imic-framework/meta-boxes.php:579
+msgid "Slider Pagination"
+msgstr "Slider Paginação"
+
+#: imic-framework/meta-boxes.php:245 imic-framework/meta-boxes.php:365
+#: imic-framework/meta-boxes.php:581
+msgid "Enable to show pagination for slider."
+msgstr "Ativar para mostrar a paginação para slider."
+
+#: imic-framework/meta-boxes.php:248 imic-framework/meta-boxes.php:368
+#: imic-framework/meta-boxes.php:584 imic-framework/meta-boxes.php:632
+#: imic-framework/meta-boxes.php:669 imic-framework/meta-boxes.php:704
+#: imic-framework/meta-boxes.php:750 imic-framework/meta-boxes.php:782
+#: imic-framework/meta-boxes.php:814
+msgid "Enable"
+msgstr "permitir"
+
+#: imic-framework/meta-boxes.php:249 imic-framework/meta-boxes.php:369
+#: imic-framework/meta-boxes.php:585 imic-framework/meta-boxes.php:633
+#: imic-framework/meta-boxes.php:670 imic-framework/meta-boxes.php:705
+#: imic-framework/meta-boxes.php:751 imic-framework/meta-boxes.php:783
+#: imic-framework/meta-boxes.php:815
+msgid "Disable"
+msgstr "incapacitar"
+
+#: imic-framework/meta-boxes.php:253 imic-framework/meta-boxes.php:373
+#: imic-framework/meta-boxes.php:589
+msgid "Slider Auto Slide"
+msgstr "Deslize Slider Auto"
+
+#: imic-framework/meta-boxes.php:255 imic-framework/meta-boxes.php:375
+#: imic-framework/meta-boxes.php:591
+msgid "Select Yes to slide automatically."
+msgstr "Selecione Sim para deslizar automaticamente."
+
+#: imic-framework/meta-boxes.php:258 imic-framework/meta-boxes.php:268
+#: imic-framework/meta-boxes.php:378 imic-framework/meta-boxes.php:388
+#: imic-framework/meta-boxes.php:535 imic-framework/meta-boxes.php:594
+#: imic-framework/meta-boxes.php:604
+#: imic-framework/imic-shortcodes/imic-interface.php:514
+#: imic-framework/imic-shortcodes/imic-interface.php:657
+msgid "Yes"
+msgstr "sim"
+
+#: imic-framework/meta-boxes.php:259 imic-framework/meta-boxes.php:269
+#: imic-framework/meta-boxes.php:379 imic-framework/meta-boxes.php:389
+#: imic-framework/meta-boxes.php:534 imic-framework/meta-boxes.php:595
+#: imic-framework/meta-boxes.php:605
+#: imic-framework/imic-shortcodes/imic-interface.php:513
+#: imic-framework/imic-shortcodes/imic-interface.php:658
+msgid "No"
+msgstr "não"
+
+#: imic-framework/meta-boxes.php:263 imic-framework/meta-boxes.php:383
+#: imic-framework/meta-boxes.php:599
+msgid "Slider Direction Arrows"
+msgstr "Setas de direção Slider"
+
+#: imic-framework/meta-boxes.php:265 imic-framework/meta-boxes.php:385
+#: imic-framework/meta-boxes.php:601
+msgid "Select Yes to show slider direction arrows."
+msgstr "Escolha Sim para mostrar as setas de direção deslizante."
+
+#: imic-framework/meta-boxes.php:273 imic-framework/meta-boxes.php:393
+#: imic-framework/meta-boxes.php:609
+msgid "Slider Effects"
+msgstr "Efeitos Slider"
+
+#: imic-framework/meta-boxes.php:275 imic-framework/meta-boxes.php:395
+#: imic-framework/meta-boxes.php:611
+msgid "Select effects for slider."
+msgstr "Escolha efeitos para slider."
+
+#: imic-framework/meta-boxes.php:278 imic-framework/meta-boxes.php:398
+#: imic-framework/meta-boxes.php:614
+msgid "Fade"
+msgstr "desvanecer"
+
+#: imic-framework/meta-boxes.php:279 imic-framework/meta-boxes.php:399
+#: imic-framework/meta-boxes.php:615
+msgid "Slide"
+msgstr "slide"
+
+#: imic-framework/meta-boxes.php:284
+msgid "Audio Display"
+msgstr "Visualização Áudio"
+
+#: imic-framework/meta-boxes.php:286
+msgid "Select Audio Display."
+msgstr "Selecione Visualização Áudio."
+
+#: imic-framework/meta-boxes.php:289
+msgid "By Ifame"
+msgstr "por Ifame"
+
+#: imic-framework/meta-boxes.php:290 imic-framework/meta-boxes.php:434
+#: imic-framework/meta-boxes.php:468
+msgid "By Upload"
+msgstr "Ao Carregar"
+
+#: imic-framework/meta-boxes.php:294
+msgid "SoundCloud Track"
+msgstr "SoundCloud trilha"
+
+#: imic-framework/meta-boxes.php:296
+msgid "Enter SoundCloud iframe code to show on post."
+msgstr "Digite o código iframe SoundCloud para mostrar no post."
+
+#: imic-framework/meta-boxes.php:304 imic-framework/meta-boxes.php:476
+msgid "Upload Audio."
+msgstr "Carregar áudio."
+
+#: imic-framework/meta-boxes.php:314
+msgid "Page/Post Header Options"
+msgstr "Página/Pós opções de cabeçalho"
+
+#: imic-framework/meta-boxes.php:319
+msgid "Custom Title"
+msgstr "Título Personalizado"
+
+#: imic-framework/meta-boxes.php:321
+msgid "Enter Custom Title."
+msgstr "Digite o Título Personalizado."
+
+#: imic-framework/meta-boxes.php:325
+msgid "Choose Header Type"
+msgstr "Escolha Header Tipo"
+
+#: imic-framework/meta-boxes.php:327 imic-framework/meta-boxes.php:557
+msgid "Select Slider Display."
+msgstr "Selecione Slider Display."
+
+#: imic-framework/meta-boxes.php:330 imic-framework/meta-boxes.php:336
+msgid "Banner Image"
+msgstr "banner Image"
+
+#: imic-framework/meta-boxes.php:331 imic-framework/meta-boxes.php:560
+msgid "Flex Slider"
+msgstr "Flex Slider"
+
+#: imic-framework/meta-boxes.php:332 imic-framework/meta-boxes.php:561
+msgid "Revolution Slider"
+msgstr "Revolução Slider"
+
+#: imic-framework/meta-boxes.php:338
+msgid "Upload banner image for header for this Page/Post."
+msgstr "Carregar bandeira por cabeçalho para página/Post."
+
+#: imic-framework/meta-boxes.php:343 imic-framework/meta-boxes.php:345
+#: imic-framework/meta-boxes.php:565 imic-framework/meta-boxes.php:567
+msgid "Select Revolution Slider from list"
+msgstr "Selecione Revolução Slider da lista"
+
+#: imic-framework/meta-boxes.php:351
+msgid "Slider Height"
+msgstr "Slider Altura"
+
+#: imic-framework/meta-boxes.php:353
+msgid "Default Slider Height is 200."
+msgstr "Slider padrão Altura é de 200."
+
+#: imic-framework/meta-boxes.php:357 imic-framework/meta-boxes.php:573
+msgid "Slider Image"
+msgstr "Slider imagem"
+
+#: imic-framework/meta-boxes.php:359 imic-framework/meta-boxes.php:575
+msgid "Enter Slider Image."
+msgstr "Digite Slider imagem."
+
+#: imic-framework/meta-boxes.php:408
+msgid "Custom Description  Meta Box"
+msgstr "Personalizado Descrição Meta Box"
+
+#: imic-framework/meta-boxes.php:413
+msgid "Custom Description"
+msgstr "Personalizado Descrição"
+
+#: imic-framework/meta-boxes.php:415
+msgid "Enter Custom Description."
+msgstr "Digite Personalizado Descrição."
+
+#: imic-framework/meta-boxes.php:424
+msgid "Sermons  Meta Box"
+msgstr "Sermões Meta Box"
+
+#: imic-framework/meta-boxes.php:429 imic-framework/meta-boxes.php:440
+#: imic-framework/meta-boxes.php:448
+msgid "Upload Pdf"
+msgstr "Carregar Pdf"
+
+#: imic-framework/meta-boxes.php:431
+msgid "Select Pdf Upload Option."
+msgstr "Selecione Pdf Carregar Opção."
+
+#: imic-framework/meta-boxes.php:435 imic-framework/meta-boxes.php:469
+msgid "By Url"
+msgstr "por Url"
+
+#: imic-framework/meta-boxes.php:442
+msgid "Upload Pdf for Sermons."
+msgstr "Carregar PDF para sermões."
+
+#: imic-framework/meta-boxes.php:450
+msgid "Enter Pdf Url for Sermons."
+msgstr "Digite Pdf Url para sermões."
+
+#: imic-framework/meta-boxes.php:456
+msgid "Sermons Url"
+msgstr "Sermões Url"
+
+#: imic-framework/meta-boxes.php:458
+msgid "Enter vimeo/youtube url for Sermons."
+msgstr "Digite vimeo/youtube url para sermões."
+
+#: imic-framework/meta-boxes.php:463
+msgid "Upload Audio"
+msgstr "Transferência de Áudio"
+
+#: imic-framework/meta-boxes.php:465
+msgid "Select Audio Upload Option."
+msgstr "Selecione Áudio Carregar Opção."
+
+#: imic-framework/meta-boxes.php:483
+msgid "Enter Audio Url for Sermons"
+msgstr "Digite Áudio Url para Sermões"
+
+#: imic-framework/meta-boxes.php:492
+msgid "Email & Subject"
+msgstr "Email & Assunto"
+
+#: imic-framework/meta-boxes.php:500
+msgid "Enter Email to Use in contact Form in default admin email used."
+msgstr ""
+"Digite o e-mail para uso em contato no e-mail Formulário de administrador "
+"padrão usado."
+
+#: imic-framework/meta-boxes.php:506
+msgid "Subject"
+msgstr "assunto"
+
+#: imic-framework/meta-boxes.php:508
+msgid "Enter Subject to Use in contact Page."
+msgstr "Digite o Assunto para uso em contato página."
+
+#: imic-framework/meta-boxes.php:516
+msgid "Map Box"
+msgstr "Box Map"
+
+#: imic-framework/meta-boxes.php:522
+msgid "Our Location Text"
+msgstr "Nossa Localização Texto"
+
+#: imic-framework/meta-boxes.php:524
+msgid "Enter the Our Location Text to display on cotact page."
+msgstr "Digite o Nossa Localização Texto para exibir na página cotact."
+
+#: imic-framework/meta-boxes.php:529
+msgid "Map Display"
+msgstr "Visualização do Mapa"
+
+#: imic-framework/meta-boxes.php:531
+msgid "Select Map Display."
+msgstr "Selecione Exibição do Mapa."
+
+#: imic-framework/meta-boxes.php:540
+msgid "Map Box Code"
+msgstr "Mapa Box Código"
+
+#: imic-framework/meta-boxes.php:542
+msgid "Enter the code to display on cotact page."
+msgstr "Digite o código para exibir na página cotact."
+
+#: imic-framework/meta-boxes.php:550
+msgid "Slider Metabox"
+msgstr "Slider Metabox"
+
+#: imic-framework/meta-boxes.php:555
+msgid "Choose Slider"
+msgstr "Escolha Slider"
+
+#: imic-framework/meta-boxes.php:622
+msgid "Categories Area"
+msgstr "Categorias Área"
+
+#: imic-framework/meta-boxes.php:627
+msgid "Switch for categories area"
+msgstr "Mudar para a área categorias"
+
+#: imic-framework/meta-boxes.php:629
+msgid "Select enable or disable to show/hide categories posts area."
+msgstr ""
+"Selecione ativar ou desativar a mostrar área /ocultar categorias mensagens."
+
+#: imic-framework/meta-boxes.php:637
+msgid "Category show on home page"
+msgstr "Categoria show na home page"
+
+#: imic-framework/meta-boxes.php:639
+msgid "Choose Category to show  on Home page"
+msgstr "Escolha a categoria para mostrar na página inicial"
+
+#: imic-framework/meta-boxes.php:646
+msgid "Number of Post"
+msgstr "Número de Pós"
+
+#: imic-framework/meta-boxes.php:648
+msgid "Enter Number of Post"
+msgstr "Digite o número de postos"
+
+#: imic-framework/meta-boxes.php:659
+msgid "Select option for Area Under Slider"
+msgstr "Selecione a opção para a Área Sob Slider"
+
+#: imic-framework/meta-boxes.php:664
+msgid "Switch for section under slider"
+msgstr "Mudar para a seção sob controle deslizante"
+
+#: imic-framework/meta-boxes.php:666
+msgid "Select enable or disable to show/hide Event/Sermon under slider."
+msgstr ""
+"Selecione ativar ou desativar para mostrar/esconder Evento / Sermão sob "
+"controle deslizante."
+
+#: imic-framework/meta-boxes.php:674
+msgid "Recent Event/Sermon"
+msgstr "Evento Recentes/Sermão"
+
+#: imic-framework/meta-boxes.php:676
+msgid "Choose Latest item to show under slider"
+msgstr "Escolha mais recente artigo para mostrar sob controle deslizante"
+
+#: imic-framework/meta-boxes.php:679
+msgid "Latest event"
+msgstr "Último evento"
+
+#: imic-framework/meta-boxes.php:684
+msgid "All Event/Sermon Button Url"
+msgstr "Todos Evento/Sermão Botão Url"
+
+#: imic-framework/meta-boxes.php:686
+msgid "Enter Event/Sermon Button Url"
+msgstr "Entrar em um Evento/Sermão Botão Url"
+
+#: imic-framework/meta-boxes.php:694
+msgid "Featured Blocks Area"
+msgstr "Apresentado Área Blocos"
+
+#: imic-framework/meta-boxes.php:699
+msgid "Switch for featured blocks"
+msgstr "Mudar para blocos em destaque"
+
+#: imic-framework/meta-boxes.php:701
+msgid "Select enable or disable to show/hide feature blocks."
+msgstr ""
+"Selecione ativar ou desativar para mostrar blocos / esconder-metragens."
+
+#: imic-framework/meta-boxes.php:709
+msgid "Featured Blocks to show on home page"
+msgstr "Blocos em destaque para mostrar na página inicial"
+
+#: imic-framework/meta-boxes.php:711
+msgid ""
+"Enter the Posts/Pages comma separated Id to show on Home page featured "
+"block. example - 1,2,3"
+msgstr ""
+"Entre os cargos/Páginas separados por vírgula Id para mostrar na página "
+"inicial do bloco caracterizado. exemplo - 1,2,3"
+
+#: imic-framework/meta-boxes.php:716
+msgid "Title for first featured block"
+msgstr "Título para o primeiro bloco em destaque"
+
+#: imic-framework/meta-boxes.php:718
+msgid "Enter the title for first featured block area"
+msgstr "Digite o título para a área do bloco primeiro destaque"
+
+#: imic-framework/meta-boxes.php:723
+msgid "Title for second featured block"
+msgstr "Título para o bloco segundo destaque"
+
+#: imic-framework/meta-boxes.php:725
+msgid "Enter the title for second featured block area"
+msgstr "Digite o título para a área do bloco segundo destaque"
+
+#: imic-framework/meta-boxes.php:730
+msgid "Title for third featured block"
+msgstr "Título para o terceiro bloco de destaque"
+
+#: imic-framework/meta-boxes.php:732
+msgid "Enter the title for third featured block area"
+msgstr "Digite o título para a terceira área do bloco destaque"
+
+#: imic-framework/meta-boxes.php:740
+msgid "Upcoming Events Area"
+msgstr "Próximos Eventos Área"
+
+#: imic-framework/meta-boxes.php:745
+msgid "Switch for upcoming events"
+msgstr "Mudar para os próximos eventos"
+
+#: imic-framework/meta-boxes.php:747
+msgid "Select enable or disable to show/hide upcoming events."
+msgstr "Selecione ativar ou desativar para mostrar/ocultar eventos futuros."
+
+#: imic-framework/meta-boxes.php:756
+msgid "Custom More Upcoming Events Title"
+msgstr "Personalizado Mais Próximos Eventos Título"
+
+#: imic-framework/meta-boxes.php:758
+msgid "Enter More Upcoming Events Title."
+msgstr "Digite Mais Próximos Eventos título."
+
+#: imic-framework/meta-boxes.php:762
+msgid "Number of Events to show on home page"
+msgstr "Número de eventos para mostrar na página inicial"
+
+#: imic-framework/meta-boxes.php:764
+msgid "Enter the number of Events to show on Home page. example - 3 ."
+msgstr ""
+"Digite o número de eventos para mostrar na página inicial. exemplo - 3."
+
+#: imic-framework/meta-boxes.php:772
+msgid "Recent Posts Area"
+msgstr "Mensagens recentes Área"
+
+#: imic-framework/meta-boxes.php:777
+msgid "Switch for recent post."
+msgstr "Mudar para recente post."
+
+#: imic-framework/meta-boxes.php:779
+msgid "Select enable or disable to show/hide recent posts."
+msgstr ""
+"Selecione ativar ou desativar para mostrar / ocultar as mensagens recentes."
+
+#: imic-framework/meta-boxes.php:788
+msgid "Custom Latest News Title"
+msgstr "Personalizado Últimas Notícias Título"
+
+#: imic-framework/meta-boxes.php:790
+msgid "Enter Custom Latest News Title."
+msgstr "Digite Personalizado Último Titulo News."
+
+#: imic-framework/meta-boxes.php:794
+msgid "Number of Recent Posts to show on home page."
+msgstr "Número de Mensagens recentes para mostrar na página inicial."
+
+#: imic-framework/meta-boxes.php:796
+msgid "Enter the number of Recent Posts to show on Home page. example - 3 ."
+msgstr ""
+"Digite o número de Mensagens recentes para mostrar na página inicial. "
+"exemplo - 3."
+
+#: imic-framework/meta-boxes.php:804
+msgid "Recent Galleries Area"
+msgstr "Recentes Área Galerias"
+
+#: imic-framework/meta-boxes.php:809
+msgid "Switch for gallery"
+msgstr "Mudar para galeria"
+
+#: imic-framework/meta-boxes.php:811
+msgid "Select enable or disable to show/hide galleries."
+msgstr "Selecione ativar ou desativar a mostrar/ocultar galerias."
+
+#: imic-framework/meta-boxes.php:820
+msgid "Custom Gallery Title"
+msgstr "Costume Gallery Título"
+
+#: imic-framework/meta-boxes.php:822
+msgid "Enter Custom Gallery Title."
+msgstr "Digite Personalizado Galeria título."
+
+#: imic-framework/meta-boxes.php:826
+msgid "Custom More Galleries Title"
+msgstr "Personalizado Mais Galerias Título"
+
+#: imic-framework/meta-boxes.php:828
+msgid "Enter Custom More Galleries Title."
+msgstr "Digite Personalizado Mais Galerias título."
+
+#: imic-framework/meta-boxes.php:832
+msgid "Custom More Galleries Url"
+msgstr "Personalizado Mais Galerias Url"
+
+#: imic-framework/meta-boxes.php:834
+msgid "Enter Custom More Galleries Url."
+msgstr "Digite Personalizado Mais Galerias Url."
+
+#: imic-framework/meta-boxes.php:838
+msgid "Number of Galleries to show on home page"
+msgstr "Número de galerias para mostrar na página inicial"
+
+#: imic-framework/meta-boxes.php:840
+msgid "Enter the number of Galleries to show on Home page. example - 3 ."
+msgstr ""
+"Digite o número de galerias para mostrar na página inicial. exemplo - 3."
+
+#: imic-framework/meta-boxes.php:848 imic-framework/meta-boxes.php:872
+#: imic-framework/meta-boxes.php:889
+msgid "Gallery to show"
+msgstr "Galeria para mostrar"
+
+#: imic-framework/meta-boxes.php:854 imic-framework/meta-boxes.php:878
+msgid "Number of Gallery to show"
+msgstr "Número de galeria para mostrar"
+
+#: imic-framework/meta-boxes.php:856 imic-framework/meta-boxes.php:880
+msgid "Enter the number of gallery  to show on Gallery page example - 3 ."
+msgstr "Digite o número de galeria para mostrar no exemplo página Galeria - 3."
+
+#: imic-framework/meta-boxes.php:861 imic-framework/meta-boxes.php:894
+msgid "Gallery Columns Layout"
+msgstr "Colunas galeria de layouts"
+
+#: imic-framework/meta-boxes.php:863
+msgid ""
+"Enter the number of Columns for Layout  to show on Gallery page example - 3 ."
+msgstr ""
+"Digite o número de colunas para Layout para mostrar na página de exemplo "
+"Galeria - 3."
+
+#: imic-framework/meta-boxes.php:896
+msgid ""
+"Enter the number of Columns for Layout  to show on Gallery Filter page "
+"example - 3 ."
+msgstr ""
+"Digite o número de colunas para Layout para mostrar na Galeria exemplo "
+"página Filter - 3."
+
+#: imic-framework/meta-boxes.php:905
+msgid "Staff to show"
+msgstr "Staff para mostrar"
+
+#: imic-framework/meta-boxes.php:911
+msgid "Number of Staff to show"
+msgstr "Número de funcionários para mostrar"
+
+#: imic-framework/meta-boxes.php:913
+msgid "Enter the number of Staff  to show on Staff page example - 3 ."
+msgstr ""
+"Digite o número de funcionários para mostrar a equipe exemplo página - 3."
+
+#: imic-framework/meta-boxes.php:918
+msgid "Select orderby"
+msgstr "Selecione orderby"
+
+#: imic-framework/meta-boxes.php:920
+msgid "Select Staff orderby."
+msgstr "Escolha Pessoal orderby."
+
+#: imic-framework/meta-boxes.php:923
+msgid "ID"
+msgstr "ID"
+
+#: imic-framework/meta-boxes.php:924
+msgid "Menu Order"
+msgstr "ordem dos menus"
+
+#: imic-framework/plugin-includes.php:46
+msgid "Breadcrumb NavXT"
+msgstr "breadcrumb NavXT"
+
+#: imic-framework/plugin-includes.php:51
+msgid "SMK Sidebar Generator"
+msgstr "SMK Sidebar Generator"
+
+#: imic-framework/plugin-includes.php:56
+msgid "WooCommerce - excelling eCommerce"
+msgstr "WooCommerce - primando eCommerce"
+
+#: imic-framework/plugin-includes.php:81
+msgid "Something went wrong with the plugin API."
+msgstr "Algo deu errado com a API do plugin."
+
+#: imic-framework/plugin-includes.php:94
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Todos os plugins instalado e ativado com sucesso. %s"
+
+#: imic-framework/shortcodes.php:368
+msgid "There are no  events to show."
+msgstr "Não há eventos para mostrar."
+
+#: imic-framework/shortcodes.php:808
+msgid "Complete(success)"
+msgstr "Completo (sucesso)"
+
+#: imic-framework/shortcodes.php:816
+msgid "Complete"
+msgstr "completo"
+
+#: imic-framework/shortcodes.php:846
+msgid "WordPress"
+msgstr "WordPress"
+
+#: imic-framework/shortcodes.php:896 includes/ReduxCore/inc/tracking.php:131
+msgid "Close"
+msgstr "perto"
+
+#: imic-framework/shortcodes.php:897
+#: woocommerce/myaccount/form-edit-account.php:35
+msgid "Save changes"
+msgstr "Salve as alterações"
+
+#: imic-framework/shortcodes.php:916
+msgid "Your email address"
+msgstr "Seu endereço de email"
+
+#: imic-framework/shortcodes.php:924
+msgid "Comment"
+msgstr "comentário"
+
+#: imic-framework/shortcodes.php:931 woocommerce/single-product-reviews.php:56
+msgid "Submit"
+msgstr "submeter"
+
+#: imic-framework/shortcodes.php:931
+msgid "Loading..."
+msgstr "Carregando ..."
+
+#: imic-framework/custom-post-types/event-type.php:10
+#: imic-framework/imic-shortcodes/imic-interface.php:623
+msgid "Event Categories"
+msgstr "Categorias de Eventos"
+
+#: imic-framework/custom-post-types/event-type.php:11
+msgid "Event Category"
+msgstr "Categoria do Evento"
+
+#: imic-framework/custom-post-types/event-type.php:23
+msgid "Events"
+msgstr "Eventos"
+
+#: imic-framework/custom-post-types/event-type.php:25
+#: imic-framework/custom-post-types/gallery-type.php:25
+#: imic-framework/custom-post-types/sermon-type.php:51
+#: imic-framework/custom-post-types/staff-type.php:26
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: imic-framework/custom-post-types/event-type.php:26
+msgid "Add New Event"
+msgstr "Adicionar Novo Evento"
+
+#: imic-framework/custom-post-types/event-type.php:27
+msgid "Edit Event"
+msgstr "Editar evento"
+
+#: imic-framework/custom-post-types/event-type.php:28
+msgid "New Event"
+msgstr "Novo Evento"
+
+#: imic-framework/custom-post-types/event-type.php:29
+msgid "View Event"
+msgstr "Ver Evento"
+
+#: imic-framework/custom-post-types/event-type.php:30
+msgid "Search Event"
+msgstr "Procurar Evento"
+
+#: imic-framework/custom-post-types/event-type.php:31
+msgid "No events have been added yet"
+msgstr "Nenhum evento foi adicionado ainda"
+
+#: imic-framework/custom-post-types/event-type.php:32
+#: imic-framework/custom-post-types/gallery-type.php:33
+#: imic-framework/custom-post-types/sermon-type.php:58
+#: imic-framework/custom-post-types/staff-type.php:33
+msgid "Nothing found in Trash"
+msgstr "Nada foi encontrado no lixo"
+
+#: imic-framework/custom-post-types/gallery-type.php:10
+msgid "Gallery Categories"
+msgstr "Categorias de Galeria"
+
+#: imic-framework/custom-post-types/gallery-type.php:11
+msgid "Gallery Category"
+msgstr "Galeria Categoria"
+
+#: imic-framework/custom-post-types/gallery-type.php:23
+msgid "Gallery"
+msgstr "galeria"
+
+#: imic-framework/custom-post-types/gallery-type.php:24
+msgid "Gallery Item"
+msgstr "Galeria item"
+
+#: imic-framework/custom-post-types/gallery-type.php:26
+msgid "Gallery items"
+msgstr "itens Galeria"
+
+#: imic-framework/custom-post-types/gallery-type.php:27
+msgid "Add New Gallery Item"
+msgstr "Adicionar novo item Gallery"
+
+#: imic-framework/custom-post-types/gallery-type.php:28
+msgid "Edit Gallery Item"
+msgstr "Editar Galeria item"
+
+#: imic-framework/custom-post-types/gallery-type.php:29
+msgid "New Gallery Item"
+msgstr "Nova Galeria de artigo"
+
+#: imic-framework/custom-post-types/gallery-type.php:30
+msgid "View Gallery Item"
+msgstr "Veja a galeria de artigo"
+
+#: imic-framework/custom-post-types/gallery-type.php:31
+msgid "Search Gallery"
+msgstr "Pesquisa Resumo Gallery"
+
+#: imic-framework/custom-post-types/gallery-type.php:32
+msgid "No gallery items have been added yet"
+msgstr "Não Galeria itens foram adicionados ainda"
+
+#: imic-framework/custom-post-types/sermon-type.php:10
+msgid "Sermons Categories"
+msgstr "sermões Categorias"
+
+#: imic-framework/custom-post-types/sermon-type.php:11
+msgid "Sermons Category"
+msgstr "Sermões Categoria"
+
+#: imic-framework/custom-post-types/sermon-type.php:23
+#: imic-framework/custom-post-types/sermon-type.php:24
+msgid "Sermons Tag"
+msgstr "Sermões Tag"
+
+#: imic-framework/custom-post-types/sermon-type.php:36
+#: imic-framework/custom-post-types/sermon-type.php:37
+msgid "Sermons Speakers"
+msgstr "sermões Speakers"
+
+#: imic-framework/custom-post-types/sermon-type.php:49
+msgid "Sermons"
+msgstr "Sermões"
+
+#: imic-framework/custom-post-types/sermon-type.php:50
+msgid "Sermons Item"
+msgstr "Sermões item"
+
+#: imic-framework/custom-post-types/sermon-type.php:52
+msgid "Add New Sermons Item"
+msgstr "Adicionar novos Sermões item"
+
+#: imic-framework/custom-post-types/sermon-type.php:53
+msgid "Edit Sermons Item"
+msgstr "Editar Sermões item"
+
+#: imic-framework/custom-post-types/sermon-type.php:54
+msgid "New Sermons Item"
+msgstr "Novos Sermões item"
+
+#: imic-framework/custom-post-types/sermon-type.php:55
+msgid "View Sermons Item"
+msgstr "Exibir Sermões item"
+
+#: imic-framework/custom-post-types/sermon-type.php:56
+msgid "Search Sermons"
+msgstr "Pesquisa Sermões"
+
+#: imic-framework/custom-post-types/sermon-type.php:57
+msgid "No sermons items have been added yet"
+msgstr "Não sermões itens foram adicionados ainda"
+
+#: imic-framework/custom-post-types/staff-type.php:10
+#: imic-framework/imic-shortcodes/imic-interface.php:518
+msgid "Staff Categories"
+msgstr "pessoal Categorias"
+
+#: imic-framework/custom-post-types/staff-type.php:11
+msgid "Staff Category"
+msgstr "Staff Categoria"
+
+#: imic-framework/custom-post-types/staff-type.php:27
+msgid "Add New Staff"
+msgstr "Adicionar Novo Staff"
+
+#: imic-framework/custom-post-types/staff-type.php:28
+msgid "Edit Staff"
+msgstr "Editar Pessoal"
+
+#: imic-framework/custom-post-types/staff-type.php:29
+msgid "New Staff"
+msgstr "novos Funcionários"
+
+#: imic-framework/custom-post-types/staff-type.php:30
+msgid "View Staff"
+msgstr "Ver Staff"
+
+#: imic-framework/custom-post-types/staff-type.php:31
+msgid "Search Staff"
+msgstr "Pesquisa Pessoal"
+
+#: imic-framework/custom-post-types/staff-type.php:32
+msgid "No staff have been added yet"
+msgstr "Não há funcionários foi adicionado ainda"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:74
+#, php-format
+msgid "%s (Invalid)"
+msgstr "%s (inválido)"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:78
+#, php-format
+msgid "%s (Pending)"
+msgstr "%s (pendente)"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:113
+msgid "Edit Menu Item"
+msgstr "Item Menu Editar"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:121
+msgid "URL"
+msgstr "URL"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:128
+msgid "Navigation Label"
+msgstr "Rótulo de navegação"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:134
+msgid "Title Attribute"
+msgstr "Título Atributo"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:141
+msgid "Open link in a new window/tab"
+msgstr "Abrir link em uma nova janela / aba"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:146
+msgid "CSS Classes (optional)"
+msgstr "Classes CSS (opcional)"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:152
+msgid "Link Relationship (XFN)"
+msgstr "Relações Link (XFN)"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:158
+msgid "Description"
+msgstr "descrição"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:160
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr "A descrição será exibida no menu se o tema atual suporta."
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:165
+msgid "Move"
+msgstr "mudança"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:166
+msgid "Up one"
+msgstr "Subir um"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:167
+msgid "Down one"
+msgstr "Abaixo um"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:170
+msgid "To the top"
+msgstr "Para o topo"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:182
+msgid "Enable Mega Menu"
+msgstr "Ativar mega menu"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:196
+#: imic-framework/widgets/custom_category.php:25
+#: imic-framework/widgets/selected_post.php:31
+msgid "Select Post Type"
+msgstr "Selecione Mensagem Tipo"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:208
+msgid "Enter Number of Post Ex-3"
+msgstr "Digite o número de Pós Ex-3"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:213
+msgid "Enter Comma seperated value Ex-1,2,3"
+msgstr "Digite o valor Vírgula separou Ex-1, 2,3"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:218
+msgid "Textarea may be used as Text Editor"
+msgstr "Textarea pode ser usado como editor de texto"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:233
+#, php-format
+msgid "Original: %s"
+msgstr "Original:%s"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:245
+#: imic-framework/meta-box/inc/fields/file-input.php:41
+#: includes/ReduxCore/inc/fields/media/field_media.php:134
+msgid "Remove"
+msgstr "remover"
+
+#: imic-framework/imic-megamenu/edit_custom_walker.php:246
+#: woocommerce/myaccount/my-orders.php:65
+msgid "Cancel"
+msgstr "cancelar"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:13
+msgid "IMIC Framework Shortcodes"
+msgstr "IMIC Quadro Shortcodes"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:40
+msgid "Select a shortcode"
+msgstr "Selecione um shortcode"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:42
+msgid "Shortcode"
+msgstr "shortcode"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:45
+#: imic-framework/imic-shortcodes/imic-interface.php:748
+msgid "Accordions"
+msgstr "Acordeões"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:46
+msgid "Button"
+msgstr "botão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:47
+#: imic-framework/imic-shortcodes/imic-interface.php:319
+msgid "Columns"
+msgstr "Colunas"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:48
+#: imic-framework/imic-shortcodes/imic-interface.php:441
+msgid "Counters"
+msgstr "Contadores"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:49
+#: imic-framework/imic-shortcodes/imic-interface.php:776
+msgid "Form"
+msgstr "forma"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:50
+#: imic-framework/imic-shortcodes/imic-interface.php:132
+msgid "Icons"
+msgstr "Ícones"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:51
+#: imic-framework/imic-shortcodes/imic-interface.php:475
+#: imic-framework/widgets/Advertisement.php:30
+msgid "Image"
+msgstr "imagem"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:52
+#: imic-framework/imic-shortcodes/imic-interface.php:693
+msgid "Lists"
+msgstr "Listas"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:53
+#: imic-framework/imic-shortcodes/imic-interface.php:393
+msgid "Modal Box"
+msgstr "Modal Box"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:54
+#: imic-framework/imic-shortcodes/imic-interface.php:353
+msgid "Progress Bar"
+msgstr "Progress Bar"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:56
+#: imic-framework/imic-shortcodes/imic-interface.php:568
+msgid "Sermon"
+msgstr "sermão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:57
+#: imic-framework/imic-shortcodes/imic-interface.php:539
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:58
+#: imic-framework/imic-shortcodes/imic-interface.php:606
+msgid "Latest events"
+msgstr "Últimos eventos"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:59
+#: imic-framework/imic-shortcodes/imic-interface.php:646
+msgid "Table"
+msgstr "mesa"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:60
+#: imic-framework/imic-shortcodes/imic-interface.php:415
+msgid "Tooltip"
+msgstr "Dica"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:61
+#: imic-framework/imic-shortcodes/imic-interface.php:143
+msgid "Typography"
+msgstr "tipografia"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:62
+#: imic-framework/imic-shortcodes/imic-interface.php:735
+msgid "Tabs"
+msgstr "Tabs"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:63
+#: imic-framework/imic-shortcodes/imic-interface.php:762
+msgid "Toggles"
+msgstr "Alterna"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:64
+#: imic-framework/imic-shortcodes/imic-interface.php:121
+msgid "Fullscreen Video"
+msgstr "Vídeo Tela Cheia"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:71
+msgid "Buttons"
+msgstr "Botões"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:73
+msgid "Button colour"
+msgstr "Botão cor"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:75
+#: imic-framework/imic-shortcodes/imic-interface.php:105
+#: imic-framework/imic-shortcodes/imic-interface.php:304
+#: imic-framework/imic-shortcodes/imic-interface.php:465
+#: includes/ReduxCore/framework.php:1795
+msgid "Default"
+msgstr "omissão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:76
+#: imic-framework/imic-shortcodes/imic-interface.php:305
+#: imic-framework/imic-shortcodes/imic-interface.php:380
+msgid "Primary"
+msgstr "primário"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:77
+#: imic-framework/imic-shortcodes/imic-interface.php:228
+#: imic-framework/imic-shortcodes/imic-interface.php:306
+#: imic-framework/imic-shortcodes/imic-interface.php:381
+msgid "Success"
+msgstr "sucesso"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:78
+#: imic-framework/imic-shortcodes/imic-interface.php:227
+#: imic-framework/imic-shortcodes/imic-interface.php:307
+#: imic-framework/imic-shortcodes/imic-interface.php:382
+msgid "Info"
+msgstr "Informações"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:79
+#: imic-framework/imic-shortcodes/imic-interface.php:225
+#: imic-framework/imic-shortcodes/imic-interface.php:308
+#: imic-framework/imic-shortcodes/imic-interface.php:383
+msgid "Warning"
+msgstr "aviso"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:80
+#: imic-framework/imic-shortcodes/imic-interface.php:309
+#: imic-framework/imic-shortcodes/imic-interface.php:384
+msgid "Danger"
+msgstr "perigo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:84
+msgid "Button type"
+msgstr "tipo de botão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:86
+#: includes/sample/sample-config.php:213
+msgid "Enabled"
+msgstr "Ativado"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:87
+#: includes/sample/sample-config.php:214
+msgid "Disabled"
+msgstr "inválido"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:91
+#: imic-framework/imic-shortcodes/imic-interface.php:92
+msgid "Button text"
+msgstr "texto do botão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:95
+msgid "Button URL"
+msgstr "Botão URL"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:99
+msgid "Open link in a new window?"
+msgstr "Abrir link em uma nova janela?"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:103
+msgid "Button Size"
+msgstr "Botão Tamanho"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:106
+msgid "Extra Small"
+msgstr "extra Pequeno"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:107
+msgid "Small"
+msgstr "pequeno"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:108
+msgid "Large"
+msgstr "grande"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:112
+msgid "Button Extra Class"
+msgstr "Botão Classe extra"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:114
+msgid "Optional, for extra styling/custom colour control."
+msgstr "Opcional, para o controle de cor extra styling/custom."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:123
+msgid "Video URL"
+msgstr "video URL"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:125
+msgid ""
+"Enter the video URL here. Vimeo/YouTube are supported, and please make sure "
+"you enter the full video URL, not shortened, and HTTP only."
+msgstr ""
+"Digite a URL do vídeo aqui. Vimeo/YouTube são suportados, e certifique-se de "
+"digitar a URL completa de vídeo, e não reduzido, e somente HTTP."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:134
+#: imic-framework/imic-shortcodes/imic-interface.php:458
+msgid "Icon image"
+msgstr "imagem do ícone"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:148
+#: imic-framework/imic-shortcodes/imic-interface.php:165
+msgid "Anchor Tag"
+msgstr "Anchor Tag"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:149
+#: imic-framework/imic-shortcodes/imic-interface.php:201
+msgid "Heading"
+msgstr "título"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:150
+#: imic-framework/imic-shortcodes/imic-interface.php:177
+msgid "Paragraph"
+msgstr "parágrafo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:151
+#: imic-framework/imic-shortcodes/imic-interface.php:185
+msgid "Span Tag"
+msgstr "Span Tag"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:152
+#: imic-framework/imic-shortcodes/imic-interface.php:193
+msgid "Divider"
+msgstr "divisor"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:153
+#: imic-framework/imic-shortcodes/imic-interface.php:268
+msgid "Container"
+msgstr "recipiente"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:154
+#: imic-framework/imic-shortcodes/imic-interface.php:220
+msgid "Alert Box"
+msgstr "Box Alerta"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:155
+#: imic-framework/imic-shortcodes/imic-interface.php:238
+msgid "Blockquote"
+msgstr "blockquote"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:156
+#: imic-framework/imic-shortcodes/imic-interface.php:246
+msgid "Dropcap"
+msgstr "Dropcap"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:157
+#: imic-framework/imic-shortcodes/imic-interface.php:257
+msgid "Code"
+msgstr "código"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:158
+#: imic-framework/imic-shortcodes/imic-interface.php:300
+msgid "Label"
+msgstr "etiqueta"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:159
+#: imic-framework/imic-shortcodes/imic-interface.php:284
+msgid "Spacer"
+msgstr "espaçador"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:160
+#: imic-framework/imic-shortcodes/imic-interface.php:276
+msgid "Section"
+msgstr "seção"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:167
+msgid "Anchor Link"
+msgstr "Anchor Ligação"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:171
+#: imic-framework/imic-shortcodes/imic-interface.php:179
+#: imic-framework/imic-shortcodes/imic-interface.php:187
+#: imic-framework/imic-shortcodes/imic-interface.php:195
+#: imic-framework/imic-shortcodes/imic-interface.php:214
+#: imic-framework/imic-shortcodes/imic-interface.php:270
+#: imic-framework/imic-shortcodes/imic-interface.php:278
+#: imic-framework/imic-shortcodes/imic-interface.php:337
+#: imic-framework/imic-shortcodes/imic-interface.php:727
+msgid "Add Extra Class"
+msgstr "Adicionar classe extra"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:203
+msgid "Select Heading Tag"
+msgstr "Selecione Título Tag"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:205
+msgid "H1"
+msgstr "H1"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:206
+msgid "H2"
+msgstr "H2"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:207
+#: imic-framework/imic-shortcodes/imic-interface.php:466
+msgid "H3"
+msgstr "H3"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:208
+msgid "H4"
+msgstr "H4"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:209
+msgid "H5"
+msgstr "H5"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:210
+#: imic-framework/imic-shortcodes/imic-interface.php:467
+msgid "H6"
+msgstr "H6"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:222
+msgid "Select Alert Box type"
+msgstr "Selecione o tipo de caixa de Alerta"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:224
+#: imic-framework/imic-shortcodes/imic-interface.php:261
+#: imic-framework/imic-shortcodes/imic-interface.php:372
+msgid "Standard"
+msgstr "padrão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:226
+msgid "Error"
+msgstr "erro"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:232
+msgid "Add Close Button"
+msgstr "Adicionar botão Fechar"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:240
+msgid "Blockquote Author Name"
+msgstr "Blockquote Nome do Autor"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:248
+msgid "Dropcap Type"
+msgstr "Dropcap Tipo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:250
+msgid "Style 1"
+msgstr "Estilo 1"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:251
+msgid "Style 2"
+msgstr "Estilo 2"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:259
+msgid "Code Type"
+msgstr "Digite o Código"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:262
+msgid "Inline"
+msgstr "Em linha"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:286
+msgid "Select Spacer"
+msgstr "Selecione Spacer"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:288
+msgid "Spacer-20"
+msgstr "Espaçador-20"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:289
+msgid "Spacer-30"
+msgstr "Espaçador-30"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:290
+msgid "Spacer-40"
+msgstr "Espaçador-40"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:291
+msgid "Spacer-50"
+msgstr "Espaçador-50"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:292
+msgid "Spacer-75"
+msgstr "Espaçador-75"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:293
+msgid "Spacer-100"
+msgstr "Espaçador-100"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:302
+msgid "Select Label Tag"
+msgstr "Selecione Rótulo Tag"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:310
+msgid "Dark"
+msgstr "escuro"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:321
+msgid "Layout"
+msgstr "Dark"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:324
+#: imic-framework/imic-shortcodes/imic-interface.php:665
+#: imic-framework/imic-shortcodes/imic-interface.php:676
+#: imic-framework/imic-shortcodes/imic-interface.php:713
+msgid "1"
+msgstr "1"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:325
+msgid "1/2 + 1/2"
+msgstr "1/2 + 1/2"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:326
+msgid "1/2 + 1/4 + 1/4"
+msgstr "1/2 + 1/4 + 1/4"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:327
+msgid "1/3 + 1/3 + 1/3"
+msgstr "1/3 + 1/3 + 1/3"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:328
+msgid "1/3 + 2/3"
+msgstr "1/3 + 2/3"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:329
+msgid "2/3 + 1/3"
+msgstr "2/3 + 1/3"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:330
+msgid "1/4 + 1/4 + 1/2"
+msgstr "1/4 e 1/4 + 1/2"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:331
+msgid "1/4 + 1/2 + 1/4"
+msgstr "1/4 e 1/2 + 1/4"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:332
+msgid "1/4 + 1/4 + 1/4 + 1/4"
+msgstr "1/4 e 1/4 + 1/4 + 1/4"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:333
+msgid "1/6 + 1/6 + 1/6 + 1/6 + 1/6 + 1/6"
+msgstr "1/6 + 1/6 + 1/6 + 1/6 + 1/6 + 1/6"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:341
+msgid "Animation"
+msgstr "animação"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:344
+msgid "From Right"
+msgstr "De direito"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:345
+msgid "From Left"
+msgstr "Da esquerda"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:355
+msgid "Percentage"
+msgstr "percentagem"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:357
+msgid "Enter the percentage of the progress bar."
+msgstr "Digite a porcentagem da barra de progresso."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:360
+msgid "Progress Text"
+msgstr "Progress Texto"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:362
+msgid "Enter the text that you'd like shown above the bar, i.e. \"COMPLETED\"."
+msgstr ""
+"Digite o texto que você gostaria apresentada por cima da barra, ou seja, "
+"\"CONCLUÍDO\"."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:365
+msgid "Progress Value"
+msgstr "Valor Progresso"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:367
+msgid ""
+"Enter value that you'd like shown at the end of the bar on completion, i.e. "
+"\"90\"."
+msgstr ""
+"Digite o valor que você gostaria mostrado no final da barra no final, ou "
+"seja, \"90\"."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:370
+msgid "Progress Bar Type"
+msgstr "Progress Bar Tipo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:373
+msgid "Striped"
+msgstr "listrado"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:374
+msgid "Colored"
+msgstr "de cor"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:378
+msgid "Progress Bar Colour Type"
+msgstr "Progress Bar Cor Tipo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:386
+msgid "Select progress bar color for progress bar type striped and colored."
+msgstr ""
+"Selecione progresso cor da barra para o tipo de barra de progresso listrado "
+"e colorido."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:395
+msgid "Modal Box ID"
+msgstr "Modal Box ID"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:399
+msgid "Modal Box Title"
+msgstr "Modal Box Título"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:403
+msgid "Modal Box Body Text"
+msgstr "Modal Box Body Text"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:407
+msgid "Modal Box Button Text"
+msgstr "Modal Box Button Text"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:417
+msgid "Text"
+msgstr "texto"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:419
+msgid "Enter the text for the tooltip."
+msgstr "Digite o texto para a dica de ferramenta."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:422
+msgid "Link"
+msgstr "link"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:424
+msgid "Enter the link that the tooltip text links to."
+msgstr "Digite o link que os links de texto de dica de ferramenta para."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:427
+msgid "Direction"
+msgstr "direção"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:429
+msgid "Top"
+msgstr "topo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:430
+msgid "Bottom"
+msgstr "inferior"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:431
+msgid "Left"
+msgstr "esquerda"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:432
+msgid "Right"
+msgstr "direito"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:434
+msgid "Choose the direction in which the tooltip appears."
+msgstr "Escolha a direção na qual a dica de ferramenta aparece."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:443
+msgid "To Value"
+msgstr "ao Valor"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:445
+msgid "Enter the number from which the counter counts up to."
+msgstr "Digite o número a partir do qual o contador conta até."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:448
+msgid "Subject Text"
+msgstr "Assunto Texto"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:450
+msgid "Enter the text which you would like to show below the counter."
+msgstr "Digite o texto que você gostaria de mostrar abaixo do balcão."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:453
+msgid "Speed"
+msgstr "velocidade"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:455
+msgid ""
+"Enter the time you want the counter to take to complete, this is in "
+"milliseconds and optional. The default is 2000."
+msgstr ""
+"Digite o tempo que você quer que o contador para a conclusão, isto é, em "
+"milissegundos e opcional. O padrão é 2000."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:463
+msgid "Text style"
+msgstr "estilo de texto"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:479
+msgid ""
+"Provide the URL here for the background image that you would like to use."
+msgstr "Forneça o URL aqui para a imagem de fundo que você gostaria de usar."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:482
+msgid "Image Width"
+msgstr "Largura da imagem"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:484
+msgid "Provide image width in pixels."
+msgstr "Fornecer largura da imagem em pixels."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:487
+msgid "Image Height"
+msgstr "Altura da imagem"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:489
+msgid "Provide image height in pixels."
+msgstr "Fornecer altura da imagem em pixels."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:492
+msgid "Add Extra class"
+msgstr "Adicionar Extra"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:507
+msgid "Number of Staff"
+msgstr "Número de funcionários"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:511
+msgid "Order By Menu"
+msgstr "Ordenar por menu"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:520
+#: imic-framework/imic-shortcodes/imic-interface.php:530
+#: imic-framework/imic-shortcodes/imic-interface.php:543
+#: imic-framework/imic-shortcodes/imic-interface.php:554
+#: imic-framework/imic-shortcodes/imic-interface.php:580
+#: imic-framework/imic-shortcodes/imic-interface.php:592
+#: imic-framework/imic-shortcodes/imic-interface.php:625
+#: imic-framework/meta-box/inc/fields/file-input.php:39
+msgid "Select"
+msgstr "selecionar"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:528
+#: imic-framework/imic-shortcodes/imic-interface.php:590
+msgid "Column Structure"
+msgstr "Estrutura da coluna"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:531
+msgid "Four"
+msgstr "quatro"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:532
+msgid "Three"
+msgstr "três"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:533
+msgid "Two"
+msgstr "dois"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:552
+msgid "Select column for sidebar"
+msgstr "Selecione a coluna para a barra lateral"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:555
+#: imic-framework/imic-shortcodes/imic-interface.php:593
+msgid "Half"
+msgstr "metade"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:556
+#: imic-framework/imic-shortcodes/imic-interface.php:594
+msgid "one-third"
+msgstr "um terço"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:557
+#: imic-framework/imic-shortcodes/imic-interface.php:595
+msgid "Full"
+msgstr "completo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:570
+#: imic-framework/imic-shortcodes/imic-interface.php:608
+msgid "Enter Title"
+msgstr "Digite o título"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:574
+msgid "Number of Sermon"
+msgstr "Número de Sermão"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:578
+msgid "Sermon Categories"
+msgstr "Sermão Categorias"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:612
+msgid "Number of Event"
+msgstr "Número de Evento"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:616
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:265
+msgid "Style"
+msgstr "estilo"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:618
+msgid "Grid"
+msgstr "grade"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:619
+msgid "List"
+msgstr "lista"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:635
+msgid "Event Type"
+msgstr "Tipo de evento"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:637
+msgid "Future"
+msgstr "futuro"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:638
+msgid "Past"
+msgstr "passado"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:648
+msgid "Table style"
+msgstr "estilo de tabela"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:650
+msgid "Striped table"
+msgstr "mesa listrada"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:651
+msgid "Bordered table"
+msgstr "mesa Rodeado"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:655
+msgid "Table Head"
+msgstr "Cabeça de mesa"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:659
+msgid "Include a heading row in the table"
+msgstr "Incluir uma linha de título na tabela"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:663
+msgid "Number of columns"
+msgstr "Número de colunas"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:666
+#: imic-framework/imic-shortcodes/imic-interface.php:677
+#: imic-framework/imic-shortcodes/imic-interface.php:714
+msgid "2"
+msgstr "2"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:667
+#: imic-framework/imic-shortcodes/imic-interface.php:678
+#: imic-framework/imic-shortcodes/imic-interface.php:715
+msgid "3"
+msgstr "3"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:668
+#: imic-framework/imic-shortcodes/imic-interface.php:679
+#: imic-framework/imic-shortcodes/imic-interface.php:716
+msgid "4"
+msgstr "4"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:669
+#: imic-framework/imic-shortcodes/imic-interface.php:680
+#: imic-framework/imic-shortcodes/imic-interface.php:717
+msgid "5"
+msgstr "5"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:670
+#: imic-framework/imic-shortcodes/imic-interface.php:681
+#: imic-framework/imic-shortcodes/imic-interface.php:718
+msgid "6"
+msgstr "6"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:674
+msgid "Number of rows"
+msgstr "Número de linhas"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:682
+#: imic-framework/imic-shortcodes/imic-interface.php:719
+msgid "7"
+msgstr "7"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:683
+#: imic-framework/imic-shortcodes/imic-interface.php:720
+msgid "8"
+msgstr "8"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:684
+#: imic-framework/imic-shortcodes/imic-interface.php:721
+msgid "9"
+msgstr "9"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:685
+#: imic-framework/imic-shortcodes/imic-interface.php:722
+msgid "10"
+msgstr "10"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:695
+msgid "List style"
+msgstr "estilo de lista"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:697
+msgid "Custom Unordered List"
+msgstr "Lista Personalizada não ordenada"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:698
+msgid "Unordered List"
+msgstr "Lista não ordenada"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:699
+msgid "Ordered List"
+msgstr "Lista Ordenada"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:700
+msgid "Icon List"
+msgstr "Lista Ícone"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:701
+msgid "Inline List"
+msgstr "Lista em linha"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:702
+msgid "Description List"
+msgstr "Descrição Lista"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:706
+msgid "List icon"
+msgstr "ícone Lista"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:711
+msgid "Number of list items"
+msgstr "Número de itens da lista"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:723
+msgid "You can easily add more by duplicating the code after."
+msgstr "Você pode facilmente adicionar mais duplicando o código depois."
+
+#: imic-framework/imic-shortcodes/imic-interface.php:737
+msgid "Tab ID"
+msgstr "tab ID"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:741
+msgid "Number of Tabs"
+msgstr "Número de Tabs"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:750
+msgid "Accordion ID"
+msgstr "Acordeão ID"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:754
+msgid "Number of Accordions"
+msgstr "Número de Acordeões"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:764
+msgid "Toggle ID"
+msgstr "Alternar ID"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:768
+msgid "Number of Toggles"
+msgstr "Número de Alterna"
+
+#: imic-framework/imic-shortcodes/imic-interface.php:782
+msgid "Insert Shortcode"
+msgstr "Insira Shortcode"
+
+#: imic-framework/meta-box/inc/field.php:64
+#: imic-framework/meta-box/inc/meta-box.php:352
+msgid "+"
+msgstr "+"
+
+#: imic-framework/meta-box/inc/meta-box.php:206
+msgid "Please correct the errors highlighted below and try again."
+msgstr "Por favor, corrija os erros destacados abaixo e tente novamente."
+
+#: imic-framework/meta-box/inc/meta-box.php:370
+msgid "&#8211;"
+msgstr "-"
+
+#: imic-framework/meta-box/inc/fields/file-advanced.php:21
+msgid "Select Files"
+msgstr "Selecionar arquivos"
+
+#: imic-framework/meta-box/inc/fields/file-input.php:17
+msgid "Select File"
+msgstr "Selecione Arquivo"
+
+#: imic-framework/meta-box/inc/fields/file.php:18
+#, php-format
+msgid "You may only upload maximum %d file"
+msgstr "Você só pode fazer upload de arquivo máximo%d"
+
+#: imic-framework/meta-box/inc/fields/file.php:19
+#, php-format
+msgid "You may only upload maximum %d files"
+msgstr "Você só pode carregar no máximo%d arquivos"
+
+#: imic-framework/meta-box/inc/fields/file.php:62
+msgid "Error: Cannot delete file"
+msgstr "Erro: Não foi possível excluir o arquivo"
+
+#: imic-framework/meta-box/inc/fields/image-advanced.php:21
+msgid "Select Images"
+msgstr "Selecione Imagens"
+
+#: imic-framework/widgets/Advertisement.php:7
+msgid "Advertisement"
+msgstr "anúncio"
+
+#: imic-framework/widgets/Advertisement.php:8
+msgid "Advertisement Widget"
+msgstr "anúncio Widget"
+
+#: imic-framework/widgets/Advertisement.php:24
+#: imic-framework/widgets/custom_category.php:22
+#: imic-framework/widgets/latest_gallery.php:21
+#: imic-framework/widgets/recent_sermons.php:22
+#: imic-framework/widgets/selected_post.php:26
+#: imic-framework/widgets/sermon_speakers.php:20
+#: imic-framework/widgets/upcoming_events.php:23
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:31
+msgid "Title"
+msgstr "título"
+
+#: imic-framework/widgets/Advertisement.php:30
+msgid "Select an image"
+msgstr "Selecione uma imagem"
+
+#: imic-framework/widgets/custom_category.php:6
+msgid "Display latest and selected post categories of different post type."
+msgstr ""
+"Exibir mais recentes e selecionados categorias post de diferente tipo post."
+
+#: imic-framework/widgets/custom_category.php:7
+msgid "Custom Categories"
+msgstr "categorias personalizadas"
+
+#: imic-framework/widgets/custom_category.php:38
+#: imic-framework/widgets/selected_post.php:45
+msgid "No Post Type Found."
+msgstr "Não Tipo de post encontrado."
+
+#: imic-framework/widgets/latest_gallery.php:6
+msgid "Display latest gallery."
+msgstr "Mostrar mais recente galeria."
+
+#: imic-framework/widgets/latest_gallery.php:7
+msgid "Latest Gallery"
+msgstr "Última Galeria"
+
+#: imic-framework/widgets/latest_gallery.php:25
+msgid "Number of gallery to show"
+msgstr "Número de galeria para mostrar"
+
+#: imic-framework/widgets/latest_gallery.php:67
+msgid "No Gallery Found"
+msgstr "Não Galeria Encontrado"
+
+#: imic-framework/widgets/recent_sermons.php:6
+msgid "Display recent sermons."
+msgstr "Apresentar sermões recentes."
+
+#: imic-framework/widgets/recent_sermons.php:7
+msgid "Recent Sermons"
+msgstr "Sermões recentes"
+
+#: imic-framework/widgets/recent_sermons.php:26
+msgid "Number of sermons to show"
+msgstr "Número de sermões para mostrar"
+
+#: imic-framework/widgets/recent_sermons.php:96
+#: imic-framework/widgets/selected_post.php:154
+#: imic-framework/widgets/selected_post.php:170
+msgid " on "
+msgstr "em"
+
+#: imic-framework/widgets/recent_sermons.php:105
+msgid "No Sermon Found"
+msgstr "No Sermão Encontrado"
+
+#: imic-framework/widgets/selected_post.php:8
+msgid "Display latest and selected post of different post type."
+msgstr "Mostrar mais recente e pós selecionado de diferentes tipos post."
+
+#: imic-framework/widgets/selected_post.php:9
+msgid "Selected Post"
+msgstr "Mensagem selecionado"
+
+#: imic-framework/widgets/selected_post.php:51
+msgid "Number of posts to show"
+msgstr "Número de postagens para mostrar"
+
+#: imic-framework/widgets/selected_post.php:177
+msgid "No "
+msgstr "não"
+
+#: imic-framework/widgets/selected_post.php:177
+msgid " Found"
+msgstr "encontrado"
+
+#: imic-framework/widgets/sermon_speakers.php:6
+msgid "Display Sermon Speakers."
+msgstr "Mostrar Sermão alto-falantes."
+
+#: imic-framework/widgets/upcoming_events.php:6
+msgid "Display Upcoming Events."
+msgstr "Mostrar Próximos Eventos."
+
+#: imic-framework/widgets/upcoming_events.php:7
+#: imic-framework/widgets/upcoming_events.php:72
+msgid "Upcoming Events"
+msgstr "Próximos eventos"
+
+#: imic-framework/widgets/upcoming_events.php:28
+msgid "Number of events to show"
+msgstr "Número de eventos para mostrar"
+
+#: imic-framework/widgets/upcoming_events.php:33
+msgid "Select Category"
+msgstr "Selecione Categoria"
+
+#: imic-framework/widgets/upcoming_events.php:35
+msgid "All"
+msgstr "tudo"
+
+#: imic-framework/widgets/twitter_feeds/tweets.php:5
+#: imic-framework/widgets/twitter_feeds/tweets.php:7
+#: imic-framework/widgets/twitter_feeds/tweets.php:9
+#: imic-framework/widgets/twitter_feeds/tweets.php:11
+msgid "Not properly configured, check settings"
+msgstr "Não configurado corretamente, as configurações de verificação"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:6
+msgid "Show latest twitter feeds."
+msgstr "Mostrar mais alimentos do twitter."
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:7
+msgid "Twitter Feeds"
+msgstr "Twitter Feeds"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:35
+msgid "Twitter Username"
+msgstr "Twitter usuário"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:39
+msgid "Number of Feeds"
+msgstr "Número de Feeds"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:43
+msgid "Consumer Key"
+msgstr "chave do Consumidor"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:47
+msgid "Consumer Key Secret"
+msgstr "Consumidor Chave Secreta"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:51
+msgid "Access Token"
+msgstr "Access Token"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:55
+msgid "Access Token Secret"
+msgstr "Access Token secreto"
+
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:111
+#: imic-framework/widgets/twitter_feeds/twitter_feeds.php:114
+msgid "Loading ..."
+msgstr "Carregando ..."
+
+#: includes/class.redux-plugin.php:261
+msgid "Redux Framework has an embedded demo."
+msgstr "Redux Framework tem uma demonstração incorporado."
+
+#: includes/class.redux-plugin.php:261
+msgid "Click here to activate the sample config file."
+msgstr "Clique aqui para ativar o arquivo de configuração de amostra."
+
+#: includes/class.redux-plugin.php:346
+msgid "Repo"
+msgstr "repo"
+
+#: includes/class.redux-plugin.php:347
+msgid "Generator"
+msgstr "gerador"
+
+#: includes/class.redux-plugin.php:348
+msgid "Issues"
+msgstr "questões"
+
+#: includes/class.redux-plugin.php:349 includes/sample/sample-config.php:702
+msgid "Documentation"
+msgstr "documentação"
+
+#: includes/class.redux-plugin.php:353
+msgid "Deactivate Demo Mode"
+msgstr "Desativar o modo de demonstração"
+
+#: includes/class.redux-plugin.php:355
+msgid "Activate Demo Mode"
+msgstr "Ativar o modo de demonstração"
+
+#: includes/ReduxCore/framework.php:231
+msgid "Theme Option v3.2.9.17"
+msgstr "Opção Tema v3.2.9.17"
+
+#: includes/ReduxCore/framework.php:231
+msgid "Redux Framework"
+msgstr "Redux-Quadro"
+
+#: includes/ReduxCore/framework.php:235 includes/ReduxCore/framework.php:239
+#: includes/ReduxCore/framework.php:1183
+msgid "Options"
+msgstr "Opções"
+
+#: includes/ReduxCore/framework.php:1124 includes/ReduxCore/framework.php:1125
+#: includes/ReduxCore/framework.php:2838 includes/ReduxCore/framework.php:2897
+msgid "System Info"
+msgstr "System Info"
+
+#: includes/ReduxCore/framework.php:1563
+#: includes/ReduxCore/extensions/customizer/extension_customizer.php:383
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr "Você tem alterações que não são salvos. Gostaria de salvá-los agora?"
+
+#: includes/ReduxCore/framework.php:1564
+#: includes/ReduxCore/extensions/customizer/extension_customizer.php:384
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr "Você tem certeza? Redefinindo perderá todos os valores personalizados."
+
+#: includes/ReduxCore/framework.php:1565
+msgid "Are you sure? Resetting will lose all custom values in this section."
+msgstr ""
+"Você tem certeza? Redefinindo perderá todos os valores personalizados nesta "
+"seção."
+
+#: includes/ReduxCore/framework.php:1566
+#: includes/ReduxCore/extensions/customizer/extension_customizer.php:385
+msgid ""
+"Your current options will be replaced with the values of this preset. Would "
+"you like to proceed?"
+msgstr ""
+"As opções atuais serão substituídos pelos valores deste predefinido. Você "
+"gostaria de prosseguir?"
+
+#: includes/ReduxCore/framework.php:1567
+msgid "Please Wait"
+msgstr "Espere por favor"
+
+#: includes/ReduxCore/framework.php:1688
+msgid "Hints"
+msgstr "Dicas"
+
+#: includes/ReduxCore/framework.php:1689
+msgid "<p>"
+msgstr "<p>"
+
+#: includes/ReduxCore/framework.php:2643
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+"Aviso-Este painel de opções não irá funcionar corretamente sem javascript!"
+
+#: includes/ReduxCore/framework.php:2702
+msgid "Expand"
+msgstr "expandir"
+
+#: includes/ReduxCore/framework.php:2704 includes/ReduxCore/framework.php:2942
+msgid "Save Changes"
+msgstr "Salvar alterações"
+
+#: includes/ReduxCore/framework.php:2706 includes/ReduxCore/framework.php:2944
+msgid "Reset Section"
+msgstr "repor Seção"
+
+#: includes/ReduxCore/framework.php:2708 includes/ReduxCore/framework.php:2946
+msgid "Reset All"
+msgstr "Reset All"
+
+#: includes/ReduxCore/framework.php:2710 includes/ReduxCore/framework.php:2948
+msgid "Working..."
+msgstr "Trabalhando ..."
+
+#: includes/ReduxCore/framework.php:2725
+msgid "Settings Imported!"
+msgstr "Configurações Importado!"
+
+#: includes/ReduxCore/framework.php:2737
+msgid "All Defaults Restored!"
+msgstr "Todos os Padrões restaurada!"
+
+#: includes/ReduxCore/framework.php:2748
+msgid "Section Defaults Restored!"
+msgstr "Seção Padrões restaurada!"
+
+#: includes/ReduxCore/framework.php:2760
+msgid "Settings Saved!"
+msgstr "Configurações salvas!"
+
+#: includes/ReduxCore/framework.php:2774
+msgid "Settings have changed, you should save them!"
+msgstr "Configurações foram alteradas, você deve salvá-los!"
+
+#: includes/ReduxCore/framework.php:2781
+msgid "error(s) were found!"
+msgstr "erro (s) foram encontrados!"
+
+#: includes/ReduxCore/framework.php:2788
+msgid "warning(s) were found!"
+msgstr "warning (s) foram encontrados!"
+
+#: includes/ReduxCore/extensions/customizer/extension_customizer.php:414
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr "Você tem alterações que não são salvos. Gostaria de salvá-los agora?"
+
+#: includes/ReduxCore/extensions/customizer/extension_customizer.php:415
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr "Você tem certeza? Redefinindo perderá todos os valores personalizados."
+
+#: includes/ReduxCore/extensions/customizer/extension_customizer.php:416
+msgid ""
+"Your current options will be replaced with the values of this preset.  Would "
+"you like to proceed?"
+msgstr ""
+"As opções atuais serão substituídos pelos valores deste predefinido. Você "
+"gostaria de prosseguir?"
+
+#: includes/ReduxCore/inc/class.redux_functions.php:221
+msgid "Dismiss"
+msgstr "demitir"
+
+#: includes/ReduxCore/inc/debug.php:38 includes/ReduxCore/inc/debug.php:59
+#: includes/ReduxCore/inc/debug.php:65 includes/ReduxCore/inc/debug.php:66
+msgid "Options Object"
+msgstr "Opções de objeto"
+
+#: includes/ReduxCore/inc/debug.php:48
+msgid "Show Object in Javascript Console Object"
+msgstr "Mostrar objeto em Javascript Console objeto"
+
+#: includes/ReduxCore/inc/import_export.php:67
+msgid "Import / Export Options"
+msgstr "Import / Export Options"
+
+#: includes/ReduxCore/inc/import_export.php:69
+msgid "Import Options"
+msgstr "Opções de importação"
+
+#: includes/ReduxCore/inc/import_export.php:70
+msgid "Import from file"
+msgstr "Importar do arquivo"
+
+#: includes/ReduxCore/inc/import_export.php:70
+msgid "Import from URL"
+msgstr "Importar de URL"
+
+#: includes/ReduxCore/inc/import_export.php:72
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+"Introduza o seu arquivo de backup abaixo e clique em Importar para restaurar "
+"as opções de locais a partir de um backup."
+
+#: includes/ReduxCore/inc/import_export.php:76
+msgid ""
+"Input the URL to another sites options set and hit Import to load the "
+"options from that site."
+msgstr ""
+"Introduza o URL para outras opções locais de definir e acertar Importar para "
+"carregar as opções desse site."
+
+#: includes/ReduxCore/inc/import_export.php:79
+msgid "Import"
+msgstr "importação"
+
+#: includes/ReduxCore/inc/import_export.php:79
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+"ATENÇÃO! Isso irá substituir todos os valores de opção existentes, por "
+"favor, vá com cuidado!"
+
+#: includes/ReduxCore/inc/import_export.php:81
+msgid "Export Options"
+msgstr "Opções de exportação"
+
+#: includes/ReduxCore/inc/import_export.php:83
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as "
+"you can use it as a backup should anything go wrong, or you can use it to "
+"restore your settings on this site (or any other site)."
+msgstr ""
+"Aqui você pode copiar / download de suas configurações de opções atuais. "
+"Manter este seguro como você pode usá-lo como um backup se algo der errado, "
+"ou você pode usá-lo para restaurar as configurações neste site (ou qualquer "
+"outro local)."
+
+#: includes/ReduxCore/inc/import_export.php:86
+msgid "Copy"
+msgstr "cópia"
+
+#: includes/ReduxCore/inc/import_export.php:86
+#: woocommerce/emails/email-order-items.php:38
+#: woocommerce/emails/plain/email-order-items.php:37
+msgid "Download"
+msgstr "baixar"
+
+#: includes/ReduxCore/inc/import_export.php:86
+msgid "Copy Link"
+msgstr "Copy Link"
+
+#: includes/ReduxCore/inc/import_export.php:112
+#: includes/ReduxCore/inc/import_export.php:119
+#: includes/ReduxCore/inc/import_export.php:120
+#: includes/sample/sample-config.php:686
+msgid "Import / Export"
+msgstr "Import / Export"
+
+#: includes/ReduxCore/inc/tracking.php:101
+msgid "Help improve Our Panel"
+msgstr "Ajude a melhorar nosso Painel de"
+
+#: includes/ReduxCore/inc/tracking.php:102
+msgid ""
+"Please helps us improve our panel by allowing us to gather anonymous usage "
+"stats so we know which configurations, plugins and themes to test to ensure "
+"compatability."
+msgstr ""
+"Por favor, ajuda-nos a melhorar o nosso painel, permitindo-nos para reunir "
+"estatísticas de uso anônimas por isso sabemos que as configurações, plugins "
+"e temas para testar para garantir compatibilidade."
+
+#: includes/ReduxCore/inc/tracking.php:107
+msgid "Allow tracking"
+msgstr "permitir o rastreamento"
+
+#: includes/ReduxCore/inc/tracking.php:110
+msgid "Do not allow tracking"
+msgstr "Não permitir o rastreamento"
+
+#: includes/ReduxCore/inc/tracking.php:118
+msgid "Welcome to the Redux Demo Panel"
+msgstr "Bem-vindo ao Painel Redux Demonstração"
+
+#: includes/ReduxCore/inc/tracking.php:119
+msgid "Getting Started"
+msgstr "Primeiros passos"
+
+#: includes/ReduxCore/inc/tracking.php:119
+#, php-format
+msgid ""
+"This panel demonstrates the many features of Redux.  Before digging in, we "
+"suggest you get up to speed by reviewing %1$s."
+msgstr ""
+"Este painel mostra as muitas características do Redux. Antes de escavar em, "
+"sugerimos que você chegar até a velocidade através da revisão %1$s."
+
+#: includes/ReduxCore/inc/tracking.php:119
+msgid "our documentation"
+msgstr "nossa documentação"
+
+#: includes/ReduxCore/inc/tracking.php:120
+msgid "Redux Generator"
+msgstr "Redux Generator"
+
+#: includes/ReduxCore/inc/tracking.php:120
+#, php-format
+msgid ""
+"Want to get a head start? Use the %1$s. It will create a customized "
+"boilerplate theme or a standalone admin folder complete with all things "
+"Redux (with the help of Underscores and TGM). Save yourself a headache and "
+"try it today."
+msgstr ""
+"Quer ter uma vantagem? Use o %1$s. Ele vai criar um tema personalizado "
+"clichê ou uma pasta de administração autônoma completo com todas as coisas "
+"Redux (com a ajuda de sublinhados e TGM). Salve-se uma dor de cabeça e "
+"experimentá-lo hoje."
+
+#: includes/ReduxCore/inc/tracking.php:121
+msgid "Redux Extensions"
+msgstr "Redux Extensões"
+
+#: includes/ReduxCore/inc/tracking.php:121
+#, php-format
+msgid ""
+"Did you know we have extensions, which greatly enhance the features of "
+"Redux?  Visit our %1$s to learn more!"
+msgstr ""
+"Você sabia que temos extensões, que aumentam grandemente as características "
+"de Redux? Visite o nosso %1$s para saber mais!"
+
+#: includes/ReduxCore/inc/tracking.php:121
+msgid "extensions directory"
+msgstr "diretório de extensões"
+
+#: includes/ReduxCore/inc/tracking.php:122
+msgid "Like Redux?"
+msgstr "Como Redux?"
+
+#: includes/ReduxCore/inc/tracking.php:122
+#, php-format
+msgid ""
+"If so, please %1$s and consider making a %2$s to keep development of Redux "
+"moving forward."
+msgstr ""
+"Se assim for, por favor, %1$s e considere fazer uma %2$s para manter o "
+"desenvolvimento de Redux avançar."
+
+#: includes/ReduxCore/inc/tracking.php:122
+msgid "leave us a favorable review on WordPress.org"
+msgstr "deixe-nos um comentário favorável sobre WordPress.org"
+
+#: includes/ReduxCore/inc/tracking.php:122
+msgid "donation"
+msgstr "doação"
+
+#: includes/ReduxCore/inc/tracking.php:123
+msgid "Newsletter"
+msgstr "boletim informativo"
+
+#: includes/ReduxCore/inc/tracking.php:123
+msgid ""
+"If you'd like to keep up to with all things Redux, please subscribe to our "
+"newsletter"
+msgstr ""
+"Se você gostaria de manter-se com todas as coisas Redux, por favor, assine a "
+"nossa newsletter"
+
+#: includes/ReduxCore/inc/tracking.php:124
+#: woocommerce/myaccount/form-edit-account.php:23
+#: woocommerce/myaccount/form-login.php:54
+msgid "Email address"
+msgstr "endereço de email"
+
+#: includes/ReduxCore/inc/tracking.php:124
+msgid "Subscribe"
+msgstr "subscrever"
+
+#: includes/ReduxCore/inc/fields/color/field_color.php:66
+msgid "Transparent"
+msgstr "transparente"
+
+#: includes/ReduxCore/inc/fields/link_color/field_link_color.php:80
+msgid "Regular"
+msgstr "regular"
+
+#: includes/ReduxCore/inc/fields/link_color/field_link_color.php:83
+msgid "Hover"
+msgstr "pairar"
+
+#: includes/ReduxCore/inc/fields/link_color/field_link_color.php:86
+msgid "Visited"
+msgstr "visitado"
+
+#: includes/ReduxCore/inc/fields/link_color/field_link_color.php:89
+msgid "Active"
+msgstr "ativo"
+
+#: includes/ReduxCore/inc/fields/media/field_media.php:99
+msgid "No media selected"
+msgstr "Nenhuma mídia selecionados"
+
+#: includes/ReduxCore/inc/fields/media/field_media.php:130
+msgid "Upload"
+msgstr "carregar"
+
+#: includes/ReduxCore/inc/fields/select/field_select.php:68
+msgid "Select an item"
+msgstr "Selecione um item"
+
+#: includes/ReduxCore/inc/fields/select/field_select.php:101
+msgid "No items of this type were found."
+msgstr "Nenhum item deste tipo foram encontrados."
+
+#: includes/ReduxCore/inc/fields/switch/field_switch.php:38
+msgid "On"
+msgstr "em"
+
+#: includes/ReduxCore/inc/fields/switch/field_switch.php:44
+msgid "Off"
+msgstr "fora"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:180
+msgid "Font Family"
+msgstr "Família de fontes"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:181
+msgid "Font family"
+msgstr "família de fontes"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:195
+msgid "Standard Fonts"
+msgstr "Fontes padrão"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:245
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:246
+msgid "Backup Font Family"
+msgstr "Família de fontes de backup"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:258
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:265
+msgid "Font style"
+msgstr "estilo da fonte"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:259
+msgid "Font Weight &amp; Style"
+msgstr "Fonte Pesos e estilo"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:292
+msgid "Font subsets"
+msgstr "subconjuntos de fontes"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:293
+msgid "Font Subsets"
+msgstr "subconjuntos de fontes"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:294
+msgid "Subsets"
+msgstr "Subconjuntos"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:294
+msgid "Font script"
+msgstr "roteiro Font"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:310
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:311
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:312
+msgid "Text Align"
+msgstr "Texto Alinhar"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:330
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:331
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:332
+msgid "Text Transform"
+msgstr "Texto Transform"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:350
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:351
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:352
+msgid "Font Variant"
+msgstr "Fonte Variant"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:368
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:369
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:370
+msgid "Text Decoration"
+msgstr "Decoração Texto"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:389
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:390
+msgid "Font Size"
+msgstr "Tamanho da fonte"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:390
+msgid "Size"
+msgstr "tamanho"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:398
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:399
+msgid "Line Height"
+msgstr "Linha Altura"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:399
+msgid "Height"
+msgstr "altura"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:407
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:408
+msgid "Word Spacing"
+msgstr "Palavra Espaçamento"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:416
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:417
+msgid "Letter Spacing"
+msgstr "Espaçamento letter"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:434
+msgid "Font Color"
+msgstr "Cor da Fonte"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:436
+msgid "Font color"
+msgstr "cor da fonte"
+
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:760
+#: includes/ReduxCore/inc/fields/typography/field_typography.php:786
+msgid "Google Webfonts"
+msgstr "Google Webfonts"
+
+#: includes/ReduxCore/inc/validation/color/validation_color.php:14
+#: includes/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php:14
+#: includes/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php:14
+msgid "This field must be a valid color value."
+msgstr "Este campo deve ser um valor de cor válido."
+
+#: includes/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php:14
+msgid ""
+"You must provide a comma separated list of numerical values for this option."
+msgstr ""
+"Você deve fornecer uma lista separada por vírgulas de valores numéricos para "
+"esta opção."
+
+#: includes/ReduxCore/inc/validation/date/validation_date.php:14
+msgid "This field must be a valid date."
+msgstr "Este campo deve ser uma data válida."
+
+#: includes/ReduxCore/inc/validation/email/validation_email.php:14
+#: includes/ReduxCore/inc/validation/email_not_empty/validation_email_not_empty.php:14
+msgid "You must provide a valid email for this option."
+msgstr "Você deve fornecer um e-mail válido para esta opção."
+
+#: includes/ReduxCore/inc/validation/not_empty/validation_not_empty.php:14
+msgid "This field cannot be empty. Please provide a value."
+msgstr "Este campo não pode ficar vazio. Por favor, forneça um valor."
+
+#: includes/ReduxCore/inc/validation/no_html/validation_no_html.php:14
+msgid ""
+"You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+"Você não deve entrar em qualquer HTML neste campo, todas as tags HTML foram "
+"removidos."
+
+#: includes/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php:14
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+"Você não deve digitar caracteres especiais neste campo, todos os caracteres "
+"especiais foram removidos."
+
+#: includes/ReduxCore/inc/validation/numeric/validation_numeric.php:14
+msgid "You must provide a numerical value for this option."
+msgstr "Você deve fornecer um valor numérico para esta opção."
+
+#: includes/ReduxCore/inc/validation/url/validation_url.php:14
+msgid "You must provide a valid URL for this option."
+msgstr "Você deve fornecer uma URL válida para esta opção."
+
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:221
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:268
+msgid "Custom Fonts"
+msgstr "fontes personalizadas"
+
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:223
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:271
+msgid "Fonts Squirrel"
+msgstr "Fontes Squirrel"
+
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:574
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:583
+msgid "Font Control"
+msgstr "Controle da fonte"
+
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/extension_custom_fonts.php:575
+msgid "<p class=\"description\"></p>"
+msgstr "<p class=\"description\"></ p>"
+
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/custom_fonts/field_custom_fonts.php:95
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/custom_fonts/field_custom_fonts.php:101
+msgid "Add Font"
+msgstr "Adicionar Font"
+
+#: includes/ReduxCore/redux-extensions/extensions/custom_fonts/custom_fonts/field_custom_fonts.php:100
+msgid "No Custom Fonts Found"
+msgstr "Sem fontes personalizadas Encontrado"
+
+#: includes/sample/barebones-config.php:38
+msgid "Home Settings"
+msgstr "Configurações Início"
+
+#: includes/sample/barebones-config.php:39
+msgid ""
+"Redux Framework was created with the developer in mind. It allows for any "
+"theme developer to have an advanced theme panel with most of the features a "
+"developer would need. For more information check out the Github repo at: <a "
+"href=\"https://github.com/ReduxFramework/Redux-Framework\">https://github."
+"com/ReduxFramework/Redux-Framework</a>"
+msgstr ""
+"Redux-Quadro foi criado com o desenvolvedor em mente. Ele permite que "
+"qualquer desenvolvedor tema de ter um painel temático avançado, com a "
+"maioria das características que um desenvolvedor precisa. Para mais "
+"informações confira o repo Github em: <a href=\"https://github.com/"
+"ReduxFramework/Redux-Framework\">https://github.com/ReduxFramework/Redux-"
+"Framework</a>"
+
+#: includes/sample/barebones-config.php:46
+msgid "Web Fonts"
+msgstr "web Fonts"
+
+#: includes/sample/barebones-config.php:49
+#: includes/sample/sample-config.php:275
+msgid "Basic media uploader with disabled URL input field."
+msgstr "Uploader mídia básico com desativado campo de entrada de URL."
+
+#: includes/sample/barebones-config.php:50
+msgid "Upload any media using the WordPress native uploader"
+msgstr "Envie qualquer mídia usando o uploader nativo WordPress"
+
+#: includes/sample/barebones-config.php:63
+#: includes/sample/sample-config.php:711
+msgid "Theme Information 1"
+msgstr "Informações Tema 1"
+
+#: includes/sample/barebones-config.php:64
+#: includes/sample/barebones-config.php:69
+#: includes/sample/sample-config.php:712 includes/sample/sample-config.php:717
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr "<p> Este é o conteúdo do guia, HTML é permitido. </ p>"
+
+#: includes/sample/barebones-config.php:68
+#: includes/sample/sample-config.php:716
+msgid "Theme Information 2"
+msgstr "Informações Tema 2"
+
+#: includes/sample/barebones-config.php:72
+#: includes/sample/sample-config.php:720
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr "<p> Este é o conteúdo da barra lateral, HTML é permitido. </ p>"
+
+#: includes/sample/barebones-config.php:87
+#: includes/sample/barebones-config.php:88
+msgid "Sample Options"
+msgstr "Exemplos de Opções"
+
+#: includes/sample/barebones-config.php:181
+#, php-format
+msgid ""
+"<p>Did you know that Redux sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong></p>"
+msgstr ""
+"<p> Você sabia que Redux define uma variável global para você? Para acessar "
+"qualquer um dos seus opções guardadas a partir do seu código, você pode usar "
+"a sua variável global: $ <strong>%1$s </ strong></ p>"
+
+#: includes/sample/barebones-config.php:183
+msgid ""
+"<p>This text is displayed above the options panel. It isn't required, but "
+"more info is always better! The intro_text field accepts all HTML.</p>"
+msgstr ""
+"<p> Este texto é exibido acima do painel de opções. Não é necessário, mas "
+"mais informação é sempre melhor! O campo intro_text aceita tudo HTML.</ P>"
+
+#: includes/sample/barebones-config.php:186
+msgid ""
+"<p>This text is displayed below the options panel. It isn't required, but "
+"more info is always better! The footer_text field accepts all HTML.</p>"
+msgstr ""
+"<p> Este texto é exibido abaixo do painel de opções. Não é necessário, mas "
+"mais informação é sempre melhor! O campo footer_text aceita tudo HTML.</ P>"
+
+#: includes/sample/sample-config.php:87
+msgid "Section via hook"
+msgstr "Seção via gancho"
+
+#: includes/sample/sample-config.php:88
+msgid ""
+"<p>Did you know that IMIC Framework sets a global variable for you? To "
+"access any of your saved options from within your code you can use your "
+"global variable: <strong>$imic_options</strong></p>"
+msgstr ""
+"<p> Você sabia que IMIC quadro define uma variável global para você? Para "
+"acessar qualquer um dos seus opções guardadas a partir do seu código, você "
+"pode usar a sua variável global: <strong> $ imic_options </ strong></ p>"
+
+#: includes/sample/sample-config.php:106
+msgid "Testing filter hook!"
+msgstr "Testando gancho do filtro!"
+
+#: includes/sample/sample-config.php:145
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr "Personalize \"%s\""
+
+#: includes/sample/sample-config.php:160
+#, php-format
+msgid "By %s"
+msgstr "Por%s"
+
+#: includes/sample/sample-config.php:161
+#, php-format
+msgid "Version %s"
+msgstr "Versão%s"
+
+#: includes/sample/sample-config.php:162
+msgid "Tags"
+msgstr "Marcações"
+
+#: includes/sample/sample-config.php:167
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+"Este tema criança <a href=\"%1$s\"></ a> requer o seu tema principal, %2$s."
+
+#: includes/sample/sample-config.php:167
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr "http://codex.wordpress.org/Child_Themes"
+
+#: includes/sample/sample-config.php:205
+msgid "General Settings"
+msgstr "Configurações Gerais"
+
+#: includes/sample/sample-config.php:210
+msgid "Enable Maintenance"
+msgstr "Ativar Manutenção"
+
+#: includes/sample/sample-config.php:211
+msgid "Enable the themes in maintenance mode."
+msgstr "Ative os temas em modo de manutenção."
+
+#: includes/sample/sample-config.php:219
+msgid "Enable Responsive"
+msgstr "Ativar Responsive"
+
+#: includes/sample/sample-config.php:220
+msgid "Enable/Disable the responsive behaviour of the theme"
+msgstr "Activar / Desactivar o comportamento de resposta do tema"
+
+#: includes/sample/sample-config.php:226
+msgid "Enable Back To Top"
+msgstr "Ativar Topo"
+
+#: includes/sample/sample-config.php:227
+msgid ""
+"Enable the back to top button that appears in the bottom right corner of the "
+"screen."
+msgstr ""
+"Ative o botão de volta ao topo, que aparece no canto inferior direito da "
+"tela."
+
+#: includes/sample/sample-config.php:234
+msgid "Custom favicon"
+msgstr "favicon personalizado"
+
+#: includes/sample/sample-config.php:235
+msgid "Upload a image that will represent your website favicon"
+msgstr "Envie uma imagem que irá representar o seu site favicon"
+
+#: includes/sample/sample-config.php:241
+msgid "Tracking Code"
+msgstr "código de acompanhamento"
+
+#: includes/sample/sample-config.php:242
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. This will be "
+"added into the footer template of your theme."
+msgstr ""
+"Cole o seu Google Analytics (ou outros), código de rastreamento aqui. Isto "
+"será adicionado ao modelo de rodapé de seu tema."
+
+#: includes/sample/sample-config.php:248
+msgid "Custom admin login logo"
+msgstr "Logotipo personalizado de login de administrador"
+
+#: includes/sample/sample-config.php:251
+msgid "Upload a 254 x 95px image here to replace the admin login logo."
+msgstr ""
+"Upload image 254 x 95px um aqui para substituir o logotipo administrador de "
+"login."
+
+#: includes/sample/sample-config.php:258
+msgid "Header Options"
+msgstr "Opções de cabeçalho"
+
+#: includes/sample/sample-config.php:259
+msgid "<p class=\"description\">These are the options for the header.</p>"
+msgstr "<p class=\"description\"> Estas são as opções para o cabeçalho.</ p>"
+
+#: includes/sample/sample-config.php:265
+msgid "Header Image"
+msgstr "Header Image"
+
+#: includes/sample/sample-config.php:266
+msgid "Default header image for post types."
+msgstr "Imagem de cabeçalho padrão para os tipos de pós."
+
+#: includes/sample/sample-config.php:267
+msgid ""
+"Set this image as default header image for all Page/Post/Event/Sermons/"
+"Gallery."
+msgstr ""
+"Defina esta imagem de cabeçalho padrão para todos página/Post/eventos/"
+"Sermões/Galeria como."
+
+#: includes/sample/sample-config.php:274
+msgid "Upload Logo"
+msgstr "carregar Logo"
+
+#: includes/sample/sample-config.php:276
+msgid "Upload site logo to display in header."
+msgstr "Envie o logo do site para exibir no cabeçalho."
+
+#: includes/sample/sample-config.php:282
+msgid "Enable Header Stick"
+msgstr "Ativar cabeçalho da vara"
+
+#: includes/sample/sample-config.php:283
+msgid "Enable/Disable Header Stick behaviour of the theme"
+msgstr "Activar / Desactivar o comportamento do cabeçalho da vara do tema"
+
+#: includes/sample/sample-config.php:289
+msgid "Header Area Height"
+msgstr "Header Área Altura"
+
+#: includes/sample/sample-config.php:290
+msgid "Enter height for header Area"
+msgstr "Digite a altura para a Área de cabeçalho"
+
+#: includes/sample/sample-config.php:298
+msgid "Header Layout"
+msgstr "Cabeçalho Disposição"
+
+#: includes/sample/sample-config.php:299
+msgid "Select the Header layout"
+msgstr "Selecione o layout do cabeçalho"
+
+#: includes/sample/sample-config.php:312 includes/sample/sample-config.php:479
+msgid "Social Links"
+msgstr "Ligações Sociais"
+
+#: includes/sample/sample-config.php:313
+msgid ""
+"Enter the social links and sort to active and display according to sequence "
+"in header."
+msgstr ""
+"Entre as ligações sociais e tipo de ativo e exibir de acordo com a seqüência "
+"no cabeçalho."
+
+#: includes/sample/sample-config.php:340
+msgid "Font Options"
+msgstr "Opções de Fonte"
+
+#: includes/sample/sample-config.php:345
+msgid "Body Font"
+msgstr "corpo Font"
+
+#: includes/sample/sample-config.php:354
+msgid "Please Enter Body Font."
+msgstr "Por favor, entrar no corpo da fonte."
+
+#: includes/sample/sample-config.php:362
+msgid "Heading Font"
+msgstr "A posição da fonte"
+
+#: includes/sample/sample-config.php:371
+msgid "Please Enter Heading Font"
+msgstr "Por favor Entre Rubrica Font"
+
+#: includes/sample/sample-config.php:379
+msgid "Metatext date Font"
+msgstr "Data metatexto Font"
+
+#: includes/sample/sample-config.php:388
+msgid "Please Enter Metatext date Font"
+msgstr "Por favor Entre data metatexto Font"
+
+#: includes/sample/sample-config.php:397
+msgid "Footer Options"
+msgstr "Opções de Rodapé"
+
+#: includes/sample/sample-config.php:398
+msgid "<p class=\"description\">These are the options for the footer.</p>"
+msgstr "<p class=\"description\">Estas são as opções para o rodapé.</ p>"
+
+#: includes/sample/sample-config.php:403
+msgid "Footer Copyright Text"
+msgstr "Rodapé Texto copyright"
+
+#: includes/sample/sample-config.php:404
+msgid " Enter Copyright Text"
+msgstr "Digite Direitos de autor do texto"
+
+#: includes/sample/sample-config.php:405
+msgid "All Rights Reserved"
+msgstr "Todos os direitos reservados"
+
+#: includes/sample/sample-config.php:412
+msgid "Facebook URL to link your social bar's facebook icon."
+msgstr "Facebook URL para conectar ícone facebook do seu bar social."
+
+#: includes/sample/sample-config.php:413
+msgid "Enter your facebook URL for your theme footer."
+msgstr "Digite o seu URL facebook para seu tema rodapé."
+
+#: includes/sample/sample-config.php:420
+msgid "Twitter URL to link your social bar's twitter icon."
+msgstr "Twitter URL para conectar ícone do twitter do seu bar social."
+
+#: includes/sample/sample-config.php:421
+msgid "Enter your twitter URL for your theme footer."
+msgstr "Digite o seu URL do twitter para o seu tema de rodapé."
+
+#: includes/sample/sample-config.php:428
+msgid "Pinterest URL to link your social bar's Pinterest icon."
+msgstr "Pinterest URL para conectar ícone Pinterest do seu bar social."
+
+#: includes/sample/sample-config.php:429
+msgid "Enter your Pinterest URL for your theme footer."
+msgstr "Digite seu Pinterest URL para o seu tema de rodapé."
+
+#: includes/sample/sample-config.php:436
+msgid "Google+ URL to link your social bar's googleplus icon."
+msgstr "Google+ URL para conectar ícone googleplus do seu bar social."
+
+#: includes/sample/sample-config.php:437
+msgid "Enter your googleplus URL for your theme footer."
+msgstr "Digite o seu URL googleplus para seu tema rodapé."
+
+#: includes/sample/sample-config.php:443
+msgid "Youtube"
+msgstr "Youtube"
+
+#: includes/sample/sample-config.php:444
+msgid "Youtube URL to link your social bar's youtube icon."
+msgstr "Youtube URL para conectar ícone youtube do seu bar social."
+
+#: includes/sample/sample-config.php:445
+msgid "Enter your Youtube URL for your theme footer."
+msgstr "Digite o seu URL Youtube para o seu tema de rodapé."
+
+#: includes/sample/sample-config.php:452
+msgid "Instagram"
+msgstr "Instagram"
+
+#: includes/sample/sample-config.php:453
+msgid "Instagram URL to link your social bar's Instagram icon."
+msgstr "Instagram URL para conectar ícone Instagram do seu bar social."
+
+#: includes/sample/sample-config.php:454
+msgid "Enter your Instagram URL for your theme footer."
+msgstr "Digite seu Instagram URL para o seu tema de rodapé."
+
+#: includes/sample/sample-config.php:461
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: includes/sample/sample-config.php:462
+msgid "Vimeo URL to link your social bar's Vimeo icon."
+msgstr "Vimeo URL para conectar ícone Vimeo do seu bar social."
+
+#: includes/sample/sample-config.php:463
+msgid "Enter your Vimeo URL for your theme footer."
+msgstr "Digite o seu URL Vimeo para o tema rodapé."
+
+#: includes/sample/sample-config.php:469
+msgid "Rss"
+msgstr "rss"
+
+#: includes/sample/sample-config.php:470
+msgid "Rss URL to link your  Rss icon."
+msgstr "Rss URL para conectar o seu ícone de RSS."
+
+#: includes/sample/sample-config.php:471
+msgid "Enter your Rss URL for you theme footer."
+msgstr "Digite o seu URL Rss para você tema rodapé."
+
+#: includes/sample/sample-config.php:480
+msgid ""
+"Enter the social links and sort to active and display according to sequence "
+"in footer."
+msgstr ""
+"Entre as ligações sociais e tipo de ativo e exibir de acordo com a seqüência "
+"em rodapé."
+
+#: includes/sample/sample-config.php:507
+msgid "Footer Layout"
+msgstr "layout de Rodapé"
+
+#: includes/sample/sample-config.php:508
+msgid "Select the footer layout"
+msgstr "Selecione o layout de rodapé"
+
+#: includes/sample/sample-config.php:522
+msgid "Theme Color Options"
+msgstr "Opções tema de cor"
+
+#: includes/sample/sample-config.php:528 includes/sample/sample-config.php:563
+msgid "Page Layout"
+msgstr "layout da Página"
+
+#: includes/sample/sample-config.php:529 includes/sample/sample-config.php:564
+msgid "Select the page layout type"
+msgstr "Selecione o tipo de layout de página"
+
+#: includes/sample/sample-config.php:531
+msgid "Pre-Defined Color Schemes"
+msgstr "Esquemas de cores pré-definidas"
+
+#: includes/sample/sample-config.php:532
+msgid "Custom Color"
+msgstr "Cor Personalizada"
+
+#: includes/sample/sample-config.php:540
+msgid "Theme Color Scheme"
+msgstr "Esquema de cores Tema"
+
+#: includes/sample/sample-config.php:541
+msgid "Select your themes alternative color scheme."
+msgstr "Selecione seus temas esquema de cor alternativa."
+
+#: includes/sample/sample-config.php:549
+msgid "Custom Theme Color"
+msgstr "Tema Personalizado Cor"
+
+#: includes/sample/sample-config.php:550
+msgid "Pick a color for the template."
+msgstr "Escolha uma cor para o modelo."
+
+#: includes/sample/sample-config.php:557
+msgid "Layout Options"
+msgstr "Opções de layout"
+
+#: includes/sample/sample-config.php:575
+msgid "Repeatable Background Images"
+msgstr "Repetitivo Imagens de Fundo"
+
+#: includes/sample/sample-config.php:576
+msgid "Select image to set in background."
+msgstr "Selecione uma imagem para colocar em plano de fundo."
+
+#: includes/sample/sample-config.php:601
+msgid "Upload Repeatable Background Image"
+msgstr "Carregar Repetitivo imagem de fundo"
+
+#: includes/sample/sample-config.php:609
+msgid "Upload Full Screen Background Image"
+msgstr "Carregar completa imagem de fundo da tela"
+
+#: includes/sample/sample-config.php:616
+msgid "Calendar Options"
+msgstr "Opções de calendário"
+
+#: includes/sample/sample-config.php:621
+msgid "Calendar Month Name"
+msgstr "Calendário Nome do Mês"
+
+#: includes/sample/sample-config.php:622
+msgid ""
+"Insert month name in local language by comma seperated to display on event "
+"calender like: January,February,March,April,May,June,July,August,September,"
+"October,November,December"
+msgstr ""
+"Insira nome do mês no idioma local por vírgula separados para exibir no "
+"calendário de eventos como: Janeiro, Fevereiro, Março, Abril, Maio, Junho, "
+"Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+
+#: includes/sample/sample-config.php:627
+msgid "Calendar Month Name Short"
+msgstr "Calendário Mês Nome Curto"
+
+#: includes/sample/sample-config.php:628
+msgid ""
+"Insert month name short in local language by comma seperated to display on "
+"event calender like: Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+msgstr ""
+"Insira nome do mês curto em língua local por vírgula separados para exibir "
+"no calendário de eventos do tipo: janeiro, fevereiro, março, abril, maio, "
+"junho, julho, agosto, setembro, outubro, novembro, dezembro"
+
+#: includes/sample/sample-config.php:633
+msgid "Calendar Day Name"
+msgstr "Nome Calendário Dia"
+
+#: includes/sample/sample-config.php:634
+msgid ""
+"Insert day name in local language by comma seperated to display on event "
+"calender like: Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
+msgstr ""
+"Insira nome do dia no idioma local por vírgula separados para exibir no "
+"calendário de eventos como: Domingo, Segunda, Terça, Quarta, Quinta, Sexta, "
+"Sábado"
+
+#: includes/sample/sample-config.php:639
+msgid "Calendar Day Name Short"
+msgstr "Calendário Dia Nome Curto"
+
+#: includes/sample/sample-config.php:640
+msgid ""
+"Insert day name short in local language by comma seperated to display on "
+"event calender like: Sun,Mon,Tue,Wed,Thu,Fri,Sat"
+msgstr ""
+"Insira o nome de dia curto no idioma local por vírgula separados para exibir "
+"no evento do calendário, como: Dom, Seg, Ter, Qua, Qui, Sex, Sáb"
+
+#: includes/sample/sample-config.php:645
+msgid "Show WP Events"
+msgstr "Mostrar WP Eventos"
+
+#: includes/sample/sample-config.php:646
+msgid "Check if you wants to show WP Events in Calendar."
+msgstr "Verifique se você quer mostrar Eventos WP em Calendário."
+
+#: includes/sample/sample-config.php:652
+msgid "Google Calendar Feed URL"
+msgstr "URL do Google Calendar alimentação"
+
+#: includes/sample/sample-config.php:653
+msgid "Enter Google Feed URL for google events in Calendar."
+msgstr "Digite a URL de alimentação Google para eventos google em Calendário."
+
+#: includes/sample/sample-config.php:659
+msgid "Custom CSS/JS"
+msgstr "Custom CSS/JS"
+
+#: includes/sample/sample-config.php:665
+msgid "CSS Code"
+msgstr "Código CSS"
+
+#: includes/sample/sample-config.php:666
+msgid "Paste your CSS code here."
+msgstr "Cole o código CSS aqui."
+
+#: includes/sample/sample-config.php:676
+msgid "JS Code"
+msgstr "Código JS"
+
+#: includes/sample/sample-config.php:677
+msgid "Paste your JS code here."
+msgstr "Cole o código JS aqui."
+
+#: includes/sample/sample-config.php:687
+msgid "Import and Export your Theme Framework settings from file, text or URL."
+msgstr ""
+"Configurações de seu tema Framework Importação e Exportação de arquivos, "
+"texto ou URL."
+
+#: includes/sample/sample-config.php:693
+msgid "Import Export"
+msgstr "Import Export"
+
+#: includes/sample/sample-config.php:694
+msgid "Save and restore your Theme options"
+msgstr "Salvar e restaurar as suas opções temáticas"
+
+#: includes/sample/sample-config.php:736
+msgid "IMIC Options"
+msgstr "Opções IMIC"
+
+#: includes/sample/sample-config.php:818
+#, php-format
+msgid ""
+"<p>Did you know that we sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong></p>"
+msgstr ""
+"<p> Você sabia que define uma variável global para você? Para acessar "
+"qualquer um dos seus opções guardadas a partir do seu código, você pode usar "
+"a sua variável global: $ <strong>%1$s</ strong></ p>"
+
+#: mail/contact.php:16
+msgid "You must enter your name."
+msgstr "Você deve digitar o seu nome."
+
+#: mail/contact.php:19
+msgid "You must enter email address."
+msgstr "Você deve digitar o endereço de e-mail."
+
+#: mail/contact.php:22
+msgid "You must enter a valid email address."
+msgstr "Você deve digitar um e-mail válido."
+
+#: mail/contact.php:47
+msgid "You have been contacted by "
+msgstr "Você tem sido contactado por"
+
+#: mail/contact.php:47
+msgid " their additional message is as follows."
+msgstr "sua mensagem adicional é como se segue."
+
+#: mail/contact.php:50
+msgid "You can contact "
+msgstr "Você pode entrar em contato"
+
+#: mail/contact.php:50
+msgid " via email, "
+msgstr "via e-mail,"
+
+#: mail/contact.php:60
+msgid "Email Sent Successfully."
+msgstr "E-mail enviado com sucesso."
+
+#: mail/contact.php:61
+msgid "Thank you "
+msgstr "obrigado"
+
+#: mail/contact.php:61
+msgid "your message has been submitted to us."
+msgstr "sua mensagem foi enviado a nós."
+
+#: mail/contact.php:64
+msgid "ERROR!"
+msgstr "ERRO!"
+
+#: woocommerce/single-product-reviews.php:21
+msgid "Reviews"
+msgstr "Comentários"
+
+#: woocommerce/single-product-reviews.php:37
+msgid "There are no reviews yet."
+msgstr "Não há comentários ainda."
+
+#: woocommerce/single-product-reviews.php:46
+msgid "Add a review"
+msgstr "Adicione uma crítica"
+
+#: woocommerce/single-product-reviews.php:46
+msgid "Be the first to review"
+msgstr "Seja o primeiro a comentar"
+
+#: woocommerce/single-product-reviews.php:47
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Deixe uma resposta para %s"
+
+#: woocommerce/single-product-reviews.php:51
+msgid "Name"
+msgstr "nome"
+
+#: woocommerce/single-product-reviews.php:61
+msgid "Your Rating"
+msgstr "sua classificação"
+
+#: woocommerce/single-product-reviews.php:62
+msgid "Rate&hellip;"
+msgstr "Taxa de ..."
+
+#: woocommerce/single-product-reviews.php:63
+msgid "Perfect"
+msgstr "perfeito"
+
+#: woocommerce/single-product-reviews.php:64
+msgid "Good"
+msgstr "bom"
+
+#: woocommerce/single-product-reviews.php:65
+msgid "Average"
+msgstr "média"
+
+#: woocommerce/single-product-reviews.php:66
+msgid "Not that bad"
+msgstr "Não é tão ruim"
+
+#: woocommerce/single-product-reviews.php:67
+msgid "Very Poor"
+msgstr "muito pobre"
+
+#: woocommerce/single-product-reviews.php:70
+msgid "Your Review"
+msgstr "O seu comentário"
+
+#: woocommerce/single-product-reviews.php:76
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+"Somente logado clientes que compraram este produto pode deixar um comentário."
+
+#: woocommerce/cart/cart-empty.php:12
+msgid "Your cart is currently empty."
+msgstr "O carrinho está vazio no momento."
+
+#: woocommerce/cart/cart-empty.php:14
+msgid "Return To Shop"
+msgstr "Voltar à loja"
+
+#: woocommerce/cart/cart-shipping.php:16
+#, php-format
+msgid "Shipping #%d"
+msgstr "Expedição #%d"
+
+#: woocommerce/cart/cart-shipping.php:18
+msgid "Shipping and Handling"
+msgstr "Envio e manipulação"
+
+#: woocommerce/cart/cart-shipping.php:45
+msgid "Please use the shipping calculator to see available shipping methods."
+msgstr ""
+"Utilize a calculadora do transporte para ver os métodos de envio disponíveis."
+
+#: woocommerce/cart/cart-shipping.php:47
+msgid ""
+"Please continue to the checkout and enter your full address to see if there "
+"are any available shipping methods."
+msgstr ""
+"Por favor, continuem o check-out e digite o seu endereço completo para ver "
+"se existem métodos de envio disponíveis."
+
+#: woocommerce/cart/cart-shipping.php:49
+msgid "Please fill in your details to see available shipping methods."
+msgstr ""
+"Por favor, preencha os seus dados para ver os métodos de envio disponíveis."
+
+#: woocommerce/cart/cart-shipping.php:54 woocommerce/cart/cart-shipping.php:58
+msgid ""
+"There doesn&lsquo;t seem to be any available shipping methods. Please double "
+"check your address, or contact us if you need any help."
+msgstr ""
+"Não parece haver qualquer métodos de envio disponíveis. Por favor, verifique "
+"o seu endereço, ou entre em contato conosco se você precisar de alguma ajuda."
+
+#: woocommerce/cart/cart-shipping.php:69
+msgid "Shipping"
+msgstr "expedição"
+
+#: woocommerce/cart/cart-totals.php:13
+msgid "Cart Totals"
+msgstr "Compras Totais"
+
+#: woocommerce/cart/cart-totals.php:16
+#: woocommerce/checkout/review-order.php:21
+msgid "Cart Subtotal"
+msgstr "carrinho Subtotal"
+
+#: woocommerce/cart/cart-totals.php:59
+#: woocommerce/checkout/review-order.php:64
+msgid "Order Total"
+msgstr "Order Total"
+
+#: woocommerce/cart/cart-totals.php:67
+#, php-format
+msgid " (taxes estimated for %s)"
+msgstr "(impostos estimada para% s)"
+
+#: woocommerce/cart/cart-totals.php:69
+#, php-format
+msgid ""
+"Note: Shipping and taxes are estimated%s and will be updated during checkout "
+"based on your billing and shipping information."
+msgstr ""
+"Nota: O envio e impostos são estimados%s e será atualizado durante o "
+"checkout com base no seu faturamento e informações de remessa."
+
+#: woocommerce/cart/cart.php:20 woocommerce/checkout/form-pay.php:16
+#: woocommerce/checkout/review-order.php:15
+#: woocommerce/emails/admin-new-order.php:17
+#: woocommerce/emails/customer-completed-order.php:17
+#: woocommerce/emails/customer-invoice.php:19
+#: woocommerce/emails/customer-note.php:19
+#: woocommerce/emails/customer-processing-order.php:17
+#: woocommerce/order/order-details.php:17
+msgid "Product"
+msgstr "produto"
+
+#: woocommerce/cart/cart.php:21 woocommerce/emails/admin-new-order.php:19
+#: woocommerce/emails/customer-completed-order.php:19
+#: woocommerce/emails/customer-invoice.php:21
+#: woocommerce/emails/customer-note.php:21
+#: woocommerce/emails/customer-processing-order.php:19
+msgid "Price"
+msgstr "preço"
+
+#: woocommerce/cart/cart.php:22 woocommerce/emails/admin-new-order.php:18
+#: woocommerce/emails/customer-completed-order.php:18
+#: woocommerce/emails/customer-invoice.php:20
+#: woocommerce/emails/customer-note.php:20
+#: woocommerce/emails/customer-processing-order.php:18
+msgid "Quantity"
+msgstr "quantidade"
+
+#: woocommerce/cart/cart.php:23 woocommerce/checkout/review-order.php:16
+#: woocommerce/myaccount/my-orders.php:28
+#: woocommerce/order/order-details.php:18
+msgid "Total"
+msgstr "total"
+
+#: woocommerce/cart/cart.php:37
+msgid "Remove this item"
+msgstr "Remover este item"
+
+#: woocommerce/cart/cart.php:59
+msgid "Available on backorder"
+msgstr "Disponível em ordem pendente"
+
+#: woocommerce/cart/cart.php:96
+msgid "Coupon"
+msgstr "cupom"
+
+#: woocommerce/cart/cart.php:96 woocommerce/checkout/form-coupon.php:20
+msgid "Coupon code"
+msgstr "código do cupom"
+
+#: woocommerce/cart/cart.php:96 woocommerce/checkout/form-coupon.php:23
+msgid "Apply Coupon"
+msgstr "aplicar Cupom"
+
+#: woocommerce/cart/cart.php:100
+msgid "Update Cart"
+msgstr "Atualização carrinho"
+
+#: woocommerce/cart/cart.php:100
+msgid "Proceed to Checkout"
+msgstr "Prossiga para Caixa"
+
+#: woocommerce/cart/cross-sells.php:27
+msgid "You may be interested in&hellip;"
+msgstr "Você pode estar interessado em ..."
+
+#: woocommerce/cart/mini-cart.php:38
+msgid "No products in the cart."
+msgstr "Não há produtos no carrinho."
+
+#: woocommerce/cart/mini-cart.php:42
+msgid "Subtotal"
+msgstr "subtotal"
+
+#: woocommerce/cart/mini-cart.php:45
+msgid "View Cart"
+msgstr "Ver carrinho"
+
+#: woocommerce/cart/mini-cart.php:46
+msgid "Checkout"
+msgstr "checkout"
+
+#: woocommerce/cart/shipping-calculator.php:16
+msgid "Calculate Shipping"
+msgstr "calcular frete"
+
+#: woocommerce/cart/shipping-calculator.php:20
+msgid "Select a country&hellip;"
+msgstr "Selecione um país ..."
+
+#: woocommerce/cart/shipping-calculator.php:34
+#: woocommerce/cart/shipping-calculator.php:38
+#: woocommerce/cart/shipping-calculator.php:48
+msgid "State / county"
+msgstr "Estado / município"
+
+#: woocommerce/cart/shipping-calculator.php:39
+msgid "Select a state&hellip;"
+msgstr "Selecione um estado ..."
+
+#: woocommerce/cart/shipping-calculator.php:54
+msgid "City"
+msgstr "City"
+
+#: woocommerce/cart/shipping-calculator.php:59
+msgid "Postcode / Zip"
+msgstr "Código Postal / Zip"
+
+#: woocommerce/cart/shipping-calculator.php:62
+msgid "Update Totals"
+msgstr "atualizar Totais"
+
+#: woocommerce/checkout/cart-errors.php:12
+msgid ""
+"There are some issues with the items in your cart (shown above). Please go "
+"back to the cart page and resolve these issues before checking out."
+msgstr ""
+"Existem alguns problemas com os itens no seu carrinho (mostrado acima). Por "
+"favor, volte para a página de compras e resolver esses problemas antes de "
+"checarem."
+
+#: woocommerce/checkout/cart-errors.php:14
+msgid "Return To Cart"
+msgstr "Retornar ao carrinho"
+
+#: woocommerce/checkout/form-billing.php:13
+msgid "Billing &amp; Shipping"
+msgstr "Billing & expedição"
+
+#: woocommerce/checkout/form-billing.php:15
+msgid "Billing Details"
+msgstr "Detalhes de faturamento"
+
+#: woocommerce/checkout/form-billing.php:25
+msgid "Create an account?"
+msgstr "Criar uma conta?"
+
+#: woocommerce/checkout/form-billing.php:31
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr ""
+"Criar uma conta digitando as informações abaixo. Se você é um cliente antigo "
+"identifique-se no topo da página."
+
+#: woocommerce/checkout/form-checkout.php:15
+msgid "You must be logged in to checkout."
+msgstr "Você precisa estar logado para checkout."
+
+#: woocommerce/checkout/form-checkout.php:32
+msgid "Your order"
+msgstr "seu pedido"
+
+#: woocommerce/checkout/form-coupon.php:14
+msgid "Have a coupon?"
+msgstr "Tenha um cupom?"
+
+#: woocommerce/checkout/form-coupon.php:15
+msgid "Click here to enter your code"
+msgstr "Clique aqui para introduzir o seu código"
+
+#: woocommerce/checkout/form-login.php:11
+msgid "Returning customer?"
+msgstr "Retornando ao cliente?"
+
+#: woocommerce/checkout/form-login.php:12
+msgid "Click here to login"
+msgstr "Clique aqui para acessar"
+
+#: woocommerce/checkout/form-login.php:18
+msgid ""
+"If you have shopped with us before, please enter your details in the boxes "
+"below. If you are a new customer please proceed to the Billing &amp; "
+"Shipping section."
+msgstr ""
+"Se você comprou com a gente antes, por favor, informe seus dados nos campos "
+"abaixo. Se você é um cliente novo, por favor prossiga para o Billing & Seção "
+"Expedição."
+
+#: woocommerce/checkout/form-pay.php:17
+msgid "Qty"
+msgstr "Qt"
+
+#: woocommerce/checkout/form-pay.php:18
+msgid "Totals"
+msgstr "Totais"
+
+#: woocommerce/checkout/form-pay.php:50
+msgid "Payment"
+msgstr "pagamento"
+
+#: woocommerce/checkout/form-pay.php:73
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Desculpe, parece que não existem métodos de pagamento disponíveis para a sua "
+"localização. Entre em contato conosco se você precisar de ajuda ou quiser "
+"fazer arranjos alternativos."
+
+#: woocommerce/checkout/form-pay.php:81
+msgid "Pay for order"
+msgstr "Pagar por ordem"
+
+#: woocommerce/checkout/form-shipping.php:22
+msgid "Ship to a different address?"
+msgstr "Enviar para um endereço diferente?"
+
+#: woocommerce/checkout/form-shipping.php:36
+#: woocommerce/single-product/tabs/additional-information.php:14
+msgid "Additional Information"
+msgstr "Informações adicionais"
+
+#: woocommerce/checkout/review-order.php:125
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Por favor, preencha os seus dados acima para ver os métodos de pagamento "
+"disponíveis."
+
+#: woocommerce/checkout/review-order.php:127
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Desculpe, parece que não existem métodos de pagamento disponíveis para o seu "
+"estado. Entre em contato conosco se você precisar de ajuda ou quiser fazer "
+"arranjos alternativos."
+
+#: woocommerce/checkout/review-order.php:134
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+"Desde que seu navegador não suporta JavaScript, ou ele está desativado, por "
+"favor, certifique-se de clicar nos Atualizar Totais <em> </ em> botão antes "
+"de fazer seu pedido. Você pode ser cobrado mais do que o valor indicado "
+"acima, se você deixar de fazê-lo."
+
+#: woocommerce/checkout/review-order.php:134
+msgid "Update totals"
+msgstr "atualizar totais"
+
+#: woocommerce/checkout/review-order.php:138
+msgid "Place order"
+msgstr "a ordem do lugar"
+
+#: woocommerce/checkout/review-order.php:145
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\">terms &amp; "
+"conditions</a>"
+msgstr ""
+"Eu li e aceito os <a href=\"%s\" target=\"_blank\"> termos e Condições</ a>"
+
+#: woocommerce/checkout/thankyou.php:13
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction."
+msgstr ""
+"Infelizmente, seu pedido não pode ser processado como o banco / mercador de "
+"origem diminuiu sua transação."
+
+#: woocommerce/checkout/thankyou.php:16
+msgid "Please attempt your purchase again or go to your account page."
+msgstr "Por favor, tente sua compra novamente ou ir a página da sua conta."
+
+#: woocommerce/checkout/thankyou.php:18
+msgid "Please attempt your purchase again."
+msgstr "Por favor, tente sua compra novamente."
+
+#: woocommerce/checkout/thankyou.php:21 woocommerce/myaccount/my-orders.php:59
+msgid "Pay"
+msgstr "pagar"
+
+#: woocommerce/checkout/thankyou.php:23
+msgid "My Account"
+msgstr "Minha Conta"
+
+#: woocommerce/checkout/thankyou.php:27 woocommerce/checkout/thankyou.php:53
+msgid "Thank you. Your order has been received."
+msgstr "Obrigado. Seu pedido foi recebido."
+
+#: woocommerce/checkout/thankyou.php:30
+#: woocommerce/emails/customer-completed-order.php:13
+#: woocommerce/emails/customer-invoice.php:15
+#: woocommerce/emails/customer-note.php:15
+#: woocommerce/emails/customer-processing-order.php:13
+msgid "Order:"
+msgstr "ordem:"
+
+#: woocommerce/checkout/thankyou.php:34
+msgid "Date:"
+msgstr "Data:"
+
+#: woocommerce/checkout/thankyou.php:38
+msgid "Total:"
+msgstr "total:"
+
+#: woocommerce/checkout/thankyou.php:43
+msgid "Payment method:"
+msgstr "Método de pagamento:"
+
+#: woocommerce/emails/admin-new-order.php:11
+#: woocommerce/emails/plain/admin-new-order.php:11
+#, php-format
+msgid "You have received an order from %s. Their order is as follows:"
+msgstr "Você recebeu uma ordem de %s. Sua ordem é a seguinte:"
+
+#: woocommerce/emails/admin-new-order.php:13
+#, php-format
+msgid "Order: %s"
+msgstr "Ordem: %s"
+
+#: woocommerce/emails/admin-new-order.php:42
+#: woocommerce/emails/customer-completed-order.php:42
+#: woocommerce/emails/customer-note.php:44
+#: woocommerce/emails/customer-processing-order.php:42
+#: woocommerce/emails/plain/admin-new-order.php:27
+#: woocommerce/order/order-details.php:81
+msgid "Customer details"
+msgstr "Detalhes do cliente"
+
+#: woocommerce/emails/admin-new-order.php:44
+#: woocommerce/emails/customer-completed-order.php:44
+#: woocommerce/emails/customer-note.php:46
+#: woocommerce/emails/customer-processing-order.php:44
+#: woocommerce/emails/plain/admin-new-order.php:29
+#: woocommerce/emails/plain/customer-completed-order.php:28
+#: woocommerce/emails/plain/customer-note.php:32
+#: woocommerce/emails/plain/customer-processing-order.php:28
+#: woocommerce/order/order-details.php:85
+msgid "Email:"
+msgstr "Email:"
+
+#: woocommerce/emails/admin-new-order.php:47
+#: woocommerce/emails/customer-completed-order.php:47
+#: woocommerce/emails/customer-note.php:49
+#: woocommerce/emails/customer-processing-order.php:47
+#: woocommerce/emails/plain/admin-new-order.php:31
+#: woocommerce/emails/plain/customer-completed-order.php:30
+#: woocommerce/emails/plain/customer-note.php:34
+#: woocommerce/emails/plain/customer-processing-order.php:30
+msgid "Tel:"
+msgstr "Tel:"
+
+#: woocommerce/emails/customer-completed-order.php:11
+#: woocommerce/emails/plain/customer-completed-order.php:11
+#, php-format
+msgid ""
+"Hi there. Your recent order on %s has been completed. Your order details are "
+"shown below for your reference:"
+msgstr ""
+"Oi lá. Seu pedido recente sobre %s foi concluída. Seus detalhes de ordem são "
+"mostrados abaixo para sua referência:"
+
+#: woocommerce/emails/customer-invoice.php:12
+#: woocommerce/emails/plain/customer-invoice.php:12
+#, php-format
+msgid ""
+"An order has been created for you on %s. To pay for this order please use "
+"the following link: %s"
+msgstr ""
+"Uma ordem foi criado para você em %s. Para pagar seu pedido, por favor use o "
+"seguinte link: %s"
+
+#: woocommerce/emails/customer-invoice.php:12
+msgid "pay"
+msgstr "pagar"
+
+#: woocommerce/emails/customer-new-account.php:11
+#: woocommerce/emails/plain/customer-new-account.php:11
+#, php-format
+msgid ""
+"Thanks for creating an account on %s. Your username is <strong>%s</strong>."
+msgstr ""
+"Obrigado por criar uma conta no %s. Seu nome de usuário é <strong>%s</ "
+"strong>."
+
+#: woocommerce/emails/customer-new-account.php:13
+#, php-format
+msgid "Your password has been automatically generated: <strong>%s</strong>"
+msgstr "Sua senha foi gerada automaticamente: <strong>%s</ strong>"
+
+#: woocommerce/emails/customer-new-account.php:15
+#: woocommerce/emails/plain/customer-new-account.php:14
+#, php-format
+msgid ""
+"You can access your account area to view your orders and change your "
+"password here: %s."
+msgstr ""
+"Você pode acessar sua área de conta para ver seus pedidos e alterar sua "
+"senha aqui: %s."
+
+#: woocommerce/emails/customer-note.php:11
+#: woocommerce/emails/plain/customer-note.php:11
+msgid "Hello, a note has just been added to your order:"
+msgstr "Olá, a nota acaba de ser adicionado ao seu pedido:"
+
+#: woocommerce/emails/customer-note.php:13
+#: woocommerce/emails/plain/customer-note.php:15
+msgid "For your reference, your order details are shown below."
+msgstr "Para sua referência, os detalhes do pedido são mostradas abaixo."
+
+#: woocommerce/emails/customer-processing-order.php:11
+#: woocommerce/emails/plain/customer-processing-order.php:11
+msgid ""
+"Your order has been received and is now being processed. Your order details "
+"are shown below for your reference:"
+msgstr ""
+"Seu pedido foi recebido e agora está sendo processado. Seus detalhes de "
+"ordem são mostrados abaixo para sua referência:"
+
+#: woocommerce/emails/customer-reset-password.php:11
+#: woocommerce/emails/plain/customer-reset-password.php:11
+msgid "Someone requested that the password be reset for the following account:"
+msgstr "Alguém pediu que a senha ser redefinida para a seguinte conta:"
+
+#: woocommerce/emails/customer-reset-password.php:12
+#: woocommerce/emails/plain/customer-reset-password.php:13
+#, php-format
+msgid "Username: %s"
+msgstr "Nome de usuário: %s"
+
+#: woocommerce/emails/customer-reset-password.php:13
+#: woocommerce/emails/plain/customer-reset-password.php:14
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "Se isso foi um erro, apenas ignore este email e nada acontecerá."
+
+#: woocommerce/emails/customer-reset-password.php:14
+#: woocommerce/emails/plain/customer-reset-password.php:15
+msgid "To reset your password, visit the following address:"
+msgstr "Para redefinir sua senha, visite o seguinte endereço:"
+
+#: woocommerce/emails/customer-reset-password.php:17
+msgid "Click here to reset your password"
+msgstr "Clique aqui para redefinir sua senha"
+
+#: woocommerce/emails/email-addresses.php:13
+#: woocommerce/emails/plain/email-addresses.php:10
+msgid "Billing address"
+msgstr "endereço para cobrança"
+
+#: woocommerce/emails/email-addresses.php:18
+#: woocommerce/emails/plain/email-addresses.php:13
+msgid "Shipping address"
+msgstr "endereço de envio"
+
+#: woocommerce/emails/email-order-items.php:21
+msgid "Product Image"
+msgstr "imagem do Produto"
+
+#: woocommerce/emails/email-order-items.php:36
+#: woocommerce/emails/plain/email-order-items.php:35
+#, php-format
+msgid "Download %d"
+msgstr "Baixe %d"
+
+#: woocommerce/emails/plain/admin-new-order.php:14
+#: woocommerce/emails/plain/customer-completed-order.php:14
+#: woocommerce/emails/plain/customer-invoice.php:15
+#: woocommerce/emails/plain/customer-note.php:18
+#: woocommerce/emails/plain/customer-processing-order.php:14
+#, php-format
+msgid "Order number: %s"
+msgstr "Número de pedido: %s"
+
+#: woocommerce/emails/plain/admin-new-order.php:15
+#, php-format
+msgid "Order link: %s"
+msgstr "Ligação Order: %s"
+
+#: woocommerce/emails/plain/admin-new-order.php:16
+#: woocommerce/emails/plain/customer-completed-order.php:15
+#: woocommerce/emails/plain/customer-invoice.php:16
+#: woocommerce/emails/plain/customer-note.php:19
+#: woocommerce/emails/plain/customer-processing-order.php:15
+#, php-format
+msgid "Order date: %s"
+msgstr "Em ordem: %s"
+
+#: woocommerce/emails/plain/admin-new-order.php:16
+msgid "jS F Y"
+msgstr "jS F Y"
+
+#: woocommerce/emails/plain/customer-completed-order.php:26
+#: woocommerce/emails/plain/customer-note.php:30
+#: woocommerce/emails/plain/customer-processing-order.php:26
+msgid "Your details"
+msgstr "seus detalhes"
+
+#: woocommerce/emails/plain/customer-new-account.php:13
+#, php-format
+msgid "Your password is <strong>%s</strong>."
+msgstr "Sua senha é <strong>%s</ strong>."
+
+#: woocommerce/emails/plain/email-order-items.php:25
+#, php-format
+msgid "Quantity: %s"
+msgstr "Quantidade: %s"
+
+#: woocommerce/emails/plain/email-order-items.php:27
+#, php-format
+msgid "Cost: %s"
+msgstr "Custo: %s"
+
+#: woocommerce/global/breadcrumb.php:43
+msgid "Products tagged &ldquo;"
+msgstr "Produtos com a tag \""
+
+#: woocommerce/global/breadcrumb.php:60 woocommerce/global/breadcrumb.php:119
+msgid "Search results for &ldquo;"
+msgstr "Resultados da busca por \""
+
+#: woocommerce/global/breadcrumb.php:92
+msgid "Error 404"
+msgstr "Erro 404"
+
+#: woocommerce/global/breadcrumb.php:121
+msgid "Posts tagged &ldquo;"
+msgstr "Posts com a tag \""
+
+#: woocommerce/global/breadcrumb.php:124
+msgid "Author:"
+msgstr "Autor:"
+
+#: woocommerce/global/breadcrumb.php:127
+msgid "Page"
+msgstr "página"
+
+#: woocommerce/global/form-login.php:17
+#: woocommerce/myaccount/form-lost-password.php:16
+msgid "Username or email"
+msgstr "Nome de usuário ou e-mail"
+
+#: woocommerce/global/form-login.php:21
+#: woocommerce/myaccount/form-login.php:25
+#: woocommerce/myaccount/form-login.php:60
+msgid "Password"
+msgstr "senha"
+
+#: woocommerce/global/form-login.php:28
+#: woocommerce/myaccount/form-login.php:17
+#: woocommerce/myaccount/form-login.php:31
+msgid "Login"
+msgstr "login"
+
+#: woocommerce/global/form-login.php:31
+#: woocommerce/myaccount/form-login.php:33
+msgid "Remember me"
+msgstr "Lembre-me"
+
+#: woocommerce/global/form-login.php:35
+#: woocommerce/myaccount/form-login.php:37
+msgid "Lost your password?"
+msgstr "Perdeu sua senha?"
+
+#: woocommerce/loop/no-products-found.php:15
+msgid "No products were found matching your selection."
+msgstr "Nenhum produto foi encontrado combinando sua seleção."
+
+#: woocommerce/loop/orderby.php:18
+msgid "Default sorting"
+msgstr "classificação padrão"
+
+#: woocommerce/loop/orderby.php:19
+msgid "Sort by popularity"
+msgstr "Ordenar por popularidade"
+
+#: woocommerce/loop/orderby.php:20
+msgid "Sort by average rating"
+msgstr "Ordenar por classificação média"
+
+#: woocommerce/loop/orderby.php:21
+msgid "Sort by newness"
+msgstr "Ordenar por novidade"
+
+#: woocommerce/loop/orderby.php:22
+msgid "Sort by price: low to high"
+msgstr "Ordenar por preço: menor para maior"
+
+#: woocommerce/loop/orderby.php:23
+msgid "Sort by price: high to low"
+msgstr "Ordenar por preço: maior para menor"
+
+#: woocommerce/loop/result-count.php:24
+msgid "Showing the single result"
+msgstr "Mostrando o único resultado"
+
+#: woocommerce/loop/result-count.php:26
+#, php-format
+msgid "Showing all %d results"
+msgstr "Mostrando todos os d% de resultados"
+
+#: woocommerce/loop/sale-flash.php:13
+#: woocommerce/single-product/sale-flash.php:13
+msgid "Sale!"
+msgstr "Venda!"
+
+#: woocommerce/myaccount/form-add-payment-method.php:36
+msgid ""
+"Sorry, it seems that there are no payment methods which support adding a new "
+"payment method. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Desculpe, parece que não há métodos de pagamento que suportam a adição de um "
+"novo método de pagamento. Entre em contato conosco se você precisar de ajuda "
+"ou quiser fazer arranjos alternativos."
+
+#: woocommerce/myaccount/form-add-payment-method.php:42
+msgid "Add Payment Method"
+msgstr "Adicionar método de pagamento"
+
+#: woocommerce/myaccount/form-change-password.php:15
+#: woocommerce/myaccount/form-lost-password.php:20
+msgid "New password"
+msgstr "Nova senha"
+
+#: woocommerce/myaccount/form-change-password.php:19
+#: woocommerce/myaccount/form-lost-password.php:24
+msgid "Re-enter new password"
+msgstr "Re-digite a nova senha"
+
+#: woocommerce/myaccount/form-change-password.php:23
+#: woocommerce/myaccount/form-lost-password.php:31
+msgid "Save"
+msgstr "salvar"
+
+#: woocommerce/myaccount/form-edit-account.php:15
+msgid "First name"
+msgstr "primeiro nome"
+
+#: woocommerce/myaccount/form-edit-account.php:19
+msgid "Last name"
+msgstr "sobrenome"
+
+#: woocommerce/myaccount/form-edit-account.php:27
+msgid "Password (leave blank to leave unchanged)"
+msgstr "Senha (deixe em branco para deixar inalterado)"
+
+#: woocommerce/myaccount/form-edit-account.php:31
+msgid "Confirm new password"
+msgstr "Confirmar nova senha"
+
+#: woocommerce/myaccount/form-edit-address.php:11
+#: woocommerce/myaccount/my-address.php:15
+#: woocommerce/myaccount/my-address.php:21
+#: woocommerce/order/order-details.php:96
+msgid "Billing Address"
+msgstr "Endereço de Cobrança"
+
+#: woocommerce/myaccount/form-edit-address.php:11
+#: woocommerce/myaccount/my-address.php:16
+#: woocommerce/order/order-details.php:107
+msgid "Shipping Address"
+msgstr "Endereço para envio"
+
+#: woocommerce/myaccount/form-edit-address.php:24
+msgid "Save Address"
+msgstr "Salve Endereço"
+
+#: woocommerce/myaccount/form-login.php:21
+msgid "Username or email address"
+msgstr "Nome de usuário ou endereço de email"
+
+#: woocommerce/myaccount/form-login.php:44
+#: woocommerce/myaccount/form-login.php:70
+msgid "Register"
+msgstr "registrar"
+
+#: woocommerce/myaccount/form-login.php:49
+msgid "Username"
+msgstr "Nome de Usuário"
+
+#: woocommerce/myaccount/form-login.php:65
+msgid "Anti-spam"
+msgstr "Anti-spam"
+
+#: woocommerce/myaccount/form-lost-password.php:15
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Perdeu sua senha? Digite seu nome de usuário ou endereço de email. Você "
+"receberá um link para criar uma nova senha via e-mail."
+
+#: woocommerce/myaccount/form-lost-password.php:18
+msgid "Enter a new password below."
+msgstr "Digite uma nova senha abaixo."
+
+#: woocommerce/myaccount/form-lost-password.php:31
+msgid "Reset Password"
+msgstr "Redefinição de senha"
+
+#: woocommerce/myaccount/my-account.php:15
+#, php-format
+msgid "Hello <strong>%1$s</strong> (not %1$s? <a href=\"%2$s\">Sign out</a>)."
+msgstr "Olá <strong>%1$s</ strong> (não%1$s? <a Href=\"%2$s\"> Sair </ a>)."
+
+#: woocommerce/myaccount/my-account.php:19
+#, php-format
+msgid ""
+"From your account dashboard you can view your recent orders, manage your "
+"shipping and billing addresses and <a href=\"%s\">edit your password and "
+"account details</a>."
+msgstr ""
+"Painel da sua conta você pode ver suas encomendas recentes, gerenciar seus "
+"endereços de entrega e cobrança e <a href=\"%s\"> editar sua senha e conta "
+"detalhes</ a>."
+
+#: woocommerce/myaccount/my-address.php:13
+msgid "My Addresses"
+msgstr "Meus endereços"
+
+#: woocommerce/myaccount/my-address.php:19
+msgid "My Address"
+msgstr "Meu Endereço"
+
+#: woocommerce/myaccount/my-address.php:28
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+"Os seguintes endereços serão utilizados na página de checkout, por padrão."
+
+#: woocommerce/myaccount/my-address.php:35
+msgid "Edit"
+msgstr "editar"
+
+#: woocommerce/myaccount/my-address.php:52
+msgid "You have not set up this type of address yet."
+msgstr "Você não criaram este tipo de endereço."
+
+#: woocommerce/myaccount/my-downloads.php:14
+msgid "Available downloads"
+msgstr "downloads disponíveis"
+
+#: woocommerce/myaccount/my-orders.php:21
+msgid "Recent Orders"
+msgstr "encomendas recentes"
+
+#: woocommerce/myaccount/my-orders.php:25
+msgid "Order"
+msgstr "ordem"
+
+#: woocommerce/myaccount/my-orders.php:26
+msgid "Date"
+msgstr "data"
+
+#: woocommerce/myaccount/my-orders.php:70
+msgid "View"
+msgstr "vista"
+
+#: woocommerce/myaccount/view-order.php:11
+#, php-format
+msgid ""
+"Order <mark class=\"order-number\">%s</mark> was placed on <mark class="
+"\"order-date\">%s</mark> and is currently <mark class=\"order-status\">%s</"
+"mark>."
+msgstr ""
+"Encomendar <mark class=\"order-number\">%s</mark> foi colocado em <mark "
+"class=\"order-date\">%s </ marca> e é atualmente <class marca = \"ordem "
+"status\">%s</ marca>."
+
+#: woocommerce/myaccount/view-order.php:14 woocommerce/order/tracking.php:23
+msgid "Order Updates"
+msgstr "Encomendar Updates"
+
+#: woocommerce/myaccount/view-order.php:20 woocommerce/order/tracking.php:29
+msgid "l jS \\o\\f F Y, h:ia"
+msgstr "l jS \\ o \\ f F Y, h: ia"
+
+#: woocommerce/order/form-tracking.php:13
+msgid ""
+"To track your order please enter your Order ID in the box below and press "
+"return. This was given to you on your receipt and in the confirmation email "
+"you should have received."
+msgstr ""
+"Para acompanhar o seu pedido, por favor digite o seu ID do pedido na caixa "
+"abaixo e pressione enter. Isto foi dado a você no seu recibo e no e-mail de "
+"confirmação que você deve ter recebido."
+
+#: woocommerce/order/form-tracking.php:14
+msgid "Order ID"
+msgstr "ID da encomenda"
+
+#: woocommerce/order/form-tracking.php:14
+msgid "Found in your order confirmation email."
+msgstr "Encontrado em seu e-mail de confirmação do pedido."
+
+#: woocommerce/order/form-tracking.php:15
+msgid "Billing Email"
+msgstr "Billing Email"
+
+#: woocommerce/order/form-tracking.php:15
+msgid "Email you used during checkout."
+msgstr "E-mail utilizado durante o checkout."
+
+#: woocommerce/order/form-tracking.php:17
+msgid "Track"
+msgstr "caminho"
+
+#: woocommerce/order/order-details.php:13
+msgid "Order Details"
+msgstr "Detalhes do pedido"
+
+#: woocommerce/order/order-details.php:55
+#, php-format
+msgid "Download file%s"
+msgstr "Baixe o arquivo% s"
+
+#: woocommerce/order/order-details.php:86
+msgid "Telephone:"
+msgstr "Telefone:"
+
+#: woocommerce/order/order-details.php:100
+#: woocommerce/order/order-details.php:111
+#: woocommerce/single-product/meta.php:17
+msgid "N/A"
+msgstr "N/D"
+
+#: woocommerce/order/tracking.php:14
+#, php-format
+msgid "Order %s which was made %s has the status &ldquo;%s&rdquo;"
+msgstr "Encomendar %s que foi feita %s tem o status de \"%s\""
+
+#: woocommerce/order/tracking.php:14
+msgid "ago"
+msgstr "atrás"
+
+#: woocommerce/order/tracking.php:15
+msgid "and was completed"
+msgstr "e foi concluída"
+
+#: woocommerce/order/tracking.php:15
+msgid " ago"
+msgstr "atrás"
+
+#: woocommerce/single-product/meta.php:17
+msgid "SKU:"
+msgstr "SKU:"
+
+#: woocommerce/single-product/product-attributes.php:23
+msgid "Weight"
+msgstr "peso"
+
+#: woocommerce/single-product/product-attributes.php:29
+msgid "Dimensions"
+msgstr "Dimensões"
+
+#: woocommerce/single-product/rating.php:17
+#, php-format
+msgid "Rated %s out of 5"
+msgstr "Avaliado com %s de 5"
+
+#: woocommerce/single-product/rating.php:19
+#: woocommerce/single-product/review.php:20
+msgid "out of 5"
+msgstr "de 5"
+
+#: woocommerce/single-product/related.php:26
+msgid "Related Products"
+msgstr "produtos relacionados"
+
+#: woocommerce/single-product/review.php:19
+#, php-format
+msgid "Rated %d out of 5"
+msgstr "Avaliado com %d de 5"
+
+#: woocommerce/single-product/review.php:24
+msgid "Your comment is awaiting approval"
+msgstr "Seu comentário está aguardando aprovação"
+
+#: woocommerce/single-product/review.php:30
+msgid "verified owner"
+msgstr "proprietário verificado"
+
+#: woocommerce/single-product/up-sells.php:28
+msgid "You may also like&hellip;"
+msgstr "Você também pode gostar ..."
+
+#: woocommerce/single-product/add-to-cart/variable.php:21
+msgid "Choose an option"
+msgstr "Escolha uma opção"
+
+#: woocommerce/single-product/add-to-cart/variable.php:60
+msgid "Clear selection"
+msgstr "Limpar seleção"
+
+#: woocommerce/single-product/add-to-cart/variable.php:81
+msgid "This product is currently out of stock and unavailable."
+msgstr "Este produto está fora de estoque e indisponíveis."
+
+#: woocommerce/single-product/tabs/description.php:11
+msgid "Product Description"
+msgstr "Descrição do produto"

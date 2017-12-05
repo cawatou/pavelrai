@@ -1,0 +1,99 @@
+<?php
+global $imic_options;
+$show_on_front = get_option('show_on_front');
+ if ((!is_front_page()) || $show_on_front == 'posts'||(!is_page_template('template-home.php')&&!is_page_template('template-h-second.php')&&!is_page_template('template-h-third.php'))) {
+	 echo '</div></div>';
+}
+?>
+<?php $options = get_option('imic_options'); ?>
+<!-- Start Footer -->
+<?php if ( is_active_sidebar( 'footer-sidebar' ) ) : ?>
+<footer class="site-footer">
+	<div class="container">
+		<div class="row">
+			<?php dynamic_sidebar('footer-sidebar'); ?>
+		</div>
+	</div>
+</footer>
+<?php endif; ?>
+<footer class="site-footer-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p>© <?=date(Y)?> Память времени.</p>
+			</div>	
+			<div class="col-md-6 logo_studio">
+				<p>Разработка сайта:</p>
+				<a href="http://aigstudio.ru/"><img src="<?php bloginfo('template_url'); ?>/images/aig_blue.png" alt=""></a>	
+			</div>
+		</div>
+	</div>
+</footer>
+<?php if ($options['enable_backtotop'] == 1) { 
+echo'<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>';
+ } ?>
+</div>
+<!-- End Boxed Body -->
+<?php wp_footer(); ?>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27253784 = new Ya.Metrika({id:27253784,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/27253784" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div id="modal_1" class="modal_window">
+	<span class="modal_close">X</span>
+	<form method="post">
+		<input type="text" id="user_name" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
+		<input type="text" id="user_phone" class="required_filds" placeholder="Введите Ваш телефон" /><br/>
+		<input class="btn btn-primary snd_btn" type="submit" name="submit" value="Подать заявку">
+	</form>
+</div>
+<div id="modal_2" class="modal_window">
+	<span class="modal_close">X</span>
+	<form method="post">
+		<input type="text" id="user_name_2m" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
+		<input type="text" id="user_phone_2m" class="required_filds" placeholder="Введите Ваш телефон" /><br/>
+		<input type="text" id="user_mail_2m" class="required_filds" placeholder="Введите Ваш email" /><br/>
+		<p>Дополнительные пожелания:</p>
+		<textarea id="user_msg_2m" class="required_filds msg_modal"></textarea>
+		<input class="btn btn-primary snd_btn" type="submit" value="Подать заявку">							
+	</form>
+</div>	
+<div id="modal_3" class="modal_window">
+	<span class="modal_close">X</span>
+	<form method="post">
+		<input type="text" id="user_name_3m" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
+		<input type="text" id="user_phone_3m" class="required_filds" placeholder="Введите Ваш телефон или email" /><br/>
+		<input class="btn btn-primary snd_btn" type="submit" name="submit" value="Подать заявку">
+	</form>
+</div>
+<div id="modal_4">
+	<span class="modal_close">X</span>
+	<div class="alert alert-success">Ваша заявка отправлена. <br/>Мы свяжемся с вами в ближайшее время.</div>
+</div>				
+<div id="overlay"></div>
+</body>
+</html>
