@@ -15,8 +15,8 @@ require($_SERVER["DOCUMENT_ROOT"].'/wp-includes/class.phpmailer.php');
 $mail = new PHPMailer();
 $mail->From = 'no-reply@pavelrai.ru';
 $mail->FromName = "no-reply@pavelrai.ru";
-$mail->AddAddress('7pavel7@pavelrai.ru,aim@aiggroup.ru,7pavel7@mail.ru');
-//$mail->AddAddress('aim@aiggroup.ru');
+$mail->AddAddress('7pavel7@pavelrai.ru, 7pavel7@mail.ru, cawatou@gmail.com');
+//$mail->AddAddress('cawatou@gmail.com, dmitriy.a.smirnov@gmail.com');
 $mail->CharSet = "UTF-8";
 $mail->IsHTML(true);
 

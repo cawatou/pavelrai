@@ -23,8 +23,7 @@ $show_on_front = get_option('show_on_front');
 				<p>© <?=date(Y)?> Память времени.</p>
 			</div>	
 			<div class="col-md-6 logo_studio">
-				<p>Разработка сайта:</p>
-				<a href="http://aigstudio.ru/"><img src="<?php bloginfo('template_url'); ?>/images/aig_blue.png" alt=""></a>	
+			
 			</div>
 		</div>
 	</div>
