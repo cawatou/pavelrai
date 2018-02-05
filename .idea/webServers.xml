@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e5b1ad9d-5a01-45f1-ac85-3820ae445076" name="pavelrai (my-vps)" url="http://95.183.10.70/">
+        <fileTransfer host="95.183.10.70" port="22" rootFolder="/var/www/html/pavelrai" accessType="SFTP" password="dfcedff1dfc0dfc6dfd3dfccdfc2dfccdfdadfe6dfeedfecdf99" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
