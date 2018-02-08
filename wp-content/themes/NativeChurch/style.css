@@ -649,9 +649,6 @@ body.boxed .body{
 	width:100%;
 	height:auto;
 	background-color:#ffffff;
-	-webkit-box-shadow:0 0 2px rgba(0,0,0,.2);
-	-moz-box-shadow:0 0 2px rgba(0,0,0,.2);
-	box-shadow:0 0 2px rgba(0,0,0,.2);
 }
 @media (min-width: 1200px) {
 	body.boxed .body .site-header, body.boxed .body .main-menu-wrapper{
@@ -3410,10 +3407,6 @@ p.demo_store{
 	margin: 5px 0 0 0;
 }
 
-.logo {
-	padding-left: 5px;
-}
-
 .main .container {
 	padding-left: 0 !important;
 }
@@ -4005,4 +3998,53 @@ li.product a img {
 
 .plate_wrap_img img {
   
+}
+
+
+/*===================================== 2018 ===========================================*/
+
+.site-header p, .site-header span {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.header_text {
+	margin: 10px 0 0 160px;
+
+}
+
+.header_contacts { margin-top: 10px}
+.callback { margin-top: 22px}
+
+.header_contacts p {
+	margin-top: 5px;
+	font-size: 18px;
+	color: black;
+}
+
+.header_contacts .email {
+	text-decoration-line: underline;
+	text-decoration-style: underline;
+}
+
+.header_contacts .phone {
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+}
+
+.tel {
+	margin-top: 10px;
+	color: black;
+}
+
+.tel .fa {
+	font-size:20px;
+	vertical-align: -4px;
+	margin-right: 5px;
+}
+
+
+.tel:hover {
+	color: blue;
+	text-decoration: underline;
 }
