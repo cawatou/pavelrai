@@ -665,9 +665,9 @@ body.boxed .body{
 	overflow:hidden;
 	position:relative;
 	z-index:333;
-	-webkit-box-shadow:0 2px 0 rgba(0,0,0,.1);
-	-moz-box-shadow:0 2px 0 rgba(0,0,0,.1);
-	box-shadow:0 2px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow:0 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow:0 1px 0 rgba(0,0,0,.1);
+	box-shadow:0 1px 0 rgba(0,0,0,.1);
 }
 .site-header h1.logo{
 	position:absolute;
@@ -740,7 +740,7 @@ body.boxed .body{
 	display:inline-block;
 	text-transform:uppercase;
 	position:relative;
-	padding: 0 17px;
+	padding: 0 30px;
 }
 .navigation > ul > li i{
 	font-size:13px;
@@ -3398,7 +3398,6 @@ p.demo_store{
 }
 
 .question, .tel {
-	padding-left: 15px;
 	font-size: 16px;
 }
 
@@ -4003,18 +4002,47 @@ li.product a img {
 
 /*===================================== 2018 ===========================================*/
 
+.topbar .container {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.main-menu-wrapper .container {
+	padding: 0;
+	width: 100%;
+}
+
+.main-menu-wrapper .col-md-12{
+	width: 100%;
+}
+
+.main-menu-wrapper .navigation  {
+	width: 1080px;
+	background: white;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+}
+
 .site-header p, .site-header span {
 	font-size: 14px;
 	font-weight: 700;
 }
 
 .header_text {
-	margin: 10px 0 0 160px;
-
+	margin: 10px 0 0 140px;
 }
 
 .header_contacts { margin-top: 10px}
-.callback { margin-top: 22px}
+
+.site-header .callback {
+	margin-top: 15px !important;
+	padding: 0 !important;
+}
+
+.site-header .callback a {
+	float: left !important;
+}
 
 .header_contacts p {
 	margin-top: 5px;
@@ -4031,20 +4059,55 @@ li.product a img {
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
 }
-
-.tel {
+.site-header .tel span{
+	font-size: 18px;
+}
+.site-header .tel {
 	margin-top: 10px;
 	color: black;
 }
 
-.tel .fa {
-	font-size:20px;
-	vertical-align: -4px;
+.site-header .tel .fa {
+	font-size:26px;
+	vertical-align: -6px;
 	margin-right: 5px;
 }
 
 
-.tel:hover {
+.site-header .tel:hover {
 	color: blue;
 	text-decoration: underline;
+}
+
+.site-header .email:hover{
+	color: blue;
+	cursor: pointer;
+}
+
+.site-header .cart{
+	color: black;
+	margin-left: 40px;
+	height: 40px;
+	width: 40px;
+	font-size: 26px;
+	display: block;
+}
+
+.site-header .cart .fa{
+	margin: 6px 0 0 5px;
+}
+
+.site-header .cart:hover{
+	color: white;
+	border: 1px solid blue;
+	background-color: blue;
+	border-radius: 40px;
+}
+
+.navigation > ul > li:first-child {
+	padding-left: 5px;
+}
+
+.navigation > ul > li:last-child {
+	padding-right: 5px;
 }

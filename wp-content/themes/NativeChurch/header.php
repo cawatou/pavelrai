@@ -128,6 +128,10 @@ echo $style; ?>>
                                 <i class="fa fa-phone"></i>
                                 <span>Вызов менеджера</span>
                             </a>
+
+                            <a href="/cart" class="cart">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
                         </div>
                         <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a>
                     </div>
