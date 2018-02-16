@@ -160,8 +160,11 @@ echo $style; ?>>
         }
         ?>
     </header>
+
+
     <!-- End Site Header -->
     <?php
+    putRevSlider("main");
     $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
     $flag = imic_cat_count_flag();
     $page_for_posts = get_option('page_for_posts');
