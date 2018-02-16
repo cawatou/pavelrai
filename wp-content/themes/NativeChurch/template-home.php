@@ -11,13 +11,9 @@ get_header();
 			<div class="wrap_cont">  
 				<?php dynamic_sidebar('inner-page-sidebar'); ?>
 				<div class="page_content">
-					<!-- Вывод Контента из админки 
-					============================-->
-					<?php the_content() ?>
-
 					<!-- Вывод каталога популярных памятников ( Теперь выводится Short кодом из Админки)
 					==================================================================================-->					
-					<!--div class="main_products no_marker">
+					<div class="main_products no_marker">
 						<h2>Популярные памятники</h2>
 						<ul class="products">
 							<?php							
@@ -45,44 +41,20 @@ get_header();
 											)
 										);
 										$tax = get_posts($args);
-										print_r($tax);
+										//print_r($tax);
 									?>
 								</a>								
 							</li>			
 							<?php endforeach; ?>
 						</ul>					
-					</div--> 
-					<!-- Вывод новостей 
-					==========================================================================-->					
-					<div class="listing">
-						<a class="news_block" href="/novosti">
-							<h2>Новости</h2>
-						</a>	
-						<?php $posts = get_posts("orderby=date&numberposts=3"); ?> 
-						<?php if ($posts) : ?>
-						<?php foreach ($posts as $post) : setup_postdata ($post); ?>
-						<section id="news_section" class="listing-cont">
-							<ul>
-								<li class="item post news_post">
-										<div class="col-md-4 news_img">
-												<?php the_post_thumbnail('600x400'); ?>
-										</div>
-										<div class="col-md-8">
-											<div class="post-title">
-												<h2><?php the_title(); ?></h2>																								
-											</div>											
-										</div>
-										<?php the_content(); ?>
-
-								</li>			
-					  		</ul>
-						</section> 
-						<?php endforeach; ?>
-						<?php endif; ?>
 					</div>
-				</div>	
+					
+				</div>
 			</div>
 		</div>
 	</div>
-</div>    
+</div>
+<!-- Вывод Контента из админки
+============================-->
+<?php the_content() ?>
 <?php get_footer(); ?>

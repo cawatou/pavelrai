@@ -54,7 +54,7 @@
 
     <link rel="stylesheet" href="/wp-content/themes/NativeChurch/css/jquery.fancybox.css?v=2.1.5" type="text/css"
           media="screen"/>
-
+    <script type='text/javascript' src='/wp-content/themes/NativeChurch/script.js'></script>
 </head>
 <!--// CLOSE HEAD //-->
 <body <?php body_class($bodyClass);
