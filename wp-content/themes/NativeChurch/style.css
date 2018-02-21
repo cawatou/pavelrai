@@ -3829,9 +3829,6 @@ a.product_type_simple {
 	text-align: center;
 	vertical-align:middle;
 }
-.products h3 {
-	text-align: center;
-}
 .product-archive {
 	width: 73% !important;
 	padding: 0 0 0 30px;
@@ -4110,4 +4107,12 @@ li.product a img {
 
 .rev_slider_wrapper {
 	margin-top: 50px !important;
+}
+.main_products h4 {
+	text-transform: none;
+}
+.product_price {
+	color: green;
+	font-weight: 700;
+	float: right;
 }

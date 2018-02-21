@@ -15,8 +15,7 @@ get_header();?>
                     <div class="main_products no_marker">
                         <h2>Популярные памятники</h2>
                         <ul class="products">
-                            <?php
-                            $x = "";
+                            <?$x = 0;
                             $posts = get_posts("post_type=product&numberposts=18&product_cat=popular_memorials");
                             foreach ($posts as $post) :
                                 $x = $x + 1;
@@ -25,11 +24,23 @@ get_header();?>
                                     $x = 0;
                                 } else {
                                     echo '<li class="product">';
-                                } ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail(); ?>
-                                    <h3><?php the_title(); ?></h3>
-                                </a>
+                                }?>
+                                    <h4 href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail(); ?>
+                                        <span><?php the_title(); ?></span>
+                                        <?$tax = get_post_custom( $post->ID );?>
+                                        <span class="product_price"><?=number_format($tax['_price'][0], 0, '', ' ')?> P</span>
+                                        <?$cats = get_the_terms( $post->ID, 'product_cat' );
+                                        
+                                        //echo "<pre>".print_r($tax, 1)."</pre>";
+                                        //echo $post->get_price();
+                                        foreach ($cats as $cat):
+                                            if($cat->name !== 'Популярные памятники'):?>
+                                                <p ><?=$cat->name?></p>
+                                                <?break?>
+                                            <?endif?>    
+                                        <?endforeach?>            
+                                    </span>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
