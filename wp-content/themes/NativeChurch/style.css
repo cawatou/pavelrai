@@ -4116,3 +4116,12 @@ li.product a img {
 	font-weight: 700;
 	float: right;
 }
+
+.product:hover {
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.product:hover img {
+	background: #c0e4eb;
+}
