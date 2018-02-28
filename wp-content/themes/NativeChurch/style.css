@@ -4195,3 +4195,6 @@ li.product a img {
 	padding: 0;
 }
 
+.service a {
+	text-decoration: none !important;
+}
