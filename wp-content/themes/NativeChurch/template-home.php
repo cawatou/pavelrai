@@ -41,6 +41,7 @@ get_header();?>
                                             <?endif?>    
                                         <?endforeach?>            
                                     </span>
+                                    <p class="detail_view">Посмотреть подробнее</p>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
