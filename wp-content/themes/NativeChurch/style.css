@@ -1172,9 +1172,9 @@ html[xmlns] .slides {
 	float:right;
 }
 .notice-bar, .page-header{
-	background:#f8f7f3;
+	font-weight: 700 !important;
 	padding:20px 0;
-	box-shadow:0 2px 0 rgba(0,0,0,.07);
+	box-shadow:0 1px 0 rgba(0,0,0,.07);
 }
 /* Added in v1.2 */
 .notice-bar.latest-sermon{
@@ -1502,7 +1502,7 @@ html[xmlns] .slides {
 ol.breadcrumb{
 	margin:0;
 	background:none;
-	padding: 60px 0 15px 40px;
+	padding: 75px 0 0px 0;
 }
 .header-style2 ol.breadcrumb{
 	padding:40px 0;
@@ -4176,3 +4176,22 @@ li.product a img {
 .radio-inline input:hover {
 	cursor: pointer;
 }
+
+.nav-backed-header {
+	background-color: white !important;
+}
+
+.breadcrumb a, .breadcrumb span {
+	color: #5e5e5e !important;
+}
+
+.breadcrumb .current_item {
+	display: none;
+}
+
+.page-header .container,
+.nav-backed-header .container {
+	margin: 0;
+	padding: 0;
+}
+
