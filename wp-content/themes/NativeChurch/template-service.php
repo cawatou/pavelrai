@@ -23,7 +23,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/zakazat-krematsiyu/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service2.png" alt="">
 						</div>
@@ -38,7 +38,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/vyzov-agenta/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service3.png" alt="">
 						</div>
@@ -53,7 +53,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/gruz-200/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service4.png" alt="">
 						</div>
@@ -68,7 +68,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/katafalk/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service5.png" alt="">
 						</div>
@@ -83,7 +83,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/uhod-za-mogilkoj/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service6.png" alt="">
 						</div>
@@ -98,7 +98,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/bronzovye-bukvy/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service4.png" alt="">
 						</div>
@@ -113,7 +113,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/epitafii/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service5.png" alt="">
 						</div>
@@ -128,7 +128,7 @@ get_header(); ?>
 			</div>
 			<div class="box_staff col-sm-4">
 				<div class="grid-item staff-item">
-					<a href="#" class="grid-item-inner">
+					<a href="/vse-uslugi/individualnyj-zakaz-pamyatnika/" class="grid-item-inner">
 						<div class="media-box">
 							<img src="/wp-content/themes/NativeChurch/images/service/service6.png" alt="">
 						</div>
