@@ -13,9 +13,9 @@
 /* Stylesheets and Google fonts import */
 @import url("css/font-awesome.css");
 @import url("css/animations.css");
-@font-face  { 
-	font-family: pt-sans-narrow;
-	src: url(css/pt-sans-narrow.ttf);
+@font-face  {
+	font-family: circe-regular;
+	src: url(css/circe-regular-Regular.ttf);
 }
 /*  CSS definations for Native Church  */
 /*-------------------------------------------------------------------------------------------*/
@@ -27,7 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	border: 0;
 	font: inherit;
 	font-size: 100%;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -167,7 +167,7 @@ h6{
 	color:#333333;
 	font-weight:400;
 	line-height:1.5em;
-	font-family: pt-sans-narrow !important;
+	font-family: circe-regular !important;
 }
 h1{
 	font-size:36px;
@@ -183,7 +183,7 @@ h4{
 	text-transform:uppercase;
 	font-weight:700;
 	letter-spacing:2px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 }
 h5{
 	font-size:16px;
@@ -215,7 +215,7 @@ blockquote p{
 	white-space:normal;
 	font-style:italic;
 	font-size:20px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 }
 blockquote cite{
 	color:#ffffff;
@@ -249,7 +249,7 @@ p.drop-caps:first-child:first-letter {
 	margin-right: 5px;
 	padding: 4px;
 	font-size: 75px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	line-height: 60px;
 }
 p.drop-caps.secondary:first-child:first-letter {
@@ -350,7 +350,7 @@ address.ico span{
 	padding-left:20px;
 }
 .cursive{
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-style:italic;
 	text-transform:none;
 	font-weight:400;
@@ -367,7 +367,7 @@ address.ico span{
 	-webkit-border-radius:2px;
 	-moz-border-radius:2px;
 	border-radius:2px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 }
 label {
   display: inline-block;
@@ -481,7 +481,7 @@ label {
 .btn{
 	border-width:0;
 	text-decoration:none;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	-webkit-transition:all 0.3s ease 0.2s;
 	-moz-transition:all 0.3s ease 0.2s;
 	-ms-transition:all 0.3s ease 0.2s;
@@ -525,7 +525,7 @@ label {
 	margin-bottom:10px;
 	font-size:12px;
 	font-style:italic;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	color:#999999;
 }
 .meta-data a{
@@ -638,7 +638,7 @@ body{
 	color:#666666;
 	font-size:14px;
 	font-weight:400;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	line-height:20px;
 	background-attachment:fixed;
 }
@@ -685,7 +685,7 @@ body.boxed .body{
 }
 .top-navigation{
 	float:right;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	padding:30px 0 0 0;
 }
 .top-navigation li{
@@ -732,14 +732,13 @@ body.boxed .body{
 	border-radius:0 0 4px 4px;
 	z-index:220;
 	text-align:center;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	position:absolute;
 	top:0;
 	border-bottom: 1px solid #ededed !important;
 }
 .navigation > ul > li{
 	display:inline-block;
-	text-transform:uppercase;
 	position:relative;
 	padding: 0 30px;
 }
@@ -750,7 +749,8 @@ body.boxed .body{
 	padding:0;
 	display:block;
 	text-decoration:none;
-	font: bold 16px pt-sans-narrow;
+	font:18px circe-regular;
+	color: #333333;
 	line-height: 50px;
 }
 .navigation ul > li > a:hover, .navigation ul > li > a.current{
@@ -1093,7 +1093,7 @@ html[xmlns] .slides {
 	width:25px;
 	height:25px;
 	display: inline-block;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-style: normal;
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
@@ -1174,7 +1174,7 @@ html[xmlns] .slides {
 .notice-bar, .page-header{
 	font-weight: 700 !important;
 	padding:20px 0;
-	box-shadow:0 1px 0 rgba(0,0,0,.07);
+	/*box-shadow:0 1px 0 rgba(0,0,0,.07);*/
 }
 /* Added in v1.2 */
 .notice-bar.latest-sermon{
@@ -1193,7 +1193,7 @@ html[xmlns] .slides {
 	margin-top:4px;
 }
 .notice-bar-title strong{
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-size:16px;
 	color:#333;
 	text-transform:uppercase;
@@ -1211,7 +1211,7 @@ html[xmlns] .slides {
 }
 .timer-col #days, .timer-col #hours, .timer-col #minutes, .timer-col #seconds{
 	display:inline-block;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-size:18px;
 	padding:5px 10px;
 }
@@ -1302,14 +1302,14 @@ html[xmlns] .slides {
 }
 .event-date{
 	width:100%;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	text-transform:uppercase;
 	color:#333333;
 	text-align:center;
 	padding:5px 0 0 0;
 }
 .event-date .date{
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-size:34px;
 	font-style:normal;
 	font-weight:700;
@@ -1352,7 +1352,7 @@ html[xmlns] .slides {
 	vertical-align:middle;
 }
 .event-item .event-detail h4{
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	text-transform:none;
 	font-weight:400;
 	letter-spacing:0;
@@ -1417,7 +1417,7 @@ html[xmlns] .slides {
 .featured-sermon .date{
 	text-transform:uppercase;
 	font-size:12px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-weight:700;
 	margin-bottom:5px;
 	display:block;
@@ -1450,15 +1450,17 @@ html[xmlns] .slides {
 	box-shadow:0 -2px 0 rgba(0,0,0,.07);
 }
 .site-footer-bottom{
-	background-color:#eceae4;
+	border-top: 1px solid #ededed;
 	padding:20px 0;
 	font-size:12px;
-	font-family:pt-sans-narrow;
+	font-family:circe-regular;
 	color:#999999;
 }
 .site-footer-bottom p{
 	margin-bottom:0;
-	font-size:12px;
+	font-size: 18px;
+	color: #333;
+	margin-left: -35px;
 }
 .site-footer-bottom .social-icons{
 	text-align:right;
@@ -1493,7 +1495,7 @@ html[xmlns] .slides {
 	color:#ffffff;
 	margin-bottom:0;
 	line-height:1em;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 }
 .page-header p{
 	color:#d8d6d1;
@@ -1718,7 +1720,7 @@ ol.breadcrumb > .active{
 }
 .timeline > li > .timeline-badge span{
 	font-size:14px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	display:block;
 	line-height:16px;
 }
@@ -1855,7 +1857,7 @@ ol.breadcrumb > .active{
 	text-align:center;
 	color:#fff;
 	text-transform:uppercase;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-weight:700;
 	float:right;
 }
@@ -1876,7 +1878,7 @@ ol.breadcrumb > .active{
 	line-height:8px;
 }
 .cause-item .progress-label{
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	margin-bottom:5px;
 }
 .cause-item .progress-label span{
@@ -2590,7 +2592,7 @@ span.progress-bar-tooltip:after {
 	color:#999999;
 	font-size:15px;
 	margin-top:10px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	font-style:italic
 }
 .counters .timer{
@@ -2719,7 +2721,7 @@ ol.breadcrumb > .current_item{
 .widget_twentyfourteen_ephemera .widget-title:before {
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font: normal 16px/1 pt-sans-narrow;
+	font: normal 16px/1 circe-regular;
 	text-decoration: inherit;
 	vertical-align: text-bottom;
 }
@@ -2738,7 +2740,7 @@ p.demo_store{
 	border:0;
 }
 .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button, .widget input[type="button"], .widget input[type="reset"], .widget input[type="submit"] {
-		font-family: pt-sans-narrow;
+		font-family: circe-regular;
 		font-weight: bold;
 		border-radius: 3px;
 		color: #333;
@@ -2941,7 +2943,7 @@ p.demo_store{
 .wpcf7-form .wpcf7-submit{
 	color: #FFF;
 	border-width: 0px;
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 	-webkit-transition: all 0.3s ease 0.1s;
 	transition: all 0.3s ease 0.1s;
 	margin-bottom: 0px;
@@ -3323,7 +3325,7 @@ p.demo_store{
 }
 
 .head_tel {
-	font: 30px pt-sans-narrow;
+	font: 30px circe-regular;
 }
 
 #header_contact a {
@@ -3341,7 +3343,7 @@ p.demo_store{
 }
 
 .page_content h3 {
-	font-family: pt-sans-narrow;	
+	font-family: circe-regular;	
 }
 
 /*.container_content {
@@ -3351,7 +3353,7 @@ p.demo_store{
 .container_content ol,
 .container_content ul{
 	color: #333;
-	font: 16px pt-sans-narrow; 
+	font: 16px circe-regular; 
 	padding-left: 20px;
 }
 
@@ -3360,18 +3362,18 @@ p.demo_store{
 }
 
 .page_content h1 {
-	font: 28px pt-sans-narrow;
+	font: 28px circe-regular;
 	font-weight: 700;
 
 }
 
 .page_content p {
-	font: 16px pt-sans-narrow;
+	font: 16px circe-regular;
 	color: #333;
 }
 
 .p_title {
-	font: 28px pt-sans-narrow !important;
+	font: 28px circe-regular !important;
 	margin-bottom: 10px;
 }
 
@@ -3394,7 +3396,7 @@ p.demo_store{
 }
 
 .p_telephone {
-	font: 35px pt-sans-narrow !important;
+	font: 35px circe-regular !important;
 	margin: 5px 0 0 0;
 }
 
@@ -3525,6 +3527,9 @@ p.demo_store{
 .menu-left_menu-container {
 	width: 25%;
 	float: left;
+	border-right: 1px solid #ededed !important;
+	padding-bottom: 40px;
+	padding-top: 10px;
 }
 
 #nav_menu-2 a {
@@ -3533,7 +3538,7 @@ p.demo_store{
 }
 
 #nav_menu-2 a:hover {
-	color: #29abe2;
+	color: #0071ff;
 }
 
 #nav_menu-2 ul {
@@ -3545,15 +3550,14 @@ p.demo_store{
 }
 
 #menu-left_menu li {
-	font: 20px pt-sans-narrow;
+	font: 18px circe-regular;
 	display: block;
 	width: 94%;
-	padding: 4px 0;
+	padding: 2px 0;
 }
 
 #menu-left_menu a {
-	padding-left: 35px;
-	font-weight: 600;
+	padding-left: 22px;
 	padding-bottom: 2px;
 }
 
@@ -3585,53 +3589,71 @@ p.demo_store{
 }
 
 #menu-left_menu .sub-menu li {
-	font: 18px pt-sans-narrow !important;
-    margin-left: 24px;
+	font: 14px circe-regular !important;
+    margin-left: 14px;
     border: 0 !important;
 }
 
 #menu-left_menu .sub-menu .sub-menu li {
-	font: 16px pt-sans-narrow !important;
+	font: 16px circe-regular !important;
 	margin-left: 10px !important;
 }
 
 #menu-left_menu .sub-menu a {
 	padding-left: 0 !important;
 	background: none !important;
+	margin-left: 10px;
+	padding: 2px 0;
 }
 
-#menu-left_menu .sub-menu a:before {
-	content: "•" ;
-	margin-right: 5px;
-}
+#menu-item-2571 a {background: url(images/granit.png) no-repeat;padding-top: 3px;}
+#menu-item-2571:hover a {background: url(images/granit_a.png) no-repeat;}
 
-#menu-item-2567 a {background: url(images/popular.png) no-repeat;} 
-#menu-item-2571 a {background: url(images/memorial.png) no-repeat;}
-#menu-item-2580 a {background: url(images/cross.png) no-repeat;}
-#menu-item-2581 a {background: url(images/memorial.png) no-repeat;}
-#menu-item-2582 a {background: url(images/material.png) no-repeat;}
-#menu-item-2583 a {background: url(images/fence.png) no-repeat;}
-#menu-item-2588 a {background: url(images/table.png) no-repeat;}
-#menu-item-2589 a {background: url(images/vase.png) no-repeat;}
-#menu-item-2591 a {background: url(images/worker.png) no-repeat;}
-#menu-item-2674 a {background: url(images/hud_off.png) no-repeat;}
-#menu-item-3811 a {background: url(images/sculpture.png) no-repeat;}
-#menu-item-2609 a {background: url(images/advance_service.png) no-repeat;}
-#menu-item-2613 a {background: url(images/info4.png) no-repeat;}
-#menu-item-2578 a {background: url(images/memorial.png) no-repeat;}
-#menu-item-9996 a {background: url(images/memorial.png) no-repeat;}
+#menu-item-2578 a {background: url(images/not-standart.png) no-repeat;padding-top: 3px;}
+#menu-item-2578:hover a {background: url(images/not-standart_a.png) no-repeat;}
 
-#menu-left_menu .sub-menu ul a:before {
-	content: '▪' !important;
-	font-size: 12px;
-}
+#menu-item-9996 a {background: url(images/combo.png) no-repeat;padding-top: 3px;}
+#menu-item-9996:hover a {background: url(images/combo_a.png) no-repeat;}
+
+#menu-item-2580 a {background: url(images/cross_n.png) no-repeat;padding-top: 3px;}
+#menu-item-2580:hover a {background: url(images/cross_a.png) no-repeat;}
+
+#menu-item-2581 a {background: url(images/mramor.png) no-repeat;padding-top: 3px;}
+#menu-item-2581:hover a {background: url(images/mramor_a.png) no-repeat;}
+
+#menu-item-2583 a {background: url(images/fence_n.png) no-repeat;padding-top: 3px;}
+#menu-item-2583:hover a {background: url(images/fence_a.png) no-repeat;}
+
+#menu-item-2588 a {background: url(images/table_n.png) no-repeat;padding-top: 5px;}
+#menu-item-2588:hover a {background: url(images/table_a.png) no-repeat;}
+
+#menu-item-2589 a {background: url(images/vase_n.png) no-repeat;padding-top: 3px;}
+#menu-item-2589:hover a {background: url(images/vase_a.png) no-repeat;}
+
+#menu-item-2591 a {background: url(images/blago.png) no-repeat;padding-top: 3px;}
+#menu-item-2591:hover a {background: url(images/blago_a.png) no-repeat;}
+
+#menu-item-2674 a {background: url(images/hud.png) no-repeat;padding-top: 6px;}
+#menu-item-2674:hover a {background: url(images/hud_a.png) no-repeat;}
+
+#menu-item-3811 a {background: url(images/sculpture_n.png) no-repeat;padding-top: 3px;}
+#menu-item-3811:hover a {background: url(images/sculpture_a.png) no-repeat;}
+
+#menu-item-10499 a {background: url(images/venki.png) no-repeat;padding-top: 2px;}
+#menu-item-10499:hover a {background: url(images/venki_a.png) no-repeat;}
+
+#menu-item-10500 a {background: url(images/grob.png) no-repeat;padding-top: 3px;}
+#menu-item-10500:hover a {background: url(images/grob_a.png) no-repeat;}
+
+#menu-item-10501 a {background: url(images/pet.png) no-repeat;padding-top: 3px;}
+#menu-item-10501:hover a {background: url(images/pet_a.png) no-repeat;}
 
 
 /*============================== ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ =======================*/
 
 .main_products h2 {
 	text-align: center;
-	font: 28px pt-sans-narrow;
+	font: 28px circe-regular;
 	color: #5e5e5e;
 }
 
@@ -3642,7 +3664,7 @@ p.demo_store{
 }
 
 #prev_our_works {
-	font: 28px pt-sans-narrow;
+	font: 28px circe-regular;
 	text-align: center;
 	margin: 10px 0 20px 0;
 	color: #333;
@@ -3664,7 +3686,7 @@ li.our_works {
 	position: relative;
 	width: 22.05%;
 	text-align: center;
-	font: 14px pt-sans-narrow;
+	font: 14px circe-regular;
 }
 
 .our_works a {
@@ -3695,14 +3717,14 @@ li.product h3 {
 }
 
 .news_post ol {
-	font: 16px pt-sans-narrow;
+	font: 16px circe-regular;
 	color: #333;
 }
 
 .news_post ul {
 	padding-left: 20px;
 	color: #333;
-	font: 16px pt-sans-narrow;
+	font: 16px circe-regular;
 }
 
 .news_img {
@@ -3835,7 +3857,7 @@ a.product_type_simple {
 	padding: 0 0 0 30px;
 }
 .product-archive h3 {
-	font-family: pt-sans-narrow;
+	font-family: circe-regular;
 }
 #submit {
 	display: block !important;
@@ -3884,7 +3906,7 @@ li.product a img {
 }
 .add_inf .ttl_p {
 	padding: 0 !important;
-	font: 14px pt-sans-narrow;
+	font: 14px circe-regular;
 	color: #333;
 	margin: 10px 0 5px 0;
 }
@@ -4016,10 +4038,11 @@ li.product a img {
 
 .site-header p, .site-header span {
 	font-size: 14px;
-	font-weight: 700;
+	color: #333;
 }
 
 .header_text {
+	width: 100%;
 	margin: 10px 0 0 140px;
 }
 
@@ -4076,7 +4099,8 @@ li.product a img {
 
 .site-header .cart{
 	color: black;
-	margin-left: 40px;
+	margin-left: 18px;
+	margin-top: 3px;
 	height: 40px;
 	width: 40px;
 	font-size: 26px;
@@ -4197,4 +4221,29 @@ li.product a img {
 
 .service a {
 	text-decoration: none !important;
+}
+
+#nav_menu-2 {
+	border-top: 1px solid #ededed !important;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#content {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ededed !important;
+}
+
+@media (min-width: 1200px){
+	#content .container {
+		width: 1080px;
+	}
+}
+
+.container_content {
+	padding-left: 10px;
+}
+
+.container_content {
+	padding-left: 40px;
 }
