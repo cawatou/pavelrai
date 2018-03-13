@@ -5,7 +5,7 @@
 get_header();
 ?>
 <div class="page_content">
-	<div class="container_content information_page">
+	<div class="container_content about_page">
         <?php the_content() ?>
 
         <div class="staff_block">
@@ -98,23 +98,25 @@ get_header();
             </article>
         </div>
 
-        <p><strong>Сертификаты и награды</strong></p>
-        <table style="height: 552px;" width="770">
-            <tbody>
-            <tr>
-                <td><img class="aligncenter size-large wp-image-10478" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-13.png" alt="New Project (13)" style="float: left;"></td>
-                <td><img class="aligncenter size-large wp-image-10479" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-14.png" alt="New Project (14)"></td>
-                <td><img class="aligncenter size-large wp-image-10480" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-15.png" alt="New Project (15)"></td>
-                <td><img class="aligncenter size-large wp-image-10481" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-16.png" alt="New Project (16)"></td>
-            </tr>
-            <tr>
-                <td><img class="aligncenter  wp-image-10482" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-17.png" alt="New Project (17)" style="float: left;"/td>
-                <td><img class="aligncenter size-large wp-image-10483" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-18.png" alt="New Project (18)"></td>
-                <td><img class="aligncenter size-large wp-image-10484" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-19.png" alt="New Project (19)"></td>
-                <td><img class="aligncenter size-full wp-image-10477" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-20.png" alt="New Project (20)"></td>
-            </tr>
-            </tbody>
-        </table>
+        <div id="sertificate_block">
+            <p><strong>Сертификаты и награды</strong></p>
+            <table style="height: 552px;" width="770">
+                <tbody>
+                <tr>
+                    <td><img class="aligncenter size-large wp-image-10478" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-13.png" alt="New Project (13)" style="float: left;"></td>
+                    <td><img class="aligncenter size-large wp-image-10479" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-14.png" alt="New Project (14)"></td>
+                    <td><img class="aligncenter size-large wp-image-10480" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-15.png" alt="New Project (15)"></td>
+                    <td><img class="aligncenter size-large wp-image-10481" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-16.png" alt="New Project (16)"></td>
+                </tr>
+                <tr>
+                    <td><img class="aligncenter  wp-image-10482" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-17.png" alt="New Project (17)" style="float: left;"/td>
+                    <td><img class="aligncenter size-large wp-image-10483" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-18.png" alt="New Project (18)"></td>
+                    <td><img class="aligncenter size-large wp-image-10484" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-19.png" alt="New Project (19)"></td>
+                    <td><img class="aligncenter size-full wp-image-10477" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-20.png" alt="New Project (20)"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
         <?=q_form()?>
 	</div>	
 </div>

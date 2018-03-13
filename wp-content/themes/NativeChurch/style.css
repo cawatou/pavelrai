@@ -4296,3 +4296,33 @@ li.product a img {
 	font-size: 18px;
 	font-weight: 700;
 }
+
+
+#sertificate_block {
+	margin-top: 40px;
+	float: left;
+}
+
+.about_page #q_form {
+	float: left;
+}
+
+.advice_page button {
+	background: #08c138 !important;
+	width: 250px;
+	height: 40px;
+	margin-bottom: 50px;
+	font-size: 14px;
+}
+
+.advice_page button:hover {
+	background: #08c138 !important;
+}
+
+.advice_page .order_text {
+	font-size: 18px;
+	vertical-align: top;
+	padding-top: 10px;
+	margin-left: 12px;
+	display: inline-block;
+}
