@@ -69,7 +69,7 @@ function imic_staff($atts, $content = null) {
     query_posts(array(
         'post_type' => 'staff',
         'staff-category' => $category,
-        'posts_per_page' => $number,
+        'posts_per_page' => 1,
         'orderby' => $orderby,
         'order' => $sort_order,
     ));

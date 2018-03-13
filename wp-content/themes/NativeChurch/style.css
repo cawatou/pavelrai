@@ -3629,16 +3629,16 @@ p.demo_store{
 #menu-item-2589 a {background: url(images/vase_n.png) no-repeat;padding-top: 3px;}
 #menu-item-2589:hover a {background: url(images/vase_a.png) no-repeat;}
 
-#menu-item-2591 a {background: url(images/blago.png) no-repeat;padding-top: 3px;}
+#menu-item-2591 a {background: url(images/blago.png) no-repeat;padding-top: 1px;}
 #menu-item-2591:hover a {background: url(images/blago_a.png) no-repeat;}
 
-#menu-item-2674 a {background: url(images/hud.png) no-repeat;padding-top: 6px;}
+#menu-item-2674 a {background: url(images/hud.png) no-repeat;padding-top: 3px;}
 #menu-item-2674:hover a {background: url(images/hud_a.png) no-repeat;}
 
-#menu-item-3811 a {background: url(images/sculpture_n.png) no-repeat;padding-top: 3px;}
+#menu-item-3811 a {background: url(images/sculpture_n.png) no-repeat;}
 #menu-item-3811:hover a {background: url(images/sculpture_a.png) no-repeat;}
 
-#menu-item-10499 a {background: url(images/venki.png) no-repeat;padding-top: 2px;}
+#menu-item-10499 a {background: url(images/venki.png) no-repeat;}
 #menu-item-10499:hover a {background: url(images/venki_a.png) no-repeat;}
 
 #menu-item-10500 a {background: url(images/grob.png) no-repeat;padding-top: 3px;}
@@ -3778,10 +3778,9 @@ li.product h3 {
 /*============================== ОФОРМЛЕНИЕ СТРАНИЦЫ ВИДЫ УСТАНОВОК ================*/
 
 .install_type {
-	width: 50%;
 	padding: 2%;
-	float: left;
 	text-align: center;
+	margin-bottom: 50px;
 }
 .install_type a {
 	text-decoration: none;
@@ -3789,9 +3788,7 @@ li.product h3 {
 .install_type a:hover {
 	text-decoration: underline;
 }
-.install_type img {
-	height: 260px;
-}
+
 .price_btn {
 	border-radius: 5px;
 	background: #333;
@@ -4280,4 +4277,22 @@ li.product a img {
 	background: #08c138;
 	width: 350px;
 	height: 40px;
+}
+
+.install_type a:hover p{
+	text-decoration: none !important;
+}
+
+.page_content {
+	margin-top: 40px;
+}
+
+.install_type img {
+	margin-bottom: 30px;
+}
+
+.install_type p {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
 }
