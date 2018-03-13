@@ -1,4 +1,7 @@
+
 jQuery(document).ready(function($){
+    var menu_height = $('.menu-left_menu-container').height();
+    console.log(menu_height);
     compose_pagination();
     
     $(document).find('input[name=pagination_gal]').on('click', function(){
@@ -29,5 +32,6 @@ jQuery(document).ready(function($){
             $('#bwg_container1_0').append(el);
         }
     }
+
 })
 

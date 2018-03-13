@@ -17,10 +17,11 @@ $show_on_front = get_option('show_on_front');
 </footer>
 <?php endif; ?>
 <footer class="site-footer-bottom">
+    <p>© <?=date(Y)?> Память времени.</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<p>© <?=date(Y)?> Память времени.</p>
+
 			</div>	
 			<div class="col-md-6 logo_studio">
 			

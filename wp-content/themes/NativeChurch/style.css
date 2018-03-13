@@ -15,7 +15,7 @@
 @import url("css/animations.css");
 @font-face  {
 	font-family: circe-regular;
-	src: url(css/circe-regular-Regular.ttf);
+	src: url(css/Circe-Regular.ttf);
 }
 /*  CSS definations for Native Church  */
 /*-------------------------------------------------------------------------------------------*/
@@ -1460,7 +1460,6 @@ html[xmlns] .slides {
 	margin-bottom:0;
 	font-size: 18px;
 	color: #333;
-	margin-left: -35px;
 }
 .site-footer-bottom .social-icons{
 	text-align:right;
@@ -2026,7 +2025,6 @@ ol.breadcrumb > .active{
 }
 /* Widgets */
 .widget{
-	margin-bottom:30px;
 	word-wrap: break-word;
 }
 .widget address {
@@ -4227,7 +4225,6 @@ li.product a img {
 #nav_menu-2 {
 	border-top: 1px solid #ededed !important;
 	margin-top: 20px;
-	margin-bottom: 10px;
 }
 
 #content {
