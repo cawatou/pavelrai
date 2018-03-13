@@ -4361,3 +4361,15 @@ li.product a img {
 #spider_popup_loading_0 {
 	display: none !important;
 }
+
+.page-id-10424 .page_content td:last-child {
+	width: 60px !important;
+}
+
+.page-id-10424 .table_blago td:last-child{
+	width: 190px !important;
+}
+
+.page-id-10424 .table_blago td:first-child{
+	width: 260px !important;
+}
