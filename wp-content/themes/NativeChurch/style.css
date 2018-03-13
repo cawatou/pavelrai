@@ -4077,6 +4077,7 @@ li.product a img {
 .site-header .tel {
 	margin-top: 10px;
 	color: black;
+	margin-left: 25px;
 }
 
 .site-header .tel .fa {
@@ -4098,7 +4099,7 @@ li.product a img {
 
 .site-header .cart{
 	color: black;
-	margin-left: 18px;
+	margin-left: 40px;
 	margin-top: 3px;
 	height: 40px;
 	width: 40px;
@@ -4250,12 +4251,33 @@ li.product a img {
 	margin-bottom: 40px;
 }
 
-.staff_block img {
-	border-radius: 100px;
-	height: 150px;
-	width: 150px;
-}
-
 .staff-item {
 	height: 250px;
+}
+
+#q_form {
+	margin-top: 60px;
+	border-top: 1px solid #ededed !important;
+	padding: 70px;
+}
+
+#q_form h2 {
+	margin-bottom: 10px;
+}
+
+#q_form p {
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+
+#q_form input {
+	height: 40px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+
+#q_form button {
+	background: #08c138;
+	width: 350px;
+	height: 40px;
 }

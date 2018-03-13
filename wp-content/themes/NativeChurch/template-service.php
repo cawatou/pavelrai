@@ -144,4 +144,6 @@ get_header(); ?>
 		</article>
 	</div>
 </div>
+<?//echo do_shortcode( '[Best_Wordpress_Gallery id="33" gal_title="На главной"]' );?>
+	
 <?php get_footer(); ?>

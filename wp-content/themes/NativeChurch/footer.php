@@ -1,21 +1,15 @@
-<?php
-global $imic_options;
-$show_on_front = get_option('show_on_front');
- if ((!is_front_page()) || $show_on_front == 'posts'||(!is_page_template('template-home.php')&&!is_page_template('template-h-second.php')&&!is_page_template('template-h-third.php'))) {
-	 echo '</div></div>';
-}
-?>
-<?php $options = get_option('imic_options'); ?>
-<!-- Start Footer -->
-<?php if ( is_active_sidebar( 'footer-sidebar' ) ) : ?>
-<footer class="site-footer">
-	<div class="container">
-		<div class="row">
-			<?php dynamic_sidebar('footer-sidebar'); ?>
-		</div>
+<? // Выводим галерею "Наши работы"
+if($pagename != ''):?>
 	</div>
-</footer>
-<?php endif; ?>
+	</div>
+	</div>
+	<br>
+	<h4>Наши работы</h4>
+	<?=do_shortcode( '[Best_Wordpress_Gallery id="34" gal_title="На главной"]' )?>
+	<br>
+	<br>
+<?endif?>
+
 <footer class="site-footer-bottom">
     <p>© <?=date(Y)?> Память времени.</p>
 	<div class="container">
@@ -29,9 +23,7 @@ $show_on_front = get_option('show_on_front');
 		</div>
 	</div>
 </footer>
-<?php if ($options['enable_backtotop'] == 1) { 
-echo'<a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>';
- } ?>
+
 </div>
 <!-- End Boxed Body -->
 <?php wp_footer(); ?>

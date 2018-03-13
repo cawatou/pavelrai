@@ -118,11 +118,11 @@ echo $style; ?>>
                             <p class="email">7pavelrai@mail.ru</p>
                            
                         </div>
-                        <div class="col-md-4 header_contacts">
+                        <div class="col-md-3 header_contacts">
                             <span>Усурийск</span><br>
                             <p class="phone"> +7 914 711-28-20 </p>
                         </div>
-                        <div class="col-md-4 callback">
+                        <div class="col-md-5 callback">
                            
                             <a class="tel" href="#">
                                 <i class="fa fa-phone"></i>

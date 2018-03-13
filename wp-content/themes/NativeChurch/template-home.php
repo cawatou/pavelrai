@@ -31,15 +31,15 @@ get_header();?>
                                         <?$tax = get_post_custom( $post->ID );?>
                                         <span class="product_price"><?=number_format($tax['_price'][0], 0, '', ' ')?> P</span>
                                         <?$cats = get_the_terms( $post->ID, 'product_cat' );
-                                        
+
                                         //echo "<pre>".print_r($tax, 1)."</pre>";
                                         //echo $post->get_price();
                                         foreach ($cats as $cat):
                                             if($cat->name !== 'Популярные памятники'):?>
                                                 <p ><?=$cat->name?></p>
                                                 <?break?>
-                                            <?endif?>    
-                                        <?endforeach?>            
+                                            <?endif?>
+                                        <?endforeach?>
                                     </span>
                                     <p class="detail_view">Посмотреть подробнее</p>
                                 </li>

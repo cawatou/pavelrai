@@ -15,7 +15,7 @@ get_header();
                     <div class="grid-item staff-item">
                         <div class="grid-item-staff">
                             <div class="media-box">
-                                <img src="http://pavelrai.ru/wp-content/uploads/2014/02/inga.gif" class="attachment-600x400 wp-post-image" alt="inga">						</div>
+                                <img src="/wp-content/themes/NativeChurch/images/face1.png" class="attachment-600x400 wp-post-image" alt="inga">						</div>
                             <div class="grid-content">
                                 <strong>Инга Шульженко</strong>
                                 <div class="meta-data">
@@ -29,7 +29,7 @@ get_header();
                     <div class="grid-item staff-item">
                         <div class="grid-item-staff">
                             <div class="media-box">
-                                <img src="http://pavelrai.ru/wp-content/uploads/2014/02/alexsandrzer.gif" class="attachment-600x400 wp-post-image" alt="alexsandrzer">						</div>
+                                <img src="/wp-content/themes/NativeChurch/images/face2.png" class="attachment-600x400 wp-post-image" alt="alexsandrzer">						</div>
                             <div class="grid-content">
                                 <strong>Александр Зерюкин</strong>
                                 <div class="meta-data">
@@ -43,7 +43,7 @@ get_header();
                     <div class="grid-item staff-item">
                         <div class="grid-item-staff">
                             <div class="media-box">
-                                <img src="http://pavelrai.ru/wp-content/uploads/2014/02/elenae.gif" class="attachment-600x400 wp-post-image" alt="elenae">						</div>
+                                <img src="/wp-content/themes/NativeChurch/images/face3.png" class="attachment-600x400 wp-post-image" alt="elenae">						</div>
                             <div class="grid-content">
                                 <strong>Елена  Евстропова</strong>
                                 <div class="meta-data">
@@ -57,7 +57,7 @@ get_header();
                     <div class="grid-item staff-item">
                         <div class="grid-item-staff">
                             <div class="media-box">
-                                <img src="http://pavelrai.ru/wp-content/uploads/2014/10/natalia.gif" class="attachment-600x400 wp-post-image" alt="natalia">						</div>
+                                <img src="/wp-content/themes/NativeChurch/images/face4.png" class="attachment-600x400 wp-post-image" alt="natalia">						</div>
                             <div class="grid-content">
                                 <strong>Наталья Рай</strong>
                                 <div class="meta-data">
@@ -71,7 +71,7 @@ get_header();
                     <div class="grid-item staff-item">
                         <div class="grid-item-staff">
                             <div class="media-box">
-                                <img src="http://pavelrai.ru/wp-content/uploads/2014/10/pavel.gif" class="attachment-600x400 wp-post-image" alt="pavel">						</div>
+                                <img src="/wp-content/themes/NativeChurch/images/face5.png" class="attachment-600x400 wp-post-image" alt="pavel">						</div>
                             <div class="grid-content">
                                 <strong>Павел</strong>
                                 <div class="meta-data">
@@ -85,7 +85,7 @@ get_header();
                     <div class="grid-item staff-item">
                         <div class="grid-item-staff">
                             <div class="media-box">
-                                <img src="http://pavelrai.ru/wp-content/uploads/2014/10/olga.gif" class="attachment-600x400 wp-post-image" alt="olga">						</div>
+                                <img src="/wp-content/themes/NativeChurch/images/face6.png" class="attachment-600x400 wp-post-image" alt="olga">						</div>
                             <div class="grid-content">
                                 <strong>Ольга</strong>
                                 <div class="meta-data">
@@ -99,7 +99,7 @@ get_header();
         </div>
 
         <p><strong>Сертификаты и награды</strong></p>
-        <table style="height: 552px;" width="860">
+        <table style="height: 552px;" width="770">
             <tbody>
             <tr>
                 <td><img class="aligncenter size-large wp-image-10478" src="http://95.183.10.70/wp-content/uploads/2014/05/New-Project-13.png" alt="New Project (13)" style="float: left;"></td>
@@ -115,6 +115,7 @@ get_header();
             </tr>
             </tbody>
         </table>
+        <?=q_form()?>
 	</div>	
 </div>
 <?php get_footer(); ?>

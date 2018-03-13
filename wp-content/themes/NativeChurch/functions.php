@@ -273,4 +273,10 @@ function my_theme_load_resources() {
     }*/
 }
 add_action('wp_enqueue_scripts', 'my_theme_load_resources');
+
+            
+/*================== Вывод формы "Остались вопросы" =================*/
+function q_form(){
+    require_once($theme_uri . 'q_form.php');
+} 
 ?>
