@@ -4,7 +4,7 @@ if($pagename != ''):?>
 	</div>
 	</div>
 	<br>
-	<h4>Наши работы</h4>
+    <p><strong>Наши работы</strong></p>
 	<?=do_shortcode( '[Best_Wordpress_Gallery id="34" gal_title="На главной"]' )?>
 	<br>
 	<br>
