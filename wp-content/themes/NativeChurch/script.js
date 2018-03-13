@@ -1,8 +1,6 @@
-
 jQuery(document).ready(function($){
-    var menu_height = $('.menu-left_menu-container').height();
-    console.log(menu_height);
     compose_pagination();
+    drawSeparateLine();
     
     $(document).find('input[name=pagination_gal]').on('click', function(){
         var current_page = $('.paging-input_0 .total-pages_0:first-child').text().trim();
@@ -33,5 +31,16 @@ jQuery(document).ready(function($){
         }
     }
 
+    function drawSeparateLine() {
+        var menu_height = $('.menu-left_menu-container').height();
+        var content_height = $('.page_content').height();
+
+        if (content_height > menu_height) {
+            console.log('fdasfa');
+            $('.page_content').addClass('content_separate');
+        }
+        else $('.menu-left_menu-container').addClass('menu_separate');
+        console.log(menu_height, content_height);
+    }
 })
 

@@ -3338,7 +3338,6 @@ p.demo_store{
 .page_content {
 	float: left;
 	width: 75%;
-	border-left: 1px solid #ededed !important;
 }
 
 .page_content h3 {
@@ -3526,7 +3525,6 @@ p.demo_store{
 .menu-left_menu-container {
 	width: 25%;
 	float: left;
-	border-right: 1px solid #ededed !important;
 	padding-bottom: 40px;
 	padding-top: 10px;
 }
@@ -4284,7 +4282,7 @@ li.product a img {
 }
 
 .page_content {
-	margin-top: 40px;
+	padding-top: 40px;
 }
 
 .install_type img {
@@ -4325,4 +4323,12 @@ li.product a img {
 	padding-top: 10px;
 	margin-left: 12px;
 	display: inline-block;
+}
+
+.menu_separate {
+	border-right: 1px solid #ededed !important;
+}
+
+.content_separate {
+	border-left: 1px solid #ededed !important;
 }
