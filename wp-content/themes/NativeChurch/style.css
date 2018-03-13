@@ -4332,3 +4332,32 @@ li.product a img {
 .content_separate {
 	border-left: 1px solid #ededed !important;
 }
+
+.footer_tel {
+	font-size: 16px;
+	margin-top: -32px;
+	float: right;
+}
+
+.footer_phone {
+	float: left;
+	margin-left: 80px;
+}
+
+.footer_phone, .footer_email {
+	margin-top: -32px !important;
+}
+
+.site-footer-bottom .container{
+	margin:0;
+	padding:0;
+	width: 1080px;
+}
+
+.site-footer-bottom .col-md-8 {
+	padding-right: 5px;
+}
+
+#spider_popup_loading_0 {
+	display: none !important;
+}

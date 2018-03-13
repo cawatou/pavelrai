@@ -5,7 +5,6 @@ jQuery(document).ready(function($){
     $(document).find('input[name=pagination_gal]').on('click', function(){
         var current_page = $('.paging-input_0 .total-pages_0:first-child').text().trim();
         var move_page = this.value;
-        var temp_value;
         
         if(current_page < move_page) {
             move_page = parseInt(move_page) - 1;
