@@ -3757,6 +3757,8 @@ li.product h3 {
 
 #contacts_map {
 	padding: 0;
+	border-top: none;
+	margin-top: 40px;
 }
 
 /*============================ ОФОРМЛЕНИЕ СТРАНИЦЫ НАШ КОЛЛЕКТИВ ==================*/
@@ -4374,10 +4376,36 @@ li.product a img {
 	width: 260px !important;
 }
 
-.information_page li {
-	font-color: 999898;
-	font-size: 14px;
+#contacts_map p {
+	margin: 10px 0;
 }
 
+.col_tel, .col_mail {
+	margin-top: 25px;
+}
 
-/* -=============== >ЮРИК ПРИВЕТ ==============*/
+.col_form {
+	text-align: center;
+	border: 1px solid #ededed;
+	height: 170px;
+	padding-top: 25px;
+}
+
+.col_form strong{
+	margin-bottom: 10px;
+}
+
+.col_form button{
+	background: #08c138 !important;
+	width: 180px;
+	height: 30px;
+	margin-top: 15px;
+	font-size: 12px;
+}
+
+/*============================================*/
+
+.information_page li {
+	font-color: #999898;
+	font-size: 14px;
+}
