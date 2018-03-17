@@ -1,4 +1,5 @@
 <? // Выводим галерею "Наши работы"
+echo '<pre>'.$pagename.'</pre>';
 if($pagename != ''):?>
 	</div>
 	</div>
