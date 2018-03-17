@@ -3816,11 +3816,10 @@ li.product h3 {
 }
 div.woocommerce-tabs {
 	float: left;
-	width: 40%;
-	margin-left: 2%;
+	width: 60%;
 }
 div.images {
-	margin-top: 10px;
+	margin-top: 50px;
 }
 #tab-additional_information {
 	display: block !important;
@@ -3919,7 +3918,7 @@ li.product a img {
 	padding-right: 0 !important;
 }
 .single-product .images {
-	width: 58% !important;
+	width: 40% !important;
 }
 .entry-summary {
 	margin: 0 !important;
@@ -4176,25 +4175,25 @@ li.product a img {
 	display: block;
 }
 
-#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 {
+#our_works #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 {
 	width: 1080px !important;
 	max-width: 1080px !important;
 	text-align: left !important;
 }
 
-#gal_front_form_0 .img-thumbnail {
+#our_works  #gal_front_form_0 .img-thumbnail {
 	border: none !important;
 }
 
-#bwg_standart_thumbnails_0 a:first-child {
+#our_works #bwg_standart_thumbnails_0 a:first-child {
 	padding-left: 0 !important;
 }
 
-#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0 {
+#our_works #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0 {
 	margin: 0 !important;
 }
 
-#bwg_container2_0, #spider_popup_loading_0 {
+#our_works #bwg_container2_0, #spider_popup_loading_0 {
 	height: 320px;
 }
 
@@ -4483,3 +4482,84 @@ li.product a img {
 	clear: left;
 }
 
+
+.single_prod,
+.single_prod .col-md-12 {
+	width: 100% !important;
+}
+
+.single_prod .images .main_img {
+	box-shadow: none !important;
+}
+
+.single_prod .thumbnails a {
+	width: 74px !important;
+	margin-bottom: 15px;
+}
+
+.prop_name {
+	width: fit-content;
+	float: left;
+	margin-right: 5px;
+}
+
+.prop_value {
+	width: 100%;
+}
+
+.prop_value p {
+	font-size: 16px;
+}
+
+#tab-additional_information {
+	margin-top: 50px;
+}
+
+.summary:hover,
+.woocommerce-tabs:hover {
+	cursor: default;
+}
+
+.order_card {
+	border: 1px solid #ededed;
+	height: 240px;
+	padding-top: 15px;
+	width: 250px;
+}
+
+.order_card .price {
+	text-align: left;
+	font-weight: 700;
+	margin-bottom: 10px !important;
+}
+
+.order_card .ico_items {
+	margin-top: 20px;
+}
+
+.order_card .ico_items p {
+	padding-left: 35px;
+	padding-top: 6px;
+}
+
+.ico_items .ico_1 {
+	background: url("/wp-content/uploads/2018/03/New-Project-30.png") no-repeat;
+}
+
+.ico_items .ico_2 {
+	background: url("/wp-content/uploads/2018/03/New-Project-28.png") no-repeat;
+	padding-top: 7px;
+}
+
+.ico_items .ico_3 {
+	background: url("/wp-content/uploads/2018/03/New-Project-29.png") no-repeat;
+}
+
+.order_card a.button {
+	background: #08c138 !important;
+	width: 220px;
+	height: 30px;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+}

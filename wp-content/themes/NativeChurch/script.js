@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
     drawSeparateLine();
     
     $(document).find('input[name=pagination_gal]').on('click', function(){
-        var current_page = $('.paging-input_0 .total-pages_0:first-child').text().trim();
+        var current_page = $('#our_works .paging-input_0 .total-pages_0:first-child').text().trim();
         var move_page = this.value;
         
         if(current_page < move_page) {
@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
 
     function compose_pagination(){
         var el ='';
-        var page_count = $('.paging-input_0 .total-pages_0:last-child').text().trim();
+        var page_count = $('#our_works .paging-input_0 .total-pages_0:last-child').text().trim();
         for(var i=1; i<=page_count; i++){
             if(i == 1) el = '<label class="radio-inline"><input type="radio" name="pagination_gal" value="'+i+'" checked></label>';
             else el = '<label class="radio-inline"><input type="radio" name="pagination_gal" value="'+i+'"></label>';

@@ -1,12 +1,15 @@
-<? // Выводим галерею "Наши работы"
-echo '<pre>'.$pagename.'</pre>';
-if($pagename != ''):?>
+<? // Выводим галерею "Наши работы"0
+$path = explode('/', $_SERVER['REQUEST_URI']);
+//echo '<pre>'.print_r($path, 1).'</pre>';
+if($pagename != '' || in_array('shop-category', $path) ):?>
 	</div>
 	</div>
 	</div>
 	<br>
     <p><strong>Наши работы</strong></p>
-	<?=do_shortcode( '[Best_Wordpress_Gallery id="34" gal_title="На главной"]' )?>
+    <div id="our_works">
+	    <?=do_shortcode( '[Best_Wordpress_Gallery id="34" gal_title="На главной"]' )?>
+    </div>
 	<br>
 	<br>
 <?endif?>

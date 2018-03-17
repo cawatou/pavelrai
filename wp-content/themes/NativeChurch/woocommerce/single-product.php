@@ -10,7 +10,7 @@ $pageOptions = imic_page_design(); //page design options
 ?>
 <div class="container">
     <div class="row">
-        <div class="<?php echo $pageOptions['class']; ?>"> 
+        <div class="<?php echo $pageOptions['class']; ?> single_prod">
            <?php
                 while ( have_posts() ) : the_post(); 
 			 		wc_get_template_part( 'content', 'single-product' );

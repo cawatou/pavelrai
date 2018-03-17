@@ -53,11 +53,11 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
                  */
                 do_action( 'woocommerce_after_shop_loop_item_title' );
 
-                // Вывод Габаритов и цвета под ценой товара
             ?>
             <p class="cat_product"><?=$product->get_categories()?></p>
             <div id="attr_product">
-                <?/*$attributes = $product->get_attributes();
+                <?/* // Вывод Габаритов и цвета под ценой товара
+                $attributes = $product->get_attributes();
                 foreach ( $attributes as $attribute ) :
                     if (wc_attribute_label($attribute['name'])=="Габариты" || wc_attribute_label($attribute['name'])=="Цвет"){
                         $values = wc_get_product_terms( $product->id, $attribute['name'], array( 'fields' => 'names' ) );

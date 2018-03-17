@@ -164,8 +164,9 @@ echo $style; ?>>
 
     <!-- End Site Header -->
     <?php
-    $pagename = get_query_var('pagename');
-    if($pagename == '') putRevSlider("main");
+    $path = explode('/', $_SERVER['REQUEST_URI']);
+    //echo '<pre>'.print_r($path, 1).'</pre>';
+    if($path[1] == '') putRevSlider("main");
     
     $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
     $flag = imic_cat_count_flag();
@@ -446,5 +447,9 @@ echo $style; ?>>
 							<div id="content" class="content full">
 								<div class="container">
 									<div class="wrap_cont">';
-        dynamic_sidebar('inner-page-sidebar');
+
+
+        // Не отображать левое меню в корзине, карточке товара
+        if(in_array('cart', $path) || in_array('shop', $path)) '';
+        else dynamic_sidebar('inner-page-sidebar');
     } ?>					
