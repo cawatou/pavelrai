@@ -1,7 +1,11 @@
 <? // Выводим галерею "Наши работы"0
 $path = explode('/', $_SERVER['REQUEST_URI']);
 //echo '<pre>'.print_r($path, 1).'</pre>';
-if($pagename != '' || in_array('shop-category', $path) ):?>
+$show_works = true;
+if($path[0] == '' && $path[1] == '') $show_works = false;
+if(in_array('cart', $path)) $show_works = false;
+
+if($show_works):?>
 	</div>
 	</div>
 	</div>

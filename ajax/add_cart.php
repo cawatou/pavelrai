@@ -1,0 +1,1 @@
+<?require_once '../wp-load.php';get_header();//echo "<pre>".print_r($wpdb, 1);add_to_cart(10582, 50);echo 'ajax';?>

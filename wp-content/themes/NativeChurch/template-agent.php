@@ -8,8 +8,8 @@ get_header();
 	<div class="container_content agent_page">
         <form id="agent_form" >
             <div class="col-md-6">
-                <h2>Ваш личный менеджер, Павел Рай</h2>
-                <p>Оставьте заявку на консультацию</p>
+                <p><strong>Ваш личный менеджер, Павел Рай</strong></p>
+                <p>Услуга по вызову менеджера бесплатно</p>
 
                 <div class="form-group">
                     <input type="text" class="form-control" id="q_name" aria-describedby="emailHelp" placeholder="Введите ваше имя">

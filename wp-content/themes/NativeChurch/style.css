@@ -4563,3 +4563,7 @@ li.product a img {
 	color: white;
 	text-align: center;
 }
+
+.woocommerce-cart .col-md-12 {
+	width: 100% !important;
+}

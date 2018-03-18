@@ -20,6 +20,33 @@ jQuery(document).ready(function($){
         console.log(current_page, move_page);
     })
 
+
+    $('#tt').on('click', function(){
+        /*$.ajax({
+            'type': 'post',
+            'url': 'ajax/add_cart.php',
+            'data': {
+                'id': 10582,
+                'count': 100
+            },
+            success: function(res) {
+                console.log(res)
+            }
+        })*/
+
+        $.ajax({
+            'type': 'post',
+            'url': '/checkout',
+            'data': {
+                'add-to-cart': 10582
+            },
+            success: function(res) {
+                console.log(res)
+            }
+        })
+        console.log('tt');
+    })
+
     function compose_pagination(){
         var el ='';
         var page_count = $('#our_works .paging-input_0 .total-pages_0:last-child').text().trim();
