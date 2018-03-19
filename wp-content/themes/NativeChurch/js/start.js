@@ -44,9 +44,18 @@ jQuery('.price_btn').click(function(event){
 });
 
 
+jQuery('.add_extra').click(function(event){
+	event.preventDefault();
+	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+		function(){ // после выполнения предъидущей анимации
+			jQuery('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+		});
+});
+
+
 
 jQuery('.modal_close, #overlay').click( function(){ 			
-	jQuery('#modal_1, #modal_2, #modal_3, #modal_4').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
+	jQuery('#modal_1, #modal_2, #modal_3, #modal_4, #modal_extra').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
 		function(){ // после анимации
 			jQuery(this).css('display', 'none'); // делаем ему display: none;
 			jQuery('#overlay').fadeOut(400); // скрываем подложку
