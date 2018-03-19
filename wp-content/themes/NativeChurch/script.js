@@ -21,32 +21,6 @@ jQuery(document).ready(function($){
     })
 
 
-    $('#tt').on('click', function(){
-        /*$.ajax({
-            'type': 'post',
-            'url': 'ajax/add_cart.php',
-            'data': {
-                'id': 10582,
-                'count': 100
-            },
-            success: function(res) {
-                console.log(res)
-            }
-        })*/
-
-        $.ajax({
-            'type': 'post',
-            'url': '/checkout',
-            'data': {
-                'add-to-cart': 10582
-            },
-            success: function(res) {
-                console.log(res)
-            }
-        })
-        console.log('tt');
-    })
-
     function compose_pagination(){
         var el ='';
         var page_count = $('#our_works .paging-input_0 .total-pages_0:last-child').text().trim();
@@ -62,11 +36,59 @@ jQuery(document).ready(function($){
         var content_height = $('.page_content').height();
 
         if (content_height > menu_height) {
-            console.log('fdasfa');
             $('.page_content').addClass('content_separate');
         }
         else $('.menu-left_menu-container').addClass('menu_separate');
         console.log(menu_height, content_height);
+    }
+
+    $('.price_block button').on('click', function(){
+        var class_name = this.className;
+        var direction = $(this).attr('data-dir');
+        var quantity = $('input.' + class_name).val();
+        var cart_key = $('input.' + class_name).attr('data-key');
+        console.log(class_name, direction, quantity, cart_key);
+
+        if(direction == 'left' && quantity > 0) quantity--;
+        if(direction == 'right') quantity++;
+        $('input.' + class_name).val(quantity);
+
+        ajax_cart('update', 0, quantity, cart_key);
+        if(quantity == 0) $(this).parents(".cart_item").empty();
+    })
+
+    $('.price_block .close').on('click', function(){
+        var cart_key = $(this).attr('data-key');
+        ajax_cart('update', 0, 0, cart_key);
+        $(this).parents(".cart_item").empty();
+    })
+
+    function ajax_cart(action, prodict_id, quantity, cart_key){
+
+        $.ajax({
+            'type': 'post',
+            'url': '../ajax/cart.php',
+            'data': {
+                'act': action,
+                'product_id': prodict_id,
+                'cart_key': cart_key,
+                'quantity': quantity
+            },
+            success: function(res) {
+               if(action == 'update'){
+                   $('.cart_total').empty();
+                   $('.cart_total').append(res);
+               }
+            }
+        }).fail(function (xhr, ajaxOptions, thrownError) {
+            if(xhr.status == 404){
+                if(action == 'update') {
+                    $('.cart_total').empty();
+                    $('.cart_total').append(xhr.responseText);
+                }
+            }
+        });
+
     }
 })
 

@@ -9,171 +9,118 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
 wc_print_notices();
-do_action( 'woocommerce_before_cart' ); ?>
-<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
+do_action( 'woocommerce_before_cart' );
+
+$cart_items = WC()->cart->get_cart();
+$items = array();
+foreach ($cart_items  as $cart_item_key => $cart_item ){
+    $category = get_the_terms( $cart_item['product_id'], 'product_cat' );
+    if($category[0]->parent > 0) $cat_id = $category[0]->parent;
+    else $cat_id = $category[0]->term_id;
+    $memorials = [50, 57, 743, 332, 59];
+    if(in_array($cat_id, $memorials)) $cart_item['extra'] = 1;
+
+    if($cat_id == 839) $extra_items[$cart_item_key] = $cart_item;
+    else $items[$cart_item_key] = $cart_item;
+
+
+}
+//echo "<pre>".print_r($extra_items, 1)."</pre>";
+?>
+<div class="cart_steps">
+    <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
+    <p>
+        <span class="active">Ваша корзина</span>
+        <span class="detail">Детали получения</span>
+        <span class="finish">Завершение покупки</span>
+    </p>
+</div>
+
+<div class="col-md-9 cart_left">
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
-<div class="col-md-9">
-<?foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ):
-    $_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-    $product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
-    if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :
-        ?>
+<?foreach ($items as $cart_item_key => $cart_item ):
+$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :?>
+    <div class="cart_item col-md-12">
         <div class="img col-md-3">
-            <?php
-            $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
-            if ( ! $_product->is_visible() )
-                echo $thumbnail;
-            else
-                printf( '<a href="%s">%s</a>', $_product->get_permalink(), $thumbnail );
-            ?>
+            <?=apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );?>
         </div>
+
         <div class="attr col-md-5">
-            <?php
-            if ( ! $_product->is_visible() )
-                echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
-            else
-                echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', $_product->get_permalink(), $_product->get_title() ), $cart_item, $cart_item_key );
-            // Meta data
-            echo WC()->cart->get_item_data( $cart_item );
-            // Backorder notification
-            if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) )
-                echo '<p class="backorder_notification">' . __( 'Available on backorder', 'woocommerce' ) . '</p>';
-            ?>
+            <p class="item_name"><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );?></p>
+            <?$attributes = $_product->get_attributes();
+            foreach($attributes as $attribute):?>
+                <p class="prop_name"><strong><?php echo wc_attribute_label( $attribute['name'] ); ?>: </strong></p>
+                <?if ( $attribute['is_taxonomy'] ) {
+                    $values = wc_get_product_terms( $_product->id, $attribute['name'], array( 'fields' => 'names' ) );
+                    echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+                } else {
+                    // Convert pipes to commas and display values
+                    $values = array_map( 'trim', explode( WC_DELIMITER, $attribute['value'] ) );
+                    echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+                }?>
+            <?endforeach;?>
+
+            <?if($cart_item['extra']):?>
+                <p class="extra"><strong>К данному товару рекомендуем</strong></p>
+                <p class="add_extra"><span>добавить дополнительные услуги</span> <span class="plus"> + </span></p>
+            <?endif?>
         </div>
-        <div class="price col-md-4">
+
+        <div class="price_block col-md-4">
+            <a class="close" data-key="<?=$cart_item_key?>">x</a>
             <?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );?>
-
-            <?php
-            if ( $_product->is_sold_individually() ) {
-                $product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-            } else {
-                $product_quantity = woocommerce_quantity_input( array(
-                    'input_name'  => "cart[{$cart_item_key}][qty]",
-                    'input_value' => $cart_item['quantity'],
-                    'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
-                ), $_product, false );
-            }
-            echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
-            ?>
+            <div class="quantity_block">
+                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="left">-</button>
+                <input type="text" class="item_quantity quantity_block-<?=$cart_item['product_id']?>" data-key="<?=$cart_item_key?>" value="<?=$cart_item['quantity']?>" />
+                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="right">+</button>
+            </div>
         </div>
-    <?endif?>
+    </div>
+<?endif?>
 <?endforeach?>
+
+
+<?//================ EXTRA ITEMS ==============?>
+<?if(count($extra_items) > 0):?>
+    <div class="col-md-12 cart_item cart_extraitem">
+        <div class="col-md-8">
+            <p><strong>Дополнительные услуги :</strong></p>
+            <?foreach($extra_items as $cart_item_key => $extra_item):
+                $_product     = apply_filters( 'woocommerce_cart_item_product', $extra_item['data'], $extra_item, $cart_item_key );
+                $extra_total += $extra_item['quantity'] * $extra_item['line_total'];?>
+                <div class="img col-md-7">
+                    <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
+                </div>
+                <div class="col-md-2">
+                    <p><?=$cart_item['quantity']?> шт.</p>
+                </div>
+                <div class="col-md-3">
+                    <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
+                </div>
+            <?endforeach?>
+            <div class="img col-md-7">
+                <p class="add_extra"><span>Изменить доп. услуги</span></p>
+            </div>
+        </div>
+        <div class="col-md-4 total_ex">
+            <p class="amount"> + <?=$extra_total?> руб.</p>
+        </div>
+    </div>
+<?endif?>
 </div>
-<div class="col-md-3">
-    <?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );?>
-    <p class="cart_count"></p>
-    <p class="cart_excount"></p>
-    <?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
-</div>
 
 
+<div class="col-md-3 cart_total_block">
+    <p class="cart_total"><?=WC()->cart->get_total()?></p>
 
-<table class="shop_table cart" cellspacing="0">
+    <div class="cart_count">
+        <span class="item_count"><?=count($items)?></span> <span class="item_measure">товара</span>
+    </div>
 
-
-
-
-
-    <thead>
-		<tr>
-			<th class="product-remove">&nbsp;</th>
-			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
-		<?php
-		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-			$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-			$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
-			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
-				?>
-				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-					<td class="product-remove">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
-						?>
-					</td>
-					<td class="product-thumbnail">
-						<?php
-							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
-							if ( ! $_product->is_visible() )
-								echo $thumbnail;
-							else
-								printf( '<a href="%s">%s</a>', $_product->get_permalink(), $thumbnail );
-						?>
-					</td>
-					<td class="product-name">
-						<?php
-							if ( ! $_product->is_visible() )
-								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
-							else
-								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', $_product->get_permalink(), $_product->get_title() ), $cart_item, $cart_item_key );
-							// Meta data
-							echo WC()->cart->get_item_data( $cart_item );
-               				// Backorder notification
-               				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) )
-               					echo '<p class="backorder_notification">' . __( 'Available on backorder', 'woocommerce' ) . '</p>';
-						?>
-					</td>
-					<td class="product-price">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
-						?>
-					</td>
-					<td class="product-quantity">
-						<?php
-							if ( $_product->is_sold_individually() ) {
-								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-							} else {
-								$product_quantity = woocommerce_quantity_input( array(
-									'input_name'  => "cart[{$cart_item_key}][qty]",
-									'input_value' => $cart_item['quantity'],
-									'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
-								), $_product, false );
-							}
-							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
-						?>
-					</td>
-					<td class="product-subtotal">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
-						?>
-					</td>
-				</tr>
-				<?php
-			}
-		}
-		do_action( 'woocommerce_cart_contents' );
-		?>
-		<tr>
-			<td colspan="6" class="actions">
-				<?php if ( WC()->cart->coupons_enabled() ) { ?>
-					<div class="coupon">
-						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
-						<?php do_action('woocommerce_cart_coupon'); ?>
-					</div>
-				<?php } ?>
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
-				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
-				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
-			</td>
-		</tr>
-		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
-	</tbody>
-</table>
-<?php do_action( 'woocommerce_after_cart_table' ); ?>
-</form>
-<div class="cart-collaterals">
-	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-	<?php woocommerce_cart_totals(); ?>
-	<?php woocommerce_shipping_calculator(); ?>
-</div>
-<?php do_action( 'woocommerce_after_cart' ); ?>
-
-
+    <div class="cart_excount">
+        <span class="exitem_count"><?=count($extra_items)?></span> <span class="exitem_measure">услуг</span>
+    </div>
+    <a href="/checkout" class="btn">Оформить заказ</a>
 </div>

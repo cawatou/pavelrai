@@ -307,100 +307,37 @@ function remove_extra_checkout_fields( $fields ) {
     return $fields;
 }
 
-function add_to_cart( $product_id = 0, $quantity = 1, $variation_id = 0, $variation = array(), $cart_item_data = array() ) {
-    try {
-        $product_id   = absint( $product_id );
-        $variation_id = absint( $variation_id );
+function add_product_to_cart() {
 
-        // Ensure we don't add a variation to the cart directly by variation ID.
-        if ( 'product_variation' === get_post_type( $product_id ) ) {
-            $variation_id = $product_id;
-            $product_id   = wp_get_post_parent_id( $variation_id );
-        }
+/*        global $woocommerce;
+        $product_id = 10582;
+        $found = false;
+        $cart_total = 30;
+        //return $woocommerce->cart->total; // total_price
+        //return $items = $woocommerce->cart->get_cart(); // get items
 
-        $product_data = wc_get_product( $variation_id ? $variation_id : $product_id );
-        $quantity     = apply_filters( 'woocommerce_add_to_cart_quantity', $quantity, $product_id );
+        $woocommerce->cart->add_to_cart( $product_id, 3 ); // add cart
+        $woocommerce->cart->empty_cart(); // add cart*/
 
-        if ( $quantity <= 0 || ! $product_data || 'trash' === $product_data->get_status() ) {
-            return false;
-        }
 
-        // Load cart item data - may be added by other plugins.
-        $cart_item_data = (array) apply_filters( 'woocommerce_add_cart_item_data', $cart_item_data, $product_id, $variation_id );
 
-        // Generate a ID based on product ID, variation ID, variation data, and other cart item data.
-        $cart_id        = $this->generate_cart_id( $product_id, $variation_id, $variation, $cart_item_data );
-
-        // Find the cart item key in the existing cart.
-        $cart_item_key  = $this->find_product_in_cart( $cart_id );
-
-        // Force quantity to 1 if sold individually and check for existing item in cart.
-        if ( $product_data->is_sold_individually() ) {
-            $quantity      = apply_filters( 'woocommerce_add_to_cart_sold_individually_quantity', 1, $quantity, $product_id, $variation_id, $cart_item_data );
-            $found_in_cart = apply_filters( 'woocommerce_add_to_cart_sold_individually_found_in_cart', $cart_item_key && $this->cart_contents[ $cart_item_key ]['quantity'] > 0, $product_id, $variation_id, $cart_item_data, $cart_id );
-
-            if ( $found_in_cart ) {
-                /* translators: %s: product name */
-                throw new Exception( sprintf( '<a href="%s" class="button wc-forward">%s</a> %s', wc_get_cart_url(), __( 'View cart', 'woocommerce' ), sprintf( __( 'You cannot add another "%s" to your cart.', 'woocommerce' ), $product_data->get_name() ) ) );
+        /*if( $woocommerce->cart->total >= $cart_total ) {
+            //check if product already in cart
+            if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
+                foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) {
+                    $_product = $values['data'];
+                    if ( $_product->id == $product_id )
+                        $found = true;
+                }
+                // if product not found, add it
+                if ( ! $found )
+                    $woocommerce->cart->add_to_cart( $product_id );
+            } else {
+                // if no products in cart, add it
+                $woocommerce->cart->add_to_cart( $product_id );
             }
-        }
+        }*/
 
-        if ( ! $product_data->is_purchasable() ) {
-            throw new Exception( __( 'Sorry, this product cannot be purchased.', 'woocommerce' ) );
-        }
-
-        // Stock check - only check if we're managing stock and backorders are not allowed.
-        if ( ! $product_data->is_in_stock() ) {
-            throw new Exception( sprintf( __( 'You cannot add &quot;%s&quot; to the cart because the product is out of stock.', 'woocommerce' ), $product_data->get_name() ) );
-        }
-
-        if ( ! $product_data->has_enough_stock( $quantity ) ) {
-            /* translators: 1: product name 2: quantity in stock */
-            throw new Exception( sprintf( __( 'You cannot add that amount of &quot;%1$s&quot; to the cart because there is not enough stock (%2$s remaining).', 'woocommerce' ), $product_data->get_name(), wc_format_stock_quantity_for_display( $product_data->get_stock_quantity(), $product_data ) ) );
-        }
-
-        // Stock check - this time accounting for whats already in-cart.
-        if ( $product_data->managing_stock() ) {
-            $products_qty_in_cart = $this->get_cart_item_quantities();
-
-            if ( isset( $products_qty_in_cart[ $product_data->get_stock_managed_by_id() ] ) && ! $product_data->has_enough_stock( $products_qty_in_cart[ $product_data->get_stock_managed_by_id() ] + $quantity ) ) {
-                throw new Exception( sprintf(
-                    '<a href="%s" class="button wc-forward">%s</a> %s',
-                    wc_get_cart_url(),
-                    __( 'View Cart', 'woocommerce' ),
-                    sprintf( __( 'You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart.', 'woocommerce' ), wc_format_stock_quantity_for_display( $product_data->get_stock_quantity(), $product_data ), wc_format_stock_quantity_for_display( $products_qty_in_cart[ $product_data->get_stock_managed_by_id() ], $product_data ) )
-                ) );
-            }
-        }
-
-        // If cart_item_key is set, the item is already in the cart.
-        if ( $cart_item_key ) {
-            $new_quantity = $quantity + $this->cart_contents[ $cart_item_key ]['quantity'];
-            $this->set_quantity( $cart_item_key, $new_quantity, false );
-        } else {
-            $cart_item_key = $cart_id;
-
-            // Add item after merging with $cart_item_data - hook to allow plugins to modify cart item.
-            $this->cart_contents[ $cart_item_key ] = apply_filters( 'woocommerce_add_cart_item', array_merge( $cart_item_data, array(
-                'key'          => $cart_item_key,
-                'product_id'   => $product_id,
-                'variation_id' => $variation_id,
-                'variation'    => $variation,
-                'quantity'     => $quantity,
-                'data'         => $product_data,
-            ) ), $cart_item_key );
-        }
-
-        do_action( 'woocommerce_add_to_cart', $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data );
-
-        return $cart_item_key;
-
-    } catch ( Exception $e ) {
-        if ( $e->getMessage() ) {
-            wc_add_notice( $e->getMessage(), 'error' );
-        }
-        return false;
-    }
 }
 ?>
 
