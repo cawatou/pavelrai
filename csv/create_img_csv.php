@@ -1,13 +1,16 @@
-<?php
-$dir    = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer';
+<?header('Content-Type: text/html; charset=utf-8');
+$folder = ['granit', 'vase'];
+$dir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$folder[1];
 $files = scandir($dir);
-//print_r($files);
 
 $fp = fopen('img_name.csv', 'w');
 
 foreach ($files as $name) {
     if($name == '.' || $name == '..') continue;
-    echo $name."<br>";
-    fputcsv($fp, $name);
+
+    $img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$folder[1].'/'.$name;
+    $name = explode('.', $name);
+    echo $name[0]."<br>";
+    //echo $img_src."<br>";
 }
 ?>
