@@ -128,13 +128,13 @@ $uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall
         </form>
     </div>
 
-    <div class="col-md-12 service_extra">
-        <div class="col-md-6">
-            <p><strong>Итого  <span class="modal_total">0</span> &#8381;</strong></p>
-            <p><strong>к оплате <span class="modal_total">0</span> &#8381;</strong></p>
-            <a class="btn add_order">Оформить заказ</a>
-            <p>Завершая оформление заказа, я даю свое согласие на обработку персональных данных и подтверждаю ознокомление со сроками хранения товара в соответствии с указанными здесь условиями.</p>
-        </div>
+    <div class="col-md-12 service_extra end_order">        
+        <p><strong>Итого :</strong></p>
+        <p>Товаров и услуг <span class="service_total modal_total">0</span> &#8381;</></p>
+        <p><strong>к оплате <span class="service_total modal_total">0</span> &#8381;</strong></p>
+        <a class="btn add_order">Оформить заказ</a><br>
+        <p class="disclaimer">Завершая оформление заказа, я даю свое согласие на обработку персональных данных и подтверждаю ознокомление со сроками хранения товара в соответствии с указанными здесь условиями.</p>
+        
     </div>
 </div>
 

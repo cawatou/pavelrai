@@ -114,6 +114,21 @@ jQuery(document).ready(function($){
         });
 
     }
+
+    var item_count = $('.item_count').text();
+    var item_text = declOfNum(item_count, ['товар', 'товара', 'товаров']);
+    $('.item_measure').empty();
+    $('.item_measure').text(item_text);
+
+    var extra_count = $('.exitem_count').text();
+    var extra_text = declOfNum(extra_count, ['услуга', 'услуги', 'услуг']);
+    $('.exitem_measure').empty();
+    $('.exitem_measure').text(extra_text);
+
+
+    $('#billing_first_name').attr('placeholder', 'Введите ваше имя');
+    $('#billing_email').attr('placeholder', 'Введите вашу почту');
+    $('#billing_phone').attr('placeholder', 'Введите номер телефона');
 })
 
 function declOfNum(number, titles) {
