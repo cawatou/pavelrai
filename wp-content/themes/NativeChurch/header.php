@@ -450,6 +450,6 @@ echo $style; ?>>
 
 
         // Не отображать левое меню в корзине, карточке товара
-        if(in_array('cart', $path) || in_array('shop', $path)) '';
+        if(in_array('cart', $path) || in_array('shop', $path) || in_array('checkout', $path)) '';
         else dynamic_sidebar('inner-page-sidebar');
     } ?>					

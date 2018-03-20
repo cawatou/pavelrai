@@ -63,14 +63,32 @@ jQuery(document).ready(function($){
         $(this).parents(".cart_item").empty();
     })
 
-    $('#modal_extra .col-md-3').on('click', function(){
+    $('.wrap_services .col-md-3').on('click', function(){
         $(this).find('input[type=radio]').attr('checked', 'checked');
         $(this).siblings().removeClass('checked');
         $(this).addClass('checked');
+
+        var id = $(this).attr('data-id');
+        var del = $(this).parents('.service_extra').attr('data-delete');
+
+        console.log(id, del);
+        $(this).parents('.service_extra').attr('data-delete', id);
+        if(del == 0) {
+            ajax_cart('add', id, 1, 0);
+        }else{
+            ajax_cart('update', del, 0);
+            ajax_cart('add', id, 1, 0);
+        }
     })
 
-    function ajax_cart(action, prodict_id, quantity, cart_key){
 
+    $('.add_order').on('click', function(){
+        $('form.checkout').submit();
+    })
+
+
+
+    function ajax_cart(action, prodict_id, quantity, cart_key){
         $.ajax({
             'type': 'post',
             'url': '../ajax/cart.php',

@@ -28,7 +28,7 @@ $pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&ord
 $lables = get_posts("post_type=product&numberposts=100&product_cat=lable");
 $rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
 
-//echo "<pre>".print_r($picture, 1)."</pre>";
+echo "<pre>".print_r($extra_items, 1)."</pre>";
 ?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
@@ -90,14 +90,15 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
     <div class="col-md-12 cart_item cart_extraitem">
         <div class="col-md-8">
             <p><strong>Дополнительные услуги :</strong></p>
-            <?foreach($extra_items as $cart_item_key => $extra_item):
+            <?$extra_total = 0;
+            foreach($extra_items as $cart_item_key => $extra_item):
                 $_product     = apply_filters( 'woocommerce_cart_item_product', $extra_item['data'], $extra_item, $cart_item_key );
-                $extra_total += $extra_item['quantity'] * $extra_item['line_total'];?>
+                $extra_total += intval($extra_item['line_total']);?>
                 <div class="img col-md-7">
                     <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
                 </div>
                 <div class="col-md-2">
-                    <p><?=$cart_item['quantity']?> шт.</p>
+                    <p><?=$extra_item['quantity']?> шт.</p>
                 </div>
                 <div class="col-md-3">
                     <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
@@ -131,7 +132,7 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
 
 <div id="modal_extra" class="modal_window">
     <p class="close modal_close">X</p>
-    <div class="wrap_scroll">
+    <div class="wrap_services">
         <h3>Дополнительные услуги</h3>
         <div class="col-md-12 service_extra">
             <p><strong>1. Выбрать портрет</strong></p>

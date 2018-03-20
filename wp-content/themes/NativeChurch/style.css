@@ -4529,7 +4529,7 @@ li.product a img {
 
 .order_card {
 	border: 1px solid #ededed;
-	height: 240px;
+	height: 250px;
 	padding-top: 15px;
 	width: 250px;
 }
@@ -4572,7 +4572,9 @@ li.product a img {
 }
 
 .woocommerce-cart .col-md-12,
-.woocommerce-cart .page-section {
+.woocommerce-cart .page-section,
+.woocommerce-checkout .col-md-12,
+.woocommerce-checkout .page-section{
 	width: 100% !important;
 }
 
@@ -4804,15 +4806,15 @@ p.cart_total {
 	margin-right: -14px;
 }
 
-#modal_extra .col-md-12 {
+.wrap_services .col-md-12 {
 	padding: 0;
 }
 
-#modal_extra .col-md-1 {
+.wrap_services .col-md-1 {
 	padding-left: 0;
 }
 
-#modal_extra .col-md-10 {
+.wrap_services .col-md-10 {
 	padding-left: 5px;
 	padding-top: 3px;
 	font-weight: 700;
@@ -4820,7 +4822,7 @@ p.cart_total {
 	height: 100%;
 }
 
-#modal_extra .col-md-3 {
+.wrap_services .col-md-3 {
 	text-align: left;
 	padding: 15px;
 	height: 120px;
@@ -4830,20 +4832,26 @@ p.cart_total {
 	width: 23%;
 }
 
-#modal_extra .col-md-3:hover {
+.wrap_services .col-md-3:hover {
 	cursor: pointer;
 }
 
-#modal_extra .checked {
+.wrap_services .checked {
 	border: 2px solid green !important;
 }
 
-#modal_extra .col-md-3 .price {
+.wrap_services .col-md-3 .price {
 	font-weight: 700;
 	text-align: left;
 	position: absolute;
 	bottom: 0;
 }
 
+.wrap_services .user_form h3,
+.wrap_services .user_form label {
+	display: none;
+}
 
-
+.woocommerce-checkout .woocommerce-info {
+	display: none;
+}
