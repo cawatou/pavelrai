@@ -83,7 +83,7 @@ jQuery(document).ready(function($){
 
 
     $('.add_order').on('click', function(){
-        $('form.checkout').submit();
+        $('#place_order').click();
     })
 
 

@@ -4571,6 +4571,8 @@ li.product a img {
 	text-align: center;
 }
 
+
+
 .woocommerce-cart .col-md-12,
 .woocommerce-cart .page-section,
 .woocommerce-checkout .col-md-12,
@@ -4854,4 +4856,13 @@ p.cart_total {
 
 .woocommerce-checkout .woocommerce-info {
 	display: none;
+}
+
+#order_review {
+	display: none;
+}
+
+.thankyou .col-md-3 {
+	height: fit-content;
+	margin-bottom: 40px;
 }

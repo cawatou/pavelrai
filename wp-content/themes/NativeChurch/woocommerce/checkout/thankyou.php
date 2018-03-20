@@ -8,47 +8,64 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
+
+$order = new WC_Order($order->id);
+$order_items = $order->get_items();
+$items_count = $extra_count = 0;
+foreach ($order_items as $cart_item_key => $cart_item) {
+    //echo "<pre>".print_r($cart_item, 1)."</pre>";
+    $category = get_the_terms( $cart_item['product_id'], 'product_cat' );
+    if($category[0]->parent > 0) $cat_id = $category[0]->parent;
+    else $cat_id = $category[0]->term_id;
+    //echo "<pre>".print_r($cart_item, 1)."</pre>";
+    if($cat_id == 839) {
+        $extra_items[$cart_item_key] = $cart_item;
+        $extra_count += $cart_item['qty'];
+    }else{
+        $items[$cart_item_key] = $cart_item;
+        $items_count += $cart_item['qty'];
+    }
+}
+
+
+//echo "<pre>".print_r($extra_items, 1)."</pre>";
+
+
 if ( $order ) : ?>
-	<?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
-		<p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
-		<p><?php
-			if ( is_user_logged_in() )
-				_e( 'Please attempt your purchase again or go to your account page.', 'woocommerce' );
-			else
-				_e( 'Please attempt your purchase again.', 'woocommerce' );
-		?></p>
-		<p>
-			<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
-			<?php if ( is_user_logged_in() ) : ?>
-			<a href="<?php echo esc_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>" class="button pay"><?php _e( 'My Account', 'woocommerce' ); ?></a>
-			<?php endif; ?>
-		</p>
-	<?php else : ?>
-		<p><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></p>
-		<ul class="order_details">
-			<li class="order">
-				<?php _e( 'Order:', 'woocommerce' ); ?>
-				<strong><?php echo $order->get_order_number(); ?></strong>
-			</li>
-			<li class="date">
-				<?php _e( 'Date:', 'woocommerce' ); ?>
-				<strong><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></strong>
-			</li>
-			<li class="total">
-				<?php _e( 'Total:', 'woocommerce' ); ?>
-				<strong><?php echo $order->get_formatted_order_total(); ?></strong>
-			</li>
-			<?php if ( $order->payment_method_title ) : ?>
-			<li class="method">
-				<?php _e( 'Payment method:', 'woocommerce' ); ?>
-				<strong><?php echo $order->payment_method_title; ?></strong>
-			</li>
-			<?php endif; ?>
-		</ul>
-		<div class="clear"></div>
-	<?php endif; ?>
-	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
-	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
-<?php else : ?>
-	<p><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></p>
+    <div class="cart_steps">
+        <img src="/wp-content/themes/NativeChurch/images/cart_3.png" alt="">
+        <p>
+            <span>Ваша корзина</span>
+            <span class="detail">Детали получения</span>
+            <span class="finish active">Завершение покупки</span>
+        </p>
+    </div>
+
+    <div class="wrap_services thankyou">
+        <div class="col-md-12">
+            <p><strong>Номер заказа <?=$order->get_order_number(); ?></strong></p>
+            <p>Ваш заказ оформлен!</p>
+            <p>Письмо с подтверждением заказа отправлено</p>
+
+            <div class="col-md-3">
+                <p>Заказ <?=$order->get_order_number(); ?></p>
+
+                <p><?=$items_count?> товара:</p>
+                <?foreach($items as $item):?>
+                    <p><?=$item['name']?></p>
+                    <p><?=$item['qty']?>шт, <?=$item['line_total']?></p>
+                <?endforeach;?>
+
+                <p><?=$extra_count?> услуг:</p>
+                <?foreach($extra_items as $exitem):?>
+                    <p><?=$exitem['name']?></p>
+                    <p><?=$exitem['qty']?>шт, <?=$exitem['line_total']?></p>
+                <?endforeach;?>
+
+                <p>Товаров и услуг <?=$order->get_formatted_order_total(); ?></p>
+                <p><strong>Итого: <?=$order->get_formatted_order_total(); ?></strong></p>
+                <a href="/" class="btn">Вернутся на главную</a>
+            </div>
+        </div>
+    </div>
 <?php endif; ?>

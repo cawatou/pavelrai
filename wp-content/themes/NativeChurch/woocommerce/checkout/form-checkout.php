@@ -25,8 +25,6 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
     $category = get_the_terms( $cart_item['product_id'], 'product_cat' );
     if($category[0]->parent > 0) $cat_id = $category[0]->parent;
     else $cat_id = $category[0]->term_id;
-    $memorials = [50, 57, 743, 332, 59];
-    if(in_array($cat_id, $memorials)) $cart_item['extra'] = 1;
 
     if($cat_id == 839) {
         $extra_items[$cart_item_key] = $cart_item;
@@ -40,7 +38,7 @@ $delivery = get_posts("post_type=product&numberposts=100&product_cat=delivery&or
 $installs = get_posts("post_type=product&numberposts=100&product_cat=install");
 $uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall");
 
-echo "<pre>".print_r($extra_id, 1)."</pre>";
+//echo "<pre>".print_r($extra_id, 1)."</pre>";
 ?>
 
 

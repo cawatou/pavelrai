@@ -28,7 +28,7 @@ $pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&ord
 $lables = get_posts("post_type=product&numberposts=100&product_cat=lable");
 $rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
 
-echo "<pre>".print_r($extra_items, 1)."</pre>";
+//echo "<pre>".print_r($extra_items, 1)."</pre>";
 ?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
