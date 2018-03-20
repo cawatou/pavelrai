@@ -1,4 +1,4 @@
-<? 
+<?header('Content-Type: text/html; charset=utf-8');
 class mysql {
 	private $link = false;
 	private $lastsql = false;
@@ -160,9 +160,9 @@ $dbconfig = array();
 
 $db = new mysql(array(
 	"host"=>"localhost",
-	"user"=>"cl107295_wp",
-	"pass"=>"RFHVH00A",
-	"name"=>"cl107295_wp"	
+	"user"=>"root",
+	"pass"=>"d[jlyfhfpLDF3",
+	"name"=>"pavelrai"	
 ));
 
 /*
@@ -184,37 +184,55 @@ while($row = $res->getRowFetch()){
 // До начала парсинга или после нужно записать (post_title, category, и post_content) через плагин CSV Import из админки,
 // это даст возможность отображения товара на сайте, также этот плагин необходим для парсинга изображений товара.
 
-$cat = file("csv/combine.csv");
+$cat = file("csv/new.csv");
 
-foreach($cat as $product){
+foreach($cat as $i => $product){
 	$ar = explode(";",$product);
+	$el = array();
+	$el['cat_slug']						= trim($ar[0]);
+	$el['title']						= trim($ar[1]);
+	$el['property']['pa_material'] 		= trim($ar[2]);
+	$el['property']['pa_color'] 		= trim($ar[3]);
+	$el['property']['pa_poilning'] 		= trim($ar[4]);
+	$el['property']['pa_height'] 		= trim($ar[5]);
+	$el['property']['pa_weight'] 		= trim($ar[6]);
+	$el['property']['pa_volume'] 		= trim($ar[7]);
+	$el['property']['pa_size'] 			= trim($ar[8]);
+	$el['property']['pa_time'] 			= trim($ar[9]);
+	$el['property']['pa_fraction'] 		= trim($ar[10]);
+	$el['property']['pa_measure'] 		= trim($ar[11]);
+	$el['property']['pa_shape']	 		= trim($ar[12]);
+	$el['property']['pa_height_flight']	= trim($ar[13]);
+	$el['property']['pa_height_pole'] 	= trim($ar[14]);
+	$el['property']['pa_casing']	 	= trim($ar[15]);
+	$el['property']['pa_twists']	 	= trim($ar[16]);
+	$el['property']['pa_handles']		= trim($ar[17]);
+	$el['property']['pa_lacq']		 	= trim($ar[18]);
+	// all cell is empty  						  [19]
+	$el['property']['pa_fittings']	 	= trim($ar[20]);
+	$el['property']['pa_manual']	 	= trim($ar[21]);
+	$el['property']['pa_finish']	 	= trim($ar[22]);
+	$el['property']['pa_cap']		 	= trim($ar[23]);
+	$el['property']['pa_gabarits_s']	= trim($ar[24]);
+	$el['property']['pa_gabarits_t']	= trim($ar[25]);
+	$el['property']['pa_gabarits_f']	= trim($ar[26]);
+	$el['price']					 	= trim($ar[27]);
+	$el['extraprice']					= trim($ar[28]);
 
-	$title = trim($ar[0]);
-	$cat_slug = trim($ar[1]);
-	//$material = trim($ar[2]);
-	$complect = trim($ar[2]);// - Комплектация (Для Комбинированных памятников)
-	//$colors = trim($ar[3]);
-	$weight = trim($ar[3]);// - Вес (Для Комбинированных памятников)
-	//$full_width = trim($ar[4]); // Высота с тумбой (Для Скульптур и памятников)
-	//$height_vase = trim($ar[4]); // - Высота вазы (Для Ваз)
-	//$height_flight = trim($ar[4]); // - Высота пролета (Для Оградок)
-	//$height = trim($ar[4]); // - Высота (Для Столов и лавочек)
-	$volume = trim($ar[4]); // - Обьем (Для Комбинированных памятников)
-	//$height_pole = trim($ar[5]); // - Высота столба (Для Оградок)
-	//$weight_attr = intval(trim($ar[5])); // - Вес (Для Скульптур, Для Столов и лавочек и памятников)
-	//$gabarits = trim($ar[6]); // Для Скульптур и памятников
+	
+	echo "<pre>".print_r($el, 1)."</pre>";
 
-
-
+	
+	if($i == 2) break;
 	// Также необходимо комментировать обращения к БД для конкретной группы товара у которой нет определенных свойств
 
-	if(!$title) continue;
+	if(!$el['title']) continue;
 
-	$res = $db->query("SELECT ID FROM `wp_posts` WHERE `post_title` = '%s' LIMIT 1", $title);
+	$res = $db->query("SELECT ID FROM `wp_posts` WHERE `post_title` = '%s' LIMIT 1", $el['title']);
 	$object_id = $res->justVar();
 
 	if(!$object_id){
-		$res = $db->query("INSERT INTO `wp_posts` (`post_author`,`post_date`,`post_date_gmt`,`post_title`,`post_type`) VALUES ('1','".date("Y-m-d H:i:s")."','".date("Y-m-d H:i:s",time()-10800)."','%s','product')", $title);
+		$res = $db->query("INSERT INTO `wp_posts` (`post_author`,`post_date`,`post_date_gmt`,`post_title`,`post_type`) VALUES ('1','".date("Y-m-d H:i:s")."','".date("Y-m-d H:i:s",time()-10800)."','%s','product')", $el['title']);
 		$object_id = $res->insertId();
 
 	}
@@ -237,11 +255,11 @@ foreach($cat as $product){
 		if(!$res2->justVar()){
 			$res2 = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','".$meta_key."','".$meta_value."')", $object_id);
 		}
-
-
 	}
 
-	// Проставление видимости свойств у добавляемых элементов
+
+
+	// Проставление видимости свойств у добавляемых элементов (Сначала необходимо добавить по 1 типу товара вручную из админки)
 
 	// для Скульптур и памятников
 	//$meta_value = 'a:5:{s:11:"pa_gabarits";a:6:{s:4:"name";s:11:"pa_gabarits";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_weight_attr";a:6:{s:4:"name";s:14:"pa_weight_attr";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_full_width";a:6:{s:4:"name";s:13:"pa_full_width";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
@@ -255,8 +273,8 @@ foreach($cat as $product){
 	// для Столиков и лавочек
 	//$meta_value = 'a:4:{s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_weight_attr";a:6:{s:4:"name";s:14:"pa_weight_attr";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
 
-	// для памятников
-	$meta_value = 'a:9:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:2:"20";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:2:"21";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_poilning";a:6:{s:4:"name";s:11:"pa_poilning";s:5:"value";s:0:"";s:8:"position";s:2:"22";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:2:"23";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:2:"25";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_gabarits";a:6:{s:4:"name";s:11:"pa_gabarits";s:5:"value";s:0:"";s:8:"position";s:2:"26";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_tumba";a:6:{s:4:"name";s:8:"pa_tumba";s:5:"value";s:0:"";s:8:"position";s:2:"27";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:10:"pa_flowers";a:6:{s:4:"name";s:10:"pa_flowers";s:5:"value";s:0:"";s:8:"position";s:2:"28";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+	// для памятников (Кроме комбинированых)
+	$meta_value = 'a:9:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"2";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_poilning";a:6:{s:4:"name";s:11:"pa_poilning";s:5:"value";s:0:"";s:8:"position";s:1:"3";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"4";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:1:"8";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:1:"9";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_s";a:6:{s:4:"name";s:13:"pa_gabarits_s";s:5:"value";s:0:"";s:8:"position";s:2:"10";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_t";a:6:{s:4:"name";s:13:"pa_gabarits_t";s:5:"value";s:0:"";s:8:"position";s:2:"12";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_f";a:6:{s:4:"name";s:13:"pa_gabarits_f";s:5:"value";s:0:"";s:8:"position";s:2:"13";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
 
 	echo $object_id;
 	$res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_product_attributes' LIMIT 1", $object_id);
@@ -270,10 +288,13 @@ foreach($cat as $product){
 		$res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_product_attributes','".$meta_value."')", $object_id);
 	}
 
+	//Цена
+	$res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','".$el['price']."')", $object_id);
+	
 	//continue;
 
 	// Категории
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `slug` = '%s' LIMIT 1", $cat_slug);
+	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `slug` = '%s' LIMIT 1", $el['cat_slug']);
 	if($res->justVar()){
 		$term_id = $res->justVar();
 		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' LIMIT 1", $term_id);
@@ -287,325 +308,33 @@ foreach($cat as $product){
 	}
 
 
-	// Объем, м3
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $volume);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $volume);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_volume' LIMIT 1", $term_id);
+	// Свойства товара
+	foreach ($el['property'] as $prop_name => $prop_value){
+		if($prop_value == '') continue;
+		$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $prop_value);
 		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_volume')", $term_id);
-			$term_taxonomy_id = $res->insertId();
+			$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $prop_value);
+			$term_id = $res->insertId();
 		} else {
-			$term_taxonomy_id = $res->justVar();
+			$term_id = $res->justVar();
 		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
+		if($term_id){
+			$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = '%s' LIMIT 1", $term_id, $prop_name);
 			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//
-
-	// Комплектация
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $complect);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $complect);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_complect' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_complect')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//
-
-	// Вес (Комбинированные памятники)
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $weight);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $weight);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_weight' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_weight')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//
-
-	/*//
-
-	// Материал
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $material);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $material);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_material' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_material')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//
-
-	// Цвет
-	$colors = trim($colors,".,");
-	$colors = explode(",",$colors);
-	if(count($colors)>0){
-		foreach($colors as $color){
-			$color = trim($color);
-			$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $color);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $color);
-				$term_id = $res->insertId();
+				$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','%s')", $term_id, $prop_name);
+				$term_taxonomy_id = $res->insertId();
 			} else {
-				$term_id = $res->justVar();
+				$term_taxonomy_id = $res->justVar();
 			}
-			if($term_id){
-				$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_color' LIMIT 1", $term_id);
+			if($term_taxonomy_id){
+				$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
 				if(!$res->justVar()){
-					$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_color')", $term_id);
-					$term_taxonomy_id = $res->insertId();
-				} else {
-					$term_taxonomy_id = $res->justVar();
-				}
-				if($term_taxonomy_id){
-					$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-					if(!$res->justVar()){
-						$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-					}
+					$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
 				}
 			}
-			$term_id = false;
 		}
+		$term_id = false;
 	}
-	//
 
-	// Высота с тумбой
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $full_width);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $full_width);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_full_width' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_full_width')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//
-
-	// Вес
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $weight_attr);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $weight_attr);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_weight_attr' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_weight_attr')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//
-
-	// Габариты
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $gabarits);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $gabarits);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_gabarits' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_gabarits')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-
-	// Высота вазы
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $height_vase);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $height_vase);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_height_vase' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_height_vase')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-	//*/
-/*
-	// Высота пролета
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $height_flight);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $height_flight);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_height_flight' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_height_flight')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-
-	// Высота столба
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $height_pole);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $height_pole);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_height_pole' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_height_pole')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-
-	// Высота
-	$res = $db->query("SELECT term_id FROM `wp_terms` WHERE `name` = '%s' LIMIT 1", $height);
-	if(!$res->justVar()){
-		$res = $db->query("INSERT INTO `wp_terms` (`name`,`slug`) VALUES ('%s','".rand(1000000,9999999)."')", $height);
-		$term_id = $res->insertId();
-	} else {
-		$term_id = $res->justVar();
-	}
-	if($term_id){
-		$res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' AND `taxonomy` = 'pa_height' LIMIT 1", $term_id);
-		if(!$res->justVar()){
-			$res = $db->query("INSERT INTO `wp_term_taxonomy` (`term_id`,`taxonomy`) VALUES ('%s','pa_height')", $term_id);
-			$term_taxonomy_id = $res->insertId();
-		} else {
-			$term_taxonomy_id = $res->justVar();
-		}
-		if($term_taxonomy_id){
-			$res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-			if(!$res->justVar()){
-				$res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-			}
-		}
-	}
-	$term_id = false;
-*/
 }
-
-
-
 ?>
