@@ -1,4 +1,6 @@
 <?header('Content-Type: text/html; charset=utf-8');
+require_once $_SERVER['DOCUMENT_ROOT'].'/wp-load.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/wp-content/plugins/woocommerce-csvimport/include/class-woocsv-product.php';
 class mysql {
 	private $link = false;
 	private $lastsql = false;
@@ -86,7 +88,6 @@ class mysql {
 	}
 
 }
-
 class mysqlResultSet {
 
 	private $q = false;
@@ -154,8 +155,7 @@ class mysqlResultSet {
 
 }
 
-//exit;
-
+$iproduct = new woocsvImportProduct();
 $dbconfig = array();
 
 $db = new mysql(array(
@@ -165,24 +165,18 @@ $db = new mysql(array(
 	"name"=>"pavelrai"	
 ));
 
-/*
-$res = $db->query("SHOW TABLES");
-
-while($row = $res->getRowFetch()){
-	print_r($row);
-}
-*/
-
-	
-
 // wp_terms - значения свойств
 // wp_term_taxonomy - значения свойств к свойству
 // wp_term_relationships -назначение свойств объекту
 
-// CSV файлы для парсинга свойств товара лежат в папке /public_html/csv/
-// CSV файлы для парсинга изображений товара лежат в папке /public_html/wp-content/uploads/csvimport/
-// До начала парсинга или после нужно записать (post_title, category, и post_content) через плагин CSV Import из админки,
-// это даст возможность отображения товара на сайте, также этот плагин необходим для парсинга изображений товара.
+// CSV файлы для парсинга свойств товара лежат в папке /csv/
+// post_content можно записать через плагин CSV Import из админки,
+// Изображения парсятся теперь из этого файла
+
+
+
+
+
 
 $cat = file("csv/new.csv");
 
@@ -220,10 +214,35 @@ foreach($cat as $i => $product){
 	$el['extraprice']					= trim($ar[28]);
 
 	
-	echo "<pre>".print_r($el, 1)."</pre>";
-
 	
-	if($i == 2) break;
+
+	// Все памятники
+
+
+	// Мраморные памятники
+//	if($i <= 546) continue;
+//	if($i == 683) break;
+
+	// Ограды
+//	if($i <= 683) continue;
+//	if($i == 713) break;
+
+	// Столики
+//	if($i <= 712) continue;
+//	if($i == 753) break;
+
+	// Вазы
+//	if($i <= 752) continue;
+//	if($i == 813) break;
+
+	//if($i <= 813) continue;
+
+
+
+	echo "<pre>".print_r($el, 1)."</pre>";
+	//continue;
+
+	//else continue;
 	// Также необходимо комментировать обращения к БД для конкретной группы товара у которой нет определенных свойств
 
 	if(!$el['title']) continue;
@@ -261,20 +280,29 @@ foreach($cat as $i => $product){
 
 	// Проставление видимости свойств у добавляемых элементов (Сначала необходимо добавить по 1 типу товара вручную из админки)
 
-	// для Скульптур и памятников
-	//$meta_value = 'a:5:{s:11:"pa_gabarits";a:6:{s:4:"name";s:11:"pa_gabarits";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_weight_attr";a:6:{s:4:"name";s:14:"pa_weight_attr";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_full_width";a:6:{s:4:"name";s:13:"pa_full_width";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
-	
-	// для Ваз
-	//$meta_value = 'a:3:{s:14:"pa_height_vase";a:6:{s:4:"name";s:14:"pa_height_vase";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
-
-	// для Оградок
-	//$meta_value = 'a:4:{s:14:"pa_height_pole";a:6:{s:4:"name";s:14:"pa_height_pole";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:16:"pa_height_flight";a:6:{s:4:"name";s:16:"pa_height_flight";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
-
-	// для Столиков и лавочек
-	//$meta_value = 'a:4:{s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_weight_attr";a:6:{s:4:"name";s:14:"pa_weight_attr";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
-
 	// для памятников (Кроме комбинированых)
-	$meta_value = 'a:9:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"2";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_poilning";a:6:{s:4:"name";s:11:"pa_poilning";s:5:"value";s:0:"";s:8:"position";s:1:"3";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"4";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:1:"8";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:1:"9";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_s";a:6:{s:4:"name";s:13:"pa_gabarits_s";s:5:"value";s:0:"";s:8:"position";s:2:"10";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_t";a:6:{s:4:"name";s:13:"pa_gabarits_t";s:5:"value";s:0:"";s:8:"position";s:2:"12";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_f";a:6:{s:4:"name";s:13:"pa_gabarits_f";s:5:"value";s:0:"";s:8:"position";s:2:"13";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+	//$meta_value = 'a:9:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"2";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_poilning";a:6:{s:4:"name";s:11:"pa_poilning";s:5:"value";s:0:"";s:8:"position";s:1:"3";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"4";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:1:"8";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:1:"9";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_s";a:6:{s:4:"name";s:13:"pa_gabarits_s";s:5:"value";s:0:"";s:8:"position";s:2:"10";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_t";a:6:{s:4:"name";s:13:"pa_gabarits_t";s:5:"value";s:0:"";s:8:"position";s:2:"12";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_f";a:6:{s:4:"name";s:13:"pa_gabarits_f";s:5:"value";s:0:"";s:8:"position";s:2:"13";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+
+	// Комбинированые
+	//$meta_value = 'a:4:{s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:2:"21";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_volume";a:6:{s:4:"name";s:9:"pa_volume";s:5:"value";s:0:"";s:8:"position";s:2:"22";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_size";a:6:{s:4:"name";s:7:"pa_size";s:5:"value";s:0:"";s:8:"position";s:2:"23";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+
+	// Ограды
+	//$meta_value = 'a:4:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:2:"21";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:2:"22";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:16:"pa_height_flight";a:6:{s:4:"name";s:16:"pa_height_flight";s:5:"value";s:0:"";s:8:"position";s:2:"23";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_height_pole";a:6:{s:4:"name";s:14:"pa_height_pole";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+
+	// Столики и лавочки
+	//$meta_value = 'a:1:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+
+	// Вазы
+	//$meta_value = 'a:3:{s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:2:"22";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:2:"23";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+
+
+	// Все свойства
+	$meta_value = 'a:24:{s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"1";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"2";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_s";a:6:{s:4:"name";s:13:"pa_gabarits_s";s:5:"value";s:0:"";s:8:"position";s:1:"3";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:16:"pa_height_flight";a:6:{s:4:"name";s:16:"pa_height_flight";s:5:"value";s:0:"";s:8:"position";s:1:"4";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_height_pole";a:6:{s:4:"name";s:14:"pa_height_pole";s:5:"value";s:0:"";s:8:"position";s:1:"5";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"6";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_volume";a:6:{s:4:"name";s:9:"pa_volume";s:5:"value";s:0:"";s:8:"position";s:1:"7";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:1:"8";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_t";a:6:{s:4:"name";s:13:"pa_gabarits_t";s:5:"value";s:0:"";s:8:"position";s:1:"9";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_f";a:6:{s:4:"name";s:13:"pa_gabarits_f";s:5:"value";s:0:"";s:8:"position";s:2:"10";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_poilning";a:6:{s:4:"name";s:11:"pa_poilning";s:5:"value";s:0:"";s:8:"position";s:2:"11";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_size";a:6:{s:4:"name";s:7:"pa_size";s:5:"value";s:0:"";s:8:"position";s:2:"12";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:2:"13";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_fraction";a:6:{s:4:"name";s:11:"pa_fraction";s:5:"value";s:0:"";s:8:"position";s:2:"14";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:10:"pa_measure";a:6:{s:4:"name";s:10:"pa_measure";s:5:"value";s:0:"";s:8:"position";s:2:"15";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_shape";a:6:{s:4:"name";s:8:"pa_shape";s:5:"value";s:0:"";s:8:"position";s:2:"16";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_casing";a:6:{s:4:"name";s:9:"pa_casing";s:5:"value";s:0:"";s:8:"position";s:2:"17";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_twists";a:6:{s:4:"name";s:9:"pa_twists";s:5:"value";s:0:"";s:8:"position";s:2:"18";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:10:"pa_handles";a:6:{s:4:"name";s:10:"pa_handles";s:5:"value";s:0:"";s:8:"position";s:2:"19";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_lacq";a:6:{s:4:"name";s:7:"pa_lacq";s:5:"value";s:0:"";s:8:"position";s:2:"20";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_fittings";a:6:{s:4:"name";s:11:"pa_fittings";s:5:"value";s:0:"";s:8:"position";s:2:"21";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_manual";a:6:{s:4:"name";s:9:"pa_manual";s:5:"value";s:0:"";s:8:"position";s:2:"22";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_finish";a:6:{s:4:"name";s:9:"pa_finish";s:5:"value";s:0:"";s:8:"position";s:2:"23";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:6:"pa_cap";a:6:{s:4:"name";s:6:"pa_cap";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
+
+
+
+
+
 
 	echo $object_id;
 	$res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_product_attributes' LIMIT 1", $object_id);
@@ -286,6 +314,7 @@ foreach($cat as $i => $product){
 	if(!$res->justVar()){
 		echo $object_id.'- Установлено отображение'."<br>";
 		$res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_product_attributes','".$meta_value."')", $object_id);
+		$res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_visibility','visible')", $object_id);
 	}
 
 	//Цена
@@ -336,5 +365,41 @@ foreach($cat as $i => $product){
 		$term_id = false;
 	}
 
+	// Добавляем изображение
+	$iproduct->body['ID'] = $object_id;
+	$file_name = $el['title'];
+	$img_oldname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+	$file_name = ru2lat($file_name);
+	$img_newname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+	
+	if(copy($img_oldname, $img_newname)){
+		$img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+		$iproduct->featuredImage = $img_src;
+		$iproduct->saveFeaturedImage();
+		unlink($img_src);
+	}else{
+		echo "Не удалось переименовать изображение: ".$img_oldname;
+	};
+}
+// Функция для переименовывания изображений 
+function ru2lat($str){
+	$tr = array(
+		"А"=>"a", "Б"=>"b", "В"=>"v", "Г"=>"g", "Д"=>"d",
+		"Е"=>"e", "Ё"=>"yo", "Ж"=>"zh", "З"=>"z", "И"=>"i",
+		"Й"=>"j", "К"=>"k", "Л"=>"l", "М"=>"m", "Н"=>"n",
+		"О"=>"o", "П"=>"p", "Р"=>"r", "С"=>"s", "Т"=>"t",
+		"У"=>"u", "Ф"=>"f", "Х"=>"kh", "Ц"=>"ts", "Ч"=>"ch",
+		"Ш"=>"sh", "Щ"=>"sch", "Ъ"=>"", "Ы"=>"y", "Ь"=>"",
+		"Э"=>"e", "Ю"=>"yu", "Я"=>"ya", "а"=>"a", "б"=>"b",
+		"в"=>"v", "г"=>"g", "д"=>"d", "е"=>"e", "ё"=>"yo",
+		"ж"=>"zh", "з"=>"z", "и"=>"i", "й"=>"j", "к"=>"k",
+		"л"=>"l", "м"=>"m", "н"=>"n", "о"=>"o", "п"=>"p",
+		"р"=>"r", "с"=>"s", "т"=>"t", "у"=>"u", "ф"=>"f",
+		"х"=>"kh", "ц"=>"ts", "ч"=>"ch", "ш"=>"sh", "щ"=>"sch",
+		"ъ"=>"", "ы"=>"y", "ь"=>"", "э"=>"e", "ю"=>"yu",
+		"я"=>"ya", " "=>"-", "."=>"", ","=>"", "/"=>"-",
+		":"=>"", ";"=>"","—"=>"", "–"=>"-"
+	);
+	return strtr($str,$tr);
 }
 ?>
