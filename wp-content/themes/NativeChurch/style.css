@@ -2886,7 +2886,7 @@ p.demo_store{
 	margin-bottom:20px;
 }
 .woocommerce .related ul li.product, .woocommerce .related ul.products li.product, .woocommerce .upsells.products ul li.product, .woocommerce .upsells.products ul.products li.product, .woocommerce-page .related ul li.product, .woocommerce-page .related ul.products li.product, .woocommerce-page .upsells.products ul li.product, .woocommerce-page .upsells.products ul.products li.product{
-	width:30%!important
+	width:30%;
 }
 .woocommerce p.myaccount_user, .woocommerce .addresses .address{
 	border:1px solid #ECEAE4!important;
@@ -3884,7 +3884,7 @@ a.product_type_simple {
 	margin: 0 !important;
 }
 .woocommerce ul.products li.product,.woocommerce-page ul.products li.product{
-	width:30.8% !important;
+	width:30.8%;
 }
 .woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 {
     font-size: 20px !important;
@@ -4955,4 +4955,8 @@ p.cart_total {
 
 .home .bwg_standart_thumb_spun1_0 {
 	margin: -5px !important;
+}
+
+.single_prod .related .product {
+	width: 22% !important;
 }

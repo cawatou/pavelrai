@@ -246,7 +246,7 @@ function imic_social_staff_icon() {
   ----------------------------------------------------------------------------------- */
 
 function woocommerce_output_related_products() {
- woocommerce_related_products(6,3); // Показывать 3 товара
+ woocommerce_related_products(4,4); // Показывать 3 товара
  }
 
 /* -------------------------------------------------------------------------------------
@@ -307,38 +307,6 @@ function remove_extra_checkout_fields( $fields ) {
     return $fields;
 }
 
-function add_product_to_cart() {
-
-/*        global $woocommerce;
-        $product_id = 10582;
-        $found = false;
-        $cart_total = 30;
-        //return $woocommerce->cart->total; // total_price
-        //return $items = $woocommerce->cart->get_cart(); // get items
-
-        $woocommerce->cart->add_to_cart( $product_id, 3 ); // add cart
-        $woocommerce->cart->empty_cart(); // add cart*/
-
-
-
-        /*if( $woocommerce->cart->total >= $cart_total ) {
-            //check if product already in cart
-            if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
-                foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) {
-                    $_product = $values['data'];
-                    if ( $_product->id == $product_id )
-                        $found = true;
-                }
-                // if product not found, add it
-                if ( ! $found )
-                    $woocommerce->cart->add_to_cart( $product_id );
-            } else {
-                // if no products in cart, add it
-                $woocommerce->cart->add_to_cart( $product_id );
-            }
-        }*/
-
-}
 ?>
 
 
