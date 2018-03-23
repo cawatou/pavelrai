@@ -83,6 +83,7 @@ jQuery(document).ready(function($){
 
 
     $('.add_order').on('click', function(){
+        $('#terms').attr('checked', 'checked');
         $('#place_order').click();
     })
 
