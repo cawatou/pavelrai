@@ -12,7 +12,7 @@ get_header();?>
                 <div class="page_content">
                     <!-- Вывод каталога популярных памятников ( Теперь выводится Short кодом из Админки)
                     ==================================================================================-->
-                    <div class="main_products no_marker">
+                    <div class="col-md-12 product-archive mainpage-archive">
                         <h2>Популярные памятники</h2>
                         <ul class="products">
                             <?$x = 0;
@@ -25,22 +25,26 @@ get_header();?>
                                 } else {
                                     echo '<li class="product">';
                                 }?>
-                                    <h4 href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail(); ?>
-                                        <span><?php the_title(); ?></span>
-                                        <?$tax = get_post_custom( $post->ID );?>
-                                        <span class="product_price"><?=number_format($tax['_price'][0], 0, '', ' ')?> P</span>
-                                        <?$cats = get_the_terms( $post->ID, 'product_cat' );
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="wraper_img">
+                                            <?php the_post_thumbnail(); ?>
+                                        </div>
+                                        <div class="wrapper_attr">
+                                            <p class="prod_title"><?php the_title(); ?></p>
+                                            <?$tax = get_post_custom( $post->ID );?>
+                                            <span class="product_price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</span>
+                                            <?$cats = get_the_terms( $post->ID, 'product_cat' );
 
-                                        //echo "<pre>".print_r($tax, 1)."</pre>";
-                                        //echo $post->get_price();
-                                        foreach ($cats as $cat):
-                                            if($cat->name !== 'Популярные памятники'):?>
-                                                <p ><?=$cat->name?></p>
-                                                <?break?>
-                                            <?endif?>
-                                        <?endforeach?>
-                                    </span>
+                                            //echo "<pre>".print_r($tax, 1)."</pre>";
+                                            //echo $post->get_price();
+                                            foreach ($cats as $cat):
+                                                if($cat->name !== 'Популярные памятники'):?>
+                                                    <p class="cat_product"><?=$cat->name?></p>
+                                                    <?break?>
+                                                <?endif?>
+                                            <?endforeach?>
+                                        </div>
+                                    </a>
                                     <p class="detail_view">Посмотреть подробнее</p>
                                 </li>
                             <?php endforeach; ?>

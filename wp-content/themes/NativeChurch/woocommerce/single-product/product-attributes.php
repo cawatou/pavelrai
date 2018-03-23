@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $has_row    = false;
 $alt        = 1;
-$attributes = $product->get_attributes();
+$attributes_tax = $product->get_attributes();
 ob_start();
 
 global $product, $wpdb;
@@ -22,27 +22,33 @@ $price = $product->get_price();
 $posts = $wpdb->get_row("SELECT value FROM dollar_course WHERE id = '1' LIMIT 0,1");
 $cource = $posts->value;
 $price_value = $price*$cource;
+foreach ($attributes_tax as $tax => $data){
 
+}
+//echo "<pre>".print_r(1, 1)."</pre>";
 ?>
 <div class="shop_attributes col-md-7">
-	<?php foreach ( $attributes as $attribute ) :
+    <p><strong>Характеристики</strong></p>
+	<?php foreach ( $attributes_tax as $tax =>$attribute ) :
 		if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
 			continue;
 		} else {
 			$has_row = true;
-		}?>
-        <div class="prop_value">
-            <p class="prop_name"><strong><?php echo wc_attribute_label( $attribute['name'] ); ?>: </strong></p>
-            <?php
-            if ( $attribute['is_taxonomy'] ) {
-                $values = wc_get_product_terms( $product->id, $attribute['name'], array( 'fields' => 'names' ) );
-                echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-            } else {
-                // Convert pipes to commas and display values
-                $values = array_map( 'trim', explode( WC_DELIMITER, $attribute['value'] ) );
-                echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-            }?>
-        </div>
+		}
+
+        $values = wc_get_product_terms( $product->id, $attribute['name'], array( 'fields' => 'names' ) );
+        $obj_attr = get_the_terms( $product->id, $tax );
+	    if($obj_attr):?>
+            <div class="prop_value">
+
+                    <p class="prop_name">
+                        <strong><?php echo wc_attribute_label( $attribute['name'] ); ?>: </strong>
+                    </p>
+
+                    <?echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );?>
+
+            </div>
+        <?endif;?>
 	<?php endforeach; ?>
 </div>
 

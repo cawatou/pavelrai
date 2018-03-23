@@ -22,6 +22,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	return;
 	 }
 ?>
+
+<?global $product;
+$category_obj = get_the_terms( $product->id, 'product_cat' );
+foreach ($category_obj as $obj){
+    if($obj->parent > 0) $cat_id = $obj->parent;
+    else $cat_id = $obj->term_id;
+}
+?>
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		/**
@@ -32,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
-	<div class="summary entry-summary">
+	<div class="summary entry-summary <?='ds'.$cat_id?>">
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
@@ -59,7 +67,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	?>
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
-    <div class="col-md-12">
+    <?$memorials = array(50, 57, 743, 332, 59, 39);
+    if(in_array($cat_id, $memorials)):?>
+        <div class="col-md-12">
         <div class="wrap_install col-md-4">
             <?if(key($cat) != 743):?>
                 <ul>
@@ -163,5 +173,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
             </table>
         </div>
     </div>
+    <?endif?>
 </div><!-- #product-<?php the_ID(); ?> -->
 <?php do_action( 'woocommerce_after_single_product' ); ?>

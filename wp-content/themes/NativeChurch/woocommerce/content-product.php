@@ -44,16 +44,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 		</div>
         <div class="wrapper_attr">
             <p class="prod_title"><?php the_title(); ?></p>
-            <?php
-                /**
-                 * woocommerce_after_shop_loop_item_title hook
-                 *
-                 * @hooked woocommerce_template_loop_rating - 5
-                 * @hooked woocommerce_template_loop_price - 10
-                 */
-                do_action( 'woocommerce_after_shop_loop_item_title' );
-
-            ?>
+            <span class="product_price"><?=number_format($product->get_price(), 0, '', ' ')?> &#8381;</span>
             <p class="cat_product"><?=$product->get_categories()?></p>
             <div id="attr_product">
                 <?/* // Вывод Габаритов и цвета под ценой товара

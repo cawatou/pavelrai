@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
             spider_page_0(this, move_page, -1);
         }
         
-        //compose_pagination();  
+        compose_pagination();
         
         console.log(current_page, move_page);
     })
