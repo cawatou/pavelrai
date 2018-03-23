@@ -44,8 +44,8 @@ get_header();?>
                                                 <?endif?>
                                             <?endforeach?>
                                         </div>
+                                        <p class="detail_view">Посмотреть подробнее</p>
                                     </a>
-                                    <p class="detail_view">Посмотреть подробнее</p>
                                 </li>
                             <?php endforeach; ?>
                         </ul>

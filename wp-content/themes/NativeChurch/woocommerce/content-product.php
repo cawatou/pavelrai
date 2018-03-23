@@ -61,7 +61,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
                 endforeach;*/?>
             </div>
         </div>
+		<p class="detail_view">Посмотреть подробнее</p>
 	</a>
-    <p class="detail_view">Посмотреть подробнее</p>
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 </li>
