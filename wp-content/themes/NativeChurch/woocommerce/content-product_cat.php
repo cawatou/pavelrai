@@ -15,10 +15,26 @@ if ( empty( $woocommerce_loop['loop'] ) )
 	$woocommerce_loop['loop'] = 0;
 // Store column count for displaying the grid
 if ( empty( $woocommerce_loop['columns'] ) )
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 2 );
+	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 3 );
 // Increase loop count
 $woocommerce_loop['loop']++;
+global $wpdb;
+function getMinPrice($category){
+    $args = array(
+        "post_type" => "product",
+        "numberposts" => 1,
+        'orderby'     => 'price',
+        'order'       => 'ASC',
+        "product_cat" => $category->slug
+    );
+    $posts = get_posts($args);
+    echo "<pre>".print_r($posts, 1)."</pre>";
+}
+//getMinPrice($category);
+//echo "<pre>".print_r($category, 1)."</pre>";
+
 ?>
+
 <li class="product-category product<?php
     if ( ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] == 0 || $woocommerce_loop['columns'] == 1 )
         echo ' first';
