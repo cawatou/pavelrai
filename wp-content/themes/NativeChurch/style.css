@@ -644,7 +644,7 @@ body{
 }
 body.boxed .body{
 	position:relative;
-	margin:25px auto;
+	margin:0 auto;
 	max-width:1080px;
 	width:100%;
 	height:auto;
@@ -4072,21 +4072,28 @@ li.product a img {
 }
 
 .header_contacts .email {
-	text-decoration-line: underline;
-	text-decoration-style: underline;
+	width: fit-content;
+	border-bottom: 1px solid;
+	font-weight: 700;
 }
 
 .header_contacts .phone {
-	text-decoration-line: underline;
-	text-decoration-style: dotted;
+	width: fit-content;
+	border-bottom: 1px dotted;
+	font-weight: 700;
 }
 .site-header .tel span{
 	font-size: 18px;
+	width: fit-content;
+	border-bottom: 1px solid;
+	font-weight: 700;
 }
+
 .site-header .tel {
 	margin-top: 10px;
 	color: black;
 	margin-left: 25px;
+	text-decoration: none;
 }
 
 .site-header .tel .fa {
@@ -4096,10 +4103,11 @@ li.product a img {
 }
 
 
-.site-header .tel:hover {
-	color: blue;
-	text-decoration: underline;
+.site-header .tel:hover,
+.site-header .tel:hover span{
+	color: blue !important;
 }
+
 
 .site-header .email:hover{
 	color: blue;
