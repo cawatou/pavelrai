@@ -30,7 +30,7 @@ function getMinPrice($category){
     $posts = get_posts($args);
     echo "<pre>".print_r($posts, 1)."</pre>";
 }
-//getMinPrice($category);
+//zgetMinPrice($category);
 //echo "<pre>".print_r($category, 1)."</pre>";
 
 ?>

@@ -751,7 +751,7 @@ body.boxed .body{
 	text-decoration:none;
 	font:18px circe-regular;
 	color: #333333;
-	line-height: 50px;
+	line-height: 47px;
 }
 .navigation ul > li > a:hover, .navigation ul > li > a.current{
 }
@@ -3608,49 +3608,50 @@ p.demo_store{
 	background: none !important;
 	margin-left: 10px;
 	padding: 2px 0;
+	font-size: 15px;
 }
 
 #menu-item-2571 a {background: url(images/granit.png) no-repeat;padding-top: 3px;}
-#menu-item-2571:hover a {background: url(images/granit_a.png) no-repeat;}
+/*#menu-item-2571:hover a {background: url(images/granit_a.png) no-repeat;}*/
 
 #menu-item-2578 a {background: url(images/not-standart.png) no-repeat;padding-top: 3px;}
-#menu-item-2578:hover a {background: url(images/not-standart_a.png) no-repeat;}
+/*#menu-item-2578:hover a {background: url(images/not-standart_a.png) no-repeat;}*/
 
 #menu-item-9996 a {background: url(images/combo.png) no-repeat;padding-top: 3px;}
-#menu-item-9996:hover a {background: url(images/combo_a.png) no-repeat;}
+/*#menu-item-9996:hover a {background: url(images/combo_a.png) no-repeat;}*/
 
 #menu-item-2580 a {background: url(images/cross_n.png) no-repeat;padding-top: 3px;}
-#menu-item-2580:hover a {background: url(images/cross_a.png) no-repeat;}
+/*#menu-item-2580:hover a {background: url(images/cross_a.png) no-repeat;}*/
 
 #menu-item-2581 a {background: url(images/mramor.png) no-repeat;padding-top: 3px;}
-#menu-item-2581:hover a {background: url(images/mramor_a.png) no-repeat;}
+/*#menu-item-2581:hover a {background: url(images/mramor_a.png) no-repeat;}*/
 
 #menu-item-2583 a {background: url(images/fence_n.png) no-repeat;padding-top: 3px;}
-#menu-item-2583:hover a {background: url(images/fence_a.png) no-repeat;}
+/*#menu-item-2583:hover a {background: url(images/fence_a.png) no-repeat;}*/
 
 #menu-item-2588 a {background: url(images/table_n.png) no-repeat;padding-top: 5px;}
-#menu-item-2588:hover a {background: url(images/table_a.png) no-repeat;}
+/*#menu-item-2588:hover a {background: url(images/table_a.png) no-repeat;}*/
 
 #menu-item-2589 a {background: url(images/vase_n.png) no-repeat;padding-top: 3px;}
-#menu-item-2589:hover a {background: url(images/vase_a.png) no-repeat;}
+/*#menu-item-2589:hover a {background: url(images/vase_a.png) no-repeat;}*/
 
 #menu-item-2591 a {background: url(images/blago.png) no-repeat;padding-top: 1px;}
-#menu-item-2591:hover a {background: url(images/blago_a.png) no-repeat;}
+/*#menu-item-2591:hover a {background: url(images/blago_a.png) no-repeat;}*/
 
 #menu-item-2674 a {background: url(images/hud.png) no-repeat;padding-top: 3px;}
-#menu-item-2674:hover a {background: url(images/hud_a.png) no-repeat;}
+/*#menu-item-2674:hover a {background: url(images/hud_a.png) no-repeat;}*/
 
 #menu-item-3811 a {background: url(images/sculpture_n.png) no-repeat;}
-#menu-item-3811:hover a {background: url(images/sculpture_a.png) no-repeat;}
+/*#menu-item-3811:hover a {background: url(images/sculpture_a.png) no-repeat;}*/
 
 #menu-item-10499 a {background: url(images/venki.png) no-repeat;}
-#menu-item-10499:hover a {background: url(images/venki_a.png) no-repeat;}
+/*#menu-item-10499:hover a {background: url(images/venki_a.png) no-repeat;}*/
 
 #menu-item-10500 a {background: url(images/grob.png) no-repeat;padding-top: 3px;}
-#menu-item-10500:hover a {background: url(images/grob_a.png) no-repeat;}
+/*#menu-item-10500:hover a {background: url(images/grob_a.png) no-repeat;}*/
 
 #menu-item-10501 a {background: url(images/pet.png) no-repeat;padding-top: 3px;}
-#menu-item-10501:hover a {background: url(images/pet_a.png) no-repeat;}
+/*#menu-item-10501:hover a {background: url(images/pet_a.png) no-repeat;}*/
 
 
 /*============================== ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ =======================*/
@@ -4120,8 +4121,11 @@ li.product a img {
 	margin-top: 3px;
 	height: 40px;
 	width: 40px;
+	border-radius: 40px;	
 	font-size: 26px;
 	display: block;
+	border: 1px solid #f7f7f7;
+	background-color: #f7f7f7;
 }
 
 .site-header .cart .fa{
@@ -4967,4 +4971,13 @@ p.cart_total {
 
 .single_prod .related .product {
 	width: 22% !important;
+}
+
+#menu-header-menu li:hover a {
+	border-bottom: 2px solid;
+	border-color: #000;
+}
+
+.home .page_content {
+	padding-top: 5px;
 }
