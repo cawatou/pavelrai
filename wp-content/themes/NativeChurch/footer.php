@@ -18,18 +18,20 @@ if($show_works):?>
     <p>© Память времени, 2001-<?=date(Y)?>.</p>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-6">
 
 			</div>	
-			<div class="col-md-8 logo_studio">
+			<div class="col-md-6 logo_studio">
                     <div class="col-md-4 header_contacts">
                         <p class="email footer_email">7pavelrai@mail.ru</p>
                     </div>
-                    <div class="col-md-8 header_contacts">
+                    <div class="col-md-4">
                         <p class="phone footer_phone"> +7 914 711-28-20 </p>
+                    </div>
+                    <div class="col-md-4 header_contacts">
+
 
                         <a class="tel footer_tel" href="#">
-                            <i class="fa fa-phone"></i>
                             <span>Вызов менеджера</span>
                         </a>
                     </div>

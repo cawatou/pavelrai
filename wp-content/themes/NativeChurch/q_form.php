@@ -1,5 +1,5 @@
 <form id="q_form" >
-    <h2 class="text-center">Остались вопросы</h2>
+    <h2 class="text-center">Остались вопросы?</h2>
     <p class="text-center">Оставьте заявку на консультацию</p>
     <p class="text-center">Наш специалист свяжется с вами и ответит на все вопросы</p>
     <div class="col-md-6">
