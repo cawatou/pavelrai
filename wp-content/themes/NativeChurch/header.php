@@ -54,6 +54,10 @@
 
     <link rel="stylesheet" href="/wp-content/themes/NativeChurch/css/jquery.fancybox.css?v=2.1.5" type="text/css"
           media="screen"/>
+
+    <link rel="stylesheet" href="/wp-content/themes/NativeChurch/css/owl.carousel.css" type="text/css"/>
+    <link rel="stylesheet" href="/wp-content/themes/NativeChurch/css/owl.theme.default.css" type="text/css"/>
+    <script type='text/javascript' src='/wp-content/themes/NativeChurch/js/owl.carousel.js'></script>
     <script type='text/javascript' src='/wp-content/themes/NativeChurch/script.js'></script>
 </head>
 <!--// CLOSE HEAD //-->

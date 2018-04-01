@@ -280,6 +280,11 @@ function q_form(){
     require_once($theme_uri . 'q_form.php');
 }
 
+/*================== Вывод карусели "Наши работы" =================*/
+function works_carousel(){
+    require_once($theme_uri . 'works_carousel.php');
+}
+
 // Убираем ненужные поля
 add_filter( 'woocommerce_checkout_fields' , 'remove_extra_checkout_fields' );
 function remove_extra_checkout_fields( $fields ) {

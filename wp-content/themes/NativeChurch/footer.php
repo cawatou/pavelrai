@@ -11,13 +11,7 @@ if($show_works):?>
 	</div>
 	</div>
 	</div>
-	<br>
-    <p><strong>Наши работы</strong></p>
-    <div id="our_works">
-	    <?=do_shortcode( '[Best_Wordpress_Gallery id="34" gal_title="На главной"]' )?>
-    </div>
-	<br>
-	<br>
+    <?=works_carousel()?>
 <?endif?>
 
 <footer class="site-footer-bottom">

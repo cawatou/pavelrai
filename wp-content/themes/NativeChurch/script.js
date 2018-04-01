@@ -1,6 +1,27 @@
 jQuery(document).ready(function($){
     compose_pagination();
     drawSeparateLine();
+
+    /*======================================================================*/
+    var carousel = $('.owl-carousel');
+    carousel.owlCarousel({
+        loop:true,
+        stagePadding:30,
+        pagination:true,
+        items: 4,
+        singleItem: false,
+    });
+    $(".right_arr").click(function() {
+        console.log('next');
+        carousel.trigger('owl.next');
+    });
+
+    $(".left_arr").click(function() {
+        console.log('prev');
+        carousel.trigger('owl.prev');
+    });
+
+    /*======================================================================*/
     
     $(document).find('input[name=pagination_gal]').on('click', function(){
         var current_page = $('#our_works .paging-input_0 .total-pages_0:first-child').text().trim();

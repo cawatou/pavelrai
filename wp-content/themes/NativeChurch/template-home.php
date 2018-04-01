@@ -58,5 +58,8 @@ get_header();?>
 </div>
 <!-- Вывод Контента из админки
 ============================-->
-<?php the_content() ?>
+<?=works_carousel()?>
+<div class="home_content">
+    <?php the_content() ?>
+</div>
 <?php get_footer(); ?>

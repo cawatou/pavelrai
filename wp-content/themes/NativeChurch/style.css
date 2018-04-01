@@ -3852,6 +3852,7 @@ a.product_type_simple {
 	line-height: 210px !important;
 	height: 240px !important;
 	margin-bottom: 10px;
+	background: #f7f7f7;
 }
 .wraper_img img {
 	text-align: center;
@@ -4165,7 +4166,7 @@ li.product a img {
 	text-transform: none;
 }
 .product_price {
-	color: green;
+	color: #08c138;
 	font-weight: 700;
 	float: right;
 }
@@ -4175,8 +4176,12 @@ li.product:hover {
 	border-radius: 5px;
 }
 
+li.product .wraper_img {
+
+}
+
 li.product:hover .wraper_img {
-	background: #c0e4eb;
+	background: #c0e4eb !important;
 }
 
 li.product .detail_view {
@@ -4193,6 +4198,13 @@ li.product .detail_view {
 
 li.product:hover .detail_view {
 	display: block;
+}
+
+#our_works {
+	padding-top: 20px;
+	position: relative;
+	padding-bottom: 40px;
+	background-color: #f8f8f8;
 }
 
 #our_works #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 {
@@ -4477,6 +4489,8 @@ li.product:hover .detail_view {
 	width: 45%;
 	font-size: 18px !important;
 	margin-top: 1px;
+	margin-bottom: 0;
+	font-weight: 700 !important;
 }
 
 .products .price {
@@ -4494,13 +4508,15 @@ li.product:hover .detail_view {
 }
 
 .products li:hover {
-	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
-	-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+	box-shadow: 0px 4px 10px rgba(209,209,209,0.45);
+	-webkit-box-shadow: 0px 4px 10px rgba(209,209,209,0.45);
 }
 
 .cat_product {
-	font-size: 18px;
+	font-size: 14px !important;
 	clear: left;
+	color: #999898 !important;
+	margin-bottom: 5px;
 }
 
 
@@ -4978,6 +4994,82 @@ p.cart_total {
 	border-color: #000;
 }
 
+#content {
+	margin-bottom: 0;
+}
+
 .home .page_content {
 	padding-top: 5px;
+}
+
+.home_content {
+	padding-top: 40px;
+	border-top: 1px solid #ededed;
+}
+
+.home_content h5 {
+	font-size: 22px;
+}
+
+.home_content p {
+	font-size: 18px;
+}
+
+
+
+.owl-nav { display: block !important; }
+
+
+.left_arr {
+	position: absolute;
+	left: -25px;
+	top: 130px;
+}
+
+.left_arr:hover {
+	cursor: pointer;
+}
+
+.right_arr {
+	position: absolute;
+	right: -25px;
+	top: 130px;
+}
+
+.right_arr:hover {
+	cursor: pointer;
+}
+
+.carousel_block .title {
+	font-size: 22px;
+	font-weight: 700;
+	color: #333;
+}
+
+.owl-item {
+	padding-left: 30px;
+}
+
+.owl-item:first-child {
+	padding-left: 0;
+}
+
+.owl-item:first-child img {
+	height: 180px;
+}
+
+#our_works .owl-pagination {
+	float: left;
+	left: -5px;
+	position: absolute;
+}
+
+.owl-pagination span {
+	background: none !important;
+	border: 2px solid #c6c6c6 !important;
+}
+
+.owl-pagination .active span {
+	background-color: #c6c6c6 !important;
+	border: 2px solid #c6c6c6 !important;
 }
