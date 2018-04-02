@@ -71,7 +71,7 @@ if($show_works):?>
 <noscript><div><img src="//mc.yandex.ru/watch/27253784" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-<div id="modal_1" class="modal_window">
+<div id="modal_1" class="modal modal_window">
 	<span class="modal_close">X</span>
 	<form method="post">
 		<input type="text" id="user_name" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
@@ -79,7 +79,8 @@ if($show_works):?>
 		<input class="btn btn-primary snd_btn" type="submit" name="submit" value="Подать заявку">
 	</form>
 </div>
-<div id="modal_2" class="modal_window">
+
+<div id="modal_2" class="modal modal_window">
 	<span class="modal_close">X</span>
 	<form method="post">
 		<input type="text" id="user_name_2m" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
@@ -89,8 +90,9 @@ if($show_works):?>
 		<textarea id="user_msg_2m" class="required_filds msg_modal"></textarea>
 		<input class="btn btn-primary snd_btn" type="submit" value="Подать заявку">							
 	</form>
-</div>	
-<div id="modal_3" class="modal_window">
+</div>
+
+<div id="modal_3" class="modal modal_window">
 	<span class="modal_close">X</span>
 	<form method="post">
 		<input type="text" id="user_name_3m" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
@@ -98,10 +100,54 @@ if($show_works):?>
 		<input class="btn btn-primary snd_btn" type="submit" name="submit" value="Подать заявку">
 	</form>
 </div>
-<div id="modal_4">
+
+<div id="modal_4" class="modal">
 	<span class="modal_close">X</span>
 	<div class="alert alert-success">Ваша заявка отправлена. <br/>Мы свяжемся с вами в ближайшее время.</div>
-</div>				
+</div>
+
+<div id="modal_contact" class="modal">
+    <form method="post" id="contactform" name="contactform" class="contact-form" action="<?php echo get_template_directory_uri() ?>/mail/contact.php">
+        <span class="modal_close">x</span>
+        <div class="col-md-12">
+            <p class="title">Задать вопрос</p>
+
+            <div class="col-md-4">
+                <p>Имя</p>
+            </div>
+            <div class="col-md-8 form-group">
+                <input type="text" id="name" name="name"  class="form-control input-lg" placeholder="Имя">
+            </div>
+
+           <div class="col-md-4">
+                <p>Телефон</p>
+            </div>
+            <div class="col-md-8 form-group">
+                <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Телефон">
+                <input type ="hidden" name ="image_path" id="image_path" value ="<?php echo get_template_directory_uri() ?>">
+                <input id="admin_email" name="admin_email" type="hidden" value ="<?php echo $admin_email; ?>">
+                <input id="subject" name="subject" type="hidden" value ="<?php echo $subject_email; ?>">
+            </div>
+
+           <div class="col-md-4">
+                <p>Почта</p>
+            </div>
+            <div class="col-md-8 form-group">
+                <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email">
+            </div>
+
+           <div class="col-md-4">
+                <p>Вопрос</p>
+            </div>
+            <div class="col-md-8 form-group">
+                <textarea cols="6" rows="7" id="comments" name="comments" class="form-control input-lg" placeholder="Ваш вопрос"></textarea>
+            </div>
+
+            <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Задать вопрос">
+        </div>
+    </form>
+</div>
+
 <div id="overlay"></div>
 </body>
 </html>

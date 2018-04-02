@@ -53,18 +53,21 @@ jQuery('.add_extra').click(function(event){
 });
 
 
+jQuery('#content_contacts button').click(function(event){
+	event.preventDefault();
+	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+		function(){ // после выполнения предъидущей анимации
+			jQuery('#modal_contact').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+		});
+});
+
+
 
 jQuery('.modal_close, #overlay').click( function(){ 			
-	jQuery('#modal_1, #modal_2, #modal_3, #modal_4, #modal_extra').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
-		function(){ // после анимации
-			jQuery(this).css('display', 'none'); // делаем ему display: none;
-			jQuery('#overlay').fadeOut(400); // скрываем подложку
-		}
-	);
-	jQuery(".required_filds").each(function(){
-		jQuery(this).val("");
-	})
+	modal_close();
 });
+
+
 
 
 jQuery(".snd_btn").click(function(event){
@@ -73,6 +76,24 @@ jQuery(".snd_btn").click(function(event){
 	//console.log($title);
 	message($y, $title);return false;
 });
+
+jQuery("#modal_contact .btn").click(function(event){
+	console.log('click there');
+    sendmsg();
+});
+
+
+function modal_close() {
+    jQuery('.modal').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
+        function(){ // после анимации
+            jQuery(this).css('display', 'none'); // делаем ему display: none;
+            jQuery('#overlay').fadeOut(400); // скрываем подложку
+        }
+    );
+    jQuery(".required_filds").each(function(){
+        jQuery(this).val("");
+    })
+}
 
 
 function message($y, $title){
@@ -95,7 +116,7 @@ function message($y, $title){
 	//console.log($y);   
 }
 
-function sendmsg(){
+function sendmsg($title){
   jQuery.ajax({
 	type: "POST",
 	url: "/wp-content/themes/NativeChurch/mail/modal.php",
@@ -117,14 +138,8 @@ function sendmsg(){
   .done(function(msg){
 	result = msg;
 	if(msg=="welldone"){
-	  jQuery(".modal_window").css('display', 'none');
-	  jQuery(".required_filds").each(function(){
-		jQuery(this).val("");
-	  })
-	  jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
-		function(){ // после выполнения предъидущей анимации
-		jQuery('#modal_4').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
-	});
+        modal_close()
+        jQuery('#modal_4').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 	}   
 	else if(msg=="nosend"){      
 	  alert("Ошибка отправки формы");

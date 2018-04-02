@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
             $('.page_content').addClass('content_separate');
         }
         else $('.menu-left_menu-container').addClass('menu_separate');
-        console.log(menu_height, content_height);
+        //console.log(menu_height, content_height);
     }
 
     $('.price_block button').on('click', function(){

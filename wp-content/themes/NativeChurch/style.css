@@ -3404,7 +3404,7 @@ p.demo_store{
 	padding-left: 0 !important;
 }
 
-#modal_1, #modal_2, #modal_3, #modal_4, #modal_extra {
+#modal_1, #modal_2, #modal_3, #modal_4, #modal_extra, #modal_contact {
 	display: none;
 	position: fixed;
 	z-index: 9999;
@@ -3435,7 +3435,17 @@ p.demo_store{
 	margin-top: -200px;
 }
 
+#modal_contact {
+	width: 500px;
+	height: 481px;
+	border-radius: 0;
+	margin-left: -250px;
+	margin-top: -225px;
+}
 
+.modal {
+	overflow: hidden;
+}
 
 #modal_1 input[type=text],
 #modal_2 input[type=text],
@@ -5140,3 +5150,70 @@ p.cart_total {
 	font-weight: 700;
 	margin-bottom: 0px;
 }
+
+
+#modal_contact .title {
+	font-size: 24px !important;
+	font-weight: 700;
+	color: #333 !important;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	margin-left: 60px;
+	text-align: left;
+}
+
+#modal_contact .col-md-12 {
+	width: 100%;
+}
+
+#modal_contact .col-md-4 p {
+	font-size: 18px;
+	color: #333;
+	padding-left: 45px;
+	text-align: left;
+	padding-top: 11px;
+}
+
+#modal_contact .col-md-8 {
+	margin-bottom: 0;
+	height: 50px;
+}
+
+#modal_contact .modal_close {
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+	z-index: 1000;
+}
+
+#modal_contact input{
+	width: 245px;
+	height: 39px;
+	border-radius: 3px;
+	border: 2px solid #ededed;
+}
+
+#modal_contact textarea {
+	width: 245px;
+	height: 119px;
+	border-radius: 3px;
+	border: 2px solid #ededed;
+}
+
+#modal_contact .btn {
+	width: 245px;
+	height: 41px;
+	background-color: #07c137;
+	border: 3px solid #07c137;
+	text-transform: none;
+	font-family: circe-regular;
+	padding-top: 5px;
+	font-size: 18px;
+	margin-right: 54px;
+	margin-top: 92px;
+}
+
+.modal_close:hover {
+	cursor: pointer;
+}
+
