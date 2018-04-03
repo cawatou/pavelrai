@@ -1513,7 +1513,7 @@ ol.breadcrumb a{
 	font-size: 16px;
 	color:#fff;
 	text-decoration:none;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid #ccc;
 }
 ol.breadcrumb a:hover{
 	color:#fff;
@@ -4087,7 +4087,7 @@ li.product a img {
 
 .header_contacts .email {
 	width: fit-content;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid #ccc;
 	font-weight: 700;
 }
 
@@ -4099,7 +4099,7 @@ li.product a img {
 .site-header .tel span{
 	font-size: 18px;
 	width: fit-content;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid #ccc;
 	font-weight: 700;
 }
 
@@ -5217,3 +5217,11 @@ p.cart_total {
 	cursor: pointer;
 }
 
+.breadcrumb a, .breadcrumb span {
+	color: #333 !important;
+}
+
+.breadcrumb > li + li:before {
+	content: "➞" !important;
+	color: #333 !important;
+}
