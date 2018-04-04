@@ -1,27 +1,9 @@
 jQuery(document).ready(function($){
-    drawSeparateLine();
+    initFunction();
 
-    /*======================================================================*/
-    var carousel = $('.owl-carousel');
-    carousel.owlCarousel({
-        loop:true,
-        stagePadding:30,
-        pagination:true,
-        items: 4,
-        singleItem: false,
-    });
-    $(".right_arr").click(function() {
-        console.log('next');
-        carousel.trigger('owl.next');
-    });
+    function initFunction() {
 
-    $(".left_arr").click(function() {
-        console.log('prev');
-        carousel.trigger('owl.prev');
-    });
-
-    /*======================================================================*/
-    function drawSeparateLine() {
+        // ============================== drawSeparateLine =========================
         var menu_height = $('.menu-left_menu-container').height();
         var content_height = $('.page_content').height();
 
@@ -30,6 +12,31 @@ jQuery(document).ready(function($){
         }
         else $('.menu-left_menu-container').addClass('menu_separate');
         //console.log(menu_height, content_height);
+
+
+        /*=============================== carousel ====================================*/
+        var carousel = $('.owl-carousel');
+        carousel.owlCarousel({
+            loop:true,
+            stagePadding:30,
+            pagination:true,
+            items: 4,
+            singleItem: false,
+        });
+        $(".right_arr").click(function() {
+            console.log('next');
+            carousel.trigger('owl.next');
+        });
+
+        $(".left_arr").click(function() {
+            console.log('prev');
+            carousel.trigger('owl.prev');
+        });
+
+
+        /*=============================== active parent menu (ico) ====================================*/
+        $('.current-menu-item a').addClass('active');
+        console.log('ddd');
     }
 
     $('.price_block button').on('click', function(){
@@ -122,9 +129,11 @@ jQuery(document).ready(function($){
     $('#billing_phone').attr('placeholder', 'Введите номер телефона');
 })
 
+
+//    declOfNum(count, ['найдена', 'найдено', 'найдены']);
 function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
-//    declOfNum(count, ['найдена', 'найдено', 'найдены']);
+
 

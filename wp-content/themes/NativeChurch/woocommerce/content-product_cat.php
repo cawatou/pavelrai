@@ -9,7 +9,7 @@
  * @version     1.6.4
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-global $woocommerce_loop;
+global $woocommerce_loop, $woocommerce;
 // Store loop count we're currently on
 if ( empty( $woocommerce_loop['loop'] ) )
 	$woocommerce_loop['loop'] = 0;
@@ -19,23 +19,11 @@ if ( empty( $woocommerce_loop['columns'] ) )
 // Increase loop count
 $woocommerce_loop['loop']++;
 global $wpdb;
-function getMinPrice($category){
-    $args = array(
-        "post_type" => "product",
-        "numberposts" => 1,
-        'orderby'     => 'price',
-        'order'       => 'ASC',
-        "product_cat" => $category->slug
-    );
-    $posts = get_posts($args);
-    echo "<pre>".print_r($posts, 1)."</pre>";
-}
-//zgetMinPrice($category);
 //echo "<pre>".print_r($category, 1)."</pre>";
 
 ?>
 
-<li class="product-category product<?php
+<li class="product<?php
     if ( ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] == 0 || $woocommerce_loop['columns'] == 1 )
         echo ' first';
 	if ( $woocommerce_loop['loop'] % $woocommerce_loop['columns'] == 0 )
@@ -43,21 +31,12 @@ function getMinPrice($category){
 	?>">
 	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
 	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
-		<?php
-			/**
-			 * woocommerce_before_subcategory_title hook
-			 *
-			 * @hooked woocommerce_subcategory_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_subcategory_title', $category );
-		?>
-		<h3>
-			<?php
-				echo $category->name;
-				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
-			?>
-		</h3>
+        <div class="wraper_img">
+            <?do_action( 'woocommerce_before_subcategory_title', $category );?>
+        </div>
+        <div class="wrapper_attr">
+            <p class="text-center"><?=$category->name?></p>
+        </div>
 		<?php
 			/**
 			 * woocommerce_after_subcategory_title hook
