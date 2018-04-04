@@ -3621,7 +3621,7 @@ p.demo_store{
 	background: none !important;
 	margin-left: 10px;
 	padding: 2px 0;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 #menu-item-2571 a {background: url(images/granit.png) no-repeat;padding-top: 3px;}
@@ -4534,11 +4534,12 @@ li.product:hover .detail_view {
 .prod_title {
 	float: left;
 	text-align: left;
-	width: 45%;
+	width: 70%;
 	font-size: 18px !important;
 	margin-top: 1px;
 	margin-bottom: 0;
 	font-weight: 700 !important;
+	color: #333;
 }
 
 .products .price {
@@ -4560,7 +4561,11 @@ li.product:hover .detail_view {
 	-webkit-box-shadow: 0px 4px 10px rgba(209,209,209,0.45);
 }
 
-.cat_product {
+.cat_product a {
+	padding-top: 5px;
+}
+
+.cat_product, .cat_product a {
 	font-size: 14px !important;
 	clear: left;
 	color: #999898 !important;
@@ -5225,4 +5230,24 @@ p.cart_total {
 .breadcrumb > li + li:before {
 	content: "➞" !important;
 	color: #333 !important;
+}
+
+.product-archive .pagination {
+	margin: 0;
+	float: right;
+}
+
+.product-archive .pagination a {
+	border: none;
+	font-size: 14px;
+	color: #333;
+}
+
+.product-archive .pagination li.active span {
+	background-color: #999898;
+	border-radius: 70px;
+	border-color: #999898;
+	width: 34px;
+	text-align: center;
+	height: 33px;
 }

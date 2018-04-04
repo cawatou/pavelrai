@@ -97,13 +97,13 @@ if (!function_exists('pagination')) {
         }
         if (1 != $pages) {
             echo '<ul class="pagination">';
-            echo '<li><a href="' . get_pagenum_link(1) . '" title="'.__('First','framework').'"><i class="fa fa-chevron-left"></i></a></li>';
+            //echo '<li><a href="' . get_pagenum_link(1) . '" title="'.__('First','framework').'"><i class="fa fa-chevron-left"></i></a></li>';
             for ($i = 1; $i <= $pages; $i++) {
                 if (1 != $pages && (!($i >= $paged + $range + 3 || $i <= $paged - $range - 3) || $pages <= $showitems )) {
                     echo ($paged == $i) ? "<li class=\"active\"><span>" . $i . "</span></li>" : "<li><a href='" . get_pagenum_link($i) . "' class=\"\">" . $i . "</a></li>";
                 }
             }
-           echo '<li><a href="' . get_pagenum_link($pages) . '" title="'.__('Last','framework').'"><i class="fa fa-chevron-right"></i></a></li>';
+            //echo '<li><a href="' . get_pagenum_link($pages) . '" title="'.__('Last','framework').'"><i class="fa fa-chevron-right"></i></a></li>';
             echo '</ul>';
         }
     }
@@ -252,7 +252,7 @@ function woocommerce_output_related_products() {
 /* -------------------------------------------------------------------------------------
   Вывод количества товара на одной странице
   ----------------------------------------------------------------------------------- */
-  add_filter('loop_shop_per_page', create_function('$cols', 'return 21;'));
+  add_filter('loop_shop_per_page', create_function('$cols', 'return 9;'));
 
 /* -------------------------------------------------------------------------------------
   Подключение Java Script
