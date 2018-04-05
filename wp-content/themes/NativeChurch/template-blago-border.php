@@ -23,7 +23,7 @@ get_header();
             <div class="gallery_work">
                 <div class="gray_bg">&nbsp;</div>
                 <p class="title">Наши работы</p>
-                <?=do_shortcode( '[Best_Wordpress_Gallery id="45" gal_title="Бордюры и щебень (Благоустройство)"]' )?>
+                <?=do_shortcode( '[Best_Wordpress_Gallery id="56"]' )?>
                 <ul class="pagination pagination_gal"></ul>
             </div>
             <?=q_form()?>

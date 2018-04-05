@@ -109,7 +109,7 @@ get_header();
         <div class="gallery_work">
             <div class="gray_bg">&nbsp;</div>
             <p class="title">Сертификаты и награды</p>
-            <?=do_shortcode( '[Best_Wordpress_Gallery id="48"]' )?>
+            <?=do_shortcode( '[Best_Wordpress_Gallery id="55"]' )?>
             <ul class="pagination pagination_gal"></ul>
         </div>
 

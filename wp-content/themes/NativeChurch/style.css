@@ -4002,7 +4002,7 @@ li.product a img {
 }
 
 #bwg_standart_thumbnails_0 a {
-	margin: 0 40px 15px 0;
+	margin: 0 15px 15px 0;
 }
 
 #bwg_standart_thumbnails_0 .img-thumbnail {
@@ -5128,7 +5128,7 @@ p.cart_total {
 
 .gallery_work {
 	position: relative;
-	padding: 20px 0 60px 0;
+	padding: 25px 0 60px 0;
 	border-top: 1px solid #ededed !important;
 }
 
@@ -5289,7 +5289,8 @@ p.cart_total {
 	color: #333;
 }
 
-.pagination_gal li.page_gal span:hover {
+.pagination_gal li.page_gal span:hover,
+.pagination li span:hover {
 	cursor: pointer;
 	background-color: inherit !important;
 }
@@ -5325,7 +5326,7 @@ p.cart_total {
 }
 
 .bwg_standart_thumb_spun1_0 {
-	margin: 0 0 40px 0 !important;
+	margin: 0 0 15px 0 !important;
 }
 
 #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 a {

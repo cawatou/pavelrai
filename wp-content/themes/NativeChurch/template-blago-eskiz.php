@@ -10,7 +10,7 @@ get_header();
             <div class="gallery_work">
                 <div class="gray_bg">&nbsp;</div>
                 <p class="title">Примеры работ</p>
-                <?=do_shortcode( '[Best_Wordpress_Gallery id="50"]' )?>
+                <?=do_shortcode( '[Best_Wordpress_Gallery id="57"]' )?>
                 <ul class="pagination pagination_gal"></ul>
             </div>
             <?=q_form()?>

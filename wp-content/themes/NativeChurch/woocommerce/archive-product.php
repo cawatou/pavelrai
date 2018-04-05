@@ -68,7 +68,7 @@ $pageOptions = imic_page_design($variable_post_id); //page design options ?>
                         <div class="monument_content">
                         <h5>Создание гранитного монумента может состоять из нескольких этапов:</h5>
                         <p>1. Зачастую клиент приходит с уже готовых решением. Но иногда ему требуется помощь. В таком
-                            случае, ему пригодятся наши <a href="/blagoustroistvo/granitnye-monumenty/eskizy/ ‎">эскизы</a>.</p>
+                            случае, ему пригодятся наши <a href="/blagoustroistvo/granitnye-monumenty/eskizy/">эскизы</a>.</p>
                         <p>2. Конструктор по выбранному эскизу создает так называемую <a href="/blagoustroistvo/granitnye-monumenty/kompyuternyj-3d-dizajn/">3D-модель гранитного монумента</a>,
                             то есть пространственную модель памятника в компьютерной графике.</p>
                         <p>3. Обсуждение материалов, используемых в работе. <a href="">Выбор материалов</a>.</p>
