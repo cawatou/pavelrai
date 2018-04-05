@@ -25,7 +25,6 @@ jQuery(document).ready(function($){
 
         var el ='';
         var page_count = $('.paging-input_0 .total-pages_0:last-child').text().trim();
-        console.log('compose_pagination', page_count);
         for(var i=1; i<=page_count; i++){
             if(i == 1) el = '<li class="page_gal active" data-page="'+i+'"><span>' + i +'</span></li>';
             else el = '<li class="page_gal" data-page="'+i+'"><span>' + i +'</span></li>';
@@ -38,12 +37,14 @@ jQuery(document).ready(function($){
         // ============================== drawSeparateLine =========================
         var menu_height = $('.menu-left_menu-container').height();
         var content_height = $('.page_content').height();
+        if(content_height == null) content_height = $('.product-archive').height();
 
         if (content_height > menu_height) {
             $('.page_content').addClass('content_separate');
+            $('.product-archive').addClass('content_separate');
         }
         else $('.menu-left_menu-container').addClass('menu_separate');
-        //console.log(menu_height, content_height);
+        console.log(menu_height, content_height);
 
 
         /*=============================== carousel ====================================*/
@@ -68,7 +69,6 @@ jQuery(document).ready(function($){
 
         /*=============================== active parent menu (ico) ====================================*/
         $('.current-menu-item a').addClass('active');
-        console.log('ddd');
     }
 
     $('.price_block button').on('click', function(){

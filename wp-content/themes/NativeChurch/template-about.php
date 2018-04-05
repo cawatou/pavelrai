@@ -104,58 +104,15 @@ get_header();
             </article>
         </div>
 
-        <div id="sertificate_block" class="galery_blk">
-            <h5><strong>Сертификаты и награды</strong></h5>
-            <table style="height: 552px;" width="770">
-                <tbody>
-                <tr>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-13.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-large wp-image-10478" src="/wp-content/uploads/2014/05/New-Project-13.png" alt="New Project (13)" style="float: left;">
-                        </a>
-                    </td>
 
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-14.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-large wp-image-10479" src="/wp-content/uploads/2014/05/New-Project-14.png" alt="New Project (14)">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-15.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-large wp-image-10480" src="/wp-content/uploads/2014/05/New-Project-15.png" alt="New Project (15)">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-16.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-large wp-image-10481" src="/wp-content/uploads/2014/05/New-Project-16.png" alt="New Project (16)">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-17.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter  wp-image-10482" src="/wp-content/uploads/2014/05/New-Project-17.png" alt="New Project (17)" style="float: left;">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-18.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-large wp-image-10483" src="/wp-content/uploads/2014/05/New-Project-18.png" alt="New Project (18)">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-19.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-large wp-image-10484" src="/wp-content/uploads/2014/05/New-Project-19.png" alt="New Project (19)">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/wp-content/uploads/2014/05/New-Project-20.png" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                            <img class="aligncenter size-full wp-image-10477" src="/wp-content/uploads/2014/05/New-Project-20.png" alt="New Project (20)">
-                        </a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+
+        <div class="gallery_work">
+            <div class="gray_bg">&nbsp;</div>
+            <p class="title">Сертификаты и награды</p>
+            <?=do_shortcode( '[Best_Wordpress_Gallery id="48"]' )?>
+            <ul class="pagination pagination_gal"></ul>
         </div>
+
         <?=q_form()?>
 	</div>	
 </div>

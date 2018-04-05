@@ -3368,7 +3368,6 @@ p.demo_store{
 }
 
 .page_content p {
-	font: 16px circe-regular;
 	color: #333;
 }
 
@@ -4210,7 +4209,7 @@ li.product .detail_view {
 }
 
 li.product:hover .detail_view {
-	display: block;
+	display: block !important;
 }
 
 #our_works {
@@ -4343,8 +4342,38 @@ li.product:hover .detail_view {
 	text-decoration: none !important;
 }
 
-.page_content {
+.page_content, .monument_content {
 	padding-top: 40px;
+}
+
+.monument_content {
+	padding-top: 20px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	border-top: 1px solid #ededed;
+}
+
+.monument_content h5 {
+	font-size: 24px;
+	color: #333;
+	font-family:circe-regular ;
+}
+
+.monument_content p {
+	font-size: 18px;
+	color: #333;
+	font-family:circe-regular ;
+}
+
+.monument_content a {
+	color: #0071ff;
+	text-decoration: none;
+	border-bottom: 1px solid #cce2ff;
+}
+
+.monument_content a:href {
+	color: #0071ff !important;
+	border-bottom: none;
 }
 
 .install_type img {
@@ -4367,6 +4396,10 @@ li.product:hover .detail_view {
 
 .about_page #q_form {
 	float: left;
+}
+
+.about_page .box_staff:last-child {
+	margin-bottom: 60px;
 }
 
 .advice_page button {
@@ -5099,6 +5132,10 @@ p.cart_total {
 	border-top: 1px solid #ededed !important;
 }
 
+.about_page .gallery_work {
+	float: left;
+}
+
 .carousel_block .title,
 .gallery_work .title{
 	font-size: 22px;
@@ -5297,8 +5334,8 @@ p.cart_total {
 	background: none;
 }
 
-.blago-border_page .before,
-.blago-border_page .after {
+.before,
+.after {
 	padding: 0;
 	margin-bottom: 30px;
 }
@@ -5311,3 +5348,13 @@ p.cart_total {
 	height: 100%;
 	background-color: #f8f8f8;
 }
+
+#our_works .gray_bg {
+	width: 1283px;
+	left: -100px;
+}
+
+.owl-item:first-child {
+	width: 250px !important;
+}
+

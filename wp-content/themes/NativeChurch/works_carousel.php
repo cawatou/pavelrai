@@ -3,6 +3,7 @@ $files = scandir($dir);
 ?>
 
 <div id="our_works" class="carousel_block">
+    <div class="gray_bg">&nbsp;</div>
     <p class="title">Наши работы</p>
     <div class="owl-carousel ">
         <?foreach($files as $img):
