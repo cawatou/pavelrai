@@ -1,5 +1,37 @@
 jQuery(document).ready(function($){
     initFunction();
+    compose_pagination();
+    $(document).find('.page_gal').on('click', function(){
+        if($(this).hasClass('active')) return false;
+        var current_page = $('.paging-input_0 .total-pages_0:first-child').text().trim();
+        console.log($(this));
+
+        var move_page = $(this).attr('data-page');
+        if(current_page < move_page) {
+            move_page = parseInt(move_page) - 1;
+            spider_page_0(this, move_page, 1);
+        }
+        if(current_page > move_page) {
+            move_page = parseInt(move_page) + 1;
+            spider_page_0(this, move_page, -1);        }
+
+        $('.page_gal').removeClass('active');
+        $(this).addClass('active');
+        console.log(current_page, move_page);
+    })
+
+
+    function compose_pagination(){
+
+        var el ='';
+        var page_count = $('.paging-input_0 .total-pages_0:last-child').text().trim();
+        console.log('compose_pagination', page_count);
+        for(var i=1; i<=page_count; i++){
+            if(i == 1) el = '<li class="page_gal active" data-page="'+i+'"><span>' + i +'</span></li>';
+            else el = '<li class="page_gal" data-page="'+i+'"><span>' + i +'</span></li>';
+            $('ul.pagination_gal').append(el);
+        }
+    }
 
     function initFunction() {
 

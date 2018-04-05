@@ -4162,9 +4162,9 @@ li.product a img {
 }
 
 .tp-bannershadow,
-.pagination-links_0,
+.tablenav-pages_0,
 .product .detail_view {
-	display: none;
+	display: none !important;
 }
 
 #content .container {
@@ -4306,7 +4306,6 @@ li.product:hover .detail_view {
 }
 
 #q_form {
-	margin-top: 60px;
 	border-top: 1px solid #ededed !important;
 	padding: 70px;
 }
@@ -5095,7 +5094,9 @@ p.cart_total {
 }
 
 .gallery_work {
-	padding: 20px 0;
+	position: relative;
+	padding: 20px 0 60px 0;
+	border-top: 1px solid #ededed !important;
 }
 
 .carousel_block .title,
@@ -5103,6 +5104,7 @@ p.cart_total {
 	font-size: 22px;
 	font-weight: 700;
 	color: #333;
+	position: relative;
 }
 
 .owl-item {
@@ -5237,18 +5239,31 @@ p.cart_total {
 	color: #333 !important;
 }
 
-.product-archive .pagination {
+.product-archive .pagination,
+.pagination_gal {
 	margin: 0;
 	float: right;
 }
 
-.product-archive .pagination a {
-	border: none;
+.product-archive .pagination a,
+.pagination_gal span {
+	border: none !important;
 	font-size: 14px;
 	color: #333;
 }
 
-.product-archive .pagination li.active span {
+.pagination_gal li.page_gal span:hover {
+	cursor: pointer;
+	background-color: inherit !important;
+}
+
+
+.pagination_gal li.active span:hover {
+	background-color: #999898 !important;
+}
+
+.product-archive .pagination li.active span,
+.pagination_gal li.active span {
 	background-color: #999898;
 	border-radius: 70px;
 	border-color: #999898;
@@ -5256,12 +5271,23 @@ p.cart_total {
 	text-align: center;
 	height: 33px;
 }
+.pagination_gal li span {
+	background-color: #f8f8f8;
+}
 
-bwg_container1_0, #bwg_container2_0, .bwg_standart_thumbnails_0 {
+.pagination_gal li.active span {
+	width: 33px;
+}
+
+#bwg_container2_0, .bwg_standart_thumbnails_0 {
 	max-width: 100% !important;
 }
 
-#bwg_container1_0, #bwg_container2_0, .bwg_standart_thumb_spun1_0 {
+#bwg_container1_0 {
+	margin-bottom: 0 !important;
+}
+
+.bwg_standart_thumb_spun1_0 {
 	margin: 0 0 40px 0 !important;
 }
 
@@ -5271,7 +5297,17 @@ bwg_container1_0, #bwg_container2_0, .bwg_standart_thumbnails_0 {
 	background: none;
 }
 
-.blago-border_page .col-md-6 {
+.blago-border_page .before,
+.blago-border_page .after {
 	padding: 0;
 	margin-bottom: 30px;
+}
+
+.gray_bg {
+	position: absolute;
+	width: 912px;
+	left: -40px;
+	top: 0;
+	height: 100%;
+	background-color: #f8f8f8;
 }
