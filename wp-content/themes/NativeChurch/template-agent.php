@@ -7,9 +7,9 @@ get_header();
 <div class="page_content">
 	<div class="container_content agent_page">
         <form id="agent_form" >
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <p><strong>Ваш личный менеджер, Павел Рай</strong></p>
-                <p>Услуга по вызову менеджера бесплатно</p>
+                <p>Услуга по вызову менеджера бесплатная</p>
 
                 <div class="form-group">
                     <input type="text" class="form-control" id="q_name" aria-describedby="emailHelp" placeholder="Введите ваше имя">
@@ -21,7 +21,7 @@ get_header();
 
                 <button type="submit" class="btn btn-primary center-block">Задать вопрос</button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <img src="/wp-content/uploads/2018/03/New-Project-6.png" alt="agent">
             </div>
         </form>

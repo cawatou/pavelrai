@@ -9,7 +9,7 @@ get_header(); ?>
             <li class="product">
                 <a href="/hudozhestvennoe-oformlenie/portrety/">
                     <div class="wraper_img">
-                        <img src="/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/hud1.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="text-center">Портреты</p>
@@ -19,7 +19,7 @@ get_header(); ?>
             <li class="product">
                 <a href="/shop-category/hud/ceramics">
                     <div class="wraper_img">
-                        <img src="/wp-content/themes/NativeChurch/images/service/service2.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/hud2.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="type_title">Керамика</p>
@@ -29,7 +29,7 @@ get_header(); ?>
             <li class="product last">
                 <a href="/hudozhestvennoe-oformlenie/pejzazhy-primery-oformlenij/">
                     <div class="wraper_img">
-                        <img src="/wp-content/themes/NativeChurch/images/service/service3.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/hud3.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="type_title">Пейзажи, примеры оформлений</p>
@@ -39,7 +39,7 @@ get_header(); ?>
             <li class="product">
                 <a href="/hudozhestvennoe-oformlenie/katalog-izobrazhenij/">
                     <div class="wraper_img">
-                        <img src="/wp-content/themes/NativeChurch/images/service/service4.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/hud4.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="type_title">Каталоги изображений</p>

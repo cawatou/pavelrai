@@ -5099,6 +5099,7 @@ p.cart_total {
 
 .home_content p, .container_content p {
 	font-size: 18px;
+	line-height: 24px;
 }
 
 
@@ -5188,6 +5189,7 @@ p.cart_total {
 	font-size: 14px;
 	color: #999898;
 	font-style: normal;
+	font-family: circe-regular;
 }
 
 .mock_catalog .wrapper_attr {
@@ -5359,3 +5361,40 @@ p.cart_total {
 	width: 250px !important;
 }
 
+.archive .nav-backed-header {
+	background: none !important;
+}
+
+#agent_form input {
+	width: 288px;
+	height: 39px;
+	border-radius: 3px;
+	border: 2px solid #ededed;
+	font-size: 18px;
+	color: #999898;
+}
+
+#agent_form button {
+	width: 288px;
+	height: 41px;
+	background-color: #07c137;
+	border: 3px solid #07c137;
+	font-family: circe-regular;
+	text-transform: none;
+}
+
+.page_content table {
+	font-size: 18px;
+	color: #333;
+	line-height: 40px;
+}
+
+.page-id-10404 .container_content a {
+	color: #0071ff;
+	text-decoration: none;
+	border-bottom: 1px solid #cce2ff;
+}
+
+.page-id-10404 .container_content a:hover {
+	border-bottom: none;
+}

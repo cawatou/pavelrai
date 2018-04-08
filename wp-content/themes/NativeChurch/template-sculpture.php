@@ -9,7 +9,7 @@ get_header(); ?>
             <li class="product">
                 <a href="/byusty-barelefy-i-gorelef/">
                     <div class="wraper_img">
-                        <img src="/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/sculpt1.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="text-center">Бюсты, барельефы и горельефы</p>
@@ -20,7 +20,7 @@ get_header(); ?>
             <li class="product">
                 <a href="/shop-category/sculpture/sculpture_granit">
                     <div class="wraper_img">
-                        <img src="/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/sculpt2.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="text-center">Гранитные</p>
@@ -31,7 +31,7 @@ get_header(); ?>
             <li class="product last">
                 <a href="/shop-category/sculpture/artificial">
                     <div class="wraper_img">
-                        <img src="/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/sculpt3.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="text-center">Искуственный мрамор</p>
@@ -42,7 +42,7 @@ get_header(); ?>
             <li class="product">
                 <a href="/shop-category/sculpture/sculpture_marble/">
                     <div class="wraper_img">
-                        <img src="/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="">
+                        <img src="/wp-content/themes/NativeChurch/images/sculpt4.png" alt="">
                     </div>
                     <div class="wrapper_attr">
                         <p class="text-center">Мраморные</p>
