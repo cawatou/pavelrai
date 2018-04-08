@@ -3620,7 +3620,7 @@ p.demo_store{
 	background: none !important;
 	margin-left: 10px;
 	padding: 2px 0;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 #menu-item-2571 a {background: url(images/granit.png) no-repeat;padding-top: 3px;}
@@ -4312,6 +4312,7 @@ li.product:hover .detail_view {
 #q_form h2 {
 	margin-bottom: 10px;
 	font-size: 24px;
+	font-weight: 700;
 }
 
 #q_form p {
@@ -4570,6 +4571,13 @@ li.product:hover .detail_view {
 	font-size: 18px !important;
 	margin-top: 1px;
 	margin-bottom: 0;
+	font-weight: 700 !important;
+	color: #333;
+}
+
+.cat_title {
+	text-align: center;
+	font-size: 18px !important;
 	font-weight: 700 !important;
 	color: #333;
 }
@@ -5077,6 +5085,7 @@ p.cart_total {
 #menu-header-menu li:hover a {
 	border-bottom: 2px solid;
 	border-color: #000;
+	color: #0071ff;
 }
 
 #content {
@@ -5085,6 +5094,7 @@ p.cart_total {
 
 .home .page_content {
 	padding-top: 5px;
+	padding-bottom: 40px;
 }
 
 .home_content {
@@ -5381,6 +5391,7 @@ p.cart_total {
 	border: 3px solid #07c137;
 	font-family: circe-regular;
 	text-transform: none;
+	font-size: 18px;
 }
 
 .page_content table {
@@ -5389,12 +5400,13 @@ p.cart_total {
 	line-height: 40px;
 }
 
-.page-id-10404 .container_content a {
+.container_content a {
 	color: #0071ff;
 	text-decoration: none;
 	border-bottom: 1px solid #cce2ff;
 }
 
-.page-id-10404 .container_content a:hover {
+.container_content a:hover {
 	border-bottom: none;
+	color: red;
 }

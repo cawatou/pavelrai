@@ -35,7 +35,7 @@ global $wpdb;
             <?do_action( 'woocommerce_before_subcategory_title', $category );?>
         </div>
         <div class="wrapper_attr">
-            <p class="text-center"><?=$category->name?></p>
+            <p class="text-center cat_title"><?=$category->name?></p>
         </div>
 		<?php
 			/**

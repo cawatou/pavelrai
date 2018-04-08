@@ -9,7 +9,7 @@ get_header();
             <?php the_content() ?>
             <div class="gallery_work">
                 <div class="gray_bg">&nbsp;</div>
-                <p class="title">Примеры работ</p>
+                <p class="title">Наш транспорт</p>
                 <?=do_shortcode( '[Best_Wordpress_Gallery id="67"]' )?>
                 <ul class="pagination pagination_gal"></ul>
             </div>

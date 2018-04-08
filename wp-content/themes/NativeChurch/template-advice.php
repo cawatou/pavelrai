@@ -45,8 +45,6 @@ get_header();
             обговорит с вами детали получения заказа.</p>
 
         <button type="button" class="btn btn-primary" onclick="location.href='/shop';">Перейти в каталог</button> <span class="order_text">или заказать индивидуальный памятник</span>
-      
-        
         
         <?=q_form()?>
 	</div>	

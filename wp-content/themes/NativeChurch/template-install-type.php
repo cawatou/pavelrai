@@ -19,7 +19,7 @@ get_header();
                 </a>
             </li>
             <li class="product">
-                <a href="/shop/combined/9749061/">
+                <a href="?page_id=825">
                     <div class="wraper_img">
                         <img src="<?php bloginfo('template_url'); ?>/images/install/i2.png" alt="">
                     </div>

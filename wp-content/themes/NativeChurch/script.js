@@ -40,8 +40,9 @@ jQuery(document).ready(function($){
         if(content_height == null) content_height = $('.product-archive').height();
 
         if (content_height > menu_height) {
-            $('.page_content').addClass('content_separate');
-            $('.product-archive').addClass('content_separate');
+
+            if($("div").is(".page_content")) $('.page_content').addClass('content_separate');
+            else $('.product-archive').addClass('content_separate');
         }
         else $('.menu-left_menu-container').addClass('menu_separate');
         console.log(menu_height, content_height);
@@ -69,6 +70,9 @@ jQuery(document).ready(function($){
 
         /*=============================== active parent menu (ico) ====================================*/
         $('.current-menu-item a').addClass('active');
+
+        if($("li").is(".current-menu-item") == false) console.log('no hover');
+        console.log($("li").is(".current-menu-item"));
     }
 
     $('.price_block button').on('click', function(){

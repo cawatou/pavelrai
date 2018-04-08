@@ -31,7 +31,7 @@ if($show_works):?>
                     <div class="col-md-4 header_contacts">
 
 
-                        <a class="tel footer_tel" href="#">
+                        <a class="footer_tel" href="/vse-uslugi/vyzov-agenta/">
                             <span>Вызов менеджера</span>
                         </a>
                     </div>
