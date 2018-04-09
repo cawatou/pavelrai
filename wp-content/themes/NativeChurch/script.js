@@ -133,10 +133,10 @@ jQuery(document).ready(function($){
                 'quantity': quantity
             },
             success: function(res) {
-               if(action == 'update'){
-                   $('.cart_total').empty();
-                   $('.cart_total').append(res);
-               }
+                if(action == 'update'){
+                    $('.cart_total').empty();
+                    $('.cart_total').append(res);
+                }
             }
         }).fail(function (xhr, ajaxOptions, thrownError) {
             if(xhr.status == 404){
@@ -171,5 +171,4 @@ function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
-
 

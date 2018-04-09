@@ -30,7 +30,7 @@ get_header();
                 </a>
             </li>
             <li class="product last">
-                <a href="?page_id=825">
+                <a href="/type_install/ustanovka-na-plitu-minirakushka/">
                     <div class="wraper_img">
                         <img src="<?php bloginfo('template_url'); ?>/images/install/i3.png" alt="">
                     </div>
@@ -52,7 +52,7 @@ get_header();
                 </a>
             </li>
             <li class="product">
-                <a href="?page_id=825">
+                <a href="/type_install/ustanovka-na-plitu-rakushka/">
                     <div class="wraper_img">
                         <img src="<?php bloginfo('template_url'); ?>/images/install/i5.png" alt="">
                     </div>
@@ -63,7 +63,7 @@ get_header();
                 </a>
             </li>
             <li class="product last">
-                <a href="?page_id=825">
+                <a href="/type_install/ustanovka-na-plitu-gretsiya/">
                     <div class="wraper_img">
                         <img src="<?php bloginfo('template_url'); ?>/images/install/i6.png" alt="">
                     </div>

@@ -8,7 +8,7 @@ get_header();
 	<div class="container_content cobbles_page">
         <?php the_content() ?>
         <div class="col-md-6 before">
-            <p><strong>Стало</strong></p>
+            <p><strong>Было</strong></p>
             <img src="/wp-content/uploads/2014/11/New-Project-35.png">
         </div>
 

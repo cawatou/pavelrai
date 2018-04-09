@@ -1514,6 +1514,8 @@ ol.breadcrumb a{
 	color:#fff;
 	text-decoration:none;
 	border-bottom: 1px solid #ccc;
+	line-height: 14px;
+	display: inline-block;
 }
 ol.breadcrumb a:hover{
 	color:#fff;
@@ -4089,6 +4091,12 @@ li.product a img {
 	width: fit-content;
 	border-bottom: 1px solid #ccc;
 	font-weight: 700;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+	display: inline-block;
 }
 
 .header_contacts .phone {
@@ -4216,7 +4224,6 @@ li.product:hover .detail_view {
 	padding-top: 20px;
 	position: relative;
 	padding-bottom: 40px;
-	background-color: #f8f8f8;
 }
 
 #our_works #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 {
@@ -4454,7 +4461,7 @@ li.product:hover .detail_view {
 
 .footer_email {
 	font-weight: 400 !important;
-	margin-top: -30px !important;
+	margin-top: -18px !important;
 }
 
 .footer_phone{
@@ -5307,14 +5314,22 @@ p.cart_total {
 	background-color: inherit !important;
 }
 
+.pagination > li > a:hover,
+.pagination_gal li.page_gal span:hover {
+	background-color: inherit !important;
+	color: #0071ff;
+}
+
 
 .pagination_gal li.active span:hover {
-	background-color: #999898 !important;
+	background: #999898 !important;
+	color: #fff;
+	cursor: default;
 }
 
 .product-archive .pagination li.active span,
 .pagination_gal li.active span {
-	background-color: #999898;
+	background: #999898 !important;
 	border-radius: 70px;
 	border-color: #999898;
 	width: 34px;
@@ -5355,7 +5370,7 @@ p.cart_total {
 
 .gray_bg {
 	position: absolute;
-	width: 912px;
+	width: 809px;
 	left: -40px;
 	top: 0;
 	height: 100%;
@@ -5409,4 +5424,8 @@ p.cart_total {
 .container_content a:hover {
 	border-bottom: none;
 	color: red;
+}
+
+.container_content a:visited {
+	color: #609;
 }
