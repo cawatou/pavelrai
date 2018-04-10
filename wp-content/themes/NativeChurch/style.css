@@ -4373,17 +4373,6 @@ li.product:hover .detail_view {
 	font-family:circe-regular ;
 }
 
-.monument_content a {
-	color: #0071ff;
-	text-decoration: none;
-	border-bottom: 1px solid #cce2ff;
-}
-
-.monument_content a:href {
-	color: #0071ff !important;
-	border-bottom: none;
-}
-
 .install_type img {
 	margin-bottom: 30px;
 }
@@ -4431,6 +4420,7 @@ li.product:hover .detail_view {
 	padding-top: 10px;
 	margin-left: 12px;
 	display: inline-block;
+	color: #333;
 }
 
 .menu_separate {
@@ -5117,6 +5107,7 @@ p.cart_total {
 .home_content p, .container_content p {
 	font-size: 18px;
 	line-height: 24px;
+	color: #333;
 }
 
 
@@ -5415,17 +5406,25 @@ p.cart_total {
 	line-height: 40px;
 }
 
-.container_content a {
+.container_content a,
+.monument_content a,
+.home_content a {
 	color: #0071ff;
 	text-decoration: none;
 	border-bottom: 1px solid #cce2ff;
+	line-height: 16px;
+	display: inline-block;
 }
 
-.container_content a:hover {
+.container_content a:hover,
+.monument_content a:hover
+.home_content a:hover {
 	border-bottom: none;
 	color: red;
 }
 
-.container_content a:visited {
+.container_content a:visited,
+.monument_content a:visited,
+.home_content a:visited {
 	color: #609;
 }
