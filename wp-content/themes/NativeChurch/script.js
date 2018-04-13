@@ -49,7 +49,7 @@ jQuery(document).ready(function($){
 
 
         /*=============================== carousel ====================================*/
-        var carousel = $('.owl-carousel');
+        var carousel = $('#our_works .owl-carousel');
         carousel.owlCarousel({
             loop:true,
             stagePadding:30,
@@ -57,6 +57,18 @@ jQuery(document).ready(function($){
             items: 4,
             singleItem: false,
         });
+
+        if($('div').hasClass('product-carousel')) {
+            carousel = $('.product-carousel');
+            carousel.owlCarousel({
+                loop:true,
+                stagePadding:30,
+                pagination:true,
+                items: 3,
+                singleItem: false,
+            });
+        }
+
         $(".right_arr").click(function() {
             console.log('next');
             carousel.trigger('owl.next');
