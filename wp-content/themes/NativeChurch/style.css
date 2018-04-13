@@ -1988,6 +1988,7 @@ ol.breadcrumb > .active{
 .owl-carousel .owl-item img{
 	width:100%;
 	float:left;
+	height: 100% !important;
 }
 .staff-item .meta-data{
 	margin-top:0;
@@ -3545,7 +3546,6 @@ p.demo_store{
 .menu-left_menu-container {
 	width: 25%;
 	float: left;
-	padding-bottom: 40px;
 	padding-top: 10px;
 }
 
@@ -4226,26 +4226,8 @@ li.product:hover .detail_view {
 	padding-bottom: 40px;
 }
 
-#our_works #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 {
-	width: 1080px !important;
-	max-width: 1080px !important;
-	text-align: left !important;
-}
-
-#our_works  #gal_front_form_0 .img-thumbnail {
-	border: none !important;
-}
-
-#our_works #bwg_standart_thumbnails_0 a:first-child {
-	padding-left: 0 !important;
-}
-
-#our_works #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0 {
-	margin: 0 !important;
-}
-
-#our_works #bwg_container2_0, #spider_popup_loading_0 {
-	height: 320px;
+#our_works .owl-item {
+	height: 250px;
 }
 
 .radio-inline {
@@ -5120,19 +5102,13 @@ p.cart_total {
 #our_works .left_arr {
 	position: absolute;
 	left: -25px;
-	top: 130px;
+	top: 165px;
 }
 
 #our_works .right_arr {
 	position: absolute;
 	right: -25px;
-	top: 130px;
-}
-
-#our_works .right_arr {
-	position: absolute;
-	right: -25px;
-	top: 130px;
+	top: 165px;
 }
 
 .left_arr:hover {
