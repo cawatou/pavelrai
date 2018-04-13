@@ -5115,9 +5115,23 @@ p.cart_total {
 .owl-nav { display: block !important; }
 
 
-.left_arr {
+
+
+#our_works .left_arr {
 	position: absolute;
 	left: -25px;
+	top: 130px;
+}
+
+#our_works .right_arr {
+	position: absolute;
+	right: -25px;
+	top: 130px;
+}
+
+#our_works .right_arr {
+	position: absolute;
+	right: -25px;
 	top: 130px;
 }
 
@@ -5125,14 +5139,8 @@ p.cart_total {
 	cursor: pointer;
 }
 
-.right_arr {
-	position: absolute;
-	right: -25px;
-	top: 130px;
-}
-
 .right_arr:hover {
-	cursor: pointer;
+cursor: pointer;
 }
 
 .gallery_work {
@@ -5427,4 +5435,34 @@ p.cart_total {
 .monument_content a:visited,
 .home_content a:visited {
 	color: #609;
+}
+
+.product-carousel .owl-wrapper-outer {
+	width: 85% !important;
+	margin-left: 6% !important;
+}
+
+.product-carousel .owl-item,
+.product-carousel .owl-item a {
+	width: 75px !important;
+	height: 63px;
+}
+
+.product-carousel .owl-item img {
+	width: 100% !important;
+	height: 100% !important;
+	box-shadow: none !important;
+}
+
+.single_prod .left_arr,
+.single_prod .right_arr {
+	position: absolute;
+	height: 25px !important;
+	width: 12px !important;
+	top: 510px;
+	box-shadow: none !important;
+}
+
+.single_prod .right_arr {
+	left: 415px;
 }

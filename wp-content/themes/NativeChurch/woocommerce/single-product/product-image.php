@@ -25,6 +25,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product;
 $image_link  = wp_get_attachment_url( get_post_thumbnail_id() );
+if(!$image_link) $image_link = '/wp-content/plugins/woocommerce/assets/images/placeholder.png';
 ?>
 <div class="images">
     <a href="<?=$image_link?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
@@ -44,6 +45,8 @@ $image_link  = wp_get_attachment_url( get_post_thumbnail_id() );
             <?endif?>
         <?endforeach?>
     </div>
+    <img class='left_arr' src="/wp-content/themes/NativeChurch/images/left_arr.png" />
+    <img class='right_arr' src="/wp-content/themes/NativeChurch/images/right_arr.png" />
     <?endif?>
 </div>
 	<?php do_action( 'woocommerce_product_thumbnails' );?>

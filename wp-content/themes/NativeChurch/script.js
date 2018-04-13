@@ -59,26 +59,20 @@ jQuery(document).ready(function($){
         });
 
         if($('div').hasClass('product-carousel')) {
-            carousel = $('.product-carousel');
-            carousel.owlCarousel({
+            var prod_carousel = $('.product-carousel');
+            prod_carousel.owlCarousel({
                 loop:true,
                 stagePadding:30,
-                pagination:true,
-                items: 3,
+                pagination:false,
+                items: 5,
                 singleItem: false,
             });
         }
 
-        $(".right_arr").click(function() {
-            console.log('next');
-            carousel.trigger('owl.next');
-        });
-
-        $(".left_arr").click(function() {
-            console.log('prev');
-            carousel.trigger('owl.prev');
-        });
-
+        $("#our_works .right_arr").click( () => carousel.trigger('owl.next'));
+        $("#our_works .left_arr").click( () => carousel.trigger('owl.prev'));
+        $(".single_prod .right_arr").click( () => prod_carousel.trigger('owl.next'));
+        $(".single_prod .left_arr").click( () => prod_carousel.trigger('owl.prev'));
 
         /*=============================== active parent menu (ico) ====================================*/
         $('.current-menu-item a').addClass('active');
