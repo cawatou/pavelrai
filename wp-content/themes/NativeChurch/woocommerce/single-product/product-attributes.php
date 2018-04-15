@@ -58,13 +58,13 @@ foreach ($attributes_tax as $tax => $data){
 <div class="col-md-5 sticky-block">
     <div class="order_card">
         <p class="price"><?=number_format($price_value, 0, '', ' ');?> &#8381;</p>
-        <span>Нашли дешевле? Снизим цену</span>
+        <span>Нашли дешевле? <span id="bestprice">Снизим цену</span></span>
         <div class="ico_items">
             <a href="/delivery/" class="ico_1">Доставка</a>
             <a href="/contact/" class="ico_2">Самовывоз</a>
             <a class="ico_3">Гарантия</a>
         </div>
-        <a href="<?=$_SERVER['REQUEST_URI']?>?add-to-cart=<?=$product->id?>" rel="nofollow" data-product_id="<?=$product->id?>" data-product_sku="" class="button add_to_cart_button">Купить</a>
+        <a data-product_id="<?=$product->id?>" class="button add_to_cart_button">Купить</a>
     </div>
 </div>
 <?php

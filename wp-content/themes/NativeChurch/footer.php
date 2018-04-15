@@ -149,6 +149,37 @@ if($show_works):?>
     </form>
 </div>
 
+
+<div id="modal_bestprice" class="modal">
+    <form method="post" id="bestpriceform" name="contactform" class="contact-form" action="<?php echo get_template_directory_uri() ?>/mail/bestprice.php">
+        <span class="modal_close">x</span>
+        <div class="">
+            <p class="title">Нашли дешевле? Снизим цену!</p>
+            <p class="descr">Если у конкурента цена ниже - вернем разницу!</p>
+            <div class="form-group">
+                <input type="text" name="price"  class="form-control input-lg" placeholder="Цена товара в другой сети">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="link"  class="form-control input-lg" placeholder="Ссылка на найденый товар">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="phone"  class="form-control input-lg" placeholder="Ваш телефон">
+            </div>
+
+            <input class="submit_btn" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Отправить">
+        </div>
+    </form>
+</div>
+
+<div id="modal_addcart" class="modal">
+     <span class="modal_close">x</span>
+    <p class="title">Товар добавлен в корзину!</p>
+    <input class="submit_btn continue_btn" type="button" class="btn btn-primary btn-lg pull-right" value="Продолжить покупки">
+    <input class="submit_btn cart_btn" type="button" class="btn btn-primary btn-lg pull-right" value="В корзину">
+</div>
+
 <div id="overlay"></div>
 </body>
 </html>

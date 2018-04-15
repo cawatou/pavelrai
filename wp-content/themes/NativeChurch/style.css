@@ -5491,5 +5491,68 @@ cursor: pointer;
 .sticky-block {
 	position: absolute;
 	padding-left: 390px;
-	z-index: 9999;
+	z-index: 200;
 }
+
+#bestprice:hover {
+	border-bottom: 1px solid #ededed;
+	cursor: pointer;
+}
+
+#modal_bestprice {
+	width: 500px;
+	height: 400px;
+	top: 100px !important;
+	left: 32%;
+	background: #fff;
+	padding: 40px 80px;
+}
+
+#modal_bestprice .title,
+#modal_addcart .title{
+	font-size: 24px;
+	color: #333;
+}
+
+#modal_bestprice .descr {
+	font-size: 18px;
+	color: #333;
+}
+
+#modal_bestprice .submit_btn {
+	width: 340px;
+	height: 41px;
+	background-color: #07c137;
+	border: 3px solid #07c137;
+	font-family: circe-regular;
+	font-size: 18px;
+	text-transform: none;
+	color: #fff;
+}
+
+#modal_addcart {
+	width: 500px;
+	height: 155px;
+	top: 100px !important;
+	left: 32%;
+	background: #fff;
+	padding: 40px 40px 40px 30px;
+}
+
+#modal_addcart .submit_btn {
+	width: 190px;
+	height: 41px;
+	background-color: #07c137;
+	border: 3px solid #07c137;
+	font-family: circe-regular;
+	font-size: 18px;
+	text-transform: none;
+	color: #fff;
+	margin-left: 20px;
+}
+
+#modal_addcart .title {
+	text-align: center;
+	margin-bottom: 25px;
+}
+

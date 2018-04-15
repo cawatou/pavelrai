@@ -61,11 +61,27 @@ jQuery('#content_contacts button').click(function(event){
 		});
 });
 
+jQuery('#bestprice').click(function(event){
+	event.preventDefault();
+	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+		function(){ // после выполнения предъидущей анимации
+			jQuery('#modal_bestprice').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+		});
+});
+
+jQuery('.add_to_cart_button').click(function(event){
+	event.preventDefault();
+	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+		function(){ // после выполнения предъидущей анимации
+			jQuery('#modal_addcart').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+		});
+});
 
 
-jQuery('.modal_close, #overlay').click( function(){ 			
+jQuery('.modal_close, #overlay, .continue_btn').click( function(){
 	modal_close();
 });
+
 
 
 

@@ -170,7 +170,9 @@ jQuery(document).ready(function($){
     $('#billing_email').attr('placeholder', 'Введите вашу почту');
     $('#billing_phone').attr('placeholder', 'Введите номер телефона');
 
-
+    $('.cart_btn').on('click', function () {
+        location.href = '/cart/';
+    })
 
 })
 
@@ -178,7 +180,7 @@ jQuery(document).ready(function($){
 jQuery(window).scroll(function() {
     console.log('scroll');
     var sb_m = 80; /* отступ сверху и снизу */
-    var mb = 300; /* высота подвала с запасом */
+    var mb = 200; /* высота подвала с запасом */
     var st = jQuery(window).scrollTop();
     var sb = jQuery(".sticky-block");
     var sb_ot = sb.offset().top;
