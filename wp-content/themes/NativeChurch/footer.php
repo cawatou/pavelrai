@@ -4,12 +4,13 @@ $path = explode('/', $_SERVER['REQUEST_URI']);
 $show_works = true;
 if($path[0] == '' && $path[1] == '') $show_works = false;
 if(in_array('cart', $path)) $show_works = false;
+if(in_array('shop', $path)) $show_works = false;
 if(in_array('checkout', $path)) $show_works = false;
 
 
 if($show_works):?>
-	</div>
-	</div>
+	        </div>
+	    </div>
 	</div>
     <?=works_carousel()?>
 <?endif?>

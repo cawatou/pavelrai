@@ -4128,12 +4128,12 @@ li.product a img {
 
 .site-header .tel:hover,
 .site-header .tel:hover span{
-	color: blue !important;
+	color: #0071ff !important;
 }
 
 
 .site-header .email:hover{
-	color: blue;
+	color: #0071ff;
 	cursor: pointer;
 }
 
@@ -4156,8 +4156,8 @@ li.product a img {
 
 .site-header .cart:hover{
 	color: white;
-	border: 1px solid blue;
-	background-color: blue;
+	border: 1px solid #0071ff;
+	background-color: #0071ff;
 	border-radius: 40px;
 }
 
@@ -4653,6 +4653,9 @@ li.product:hover .detail_view {
 	margin-top: 20px;
 }
 
+.order_card .ico_items a:hover {
+	color: #0071ff;
+}
 .order_card .ico_items a {
 	padding-left: 35px;
 	padding-top: 6px;
