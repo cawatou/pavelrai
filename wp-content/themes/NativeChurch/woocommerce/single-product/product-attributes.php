@@ -22,23 +22,26 @@ $price = $product->get_price();
 $posts = $wpdb->get_row("SELECT value FROM dollar_course WHERE id = '1' LIMIT 0,1");
 $cource = $posts->value;
 $price_value = $price*$cource;
+$attr_count = 0;
 foreach ($attributes_tax as $tax => $data){
-
+    $values = wc_get_product_terms( $product->id, $data['name'], array( 'fields' => 'names' ) );
+    //echo "<pre>".print_r($values, 1)."</pre>";
+    if($values[0] != '') $attr_count++;
 }
-//echo "<pre>".print_r(1, 1)."</pre>";
+//echo "<pre>".print_r($attr_count, 1)."</pre>";
 ?>
 <div class="shop_attributes col-md-7">
-    <p><strong>Характеристики</strong></p>
-	<?php foreach ( $attributes_tax as $tax =>$attribute ) :
-		if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
-			continue;
-		} else {
-			$has_row = true;
-		}
+    <?if($attr_count > 0):?><p><strong>Характеристики</strong></p><?endif?>
+    <?php foreach ( $attributes_tax as $tax =>$attribute ) :
+        if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
+            continue;
+        } else {
+            $has_row = true;
+        }
 
         $values = wc_get_product_terms( $product->id, $attribute['name'], array( 'fields' => 'names' ) );
         $obj_attr = get_the_terms( $product->id, $tax );
-	    if($obj_attr):?>
+        if($obj_attr):?>
             <div class="prop_value">
 
                     <p class="prop_name">
@@ -49,18 +52,20 @@ foreach ($attributes_tax as $tax => $data){
 
             </div>
         <?endif;?>
-	<?php endforeach; ?>
+    <?php endforeach; ?>
 </div>
 
-<div class="order_card col-md-5">
-    <p class="price"><?=number_format($price_value, 0, '', ' ');?> &#8381;</p>
-    <span>Нашли дешевле? Снизим цену</span>
-    <div class="ico_items">
-        <p class="ico_1">Доставка</p>
-        <p class="ico_2">Самовывоз</p>
-        <p class="ico_3">Гарантия</p>
+<div class="col-md-5 sticky-block">
+    <div class="order_card">
+        <p class="price"><?=number_format($price_value, 0, '', ' ');?> &#8381;</p>
+        <span>Нашли дешевле? Снизим цену</span>
+        <div class="ico_items">
+            <a class="ico_1">Доставка</a>
+            <a class="ico_2">Самовывоз</a>
+            <a class="ico_3">Гарантия</a>
+        </div>
+        <a href="<?=$_SERVER['REQUEST_URI']?>?add-to-cart=<?=$product->id?>" rel="nofollow" data-product_id="<?=$product->id?>" data-product_sku="" class="button add_to_cart_button">Купить</a>
     </div>
-    <a href="<?=$_SERVER['REQUEST_URI']?>?add-to-cart=<?=$product->id?>" rel="nofollow" data-product_id="<?=$product->id?>" data-product_sku="" class="button add_to_cart_button">Купить</a>
 </div>
 <?php
 // Получение id родительской категории товара

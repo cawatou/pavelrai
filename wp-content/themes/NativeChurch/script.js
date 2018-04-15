@@ -169,8 +169,31 @@ jQuery(document).ready(function($){
     $('#billing_first_name').attr('placeholder', 'Введите ваше имя');
     $('#billing_email').attr('placeholder', 'Введите вашу почту');
     $('#billing_phone').attr('placeholder', 'Введите номер телефона');
+
+
+
 })
 
+// Плавающий блок
+jQuery(window).scroll(function() {
+    console.log('scroll');
+    var sb_m = 80; /* отступ сверху и снизу */
+    var mb = 300; /* высота подвала с запасом */
+    var st = jQuery(window).scrollTop();
+    var sb = jQuery(".sticky-block");
+    var sb_ot = sb.offset().top;
+    var sb_h = sb.height();
+
+    if(sb_h + jQuery(document).scrollTop() + sb_m + mb < jQuery(document).height()) {
+        if(st > sb_ot) {
+            var h = Math.round(st - sb_ot) + sb_m;
+            sb.css({"paddingTop" : h});
+        }
+        else {
+            sb.css({"paddingTop" : 0});
+        }
+    }
+});
 
 //    declOfNum(count, ['найдена', 'найдено', 'найдены']);
 function declOfNum(number, titles) {

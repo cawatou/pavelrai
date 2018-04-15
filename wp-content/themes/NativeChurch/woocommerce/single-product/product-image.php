@@ -26,28 +26,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product;
 $image_link  = wp_get_attachment_url( get_post_thumbnail_id() );
 if(!$image_link) $image_link = '/wp-content/plugins/woocommerce/assets/images/placeholder.png';
+$dir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/product-gallery/'.$post->post_title;
+$files = scandir($dir);
 ?>
 <div class="images">
     <a href="<?=$image_link?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
         <img src="<?=$image_link?>" class="main_img" alt="">
-        <img src="/wp-content/themes/NativeChurch/images/zoom.png" class="zoom_img" alt="">
+        <img src="/wp-content/themes/NativeChurch/images/zoom.png" class="zoom_img <?=($files)?'':'no_gallery'?>" alt="">
     </a>
-    <?
-    $dir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/product-gallery/'.$post->post_title;
-    $files = scandir($dir);
-    if($files):?>
-    <div class="owl-carousel product-carousel">
-        <?foreach($files as $img):
-            $check = explode('.', $img);
-            if(count($check) == 2 && $check[1] != 'db' && $check[1] != ''):?>
-                <a href="/wp-content/uploads/product-gallery/<?=$post->post_title?>/<?=$img?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
-                    <img src="/wp-content/uploads/product-gallery/<?=$post->post_title?>/<?=$img?>" alt="">
-                </a>
-            <?endif?>
-        <?endforeach?>
-    </div>
-    <img class='left_arr' src="/wp-content/themes/NativeChurch/images/left_arr.png" />
-    <img class='right_arr' src="/wp-content/themes/NativeChurch/images/right_arr.png" />
+    <?if($files):?>
+        <div class="owl-carousel product-carousel">
+            <?foreach($files as $img):
+                $check = explode('.', $img);
+                if(count($check) == 2 && $check[1] != 'db' && $check[1] != ''):?>
+                    <a href="/wp-content/uploads/product-gallery/<?=$post->post_title?>/<?=$img?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
+                        <img src="/wp-content/uploads/product-gallery/<?=$post->post_title?>/<?=$img?>" alt="">
+                    </a>
+                <?endif?>
+            <?endforeach?>
+        </div>
+        <img class='left_arr' src="/wp-content/themes/NativeChurch/images/left_arr.png" />
+        <img class='right_arr' src="/wp-content/themes/NativeChurch/images/right_arr.png" />
     <?endif?>
 </div>
 	<?php do_action( 'woocommerce_product_thumbnails' );?>

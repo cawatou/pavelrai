@@ -4600,6 +4600,8 @@ li.product:hover .detail_view {
 
 .single_prod .images .main_img {
 	box-shadow: none !important;
+	background: #f7f7f7;
+	margin-bottom: 20px;
 }
 
 .single_prod .thumbnails a {
@@ -4633,9 +4635,10 @@ li.product:hover .detail_view {
 .order_card {
 	border: 2px solid #ededed;
 	height: 290px;
-	padding-top: 15px;
+	padding: 15px;
 	width: 250px;
 	color: #333;
+	background: #fff;
 }
 
 .order_card .price {
@@ -4650,9 +4653,15 @@ li.product:hover .detail_view {
 	margin-top: 20px;
 }
 
-.order_card .ico_items p {
+.order_card .ico_items a {
 	padding-left: 35px;
 	padding-top: 6px;
+	width: 100%;
+	display: inline-block;
+	height: 42px;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
 }
 
 .ico_items .ico_1 {
@@ -5443,16 +5452,12 @@ cursor: pointer;
 	position: absolute;
 	height: 25px !important;
 	width: 12px !important;
-	top: 510px;
+	top: 477px;
 	box-shadow: none !important;
 }
 
 .single_prod .right_arr {
 	left: 415px;
-}
-
-.single_prod .images  {
-	background: #f7f7f7;
 }
 
 .shop_attributes {
@@ -5473,6 +5478,15 @@ cursor: pointer;
 	box-shadow: none !important;
 	right: 20px;
 	position: absolute;
-	bottom: 20px;
+	bottom: 100px;
 }
 
+.no_gallery {
+	bottom: 40px;
+}
+
+.sticky-block {
+	position: absolute;
+	padding-left: 390px;
+	z-index: 9999;
+}

@@ -71,7 +71,7 @@ $pageOptions = imic_page_design($variable_post_id); //page design options ?>
                             случае, ему пригодятся наши <a href="/blagoustroistvo/granitnye-monumenty/eskizy/">эскизы</a>.</p>
                         <p>2. Конструктор по выбранному эскизу создает так называемую <a href="/blagoustroistvo/granitnye-monumenty/kompyuternyj-3d-dizajn/">3D-модель гранитного монумента</a>,
                             то есть пространственную модель памятника в компьютерной графике.</p>
-                        <p>3. Обсуждение материалов, используемых в работе. <a href="">Выбор материалов</a>.</p>
+                        <p>3. Обсуждение материалов, используемых в работе. <a href="/blagoustroistvo/granitnye-monumenty/granit_type/">Выбор материалов</a>.</p>
 
                         <p><strong>Стоимость изготовления зависит от следующих факторов:</strong></p>
                         <p>— количество и тип материалов, используемых в проекте;</p>
