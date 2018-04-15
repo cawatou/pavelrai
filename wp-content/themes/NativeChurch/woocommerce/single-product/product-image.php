@@ -30,11 +30,12 @@ if(!$image_link) $image_link = '/wp-content/plugins/woocommerce/assets/images/pl
 <div class="images">
     <a href="<?=$image_link?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
         <img src="<?=$image_link?>" class="main_img" alt="">
+        <img src="/wp-content/themes/NativeChurch/images/zoom.png" class="zoom_img" alt="">
     </a>
     <?
     $dir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/product-gallery/'.$post->post_title;
     $files = scandir($dir);
-    if(count($files)>0):?>
+    if($files):?>
     <div class="owl-carousel product-carousel">
         <?foreach($files as $img):
             $check = explode('.', $img);

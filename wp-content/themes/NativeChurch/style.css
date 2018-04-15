@@ -3842,7 +3842,7 @@ div.woocommerce-tabs {
 	margin-top: 50px;
 }
 div.images {
-	margin-top: 50px;
+	margin-top: 60px;
 }
 #tab-additional_information {
 	display: block !important;
@@ -3943,6 +3943,7 @@ li.product a img {
 }
 .single-product .images {
 	width: 40% !important;
+	position: relative;
 }
 .entry-summary {
 	margin: 0 !important;
@@ -4630,16 +4631,19 @@ li.product:hover .detail_view {
 }
 
 .order_card {
-	border: 1px solid #ededed;
-	height: 250px;
+	border: 2px solid #ededed;
+	height: 290px;
 	padding-top: 15px;
 	width: 250px;
+	color: #333;
 }
 
 .order_card .price {
 	text-align: left;
 	font-weight: 700;
-	margin-bottom: 10px !important;
+	margin-bottom: 15px !important;
+	font-size: 44px !important;
+	margin-top: 15px !important;
 }
 
 .order_card .ico_items {
@@ -4662,15 +4666,19 @@ li.product:hover .detail_view {
 
 .ico_items .ico_3 {
 	background: url("/wp-content/uploads/2018/03/New-Project-29.png") no-repeat;
+
 }
 
 .order_card a.button {
-	background: #08c138 !important;
-	width: 220px;
-	height: 30px;
-	font-size: 12px;
+	padding-top: 10px;
+	font-size: 18px;
 	color: white;
 	text-align: center;
+	text-transform: none;
+	font-family: circe-regular !important;
+	width: 215px;
+	height: 41px;
+	background-color: #07c137 !important;
 }
 .order_card a.button:hover {
 	color: white;
@@ -5442,3 +5450,29 @@ cursor: pointer;
 .single_prod .right_arr {
 	left: 415px;
 }
+
+.single_prod .images  {
+	background: #f7f7f7;
+}
+
+.shop_attributes {
+	padding-left: 20px !important;
+}
+
+.shop_attributes p {
+	font-size: 18px !important;
+	color: #333;
+}
+
+.shop_attributes .prop_value p:last-child {
+	text-transform:lowercase;
+}
+
+.zoom_img {
+	width: 22px !important;
+	box-shadow: none !important;
+	right: 20px;
+	position: absolute;
+	bottom: 20px;
+}
+

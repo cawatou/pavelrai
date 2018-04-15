@@ -8,7 +8,7 @@ $files = scandir($dir);
         <?foreach($files as $img):
             $check = explode('.', $img);
             if(count($check) == 2 && $check[0] != ''):?>
-                <a href="/wp-content/uploads/photo-gallery/main/<?=$img?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
+                <a href="/wp-content/uploads/photo-gallery/main/<?=$img?>" class="zoom" data-rel="prettyPhoto[works-gallery]">
                     <img src="/wp-content/uploads/photo-gallery/main/<?=$img?>" alt="">
                 </a>
             <?endif?>
