@@ -127,14 +127,20 @@ jQuery(document).ready(function($){
     })
 
 
+    $('.add_to_cart_button').on('click', function(){
+        var product_id = $(this).attr('data-product_id');
+        ajax_cart('add', product_id, 1, 0);
+    })
 
-    function ajax_cart(action, prodict_id, quantity, cart_key){
+
+    function ajax_cart(action, product_id, quantity, cart_key){
+        var url = location.origin + '/ajax/cart.php';
         $.ajax({
             'type': 'post',
-            'url': '../ajax/cart.php',
+            'url': url,
             'data': {
                 'act': action,
-                'product_id': prodict_id,
+                'product_id': product_id,
                 'cart_key': cart_key,
                 'quantity': quantity
             },
