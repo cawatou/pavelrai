@@ -3839,10 +3839,10 @@ li.product h3 {
 div.woocommerce-tabs {
 	float: left;
 	width: 60%;
-	margin-top: 50px;
+	margin-top: 55px;
 }
 div.images {
-	margin-top: 60px;
+	margin-top: 65px;
 }
 #tab-additional_information {
 	display: block !important;
@@ -4229,6 +4229,11 @@ li.product:hover .detail_view {
 
 #our_works .owl-item {
 	height: 250px;
+	width: 270px !important;
+}
+
+#our_works .owl-item:hover {
+	opacity: .9;
 }
 
 .radio-inline {
@@ -5357,6 +5362,10 @@ cursor: pointer;
 	background: none;
 }
 
+#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0 {
+	width: 175px !important;
+}
+
 .before,
 .after {
 	padding: 0;
@@ -5494,9 +5503,15 @@ cursor: pointer;
 	z-index: 200;
 }
 
-#bestprice:hover {
+#bestprice {
 	border-bottom: 1px solid #ededed;
 	cursor: pointer;
+}
+
+#bestprice:hover {
+	border-bottom: none;
+	cursor: pointer;
+	color: #0071ff;
 }
 
 #modal_bestprice {
@@ -5556,3 +5571,11 @@ cursor: pointer;
 	margin-bottom: 25px;
 }
 
+.single-product .page-header {
+	padding: 0;
+}
+
+.single_prod h1 {
+	font-size: 44px;
+	font-weight: 700;
+}

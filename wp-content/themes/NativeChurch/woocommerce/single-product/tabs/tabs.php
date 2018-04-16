@@ -19,7 +19,7 @@ foreach ($category_obj as $obj){
     if($obj->parent > 0) $cat_id = $obj->parent;
     else $cat_id = $obj->term_id;
 }
-
+//echo "<pre>".print_r($product, 1)."</pre>";
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 if ( ! empty( $tabs ) ) : ?>
 	<div class="woocommerce-tabs">
@@ -148,4 +148,6 @@ if(in_array($cat_id, $memorials)):?>
             </table>
         </div>
     </div>
+<?else:?>
+    <?=$product->post_content?>
 <?endif?>
