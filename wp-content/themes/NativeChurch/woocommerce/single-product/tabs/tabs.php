@@ -19,29 +19,19 @@ foreach ($category_obj as $obj){
     if($obj->parent > 0) $cat_id = $obj->parent;
     else $cat_id = $obj->term_id;
 }
-//echo "<pre>".print_r($product, 1)."</pre>";
-$tabs = apply_filters( 'woocommerce_product_tabs', array() );
-if ( ! empty( $tabs ) ) : ?>
-	<div class="woocommerce-tabs">
-		<ul class="tabs">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo $key ?>_tab">
-					<a href="#tab-<?php echo $key ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', $tab['title'], $key ) ?></a>
-				</li>
-                <?break?>
-			<?php endforeach; ?>
-		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="panel entry-content" id="tab-<?php echo $key ?>">
-				<?php call_user_func( $tab['callback'], $key, $tab ) ?>
-			</div>
-            <?break?>
-		<?php endforeach; ?>
-	</div>
-<?php endif; ?>
 
-
-
+//$tabs = apply_filters( 'woocommerce_product_tabs', array() );
+$tab = Array(
+    'title' => 'Дополнительная информация',
+    'priority' => 20,
+    'callback' => 'woocommerce_product_additional_information_tab'
+);
+?>
+<div class="woocommerce-tabs">
+    <div class="panel entry-content" id="tab-additional_information">
+        <?php call_user_func( $tab['callback'], 'additional_information', $tab ) ?>
+    </div>
+</div>
 <?$memorials = array(50, 57, 743, 332, 59, 39);
 if(in_array($cat_id, $memorials)):?>
     <div class="col-md-12">

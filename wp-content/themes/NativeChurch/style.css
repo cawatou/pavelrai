@@ -3477,6 +3477,9 @@ p.demo_store{
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
+	font-weight: 700;
+	color: #333;
+	font-size: 24px;
 }
 
 .user_name {
@@ -5474,6 +5477,7 @@ cursor: pointer;
 
 .shop_attributes {
 	padding-left: 20px !important;
+	z-index: 201;
 }
 
 .shop_attributes p {
