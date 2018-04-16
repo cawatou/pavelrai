@@ -3356,8 +3356,9 @@ p.demo_store{
 .container_content ol,
 .container_content ul{
 	color: #333;
-	font: 16px circe-regular; 
-	padding-left: 20px;
+	font: 18px circe-regular;
+	padding-left: 0;
+	margin-left: 20px;
 }
 
 .container_cont {
@@ -5579,7 +5580,7 @@ cursor: pointer;
 	padding: 0;
 }
 
-.single_prod h1 {
+.single_prod .product_title {
 	font-size: 44px;
 	font-weight: 700;
 }
@@ -5617,4 +5618,14 @@ cursor: pointer;
 
 .extra_service p.title {
 	font-weight: 700;
+}
+
+.single_prod .container_content {
+	padding-left: 0;
+	color: #333;
+	padding: 20px 0;
+	margin: 40px 0;
+	font-size: 18px;
+	border-top: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
 }

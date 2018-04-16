@@ -20,6 +20,8 @@ foreach ($category_obj as $obj){
     else $cat_id = $obj->term_id;
 }
 
+//echo "<pre>".print_r($product, 1);
+
 //$tabs = apply_filters( 'woocommerce_product_tabs', array() );
 $tab = Array(
     'title' => 'Дополнительная информация',
@@ -143,5 +145,8 @@ if(in_array($cat_id, $memorials)):?>
     </div>
 
 <?else:?>
-    <?=$product->post_content?>
+    <div class="col-md-9 container_content">
+        <?if($product->post->post_content) echo $product->post->post_content;
+        else echo "<h2>Описание отсутствует</h2>"?>
+    </div>
 <?endif?>
