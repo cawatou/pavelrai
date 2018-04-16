@@ -32,112 +32,116 @@ $tab = Array(
         <?php call_user_func( $tab['callback'], 'additional_information', $tab ) ?>
     </div>
 </div>
-<?$memorials = array(50, 57, 743, 332, 59, 39);
+<?$memorials = array(50, 57, 743, 332, 59, 39, 360, 361, 830);
 if(in_array($cat_id, $memorials)):?>
-    <div class="col-md-12">
-        <div class="wrap_install col-md-4">
-            <?if(key($cat) != 743):?>
-                <ul>
-                    <li><a href="?page_id=813" target="_blank"><p>Установка памятника в металлическую рамку - 3 600 руб.</p><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/type1.jpg" alt=""></a></li>
-                    <li><a href="?page_id=813" target="_blank"><p>Установка памятника на плиту «Миниракушка»- 3 600 руб.</p><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/type3.jpg" alt=""></a></li>
-                    <li><a href="?page_id=825" target="_blank"><p>Установка памятника на плиту "Подиум" - 4 900 руб.</p><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/type2.jpg" alt=""></a></li>
-                    <li><a href="?page_id=829" target="_blank"><p>Установка памятника на плиту "Ракушка" - 10 800 руб.</p><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/type5.jpg" alt=""></a></li>
-                    <li><a href="?page_id=838" target="_blank"><p>Установка памятника на фундамент "Стандарт" - 18 565 руб.</p><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/type4.jpg" alt=""></a></li>
-                    <li><a href="/type_install/" target="_blank"><p>Установка памятника на плиту «Греция» - 5 500 руб.</p><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/type6.jpg" alt=""></a></li>
-                </ul>
-            <?else:
-                $random = array('1', '2', '3', '4', '5', '6', '7', '8', '9');
-                shuffle($random);
-                //echo "<pre>".print_r($random, 1);?>
-                <ul>
-                    <li style="width: 220px !important; height: 375px; float: left;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[0]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[0]?>.jpg" /></a></li>
-                    <li style="width: 220px !important; height: 375px; float: left;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[1]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[1]?>.jpg" /></a></li>
-                    <li style="height: 250px; float: left; overflow: hidden; margin-bottom: 20px;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[2]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[2]?>.jpg" /></a></li>
-                    <li style="width: 220px !important; height: 375px; float: left;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[3]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[3]?>.jpg" /></a></li>
-                    <li style="width: 220px !important; height: 375px; float: left;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[4]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[4]?>.jpg" /></a></li>
-                    <li style="height: 250px; float: left; overflow: hidden; margin-bottom: 20px;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[5]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[5]?>.jpg" /></a></li>
-                    <li style="width: 220px !important; height: 375px; float: left;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[6]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[6]?>.jpg" /></a></li>
-                    <li style="width: 220px !important; height: 375px; float: left;"><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[7]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[7]?>.jpg" /></a></li>
-                    <li><a class="gallery" rel="group" title="" href="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[8]?>.jpg"><img src="http://pavelrai.ru/wp-content/themes/NativeChurch/images/c<?=$random[8]?>.jpg" /></a></li>
-                </ul>
-            <?endif?>
+    <div class="col-md-9 extra_service">
+        <h5>Художественные работы на памятник</h5>
+        <div class="col-md-5">
+            <img src="/wp-content/themes/NativeChurch/images/type3.jpg" />
         </div>
         <div class="col-md-4">
-            <h2>Установка памятника</h2>
-            <table class='shop_attributes'>
-                <tbody>
-                <tr>
-                    <th>Установка памятника в металлическую рамку</th>
-                    <td><p>3 600 руб.</p></td>
-                </tr>
-                <tr>
-                    <th>Установка памятника на плиту «Миниракушка»</th>
-                    <td><p>3 600 руб.</p></td>
-                </tr>
-                <tr class='alt'>
-                    <th>Установка памятника на плиту "Подиум"</th>
-                    <td><p>4 900 руб.</p></td>
-                </tr>
-                <tr>
-                    <th>Установка памятника на плиту "Ракушка"</th>
-                    <td><p>10 800 руб.</p></td>
-                </tr>
-                <tr class='alt'>
-                    <th>Установка памятника на фундамент 'Стандарт'</th>
-                    <td><p>18 565 руб.</p></td>
-                </tr>
-                <tr class='alt'>
-                    <th>Установка памятника на плиту «Греция»</th>
-                    <td><p>5 500 руб.</p></td>
-                </tr>
-                </tbody>
-            </table>
-
-
-            <h2>Доставка памятника</h2>
-            <table class='shop_attributes'>
-                <tbody>
-                <tr>
-                    <th>Доставка по Уссурийску</th>
-                    <td><p>800 руб.</p></td>
-                </tr>
-                <tr class='alt'>
-                    <th>Доставка Борисовка, Михайловка, Воздвиженка, Новоникольск</th>
-                    <td><p>800 руб.</p></td>
-                </tr>
-                <tr>
-                    <th>Доставка Владивосток</th>
-                    <td><p>4 500 руб.</p></td>
-                </tr>
-                <tr class='alt'>
-                    <th>Доставка Славянка</th>
-                    <td><p>6 750 руб.</p></td>
-                </tr>
-                <tr>
-                    <th>Доставка Сибирцево</th>
-                    <td><p>3 150 руб.</p></td>
-                </tr>
-                <tr class='alt'>
-                    <th>Доставка Покровка, Алексеевка, Раздольное, Галенки</th>
-                    <td><p>1 800 руб.</p></td>
-                </tr>
-                <tr>
-                    <td colspan='2' style='padding: 8px'>
-                        <p>Доставка в любой населенный пункт - 1 руб. - 1 километр в одну сторону. Пример расчета : Уссурийск - Владивосток 100км ( 45р * 100км = 4500 руб.)</p>
-                    </td>
-                </tr>
-                <tr class='alt'>
-                    <th>Доставка по России</th>
-                    <td><p>от 3 000 руб.</p></td>
-                </tr>
-                <tr>
-                    <th>Хранение на складе</th>
-                    <td><p>Бесплатно</p></td>
-                </tr>
-                </tbody>
-            </table>
+            <p class="title">Вид Услуги</p>
+            <p>Портрет на камне</p>
+            <p>Фото на металле</p>
+            <p>Фото на фарфоре</p>
+            <p>ФИО и даты</p>
+            <p>Слова эпитафии</p>
+            <p>Цветы</p>
+            <p>Крест на памятнике</p>
+            <p>Сюжеты</p>
+        </div>
+        <div class="col-md-3">
+            <p class="title">Стоимость</p>
+            <p>от 2 950 &#8381;</p>
+            <p>от 1 250 &#8381;</p>
+            <p>от 2 900 &#8381;</p>
+            <p>от 950 &#8381;</p>
+            <p>от 10 &#8381; за 1 знак</p>
+            <p>от 400 &#8381;</p>
+            <p>от 200 &#8381;</p>
+            <p>от 300 &#8381;</p>
         </div>
     </div>
+
+
+    <div class="col-md-9 extra_service">
+        <h5>Установка памятника</h5>
+        <div class="col-md-5">
+            <img src="/wp-content/themes/NativeChurch/images/type2.jpg" />
+        </div>
+        <div class="col-md-4">
+            <p class="title">Установка</p>
+            <p>в металлическую рамку</p>
+            <p>на плиту "Подиум"</p>
+            <p>на плиту «Миниракушка»</p>
+            <p>на бетонный фундамент «Стандарт»</p>
+            <p>на плиту "Ракушка"</p>
+            <p>на плиту «Греция»</p>
+        </div>
+        <div class="col-md-3">
+            <p class="title">Стоимость</p>
+            <p>3 600 &#8381;</p>
+            <p>4 900 &#8381;</p>
+            <p>3 600 &#8381;</p>
+            <p>18 565 &#8381;</p>
+            <p>10 800 &#8381;</p>
+            <p>5 500 &#8381;</p>
+        </div>
+    </div>
+
+
+    <div class="col-md-9 extra_service">
+        <h5>Доставка без установки</h5>
+        <div class="col-md-5">
+            <img src="/wp-content/themes/NativeChurch/images/delivery_wi.png" />
+        </div>
+        <div class="col-md-4">
+            <p class="title">Доставка</p>
+            <p>по Уссурийску</p>
+            <p>Борисовка, Михайловка, Воздвиженка, Новоникольск</p>
+            <p>Владивосток</p>
+            <p>Славянка</p>
+            <p>Сибирцево</p>
+            <p>Покровка, Алексеевка, Раздольное, Галенки</p>
+            <p>по России</p>
+            <p>Хранение на складе</p>
+        </div>
+        <div class="col-md-3">
+            <p class="title">Стоимость</p>
+            <p>800 &#8381;</p>
+            <p>800 &#8381;</p>
+            <p>5 200 &#8381;</p>
+            <p>7 280 &#8381;</p>
+            <p>4 056 &#8381;</p>
+            <p>2 800 &#8381;</p>
+            <p>от 3 000 &#8381;</p>
+            <p>Бесплатно</p>
+        </div>
+    </div>
+
+    <div class="col-md-9 extra_service">
+        <h5>Дополнительная информация</h5>
+        <div class="col-md-5">
+            <img src="/wp-content/themes/NativeChurch/images/type1.jpg" />
+        </div>
+        <div class="col-md-4">
+            <p class="title">Вид услуги</p>
+            <p>Комплектация памятника цветником</p>
+            <p>Комплектация памятника накрывной плитой</p>
+            <p>Демонтаж временного памятника</p>
+            <p>Демонтаж бетонного памятника</p>
+            <p>Покрытие «Антидождь»</p>
+        </div>
+        <div class="col-md-3">
+            <p class="title">Стоимость</p>
+            <p>Бесплатно</p>
+            <p>от 2 660 &#8381;</p>
+            <p>Бесплатно</p>
+            <p>от 900 &#8381;</p>
+            <p>500 &#8381;</p>
+        </div>
+    </div>
+
 <?else:?>
     <?=$product->post_content?>
 <?endif?>

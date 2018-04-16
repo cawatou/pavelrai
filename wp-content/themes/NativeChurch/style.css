@@ -5583,3 +5583,38 @@ cursor: pointer;
 	font-size: 44px;
 	font-weight: 700;
 }
+
+.extra_service:first-child {
+	margin-top: 40px;
+}
+
+.extra_service {
+	padding-left: 0;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #ededed;
+}
+
+.extra_service .col-md-5 {
+	padding-left: 0;
+	max-height: 330px;
+	overflow: hidden;
+}
+
+.extra_service img {
+	width: 320px;
+}
+
+.extra_service h5 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.extra_service p {
+	font-size: 18px;
+	color:#333;
+}
+
+.extra_service p.title {
+	font-weight: 700;
+}
