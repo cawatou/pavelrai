@@ -3851,7 +3851,7 @@ div.images {
 	display: block !important;
 }
 .related {
-	width: 100%;
+	width: 1085px;
 	float: left;
 }
 .related .wraper_img {
@@ -5542,6 +5542,7 @@ cursor: pointer;
 #modal_addcart .title{
 	font-size: 24px;
 	color: #333;
+	font-weight: 700;
 }
 
 #modal_bestprice .descr {
@@ -5584,7 +5585,6 @@ cursor: pointer;
 #modal_addcart .title {
 	text-align: center;
 	margin-bottom: 25px;
-	font-weight: 700;
 }
 
 .single-product .page-header {

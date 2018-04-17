@@ -62,7 +62,7 @@ foreach ($attributes_tax as $tax => $data){
         <div class="ico_items">
             <a href="/delivery/" class="ico_1">Доставка</a>
             <a href="/contact/" class="ico_2">Самовывоз</a>
-            <a class="ico_3">Гарантия</a>
+            <a href="/garantii/" class="ico_3">Гарантия</a>
         </div>
         <a data-product_id="<?=$product->id?>" class="button add_to_cart_button">Купить</a>
     </div>
