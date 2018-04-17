@@ -3356,9 +3356,8 @@ p.demo_store{
 .container_content ol,
 .container_content ul{
 	color: #333;
-	font: 18px circe-regular;
-	padding-left: 0;
-	margin-left: 20px;
+	font: 16px circe-regular; 
+	padding-left: 20px;
 }
 
 .container_cont {
@@ -4434,6 +4433,7 @@ li.product:hover .detail_view {
 
 .footer_tel:hover {
 	border-bottom: none;
+	color: #0071ff !important;
 }
 
 .footer_phone {
@@ -4444,6 +4444,10 @@ li.product:hover .detail_view {
 .footer_email {
 	font-weight: 400 !important;
 	margin-top: -18px !important;
+}
+
+.footer_email:hover {
+	color: #0071ff;
 }
 
 .footer_phone{
@@ -4519,6 +4523,7 @@ li.product:hover .detail_view {
 .information_page li {
 	margin-bottom: 40px;
 	list-style-type: none;
+	width: fit-content;
 }
 
 .information_page li:hover  p:last-child {
@@ -5074,6 +5079,10 @@ p.cart_total {
 	text-decoration: none;
 }
 
+.mainpage-archive h2 {
+	font-weight: 700;
+}
+
 .mainpage-archive .last+li, .last+li  {
 	clear: both;
 }
@@ -5288,6 +5297,7 @@ cursor: pointer;
 
 .modal_close:hover {
 	cursor: pointer;
+	color: #0071ff;
 }
 
 .breadcrumb a, .breadcrumb span {
@@ -5434,10 +5444,10 @@ cursor: pointer;
 }
 
 .container_content a:hover,
-.monument_content a:hover
+.monument_content a:hover,
 .home_content a:hover {
 	border-bottom: none;
-	color: red;
+	color: red !important;
 }
 
 .container_content a:visited,
@@ -5574,13 +5584,14 @@ cursor: pointer;
 #modal_addcart .title {
 	text-align: center;
 	margin-bottom: 25px;
+	font-weight: 700;
 }
 
 .single-product .page-header {
 	padding: 0;
 }
 
-.single_prod .product_title {
+.single_prod h1 {
 	font-size: 44px;
 	font-weight: 700;
 }
@@ -5620,12 +5631,7 @@ cursor: pointer;
 	font-weight: 700;
 }
 
-.single_prod .container_content {
-	padding-left: 0;
-	color: #333;
-	padding: 20px 0;
-	margin: 40px 0;
-	font-size: 18px;
-	border-top: 1px solid #ededed;
-	border-bottom: 1px solid #ededed;
+.information_page a {
+	border-bottom: none;
+	width: fit-content;
 }
