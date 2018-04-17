@@ -127,7 +127,7 @@ echo $style; ?>>
                         </div>
                         <div class="col-md-5 callback">
                            
-                            <a class="tel" href="#">
+                            <a href="/vse-uslugi/vyzov-agenta/" class="tel">
                                 <i class="fa fa-phone"></i>
                                 <span>Вызов менеджера</span>
                             </a>

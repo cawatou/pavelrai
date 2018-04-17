@@ -16,13 +16,13 @@ jQuery(function(){
 jQuery(".bwg_standart_thumb_0").wrap("<a class='img-thumbnail'></a>");
 
 
-jQuery('.tel').click(function(event){ 
+/*jQuery('.tel').click(function(event){ 
 	event.preventDefault();
 	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
 			jQuery('#modal_1').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
-});
+});*/
 
 
 jQuery('.question').click(function(event){
