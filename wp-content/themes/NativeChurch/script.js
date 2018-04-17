@@ -180,6 +180,14 @@ jQuery(document).ready(function($){
         location.href = '/cart/';
     })
 
+    $(".single_prod .images")
+        .mouseover(function() {
+           $('.single_prod .zoom_img').attr('src', '/wp-content/themes/NativeChurch/images/zoom_h.png');
+       })
+        .mouseout(function() {
+           $('.single_prod .zoom_img').attr('src', '/wp-content/themes/NativeChurch/images/zoom.png');
+        });
+
 })
 
 // Плавающий блок
