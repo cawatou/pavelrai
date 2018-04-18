@@ -239,8 +239,8 @@ foreach($cat as $i => $product){
 	//if($i <= 813) continue;
 
 
-
-	echo "<pre>".print_r($el, 1)."</pre>";
+    $pstr = $el['title'].' - '.$el['price'];
+	echo "<pre>".print_r($pstr, 1)."</pre>";
 	//continue;
 
 	//else continue;
@@ -344,7 +344,7 @@ foreach($cat as $i => $product){
         }
     }
 
-	// Добавляем изображение
+/*	// Добавляем изображение
 	$iproduct->body['ID'] = $object_id;
 	$file_name = $el['title'];
 	$img_oldname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
@@ -360,8 +360,10 @@ foreach($cat as $i => $product){
 	}else{
 		echo "Не удалось переименовать изображение: ".$img_newname;
         file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']." - Нет фото\r\n", FILE_APPEND);
-	};
+	};*/
 }
+$file_name = ru2lat('Комплект ТО 3 светло серый');
+echo $file_name;
 // Функция для переименовывания изображений 
 function ru2lat($str){
 	$tr = array(
