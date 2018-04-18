@@ -257,11 +257,11 @@ foreach($cat as $i => $product){
         //Цена
         $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
         if (!$res->justVar()) {
-            echo "нет цены - ".$el['title'];
             $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
+            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_regular_price','" . $el['price'] . "')", $object_id);
         }else{
-            echo "обновляем цену - ".$el['title'];
             $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
+            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_regular_price' LIMIT 1", $el['price'], $object_id);
         }
     }
 
@@ -314,11 +314,11 @@ foreach($cat as $i => $product){
         //Цена
         $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
         if (!$res->justVar()) {
-            echo "нет цены - ".$el['title'];
             $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
+            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_regular_price','" . $el['price'] . "')", $object_id);
         }else{
-            echo "обновляем цену - ".$el['title'];
             $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
+            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_regular_price' LIMIT 1", $el['price'], $object_id);
         }
 
         //continue;

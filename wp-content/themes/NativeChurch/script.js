@@ -39,7 +39,7 @@ jQuery(document).ready(function($){
         var content_height = $('.page_content').height();
         if(content_height == null) content_height = $('.product-archive').height();
 
-        if (content_height > menu_height) {
+        if (content_height > menu_height || content_height >= 1187) {
 
             if($("div").is(".page_content")) $('.page_content').addClass('content_separate');
             else $('.product-archive').addClass('content_separate');
@@ -99,7 +99,7 @@ jQuery(document).ready(function($){
     $('.price_block .close').on('click', function(){
         var cart_key = $(this).attr('data-key');
         ajax_cart('update', 0, 0, cart_key);
-        $(this).parents(".cart_item").empty();
+        $(this).parents(".cart_item").remove();
     })
 
     $('.wrap_services .col-md-3').on('click', function(){
@@ -146,15 +146,15 @@ jQuery(document).ready(function($){
             },
             success: function(res) {
                 if(action == 'update'){
-                    $('.cart_total').empty();
-                    $('.cart_total').append(res);
+                    $('.cart_total .amount').empty();
+                    $('.cart_total .amount').append(res);
                 }
             }
         }).fail(function (xhr, ajaxOptions, thrownError) {
             if(xhr.status == 404){
                 if(action == 'update') {
-                    $('.cart_total').empty();
-                    $('.cart_total').append(xhr.responseText);
+                    $('.cart_total .amount').empty();
+                    $('.cart_total .amount').append(xhr.responseText);
                 }
             }
         });
@@ -192,21 +192,25 @@ jQuery(document).ready(function($){
 
 // Плавающий блок
 jQuery(window).scroll(function() {
-    console.log('scroll');
-    var sb_m = 80; /* отступ сверху и снизу */
-    var mb = 550; /* высота подвала с запасом */
-    var st = jQuery(window).scrollTop();
-    var sb = jQuery(".sticky-block");
-    var sb_ot = sb.offset().top;
-    var sb_h = sb.height();
+    if (jQuery('.sticky-block').hasClass("col-md-5")){
+        console.log('scroll');
+        var sb_m = 80;
+        /* отступ сверху и снизу */
+        var mb = 550;
+        /* высота подвала с запасом */
+        var st = jQuery(window).scrollTop();
+        var sb = jQuery(".sticky-block");
+        var sb_ot = sb.offset().top;
+        var sb_h = sb.height();
 
-    if(sb_h + jQuery(document).scrollTop() + sb_m + mb < jQuery(document).height()) {
-        if(st > sb_ot) {
-            var h = Math.round(st - sb_ot) + sb_m;
-            sb.css({"paddingTop" : h});
-        }
-        else {
-            sb.css({"paddingTop" : 0});
+        if (sb_h + jQuery(document).scrollTop() + sb_m + mb < jQuery(document).height()) {
+            if (st > sb_ot) {
+                var h = Math.round(st - sb_ot) + sb_m;
+                sb.css({"paddingTop": h});
+            }
+            else {
+                sb.css({"paddingTop": 0});
+            }
         }
     }
 });

@@ -28,7 +28,7 @@ $pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&ord
 $lables = get_posts("post_type=product&numberposts=100&product_cat=lable");
 $rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
 
-//echo "<pre>".print_r($extra_items, 1)."</pre>";
+
 ?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
@@ -45,6 +45,7 @@ $rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
 $_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 $product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :?>
+    <?//echo "<pre>".print_r($cart_item, 1)."</pre>";?>
     <div class="cart_item col-md-12">
         <div class="img col-md-3">
             <?=apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );?>
@@ -66,16 +67,17 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
             --><?/*endforeach;*/?>
 
             <?if($cart_item['extra']):?>
-                <p class="extra"><strong>К данному товару рекомендуем</strong></p>
+                <p class="extra">К данному товару рекомендуем</p>
                 <p class="add_extra"><span>добавить дополнительные услуги</span> <span class="plus"> + </span></p>
             <?endif?>
         </div>
 
         <div class="price_block col-md-4">
             <a class="close" data-key="<?=$cart_item_key?>">x</a>
-            <?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );?>
+            <?$price = $cart_item['line_total'] / $cart_item['quantity'];?>
+            <span class="amount"><?=number_format($price, 0, '', ' ')?> &#8381;</span>
             <div class="quantity_block">
-                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="left">-</button>
+                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="left">–</button>
                 <input type="text" class="item_quantity quantity_block-<?=$cart_item['product_id']?>" data-key="<?=$cart_item_key?>" value="<?=$cart_item['quantity']?>" />
                 <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="right">+</button>
             </div>
@@ -117,7 +119,12 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
 
 
 <div class="col-md-3 cart_total_block">
-    <p class="cart_total"><?=WC()->cart->get_total()?></p>
+    <p class="cart_total">
+        <?$price = WC()->cart->get_total();
+        $price = price_format($price);
+        ?>
+        <span class="amount"><?=$price?></span>
+    </p>
 
     <div class="cart_count">
         <span class="item_count"><?=count($items)?></span> <span class="item_measure">товара</span>
