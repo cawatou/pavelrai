@@ -3842,10 +3842,10 @@ li.product h3 {
 div.woocommerce-tabs {
 	float: left;
 	width: 60%;
-	margin-top: 55px;
+	margin-top: 65px;
 }
 div.images {
-	margin-top: 65px;
+	margin-top: 75px;
 }
 #tab-additional_information {
 	display: block !important;
@@ -3853,7 +3853,15 @@ div.images {
 .related {
 	width: 1085px;
 	float: left;
+	padding-top: 20px;
+	border-top: 1px solid #ededed !important;
 }
+
+.related h2 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
 .related .wraper_img {
 	line-height: 200px !important;
 	height: auto !important;
@@ -4232,7 +4240,13 @@ li.product:hover .detail_view {
 
 #our_works .owl-item {
 	height: 250px;
-	width: 270px !important;
+	padding-left: 0;
+	margin-left: 30px;
+	width: 248px !important;
+}
+
+#our_works .owl-item:first-child {
+	margin-left: 0;
 }
 
 #our_works .owl-item:hover {
@@ -4621,6 +4635,16 @@ li.product:hover .detail_view {
 .single_prod .thumbnails a {
 	width: 74px !important;
 	margin-bottom: 15px;
+}
+
+.single_prod .container_content {
+	margin-top: 40px;
+	padding: 20px 0;
+	border-top: 1px solid #ededed;
+}
+
+.single_prod .container_content h2 {
+	font-weight: 700;
 }
 
 .prop_name {
@@ -5175,13 +5199,6 @@ cursor: pointer;
 	position: relative;
 }
 
-.owl-item {
-	padding-left: 30px;
-}
-
-.owl-item:first-child {
-	padding-left: 0;
-}
 
 .owl-item:first-child img {
 	height: 180px;
@@ -5399,10 +5416,10 @@ cursor: pointer;
 	width: 1283px;
 	left: -100px;
 }
-
+/*
 .owl-item:first-child {
 	width: 250px !important;
-}
+}*/
 
 .archive .nav-backed-header {
 	background: none !important;
@@ -5464,13 +5481,23 @@ cursor: pointer;
 .product-carousel .owl-item,
 .product-carousel .owl-item a {
 	width: 75px !important;
-	height: 63px;
+	height: 75px;
+
+}
+.product-carousel .owl-item {
+	margin-left: 24px;
+
+}
+
+.product-carousel .owl-item:first-child {
+	margin-left: 0;
 }
 
 .product-carousel .owl-item img {
-	width: 100% !important;
-	height: 100% !important;
+	width: 75px !important;
+	height: 75px !important;
 	box-shadow: none !important;
+	border: 1px solid #ededed;
 }
 
 .single_prod .left_arr,
@@ -5596,8 +5623,14 @@ cursor: pointer;
 	font-weight: 700;
 }
 
-.extra_service:first-child {
+.extra_service_fst {
+	padding-top: 20px;
 	margin-top: 40px;
+	border-top: 1px solid #ededed;
+}
+
+.extra_service_lst {
+	border-bottom: none !important;
 }
 
 .extra_service {
@@ -5634,4 +5667,8 @@ cursor: pointer;
 .information_page a {
 	border-bottom: none;
 	width: fit-content;
+}
+
+p.double_row {
+	margin-bottom: 35px;
 }

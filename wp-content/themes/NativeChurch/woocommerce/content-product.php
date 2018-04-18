@@ -42,6 +42,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 				do_action( 'woocommerce_before_shop_loop_item_title' );
 			?>
 		</div>
+        <p class="detail_view">Посмотреть подробнее</p>
         <div class="wrapper_attr">
             <p class="prod_title"><?php the_title(); ?></p>
             <span class="product_price"><?=number_format($product->get_price(), 0, '', ' ')?> &#8381;</span>
@@ -61,7 +62,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
                 endforeach;*/?>
             </div>
         </div>
-		<p class="detail_view">Посмотреть подробнее</p>
+
 	</a>
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 </li>

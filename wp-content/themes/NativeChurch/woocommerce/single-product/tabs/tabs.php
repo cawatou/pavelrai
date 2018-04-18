@@ -36,7 +36,7 @@ $tab = Array(
 </div>
 <?$memorials = array(50, 57, 743, 332, 59, 39, 360, 361, 830);
 if(in_array($cat_id, $memorials)):?>
-    <div class="col-md-9 extra_service">
+    <div class="col-md-9 extra_service extra_service_fst">
         <h5>Художественные работы на памятник</h5>
         <div class="col-md-5">
             <img src="/wp-content/themes/NativeChurch/images/type3.jpg" />
@@ -85,7 +85,7 @@ if(in_array($cat_id, $memorials)):?>
             <p>3 600 &#8381;</p>
             <p>4 900 &#8381;</p>
             <p>3 600 &#8381;</p>
-            <p>18 565 &#8381;</p>
+            <p class="double_row">18 565 &#8381;</p>
             <p>10 800 &#8381;</p>
             <p>5 500 &#8381;</p>
         </div>
@@ -111,17 +111,17 @@ if(in_array($cat_id, $memorials)):?>
         <div class="col-md-3">
             <p class="title">Стоимость</p>
             <p>800 &#8381;</p>
-            <p>800 &#8381;</p>
+            <p class="double_row">800 &#8381;</p>
             <p>5 200 &#8381;</p>
             <p>7 280 &#8381;</p>
             <p>4 056 &#8381;</p>
-            <p>2 800 &#8381;</p>
+            <p class="double_row">2 800 &#8381;</p>
             <p>от 3 000 &#8381;</p>
             <p>Бесплатно</p>
         </div>
     </div>
 
-    <div class="col-md-9 extra_service">
+    <div class="col-md-9 extra_service extra_service_lst">
         <h5>Дополнительная информация</h5>
         <div class="col-md-5">
             <img src="/wp-content/themes/NativeChurch/images/type1.jpg" />
@@ -136,17 +136,21 @@ if(in_array($cat_id, $memorials)):?>
         </div>
         <div class="col-md-3">
             <p class="title">Стоимость</p>
-            <p>Бесплатно</p>
-            <p>от 2 660 &#8381;</p>
-            <p>Бесплатно</p>
-            <p>от 900 &#8381;</p>
+            <p class="double_row">Бесплатно</p>
+            <p class="double_row">от 2 660 &#8381;</p>
+            <p class="double_row">Бесплатно</p>
+            <p class="double_row">от 900 &#8381;</p>
             <p>500 &#8381;</p>
         </div>
     </div>
 
 <?else:?>
     <div class="col-md-9 container_content">
-        <?if($product->post->post_content) echo $product->post->post_content;
-        else echo "<h2>Описание отсутствует</h2>"?>
+        <h2>Описание</h2>
+        <?if($product->post->post_content):?>
+            <?=$product->post->post_content?>
+        <?else:?>
+            <p>описание отсутствует</p>
+        <?endif?>
     </div>
 <?endif?>
