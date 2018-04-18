@@ -59,7 +59,6 @@ $pageOptions = imic_page_design($variable_post_id); //page design options ?>
                     do_action('woocommerce_after_main_content');
                     ?>
                     <?php
-                    123 /shop-category/care/monument/
                     pagination();
                     ?>
 

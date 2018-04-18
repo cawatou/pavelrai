@@ -177,7 +177,8 @@ $db = new mysql(array(
 
 
 
-$parse = 'img';
+$parse = 'price';
+//$parse = 'img';
 //$parse = 'all';
 $cat = file("csv/new.csv");
 
@@ -252,15 +253,18 @@ foreach($cat as $i => $product){
 	$object_id = $res->justVar();
 
 
-    //Цена
-    $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
-    if (!$res->justVar()) {
-        echo "нет цены - ".$el['title'];
-        $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
-    }else{
-        echo "обновляем цену - ".$el['title'];
-        $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
+	if($parse == 'price'){
+        //Цена
+        $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
+        if (!$res->justVar()) {
+            echo "нет цены - ".$el['title'];
+            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
+        }else{
+            echo "обновляем цену - ".$el['title'];
+            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
+        }
     }
+
 
     if($parse == 'all') {
         if (!$object_id) {
@@ -361,25 +365,27 @@ foreach($cat as $i => $product){
             }
             $term_id = false;
         }
+
+
+        // Добавляем изображение
+        $iproduct->body['ID'] = $object_id;
+        $file_name = $el['title'];
+        $img_oldname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+        $file_name = ru2lat($file_name);
+        $img_newname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+
+        if(copy($img_oldname, $img_newname)){
+            $img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+            $iproduct->featuredImage = $img_src;
+            $iproduct->saveFeaturedImage();
+            file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']."\r\n", FILE_APPEND);
+            //unlink($_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';);
+        }else{
+            echo "Не удалось переименовать изображение: ".$img_newname;
+            file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']." - Нет фото\r\n", FILE_APPEND);
+        };
+
     }
-
-/*	// Добавляем изображение
-	$iproduct->body['ID'] = $object_id;
-	$file_name = $el['title'];
-	$img_oldname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
-	$file_name = ru2lat($file_name);
-	$img_newname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
-
-	if(copy($img_oldname, $img_newname)){
-		$img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
-		$iproduct->featuredImage = $img_src;
-		$iproduct->saveFeaturedImage();
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']."\r\n", FILE_APPEND);
-		//unlink($_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';);
-	}else{
-		echo "Не удалось переименовать изображение: ".$img_newname;
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']." - Нет фото\r\n", FILE_APPEND);
-	};*/
 }
 $file_name = ru2lat('Комплект ТО 3 светло серый');
 echo $file_name;

@@ -13,28 +13,74 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Each tab is an array containing title, callback and priority.
  * @see woocommerce_default_product_tabs()
  */
-global $product;
+global $product, $wpdb;
 $category_obj = get_the_terms( $product->id, 'product_cat' );
 foreach ($category_obj as $obj){
     if($obj->parent > 0) $cat_id = $obj->parent;
     else $cat_id = $obj->term_id;
 }
 
-//echo "<pre>".print_r($product, 1);
 
-//$tabs = apply_filters( 'woocommerce_product_tabs', array() );
-$tab = Array(
-    'title' => 'Дополнительная информация',
-    'priority' => 20,
-    'callback' => 'woocommerce_product_additional_information_tab'
-);
+$attributes_tax = $product->get_attributes();
+ob_start();
+
+
+//print_r($product);
+$price = $product->get_price();
+$posts = $wpdb->get_row("SELECT value FROM dollar_course WHERE id = '1' LIMIT 0,1");
+$cource = $posts->value;
+$price_value = $price*$cource;
+$attr_count = 0;
+foreach ($attributes_tax as $tax => $data){
+    $values = wc_get_product_terms( $product->id, $data['name'], array( 'fields' => 'names' ) );
+    //echo "<pre>".print_r($values, 1)."</pre>";
+    if($values[0] != '') $attr_count++;
+}
+//echo "<pre>".print_r($attr_count, 1)."</pre>";
 ?>
+
 <div class="woocommerce-tabs">
     <div class="panel entry-content" id="tab-additional_information">
-        <?php call_user_func( $tab['callback'], 'additional_information', $tab ) ?>
+        <div class="shop_attributes col-md-7">
+            <?if($attr_count > 0):?><p><strong>Характеристики</strong></p><?endif?>
+            <?php foreach ( $attributes_tax as $tax =>$attribute ) :
+                if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
+                    continue;
+                } else {
+                    $has_row = true;
+                }
+
+                $values = wc_get_product_terms( $product->id, $attribute['name'], array( 'fields' => 'names' ) );
+                $obj_attr = get_the_terms( $product->id, $tax );
+                if($obj_attr):?>
+                    <div class="prop_value">
+
+                        <p class="prop_name">
+                            <strong><?php echo wc_attribute_label( $attribute['name'] ); ?>: </strong>
+                        </p>
+
+                        <?echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );?>
+
+                    </div>
+                <?endif;?>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="col-md-5 sticky-block">
+            <div class="order_card">
+                <p class="price"><?=number_format($price_value, 0, '', ' ');?> &#8381;</p>
+                <span>Нашли дешевле? <span id="bestprice">Снизим цену</span></span>
+                <div class="ico_items">
+                    <a href="/delivery/" class="ico_1">Доставка</a>
+                    <a href="/contact/" class="ico_2">Самовывоз</a>
+                    <a href="/garantii/" class="ico_3">Гарантия</a>
+                </div>
+                <a data-product_id="<?=$product->id?>" class="button add_to_cart_button">Купить</a>
+            </div>
+        </div>
     </div>
 </div>
-<?$memorials = array(50, 57, 743, 332, 59, 39, 360, 361, 830);
+<?$memorials = array(50, 57, 743, 332, 59, 39, 360, 361);
 if(in_array($cat_id, $memorials)):?>
     <div class="col-md-9 extra_service extra_service_fst">
         <h5>Художественные работы на памятник</h5>
@@ -154,3 +200,4 @@ if(in_array($cat_id, $memorials)):?>
         <?endif?>
     </div>
 <?endif?>
+<?//ob_end_clean();?>
