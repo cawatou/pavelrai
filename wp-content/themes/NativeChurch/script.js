@@ -180,7 +180,7 @@ jQuery(document).ready(function($){
         location.href = '/cart/';
     })
 
-    $(".single_prod .images")
+    $(".single_prod .main_img")
         .mouseover(function() {
            $('.single_prod .zoom_img').attr('src', '/wp-content/themes/NativeChurch/images/zoom_h.png');
        })

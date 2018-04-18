@@ -4744,7 +4744,7 @@ li.product:hover .detail_view {
 }
 
 .cart_item {
-	border: 1px solid #ededed;
+	border: 2px solid #ededed;
 	padding: 0 15px;
 	margin-bottom: 40px;
 }
@@ -4767,7 +4767,6 @@ li.product:hover .detail_view {
 .cart_steps img {
 	margin-left: 17px;
 	margin-top: 15px;
-	padding-top: 20px;
 }
 
 .cart_steps .detail {
@@ -4787,8 +4786,14 @@ li.product:hover .detail_view {
 .cart_item, .cart_item .img {
 	padding-left: 0;
 }
+
+.cart_item .img {
+	background: #ededed;
+	padding-right: 0;
+}
+
 .cart_item .attr {
-	padding: 20px 0;
+	padding: 20px 0 20px 20px;
 	border-right: 1px solid #ededed;
 }
 
@@ -4800,6 +4805,7 @@ li.product:hover .detail_view {
 	font-weight: 700;
 	margin-bottom: 20px !important;
 	font-size: 18px;
+	color: #333;
 }
 .add_extra:hover {
 	cursor: pointer;
@@ -5671,4 +5677,8 @@ cursor: pointer;
 
 p.double_row {
 	margin-bottom: 35px;
+}
+
+.term-macadam .product-archive .wraper_img img {
+	border-radius: 240px;
 }

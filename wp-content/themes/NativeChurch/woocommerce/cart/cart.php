@@ -52,18 +52,18 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
 
         <div class="attr col-md-5">
             <p class="item_name"><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );?></p>
-            <?$attributes = $_product->get_attributes();
-            foreach($attributes as $attribute):?>
-                <p class="prop_name"><strong><?php echo wc_attribute_label( $attribute['name'] ); ?>: </strong></p>
-                <?if ( $attribute['is_taxonomy'] ) {
+            <?/*$attributes = $_product->get_attributes();
+            foreach($attributes as $attribute):*/?><!--
+                <p class="prop_name"><strong><?php /*echo wc_attribute_label( $attribute['name'] ); */?>: </strong></p>
+                <?/*if ( $attribute['is_taxonomy'] ) {
                     $values = wc_get_product_terms( $_product->id, $attribute['name'], array( 'fields' => 'names' ) );
                     echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
                 } else {
                     // Convert pipes to commas and display values
                     $values = array_map( 'trim', explode( WC_DELIMITER, $attribute['value'] ) );
                     echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-                }?>
-            <?endforeach;?>
+                }*/?>
+            --><?/*endforeach;*/?>
 
             <?if($cart_item['extra']):?>
                 <p class="extra"><strong>К данному товару рекомендуем</strong></p>
