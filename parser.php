@@ -239,8 +239,8 @@ foreach($cat as $i => $product){
 	//if($i <= 813) continue;
 
 
-    $pstr = $el['title'].' - '.$el['price'];
-	echo "<pre>".print_r($pstr, 1)."</pre>";
+    /*$pstr = $el['title'].' - '.$el['price'];
+	echo "<pre>".print_r($pstr, 1)."</pre>";*/
 	//continue;
 
 	//else continue;
@@ -251,7 +251,18 @@ foreach($cat as $i => $product){
 	$res = $db->query("SELECT ID FROM `wp_posts` WHERE `post_type` = 'product' AND `post_title` = '%s' LIMIT 1", $el['title']);
 	$object_id = $res->justVar();
 
-	if($parse == 'all') {
+
+    //Цена
+    $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
+    if (!$res->justVar()) {
+        echo "нет цены - ".$el['title'];
+        $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
+    }else{
+        echo "обновляем цену - ".$el['title'];
+        $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
+    }
+
+    if($parse == 'all') {
         if (!$object_id) {
             $res = $db->query("INSERT INTO `wp_posts` (`post_author`,`post_date`,`post_date_gmt`,`post_title`,`post_type`) VALUES ('1','" . date("Y-m-d H:i:s") . "','" . date("Y-m-d H:i:s", time() - 10800) . "','%s','product')", $el['title']);
             $object_id = $res->insertId();
@@ -295,8 +306,16 @@ foreach($cat as $i => $product){
             $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_visibility','visible')", $object_id);
         }
 
+
         //Цена
-        $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
+        $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
+        if (!$res->justVar()) {
+            echo "нет цены - ".$el['title'];
+            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
+        }else{
+            echo "обновляем цену - ".$el['title'];
+            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
+        }
 
         //continue;
 
