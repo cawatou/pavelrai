@@ -27,7 +27,7 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 $pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&orderby='ID'&order='ASC'");
 $lables = get_posts("post_type=product&numberposts=100&product_cat=lable");
 $rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
-
+echo "<pre>".print_r($pictures, 1)."</pre>";
 
 ?>
 <div class="cart_steps">
@@ -45,7 +45,7 @@ $rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
 $_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 $product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :?>
-    <?//echo "<pre>".print_r($cart_item, 1)."</pre>";?>
+    <?echo "<pre>".print_r($cart_items, 1)."</pre>";?>
     <div class="cart_item col-md-12">
         <div class="img col-md-3">
             <?=apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );?>

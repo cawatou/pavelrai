@@ -5715,3 +5715,7 @@ p.double_row {
 .term-macadam .product-archive .wraper_img img {
 	border-radius: 240px;
 }
+
+.onsale {
+	display: none;
+}
