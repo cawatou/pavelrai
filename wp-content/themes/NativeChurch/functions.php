@@ -285,6 +285,13 @@ function works_carousel(){
     require_once($theme_uri . 'works_carousel.php');
 }
 
+/*================== Модальное окно корзины =================*/
+//add_action( 'wp_ajax_my_action', 'modal_extra' );
+//function modal_extra(){
+//    return "ddd";
+//    //require_once($theme_uri . 'modal_extra.php');
+//}
+
 /*================== Форматирование цены корзины =================*/
 function price_format($price){
     $price = mb_substr($price,21); // вырезаем <span class="amount">

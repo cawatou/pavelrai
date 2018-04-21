@@ -161,6 +161,35 @@ jQuery(document).ready(function($){
 
     }
 
+    $('.add_extra').click(function(event){
+        event.preventDefault();
+        var id = $(this).attr('data-cat-id');
+        $('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+            function(){ // после выполнения предъидущей анимации
+                $.ajax({
+                    'type': 'post',
+                    'url': '/modal_extra',
+                    'data': {
+                        id: id
+                    },
+                    success: function(res) {
+                        //$("#modal_extra").load('/wp-content/themes/NativeChurch/modal_extra.php');
+                        $("#modal_extra").append(res)
+                        $('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+                    }
+                }).fail(function (xhr, ajaxOptions, thrownError) {
+                    if(xhr.status == 404){
+                        var res = xhr.responseText;
+                        //$("#modal_extra").load('/wp-content/themes/NativeChurch/modal_extra.php');
+                        $("#modal_extra").append(res);
+                        $('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+                    }
+                });
+
+            });
+    });
+
+
     var item_count = $('.item_count').text();
     var item_text = declOfNum(item_count, ['товар', 'товара', 'товаров']);
     $('.item_measure').empty();

@@ -180,6 +180,10 @@ if($show_works):?>
     <input class="submit_btn cart_btn" type="button" class="btn btn-primary btn-lg pull-right" value="В корзину">
 </div>
 
+<div id="modal_extra" class="modal_window modal">
+
+</div>
+
 <div id="overlay"></div>
 </body>
 </html>
