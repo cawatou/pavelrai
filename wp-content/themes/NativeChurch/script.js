@@ -102,25 +102,6 @@ jQuery(document).ready(function($){
         $(this).parents(".cart_item").remove();
     })
 
-    $('.wrap_services .col-md-3').on('click', function(){
-        $(this).find('input[type=radio]').attr('checked', 'checked');
-        $(this).siblings().removeClass('checked');
-        $(this).addClass('checked');
-
-        var id = $(this).attr('data-id');
-        var del = $(this).parents('.service_extra').attr('data-delete');
-
-        console.log(id, del);
-        $(this).parents('.service_extra').attr('data-delete', id);
-        if(del == 0) {
-            ajax_cart('add', id, 1, 0);
-        }else{
-            ajax_cart('update', del, 0);
-            ajax_cart('add', id, 1, 0);
-        }
-    })
-
-
     $('.add_order').on('click', function(){
         $('#terms').attr('checked', 'checked');
         $('#place_order').click();
@@ -161,33 +142,80 @@ jQuery(document).ready(function($){
 
     }
 
+
+
+
     $('.add_extra').click(function(event){
         event.preventDefault();
-        var id = $(this).attr('data-cat-id');
+        var id = $(this).attr('data-id');
+        var cat_id = $(this).attr('data-cat-id');
         $('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
             function(){ // после выполнения предъидущей анимации
                 $.ajax({
                     'type': 'post',
                     'url': '/modal_extra',
                     'data': {
-                        id: id
+                        id: id,
+                        cat_id: cat_id
                     },
                     success: function(res) {
-                        //$("#modal_extra").load('/wp-content/themes/NativeChurch/modal_extra.php');
-                        $("#modal_extra").append(res)
-                        $('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
-                    }
-                }).fail(function (xhr, ajaxOptions, thrownError) {
-                    if(xhr.status == 404){
-                        var res = xhr.responseText;
-                        //$("#modal_extra").load('/wp-content/themes/NativeChurch/modal_extra.php');
+                        $("#modal_extra").empty();
                         $("#modal_extra").append(res);
                         $('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
                     }
                 });
-
-            });
+        });
     });
+
+    $(document).on('click', '.wrap_services .col-md-3', function(){
+        $(this).find('input[type=radio]').attr('checked', 'checked');
+        $(this).siblings().removeClass('checked');
+        $(this).addClass('checked');
+
+        var totalPrice = 0;
+        var extra_id = [];
+        $('.wrap_services .checked').each(function(){
+            var current_price = $(this).attr('data-price');
+            if(current_price === undefined) return;
+
+            var id = $(this).attr('data-id');
+            totalPrice += Number(current_price);
+            extra_id.push(id);
+        })
+        console.log(extra_id);
+
+        $('.modal_total').text(number_format(totalPrice, 0, '', ' '));
+        $('#extra_id').val(extra_id.join(','));
+
+        /*
+            ajax_cart('add', id, 1, 0);
+        */
+    })
+
+    $(document).on('click', '.accept_extra', function(){
+        var product_id = $('#product_id').val();
+        var extra_id = $('#extra_id').val();
+        var url = location.origin + '/ajax/cart.php';
+        $.ajax({
+            'type': 'post',
+            'url': url,
+            'data': {
+                act: 'add_extra',
+                product_id: product_id,
+                extra: extra_id
+            },
+            success: function(res) {
+                $("#modal_extra").empty();
+                $("#modal_extra").append(res);
+                modal_close();
+                //$('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+            }
+        });
+        add_extra
+        console.log(product_id, extra_id);
+    })
+
+
 
 
     var item_count = $('.item_count').text();
@@ -246,7 +274,36 @@ jQuery(window).scroll(function() {
 
 //    declOfNum(count, ['найдена', 'найдено', 'найдены']);
 function declOfNum(number, titles) {
-    cases = [2, 0, 1, 1, 1, 2];
+    var cases = [2, 0, 1, 1, 1, 2];
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+};
+
+
+function number_format( number, decimals, dec_point, thousands_sep ) {
+    var i, j, kw, kd, km;
+
+    if( isNaN(decimals = Math.abs(decimals)) ){
+        decimals = 2;
+    }
+
+    if( dec_point == undefined ){
+        dec_point = ",";
+    }
+    if( thousands_sep == undefined ){
+        thousands_sep = ".";
+    }
+
+    i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+
+    if( (j = i.length) > 3 ){
+        j = j % 3;
+    } else{
+        j = 0;
+    }
+
+    km = (j ? i.substr(0, j) + thousands_sep : "");
+    kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_sep);
+    kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+    return km + kw + kd;
 }
 

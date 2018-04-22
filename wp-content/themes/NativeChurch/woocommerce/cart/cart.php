@@ -37,7 +37,8 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 }
 
 $pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&orderby='ID'&order='ASC'");
-//echo "<pre>".print_r($pictures, 1)."</pre>";
+
+echo "<pre>".print_r($_SESSION, 1)."</pre>";
 
 ?>
 <div class="cart_steps">
@@ -65,7 +66,7 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
             <p class="item_name"><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );?></p>
             <?if($cart_item['extra']):?>
                 <p class="extra">К данному товару рекомендуем</p>
-                <p class="add_extra" data-cat-id = "<?=$cart_item['category']?>"><span>добавить дополнительные услуги</span> <span class="plus"> + </span></p>
+                <p class="add_extra" data-id = "<?=$cart_item['product_id']?>" data-cat-id = "<?=$cart_item['category']?>"><span>добавить дополнительные услуги</span> <span class="plus"> + </span></p>
             <?endif?>
         </div>
 

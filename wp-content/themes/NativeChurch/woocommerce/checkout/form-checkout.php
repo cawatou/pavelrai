@@ -26,9 +26,6 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 }
 
 $delivery = get_posts("post_type=product&numberposts=100&product_cat=delivery&orderby='ID'&order='ASC'");
-$installs = get_posts("post_type=product&numberposts=100&product_cat=install");
-$uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall");
-
 //echo "<pre>".print_r($extra_id, 1)."</pre>";
 ?>
 
@@ -65,54 +62,8 @@ $uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall
         <?endforeach?>
     </div>
 
-
-    <div class="col-md-12 service_extra" data-delete="0">
-        <p><strong>2. Установка памятника</strong></p>
-
-        <div class="col-md-3 checked" data-id="0">
-            <div class="col-md-1"><input type="radio" name="install" checked/></div>
-            <div class="col-md-10"><label>Без установки</label></div>
-        </div>
-
-        <?foreach($installs as $k => $install):
-            $tax = get_post_custom( $install->ID );?>
-            <div class="col-md-3" data-id="<?=$install->ID?>">
-                <div class="col-md-1"><input type="radio" name="install" /></div>
-                <div class="col-md-10">
-                    <label><?=$install->post_title?></label>
-                    <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
-                </div>
-            </div>
-        <?endforeach?>
-    </div>
-
-
-    <div class="col-md-12 service_extra" data-delete="0">
-        <p><strong>3. Нужен ли вам демонтаж памятника?</strong></p>
-
-        <div class="col-md-3 checked" data-id="0">
-            <div class="col-md-1"><input type="radio" name="uninstall" checked/></div>
-            <div class="col-md-10">
-                <label>Демонтаж временного памятника</label>
-                <p class="price">Бесплатно</p>
-            </div>
-        </div>
-
-        <?foreach($uninstalls as $k => $uninstall):
-            $tax = get_post_custom( $uninstall->ID );?>
-            <div class="col-md-3" data-id="<?=$uninstall->ID?>">
-                <div class="col-md-1"><input type="radio" name="uninstall" /></div>
-                <div class="col-md-10">
-                    <label><?=$uninstall->post_title?></label>
-                    <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
-                </div>
-            </div>
-        <?endforeach?>
-    </div>
-
-
     <div class="col-md-12 service_extra user_form">
-        <p><strong>4. Контактные данные</strong></p>
+        <p><strong>2. Контактные данные</strong></p>
         <form name="checkout" method="post" class="checkout" action="<?php echo esc_url( $get_checkout_url ); ?>">
             <?php do_action( 'woocommerce_checkout_billing' ); ?>
             <?php do_action( 'woocommerce_checkout_order_review' ); ?>
