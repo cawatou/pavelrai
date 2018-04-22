@@ -8,9 +8,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
-wc_print_notices();
-do_action( 'woocommerce_before_cart' );
-
+session_start();
 $cart_items = WC()->cart->get_cart();
 $items = array();
 foreach ($cart_items  as $cart_item_key => $cart_item ){
@@ -35,12 +33,9 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 
     //echo "<pre>".print_r($category, 1)."</pre>";
 }
+if(count($extra_items) < 1) session_destroy();
 
-$pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&orderby='ID'&order='ASC'");
-
-echo "<pre>".print_r($_SESSION, 1)."</pre>";
-
-?>
+echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
     <p>
@@ -64,7 +59,7 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
 
         <div class="attr col-md-5">
             <p class="item_name"><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );?></p>
-            <?if($cart_item['extra']):?>
+            <?if($cart_item['extra'] && !array_key_exists ($cart_item['product_id'], $_SESSION['extra'])):?>
                 <p class="extra">К данному товару рекомендуем</p>
                 <p class="add_extra" data-id = "<?=$cart_item['product_id']?>" data-cat-id = "<?=$cart_item['category']?>"><span>добавить дополнительные услуги</span> <span class="plus"> + </span></p>
             <?endif?>
@@ -81,46 +76,47 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
             </div>
         </div>
     </div>
+    <?//================ EXTRA ITEMS ==============?>
+    <?if(array_key_exists ($cart_item['product_id'], $_SESSION['extra'])):
+        $extra_id = explode(',', $_SESSION['extra'][$cart_item['product_id']]);?>
+        <div class="col-md-12 cart_extraitem">
+            <div class="col-md-8">
+                <p><strong>Дополнительные услуги :</strong></p>
+                <?$extra_total = 0;
+                foreach($extra_items as $cart_item_key => $extra_item):
+                    if(in_array($extra_item['product_id'], $extra_id)):
+                        $_product     = apply_filters( 'woocommerce_cart_item_product', $extra_item['data'], $extra_item, $cart_item_key );
+                        $extra_total += intval($extra_item['line_total']);?>
+                        <div class="img col-md-7">
+                            <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
+                        </div>
+                        <div class="col-md-2">
+                            <p><?=$extra_item['quantity']?> шт.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
+                        </div>
+                    <?endif?>
+                <?endforeach?>
+                <div class="img col-md-7">
+                    <p class="add_extra" data-id = "<?=$cart_item['product_id']?>" data-cat-id = "<?=$cart_item['category']?>"><span>Изменить доп. услуги</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 total_ex">
+                <p class="amount"> + <?=number_format($extra_total, 0, '', ' ')?> &#8381;</p>
+            </div>
+        </div>
+    <?endif?>
 <?endif?>
 <?endforeach?>
 
-
-<?//================ EXTRA ITEMS ==============?>
-<?if(count($extra_items) > 0):?>
-    <div class="col-md-12 cart_item cart_extraitem">
-        <div class="col-md-8">
-            <p><strong>Дополнительные услуги :</strong></p>
-            <?$extra_total = 0;
-            foreach($extra_items as $cart_item_key => $extra_item):
-                $_product     = apply_filters( 'woocommerce_cart_item_product', $extra_item['data'], $extra_item, $cart_item_key );
-                $extra_total += intval($extra_item['line_total']);?>
-                <div class="img col-md-7">
-                    <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
-                </div>
-                <div class="col-md-2">
-                    <p><?=$extra_item['quantity']?> шт.</p>
-                </div>
-                <div class="col-md-3">
-                    <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
-                </div>
-            <?endforeach?>
-            <div class="img col-md-7">
-                <p class="add_extra"><span>Изменить доп. услуги</span></p>
-            </div>
-        </div>
-        <div class="col-md-4 total_ex">
-            <p class="amount"> + <?=$extra_total?> руб.</p>
-        </div>
-    </div>
-<?endif?>
 </div>
 
 
 <div class="col-md-3 cart_total_block">
     <p class="cart_total">
         <?$price = WC()->cart->get_total();
-        $price = price_format($price);
-        ?>
+        $price = price_format($price);?>
         <span class="amount"><?=$price?></span>
     </p>
 

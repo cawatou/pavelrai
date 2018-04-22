@@ -69,6 +69,16 @@ jQuery('.add_to_cart_button').click(function(event){
 });
 
 
+jQuery('.col_tel').click(function(event){
+	event.preventDefault();
+	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+		function(){ // после выполнения предъидущей анимации
+			jQuery('#modal_fence').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+		});
+});
+
+
+
 jQuery(document).find('.modal_close, #overlay, .continue_btn').click( function(){
 	modal_close();
 });

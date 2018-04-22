@@ -205,13 +205,9 @@ jQuery(document).ready(function($){
                 extra: extra_id
             },
             success: function(res) {
-                $("#modal_extra").empty();
-                $("#modal_extra").append(res);
-                modal_close();
-                //$('#modal_extra').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+                location.reload();
             }
         });
-        add_extra
         console.log(product_id, extra_id);
     })
 
