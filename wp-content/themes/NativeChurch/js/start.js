@@ -1,85 +1,85 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 
-jQuery(function(){
-	jQuery(window).scroll(function(){
-		var top = jQuery(this).scrollTop();   		
+$(function(){
+	$(window).scroll(function(){
+		var top = $(this).scrollTop();   		
 		if (top==0) {
-			jQuery("#undefined-sticky-wrapper").removeClass("is-sticky");
-			jQuery(".main-menu-wrapper").removeClass("fixed_menu");
+			$("#undefined-sticky-wrapper").removeClass("is-sticky");
+			$(".main-menu-wrapper").removeClass("fixed_menu");
 		} else {
-			jQuery("#undefined-sticky-wrapper").addClass("is-sticky");
-			jQuery(".main-menu-wrapper").addClass("fixed_menu");
+			$("#undefined-sticky-wrapper").addClass("is-sticky");
+			$(".main-menu-wrapper").addClass("fixed_menu");
 		}
 	});
 });
 
-jQuery(".bwg_standart_thumb_0").wrap("<a class='img-thumbnail'></a>");
+$(".bwg_standart_thumb_0").wrap("<a class='img-thumbnail'></a>");
 
 
-/*jQuery('.tel').click(function(event){ 
+/*$('.tel').click(function(event){ 
 	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_1').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+			$('#modal_1').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
 });*/
 
 
-jQuery('.question').click(function(event){
+$('.question').click(function(event){
 	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_2').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+			$('#modal_2').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
 });
 
 
 
-jQuery('.price_btn').click(function(event){ 
+$('.price_btn').click(function(event){ 
 	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_3').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+			$('#modal_3').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
 });
 
 
-jQuery('#content_contacts button').click(function(event){
+$('#content_contacts button').click(function(event){
 	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_contact').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+			$('#modal_contact').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
 });
 
-jQuery('#bestprice').click(function(event){
+$('#bestprice').click(function(event){
 	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_bestprice').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+			$('#modal_bestprice').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
 });
 
-jQuery('.add_to_cart_button').click(function(event){
+$('.add_to_cart_button').click(function(event){
 	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_addcart').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
-		});
-});
-
-
-jQuery('.col_tel').click(function(event){
-	event.preventDefault();
-	jQuery('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
-		function(){ // после выполнения предъидущей анимации
-			jQuery('#modal_fence').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+			$('#modal_addcart').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
 });
 
 
+$('.col_tel').click(function(event){
+	event.preventDefault();
+	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
+		function(){ // после выполнения предъидущей анимации
+			$('#modal_fence').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+		});
+});
 
-jQuery(document).find('.modal_close, #overlay, .continue_btn').click( function(){
+
+
+$(document).find('.modal_close, #overlay, .continue_btn').click( function(){
 	modal_close();
 });
 
@@ -87,28 +87,32 @@ jQuery(document).find('.modal_close, #overlay, .continue_btn').click( function()
 
 
 
-jQuery(".snd_btn").click(function(event){
-	$y=jQuery(this).parent().parent().attr('id');
-	$title = jQuery('.page-header h1').text();
+$(".snd_btn").click(function(event){
+	$y=$(this).parent().parent().attr('id');
+	$title = $('.page-header h1').text();
 	//console.log($title);
 	message($y, $title);return false;
 });
 
-jQuery("#modal_contact .btn").click(function(event){
+$("#modal_contact .btn").click(function(event){
 	console.log('click there');
     sendmsg();
 });
 
 
+$("#fence_btn").click(function(event){
+	console.log('hello');
+});
+
 function modal_close() {
-    jQuery('.modal').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
+    $('.modal').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
         function(){ // после анимации
-            jQuery(this).css('display', 'none'); // делаем ему display: none;
-            jQuery('#overlay').fadeOut(400); // скрываем подложку
+            $(this).css('display', 'none'); // делаем ему display: none;
+            $('#overlay').fadeOut(400); // скрываем подложку
         }
     );
-    jQuery(".required_filds").each(function(){
-        jQuery(this).val("");
+    $(".required_filds").each(function(){
+        $(this).val("");
     })
 }
 
@@ -116,12 +120,12 @@ function modal_close() {
 function message($y, $title){
 	var $x=0;
 	$y="#"+$y+" .required_filds"
-	jQuery($y).each(function(){
-		if(!jQuery(this).val()){
-			jQuery(this).addClass("red_border"); 
+	$($y).each(function(){
+		if(!$(this).val()){
+			$(this).addClass("red_border"); 
 			$x=$x+1;           
 		}else{
-			jQuery(this).removeClass("red_border");
+			$(this).removeClass("red_border");
 		}
 	});
 	
@@ -134,18 +138,18 @@ function message($y, $title){
 }
 
 function sendmsg($title){
-  jQuery.ajax({
+  $.ajax({
 	type: "POST",
 	url: "/wp-content/themes/NativeChurch/mail/modal.php",
 	data: {
-	  user_name: jQuery("#user_name").val(),
-	  user_phone: jQuery("#user_phone").val(),
-	  user_name_2m: jQuery("#user_name_2m").val(),
-	  user_phone_2m: jQuery("#user_phone_2m").val(),
-	  user_mail_2m: jQuery("#user_mail_2m").val(),
-	  user_msg_2m: jQuery("#user_msg_2m").val(),
-	  user_name_3m: jQuery("#user_name_3m").val(),
-	  user_phone_3m: jQuery("#user_phone_3m").val(),
+	  user_name: $("#user_name").val(),
+	  user_phone: $("#user_phone").val(),
+	  user_name_2m: $("#user_name_2m").val(),
+	  user_phone_2m: $("#user_phone_2m").val(),
+	  user_mail_2m: $("#user_mail_2m").val(),
+	  user_msg_2m: $("#user_msg_2m").val(),
+	  user_name_3m: $("#user_name_3m").val(),
+	  user_phone_3m: $("#user_phone_3m").val(),
 	  model: $title
 	}
   })
@@ -156,7 +160,7 @@ function sendmsg($title){
 	result = msg;
 	if(msg=="welldone"){
         modal_close()
-        jQuery('#modal_4').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+        $('#modal_4').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 	}   
 	else if(msg=="nosend"){      
 	  alert("Ошибка отправки формы");
@@ -168,7 +172,7 @@ function sendmsg($title){
 } 
 
 // Убираем эффект галлереи из карточки товара
-jQuery("img.attachment-shop_single").unwrap();
+$("img.attachment-shop_single").unwrap();
 				
 });
 

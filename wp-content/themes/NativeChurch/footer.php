@@ -184,6 +184,49 @@ if($show_works):?>
 
 </div>
 
+<div id="modal_fence" class="modal">
+
+    <span class="modal_close">x</span>
+
+    <div class="col-md-12">
+        <p class="title">Калькулятор стоимости оградки</p>
+        <div class="col-md-4">
+            <p>Ограда №1</p>
+        </div>
+        <div class="col-md-8">
+            <p>Цена за м.п.: <span class="fence_price">2000</span> Р</p>
+        </div>
+    </div>
+
+    <div class="separateFence"></div>
+
+    <div class="col-md-12">
+        <p>Укажите размеры сторон:</p>
+        <div class="col-md-4">   
+            <p>Длина</p>
+            <input class='l_fence' type="text" value="">
+            <p>м</p>
+        </div>
+        <div class="col-md-4">
+            <p>Ширина</p>
+            <input class="w_fence" type="text" value="">
+            <p>м</p>
+        </div>
+        <div class="col-md-4">
+            <p>Периметр</p>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <p>Стоимость</p> 
+        <span class="total_price"></span>
+    </div>
+
+    <a class="button add_to_cart_button fence_btn">Купить</a>
+
+</div>
+
+
 <div id="overlay"></div>
 </body>
 </html>
