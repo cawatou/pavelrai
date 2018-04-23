@@ -81,6 +81,10 @@ jQuery(document).ready(function($){
         console.log($("li").is(".current-menu-item"));
     }
 
+
+    /*=============================== cart ====================================*/
+
+    // Изменение количества товара в корзине
     $('.price_block button').on('click', function(){
         var class_name = this.className;
         var direction = $(this).attr('data-dir');
@@ -92,23 +96,38 @@ jQuery(document).ready(function($){
         if(direction == 'right') quantity++;
         $('input.' + class_name).val(quantity);
 
-        ajax_cart('update', 0, quantity, cart_key);
-        if(quantity == 0) $(this).parents(".cart_item").empty();
+
+        if(quantity == 0) {
+            $(this).parents(".cart_item").next().remove();
+            $(this).parents(".cart_item").remove();
+            var product_id = $(this).attr('data-id');
+            ajax_cart('delete', product_id, 0, cart_key);
+            if($('.cart_item').length < 1) location.reload();
+        }else{
+            ajax_cart('update', 0, quantity, cart_key);
+        }
+
+        calculateQuantity();
     })
 
+    // Удалить товар из корзины
     $('.price_block .close').on('click', function(){
         var cart_key = $(this).attr('data-key');
         var product_id = $(this).attr('data-id');
         ajax_cart('delete', product_id, 0, cart_key);
+        $(this).parents(".cart_item").next().remove();
         $(this).parents(".cart_item").remove();
+        if($('.cart_item').length < 1) location.reload();
+        calculateQuantity();
     })
 
+    // Переход на 2 шаг корзины
     $('.add_order').on('click', function(){
         $('#terms').attr('checked', 'checked');
         $('#place_order').click();
     })
 
-
+    // Добавление товара в корзину
     $('.add_to_cart_button').on('click', function(){
         var product_id = $(this).attr('data-product_id');
         ajax_cart('add', product_id, 1, 0);
@@ -127,14 +146,14 @@ jQuery(document).ready(function($){
                 'quantity': quantity
             },
             success: function(res) {
-                if(action == 'update'){
+                if(action == 'update' || action == 'delete'){
                     $('.cart_total .amount').empty();
                     $('.cart_total .amount').append(res);
                 }
             }
         }).fail(function (xhr, ajaxOptions, thrownError) {
             if(xhr.status == 404){
-                if(action == 'update') {
+                if(action == 'update' || action == 'delete') {
                     $('.cart_total .amount').empty();
                     $('.cart_total .amount').append(xhr.responseText);
                 }
@@ -142,8 +161,6 @@ jQuery(document).ready(function($){
         });
 
     }
-
-
 
 
     $('.add_extra').click(function(event){
@@ -213,18 +230,24 @@ jQuery(document).ready(function($){
     })
 
 
+    calculateQuantity();
+    function calculateQuantity(){
+        var item_count = 0;
+        $('.item_quantity').each(function(){
+            item_count += Number(this.value);
+        });
 
+        $('.item_count').text(item_count);
+        var item_text = declOfNum(item_count, ['товар', 'товара', 'товаров']);
+        $('.item_measure').empty();
+        $('.item_measure').text(item_text);
 
-    var item_count = $('.item_count').text();
-    var item_text = declOfNum(item_count, ['товар', 'товара', 'товаров']);
-    $('.item_measure').empty();
-    $('.item_measure').text(item_text);
-
-    var extra_count = $('.exitem_count').text();
-    var extra_text = declOfNum(extra_count, ['услуга', 'услуги', 'услуг']);
-    $('.exitem_measure').empty();
-    $('.exitem_measure').text(extra_text);
-
+        var extra_count = $('.extra_item').length;
+        $('.exitem_count').text(extra_count)
+        var extra_text = declOfNum(extra_count, ['услуга', 'услуги', 'услуг']);
+        $('.exitem_measure').empty();
+        $('.exitem_measure').text(extra_text);
+    }
 
     $('#billing_first_name').attr('placeholder', 'Введите ваше имя');
     $('#billing_email').attr('placeholder', 'Введите вашу почту');
@@ -274,6 +297,8 @@ function declOfNum(number, titles) {
     var cases = [2, 0, 1, 1, 1, 2];
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 };
+
+
 
 
 function number_format( number, decimals, dec_point, thousands_sep ) {

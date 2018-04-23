@@ -35,6 +35,9 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 }
 if(count($extra_items) < 1) session_destroy();
 
+$count_item = $count_extra = 0;
+echo count($extra_items);
+//echo "<pre>".print_r($cart_items, 1)."</pre>";
 echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
@@ -51,7 +54,8 @@ echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";?>
 $_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 $product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :?>
-    <?//echo "<pre>".print_r($cart_items, 1)."</pre>";?>
+    <?$count_item += $cart_item['quantity'];
+    //echo "<pre>".print_r($cart_item, 1)."</pre>";?>
     <div class="cart_item col-md-12">
         <div class="img col-md-3">
             <?=apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );?>
@@ -70,14 +74,14 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
             <?$price = $cart_item['line_total'] / $cart_item['quantity'];?>
             <span class="amount"><?=number_format($price, 0, '', ' ')?> &#8381;</span>
             <div class="quantity_block">
-                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="left">–</button>
+                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="left" data-id = "<?=$cart_item['product_id']?>">–</button>
                 <input type="text" class="item_quantity quantity_block-<?=$cart_item['product_id']?>" data-key="<?=$cart_item_key?>" value="<?=$cart_item['quantity']?>" />
-                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="right">+</button>
+                <button type="button" class="quantity_block-<?=$cart_item['product_id']?>" data-dir="right" data-id = "<?=$cart_item['product_id']?>">+</button>
             </div>
         </div>
     </div>
     <?//================ EXTRA ITEMS ==============?>
-    <?if(array_key_exists ($cart_item['product_id'], $_SESSION['extra'])):
+    <?if($_SESSION['extra'] && array_key_exists ($cart_item['product_id'], $_SESSION['extra'])):
         $extra_id = explode(',', $_SESSION['extra'][$cart_item['product_id']]);?>
         <div class="col-md-12 cart_extraitem">
             <div class="col-md-8">
@@ -86,15 +90,18 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
                 foreach($extra_items as $cart_item_key => $extra_item):
                     if(in_array($extra_item['product_id'], $extra_id)):
                         $_product     = apply_filters( 'woocommerce_cart_item_product', $extra_item['data'], $extra_item, $cart_item_key );
-                        $extra_total += intval($extra_item['line_total']);?>
-                        <div class="img col-md-7">
-                            <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
-                        </div>
-                        <div class="col-md-2">
-                            <p>1 шт.</p>
-                        </div>
-                        <div class="col-md-3">
-                            <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
+                        $extra_total += intval($extra_item['line_total']) / $extra_item['quantity'];
+                        $count_extra ++;?>
+                        <div class="extra_item">
+                            <div class="img col-md-7">
+                                <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
+                            </div>
+                            <div class="col-md-2">
+                                <p>1 шт.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
+                            </div>
                         </div>
                     <?endif?>
                 <?endforeach?>
@@ -121,11 +128,11 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
     </p>
 
     <div class="cart_count">
-        <span class="item_count"><?=count($items)?></span> <span class="item_measure">товара</span>
+        <span class="item_count"></span> <span class="item_measure"></span>
     </div>
 
     <div class="cart_excount">
-        <span class="exitem_count"><?=count($extra_items)?></span> <span class="exitem_measure">услуг</span>
+        <span class="exitem_count"></span> <span class="exitem_measure"></span>
     </div>
     <a href="/checkout" class="btn">Оформить заказ</a>
 </div>
