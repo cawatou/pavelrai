@@ -98,7 +98,8 @@ jQuery(document).ready(function($){
 
     $('.price_block .close').on('click', function(){
         var cart_key = $(this).attr('data-key');
-        ajax_cart('update', 0, 0, cart_key);
+        var product_id = $(this).attr('data-id');
+        ajax_cart('delete', product_id, 0, cart_key);
         $(this).parents(".cart_item").remove();
     })
 

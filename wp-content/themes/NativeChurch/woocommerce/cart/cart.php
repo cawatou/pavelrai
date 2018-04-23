@@ -66,7 +66,7 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
         </div>
 
         <div class="price_block col-md-4">
-            <a class="close" data-key="<?=$cart_item_key?>">x</a>
+            <a class="close" data-key="<?=$cart_item_key?>" data-id="<?=$cart_item['product_id']?>">x</a>
             <?$price = $cart_item['line_total'] / $cart_item['quantity'];?>
             <span class="amount"><?=number_format($price, 0, '', ' ')?> &#8381;</span>
             <div class="quantity_block">
@@ -91,7 +91,7 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
                             <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
                         </div>
                         <div class="col-md-2">
-                            <p><?=$extra_item['quantity']?> шт.</p>
+                            <p>1 шт.</p>
                         </div>
                         <div class="col-md-3">
                             <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
