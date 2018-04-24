@@ -36,9 +36,12 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 if(count($extra_items) < 1) session_destroy();
 
 $count_item = $count_extra = 0;
-echo count($extra_items);
-//echo "<pre>".print_r($cart_items, 1)."</pre>";
-echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";?>
+//echo count($extra_items);
+if($_REQUEST['dev']){
+    echo "<pre>".print_r($cart_items, 1)."</pre>";
+}
+//echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";
+;?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
     <p>
@@ -85,7 +88,7 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
         $extra_id = explode(',', $_SESSION['extra'][$cart_item['product_id']]);?>
         <div class="col-md-12 cart_extraitem">
             <div class="col-md-8">
-                <p><strong>Дополнительные услуги :</strong></p>
+                <p class="title">Дополнительные услуги :</p>
                 <?$extra_total = 0;
                 foreach($extra_items as $cart_item_key => $extra_item):
                     if(in_array($extra_item['product_id'], $extra_id)):

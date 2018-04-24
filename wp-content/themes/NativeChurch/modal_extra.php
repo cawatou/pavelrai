@@ -89,7 +89,7 @@ $uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall
         <div class="col-md-3 checked">
             <div class="col-md-1"><input type="radio" name="uninstall" checked/></div>
             <div class="col-md-10">
-                <label>Демонтаж временного памятника</label>
+                <label>Не требуется</label>
                 <p class="price">Бесплатно</p>
             </div>
         </div>
@@ -139,7 +139,7 @@ $uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall
 
     <div class="col-md-12 service_extra">
         <div class="col-md-6">
-            <p><strong>Итого  <span class="modal_total">0</span> &#8381;</strong></p>
+            <p><strong>Итого: <span class="modal_total">0</span> &#8381;</strong></p>
         </div>
         <div class="col-md-6">
             <!--a class="btn modal_close">Продолжить</a-->

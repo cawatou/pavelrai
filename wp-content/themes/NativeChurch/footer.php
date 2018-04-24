@@ -191,7 +191,7 @@ if($show_works):?>
     <div class="col-md-12">
         <p class="title">Калькулятор стоимости оградки</p>
         <div class="col-md-4">
-            <p>Ограда №1</p>
+            <p class="fence_title">Ограда №1</p>
         </div>
         <div class="col-md-8">
             <p>Цена за м.п.: <span class="fence_price">2000</span> Р</p>
@@ -213,13 +213,13 @@ if($show_works):?>
             <p>м</p>
         </div>
         <div class="col-md-4">
-            <p>Периметр</p>
+            <p>Периметр</p> <span class="quantity"></span>
         </div>
     </div>
 
     <div class="col-md-12">
         <p>Стоимость</p> 
-        <span class="total_price"></span>
+        <span class="total_price">0</span>  &#8381;
     </div>
 
     <a class="button add_to_cart_button fence_btn">Купить</a>

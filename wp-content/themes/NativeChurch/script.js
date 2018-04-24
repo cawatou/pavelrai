@@ -102,11 +102,9 @@ jQuery(document).ready(function($){
             $(this).parents(".cart_item").remove();
             var product_id = $(this).attr('data-id');
             ajax_cart('delete', product_id, 0, cart_key);
-            if($('.cart_item').length < 1) location.reload();
         }else{
             ajax_cart('update', 0, quantity, cart_key);
         }
-
         calculateQuantity();
     })
 
@@ -117,7 +115,6 @@ jQuery(document).ready(function($){
         ajax_cart('delete', product_id, 0, cart_key);
         $(this).parents(".cart_item").next().remove();
         $(this).parents(".cart_item").remove();
-        if($('.cart_item').length < 1) location.reload();
         calculateQuantity();
     })
 
@@ -131,6 +128,26 @@ jQuery(document).ready(function($){
     $('.add_to_cart_button').on('click', function(){
         var product_id = $(this).attr('data-product_id');
         ajax_cart('add', product_id, 1, 0);
+    })
+
+    $('.fence_btn').on('click', function(){
+        var l_fence = Number($('.l_fence').val());
+        var w_fence = Number($('.w_fence').val());
+        var product_id = $('.fence_calc').attr('data-id');
+        var quantity = (l_fence + w_fence) * 2;
+
+        ajax_cart('add', product_id, quantity, 0);
+        $('#modal_fence').hide();
+    })
+
+    $('.l_fence, .w_fence').keyup(function () {
+        var l_fence = Number($('.l_fence').val());
+        var w_fence = Number($('.w_fence').val());
+        var fence_price = Number($('.fence_price').text());
+        var quantity = (l_fence + w_fence) * 2;
+        var total_price = fence_price * quantity;
+        $('#modal_fence .total_price').text(total_price);
+        $('#modal_fence .quantity').text(quantity + ' м.п');
     })
 
 
@@ -149,17 +166,10 @@ jQuery(document).ready(function($){
                 if(action == 'update' || action == 'delete'){
                     $('.cart_total .amount').empty();
                     $('.cart_total .amount').append(res);
+                    if($('.cart_item').length < 1) location.reload();
                 }
             }
-        }).fail(function (xhr, ajaxOptions, thrownError) {
-            if(xhr.status == 404){
-                if(action == 'update' || action == 'delete') {
-                    $('.cart_total .amount').empty();
-                    $('.cart_total .amount').append(xhr.responseText);
-                }
-            }
-        });
-
+        })
     }
 
 

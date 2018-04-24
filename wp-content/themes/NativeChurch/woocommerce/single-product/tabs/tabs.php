@@ -36,7 +36,7 @@ foreach ($attributes_tax as $tax => $data){
     //echo "<pre>".print_r($values, 1)."</pre>";
     if($values[0] != '') $attr_count++;
 }
-//echo "<pre>".print_r($attr_count, 1)."</pre>";
+//echo "<pre>".print_r($product, 1)."</pre>";
 ?>
 
 <div class="woocommerce-tabs">
@@ -64,6 +64,12 @@ foreach ($attributes_tax as $tax => $data){
                     </div>
                 <?endif;?>
             <?php endforeach; ?>
+
+            <?if($cat_id == 253):?>
+                <p class="fence_calc" data-price="<?=number_format($price_value, 0, '', '');?>" data-title="<?=$product->post->post_title?>" data-id="<?=$product->id?>">
+                    Калькулятор стоимости
+                </p>
+            <?endif?>
         </div>
 
         <div class="col-md-5 sticky-block">

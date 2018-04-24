@@ -69,7 +69,11 @@ $('.add_to_cart_button').click(function(event){
 });
 
 
-$('.col_tel').click(function(event){
+$('.fence_calc').click(function(event){
+	var price = $(this).attr('data-price');
+	var title = $(this).attr('data-title');
+	$('#modal_fence .fence_price').text(price);
+    $('#modal_fence .fence_title').text(title);
 	event.preventDefault();
 	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
@@ -79,7 +83,7 @@ $('.col_tel').click(function(event){
 
 
 
-$(document).find('.modal_close, #overlay, .continue_btn').click( function(){
+$(document).on('click', '.modal_close, #overlay, .continue_btn', function(){
 	modal_close();
 });
 
