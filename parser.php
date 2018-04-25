@@ -209,8 +209,8 @@ $cat_match = Array(
 
 
 //$parse = 'price';
-//$parse = 'img';
-$parse = 'all';
+$parse = 'img';
+//$parse = 'all';
 $cat = file("csv/new2.csv");
 
 foreach($cat as $i => $product){
@@ -264,26 +264,24 @@ foreach($cat as $i => $product){
         );
     };
 
-	//Цена
-    update_post_meta($post_id, '_regular_price', $el['price']);
-    update_post_meta($post_id, '_price', $el['price']);
-
-
-	// Категория
-	if($el['subcat'] == '') $cat_id = $el['cat'];
-	else $cat_id = $el['subcat'];
-	
-	$cat_id = array_search($cat_id, $cat_match);
-    wp_set_object_terms( $post_id, $cat_id, 'product_cat', true );
-
-
-	// Также необходимо комментировать обращения к БД для конкретной группы товара у которой нет определенных свойств
 
 	if(!$el['title']) continue;
 
     if($parse == 'all') {
 		if (!$post_id) continue;
-		
+
+        //Цена
+        update_post_meta($post_id, '_regular_price', $el['price']);
+        update_post_meta($post_id, '_price', $el['price']);
+
+
+        // Категория
+        if($el['subcat'] == '') $cat_id = $el['cat'];
+        else $cat_id = $el['subcat'];
+
+        $cat_id = array_search($cat_id, $cat_match);
+        wp_set_object_terms( $post_id, $cat_id, 'product_cat', true );
+
         $res = $db->query("UPDATE `wp_posts` SET `post_name` = '%s' WHERE `ID` = '%s' LIMIT 1", rand(1000000, 99999999), $post_id);
 
         $res = $db->query("SELECT * FROM `wp_postmeta` WHERE `post_id` = '" . $post_id . "'");
@@ -344,27 +342,27 @@ foreach($cat as $i => $product){
             }
             $term_id = false;
         }
+    }
 
-
+    if($parse == 'all' || $parse == 'img') {
         // Добавляем изображение
         $iproduct->body['ID'] = $post_id;
         $file_name = $el['title'];
-        $img_oldname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+        $img_oldname = $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/catalog_parcer/' . $file_name . '.png';
         $file_name = ru2lat($file_name);
-        $img_newname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+        $img_newname = $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/catalog_parcer/' . $file_name . '.png';
 
-        if(copy($img_oldname, $img_newname)){            
-            file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']."\r\n", FILE_APPEND);
+        if (copy($img_oldname, $img_newname)) {
+            file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/tt.txt', $el['title'] . "\r\n", FILE_APPEND);
             //unlink($_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';);
-        }else{
-            echo "Не удалось переименовать изображение: ".$img_newname;
-            file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']." - Нет фото\r\n", FILE_APPEND);
+        } else {
+            echo "Не удалось переименовать изображение: " . $img_newname;
+            file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/tt.txt', $el['title'] . " - Нет фото\r\n", FILE_APPEND);
         };
 
-		$img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
-		$iproduct->featuredImage = $img_src;
-		$iproduct->saveFeaturedImage();
-
+        $img_src = 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content/uploads/catalog_parcer/' . $file_name . '.png';
+        $iproduct->featuredImage = $img_src;
+        $iproduct->saveFeaturedImage();
     }
 }
 
@@ -385,7 +383,7 @@ function ru2lat($str){
 		"х"=>"kh", "ц"=>"ts", "ч"=>"ch", "ш"=>"sh", "щ"=>"sch",
 		"ъ"=>"", "ы"=>"y", "ь"=>"", "э"=>"e", "ю"=>"yu",
 		"я"=>"ya", " "=>"-", "."=>"", ","=>"", "/"=>"-",
-		":"=>"", ";"=>"","—"=>"", "–"=>"-"
+		":"=>"", ";"=>"","—"=>"", "–"=>"-", "№" => "№", "×" => "×"
 	);
 	return strtr($str,$tr);
 }
