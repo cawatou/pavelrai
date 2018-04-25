@@ -25,7 +25,7 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
     }
 }
 
-$delivery = get_posts("post_type=product&numberposts=100&product_cat=delivery");
+$delivery = get_posts("post_type=product&numberposts=1000&product_cat=delivery&orderby=ID&order=ASC");
 //echo "<pre>".print_r($extra_id, 1)."</pre>";
 ?>
 

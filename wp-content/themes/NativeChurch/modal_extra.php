@@ -4,11 +4,11 @@ Template Name: cart_extra
 */
 $product_id = $_REQUEST['id'];
 $cat_id = $_REQUEST['cat_id'];
-$pictures = get_posts("post_type=product&numberposts=100&product_cat=picture&orderby='ID'&order='ASC'");
-$lables = get_posts("post_type=product&numberposts=100&product_cat=lable");
-$rains = get_posts("post_type=product&numberposts=100&product_cat=antirain");
-$installs = get_posts("post_type=product&numberposts=100&product_cat=install");
-$uninstalls = get_posts("post_type=product&numberposts=100&product_cat=uninstall");?>
+$pictures = get_posts("post_type=product&numberposts=1000&product_cat=picture&orderby='ID'&order='ASC'");
+$lables = get_posts("post_type=product&numberposts=1000&product_cat=lable");
+$rains = get_posts("post_type=product&numberposts=1000&product_cat=antirain");
+$installs = get_posts("post_type=product&numberposts=1000&product_cat=install");
+$uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstall");?>
 
 <p class="close modal_close">X</p>
 <div class="wrap_services">
