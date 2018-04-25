@@ -174,111 +174,119 @@ $db = new mysql(array(
 // Изображения парсятся теперь из этого файла
 
 
+//$file_name = ru2lat('GFE');
+//echo $file_name;
+//die();
+
+$cat_match = Array(
+    257 => "Каменные",
+    826 => "Искусственный мрамор",
+    825 => "Керамика",
+    827 => "Гранитные монументы",
+    337 => "Вазы и лампады",
+    822 => "Щебень и мраморная крошка",
+    828 => "Венки и корзины",
+    823 => "Фигурные плиты и площадки",
+    57  => "Нестандартные",
+    56  => "Семейные",
+    54  => "Стандартные",
+    53  => "Экономные",
+    360 => "Мраморная",
+    58  => "Цветные",
+    332 => "Памятники с крестом",
+    743 => "Комбинированные",
+    256 => "Кованные",
+    306 => "Столики и лавочки",
+    254 => "Сварные",
+    829 => "Гробы",
+    59  => "Мраморные памятники",
+    830 => "Памятники домашним животным",
+    52  => "Бюджетные",
+    361 => "Гранитная"
+);
 
 
 
-$parse = 'price';
+
+//$parse = 'price';
 //$parse = 'img';
-//$parse = 'all';
-$cat = file("csv/new.csv");
+$parse = 'all';
+$cat = file("csv/new2.csv");
 
 foreach($cat as $i => $product){
 	$ar = explode(";",$product);
 	$el = array();
-	$el['cat_slug']						= trim($ar[0]);
-	$el['title']						= trim($ar[1]);
-	$el['property']['pa_material'] 		= trim($ar[2]);
-	$el['property']['pa_color'] 		= trim($ar[3]);
-	$el['property']['pa_poilning'] 		= trim($ar[4]);
-	$el['property']['pa_height'] 		= trim($ar[5]);
-	$el['property']['pa_weight'] 		= trim($ar[6]);
-	$el['property']['pa_volume'] 		= trim($ar[7]);
-	$el['property']['pa_size'] 			= trim($ar[8]);
-	$el['property']['pa_time'] 			= trim($ar[9]);
-	$el['property']['pa_fraction'] 		= trim($ar[10]);
-	$el['property']['pa_measure'] 		= trim($ar[11]);
-	$el['property']['pa_shape']	 		= trim($ar[12]);
-	$el['property']['pa_height_flight']	= trim($ar[13]);
-	$el['property']['pa_height_pole'] 	= trim($ar[14]);
-	$el['property']['pa_casing']	 	= trim($ar[15]);
-	$el['property']['pa_twists']	 	= trim($ar[16]);
-	$el['property']['pa_handles']		= trim($ar[17]);
-	$el['property']['pa_lacq']		 	= trim($ar[18]);
+	$el['cat']						    = trim($ar[0]);
+	$el['subcat']						= trim($ar[1]);
+	$el['title']						= trim($ar[2]);
+	$el['property']['pa_material'] 		= trim($ar[3]);
+	$el['property']['pa_color'] 		= trim($ar[4]);
+	$el['property']['pa_poilning'] 		= trim($ar[5]);
+	$el['property']['pa_height'] 		= trim($ar[6]);
+	$el['property']['pa_weight'] 		= trim($ar[7]);
+	$el['property']['pa_volume'] 		= trim($ar[8]);
+	$el['property']['pa_size'] 			= trim($ar[9]);
+	$el['property']['pa_time'] 			= trim($ar[10]);
+	$el['property']['pa_fraction'] 		= trim($ar[11]);
+	$el['property']['pa_measure'] 		= trim($ar[12]);
+	$el['property']['pa_shape']	 		= trim($ar[13]);
+	$el['property']['pa_height_flight']	= trim($ar[14]);
+	$el['property']['pa_height_pole'] 	= trim($ar[15]);
+	$el['property']['pa_casing']	 	= trim($ar[16]);
+	$el['property']['pa_twists']	 	= trim($ar[17]);
+	$el['property']['pa_handles']		= trim($ar[18]);
+	$el['property']['pa_lacq']		 	= trim($ar[19]);
 	// all cell is empty  						  [19]
-	$el['property']['pa_fittings']	 	= trim($ar[20]);
-	$el['property']['pa_manual']	 	= trim($ar[21]);
-	$el['property']['pa_finish']	 	= trim($ar[22]);
-	$el['property']['pa_cap']		 	= trim($ar[23]);
-	$el['property']['pa_gabarits_s']	= trim($ar[24]);
-	$el['property']['pa_gabarits_t']	= trim($ar[25]);
-	$el['property']['pa_gabarits_f']	= trim($ar[26]);
-	$el['price']					 	= trim($ar[27]);
-	$el['extraprice']					= trim($ar[28]);
+	$el['property']['pa_fittings']	 	= trim($ar[21]);
+	$el['property']['pa_manual']	 	= trim($ar[22]);
+	$el['property']['pa_finish']	 	= trim($ar[23]);
+	$el['property']['pa_cap']		 	= trim($ar[24]);
+	$el['property']['pa_gabarits_s']	= trim($ar[25]);
+	$el['property']['pa_gabarits_t']	= trim($ar[26]);
+	$el['property']['pa_gabarits_f']	= trim($ar[27]);
+	$el['price']					 	= trim($ar[28]);
+	$el['extraprice']					= trim($ar[29]);
+
+	//if($i == 1) break;
+	
+    $item = get_page_by_title($el['title'], 'OBJECT', 'product');
+
+    if($item->ID){
+        $post_id = $item->ID;
+    }else{
+        $post_id = wp_insert_post(
+            array(
+                'post_title' => $el['title'],
+                //'post_content' => $item['offer_cat'],
+                'post_status' => 'publish',
+                'post_type' => "product",
+            )
+        );
+    };
+
+	//Цена
+    update_post_meta($post_id, '_regular_price', $el['price']);
+    update_post_meta($post_id, '_price', $el['price']);
 
 
+	// Категория
+	if($el['subcat'] == '') $cat_id = $el['cat'];
+	else $cat_id = $el['subcat'];
+	
+	$cat_id = array_search($cat_id, $cat_match);
+    wp_set_object_terms( $post_id, $cat_id, 'product_cat', true );
 
 
-
-
-
-	// Мраморные памятники
-//	if($i <= 546) continue;
-//	if($i == 683) break;
-
-	// Ограды
-//	if($i <= 683) continue;
-//	if($i == 713) break;
-
-	// Столики
-//	if($i <= 712) continue;
-//	if($i == 753) break;
-
-	// Вазы
-/*	if($i <= 474) continue;
-    if($i == 547) break;*/
-
-	//if($i <= 813) continue;
-
-
-    /*$pstr = $el['title'].' - '.$el['price'];
-	echo "<pre>".print_r($pstr, 1)."</pre>";*/
-	//continue;
-
-	//else continue;
 	// Также необходимо комментировать обращения к БД для конкретной группы товара у которой нет определенных свойств
 
 	if(!$el['title']) continue;
 
-	$res = $db->query("SELECT ID FROM `wp_posts` WHERE `post_type` = 'product' AND `post_title` = '%s' LIMIT 1", $el['title']);
-	$object_id = $res->justVar();
-
-
-	if($parse == 'price'){
-        //Цена
-        $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
-        if (!$res->justVar()) {
-            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
-            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_regular_price','" . $el['price'] . "')", $object_id);
-        }else{
-            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
-            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_regular_price' LIMIT 1", $el['price'], $object_id);
-        }
-    }
-
-
     if($parse == 'all') {
-        if (!$object_id) {
-            $res = $db->query("INSERT INTO `wp_posts` (`post_author`,`post_date`,`post_date_gmt`,`post_title`,`post_type`) VALUES ('1','" . date("Y-m-d H:i:s") . "','" . date("Y-m-d H:i:s", time() - 10800) . "','%s','product')", $el['title']);
-            $object_id = $res->insertId();
-        }
+		if (!$post_id) continue;
+		
+        $res = $db->query("UPDATE `wp_posts` SET `post_name` = '%s' WHERE `ID` = '%s' LIMIT 1", rand(1000000, 99999999), $post_id);
 
-        if (!$object_id) continue;
-
-
-        $res = $db->query("UPDATE `wp_posts` SET `post_name` = '%s' WHERE `ID` = '%s' LIMIT 1", rand(1000000, 99999999), $object_id);
-
-        //$res = $db->query("SELECT * FROM `wp_postmeta` WHERE `post_id` = '2057'");
-        $res = $db->query("SELECT * FROM `wp_postmeta` WHERE `post_id` = '" . $object_id . "'");
+        $res = $db->query("SELECT * FROM `wp_postmeta` WHERE `post_id` = '" . $post_id . "'");
 
 
         // Проходим по всем имеющимся свойствам
@@ -286,9 +294,9 @@ foreach($cat as $i => $product){
             $meta_key = $row['meta_key'];
             $meta_value = $row['meta_value'];
 
-            $res2 = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '" . $meta_key . "' LIMIT 1", $object_id);
+            $res2 = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '" . $meta_key . "' LIMIT 1", $post_id);
             if (!$res2->justVar()) {
-                $res2 = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','" . $meta_key . "','" . $meta_value . "')", $object_id);
+                $res2 = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','" . $meta_key . "','" . $meta_value . "')", $post_id);
             }
         }
 
@@ -297,46 +305,17 @@ foreach($cat as $i => $product){
         // Все свойства
         $meta_value = 'a:24:{s:8:"pa_color";a:6:{s:4:"name";s:8:"pa_color";s:5:"value";s:0:"";s:8:"position";s:1:"1";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_material";a:6:{s:4:"name";s:11:"pa_material";s:5:"value";s:0:"";s:8:"position";s:1:"2";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_s";a:6:{s:4:"name";s:13:"pa_gabarits_s";s:5:"value";s:0:"";s:8:"position";s:1:"3";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:16:"pa_height_flight";a:6:{s:4:"name";s:16:"pa_height_flight";s:5:"value";s:0:"";s:8:"position";s:1:"4";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:14:"pa_height_pole";a:6:{s:4:"name";s:14:"pa_height_pole";s:5:"value";s:0:"";s:8:"position";s:1:"5";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_height";a:6:{s:4:"name";s:9:"pa_height";s:5:"value";s:0:"";s:8:"position";s:1:"6";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_volume";a:6:{s:4:"name";s:9:"pa_volume";s:5:"value";s:0:"";s:8:"position";s:1:"7";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_weight";a:6:{s:4:"name";s:9:"pa_weight";s:5:"value";s:0:"";s:8:"position";s:1:"8";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_t";a:6:{s:4:"name";s:13:"pa_gabarits_t";s:5:"value";s:0:"";s:8:"position";s:1:"9";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:13:"pa_gabarits_f";a:6:{s:4:"name";s:13:"pa_gabarits_f";s:5:"value";s:0:"";s:8:"position";s:2:"10";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_poilning";a:6:{s:4:"name";s:11:"pa_poilning";s:5:"value";s:0:"";s:8:"position";s:2:"11";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_size";a:6:{s:4:"name";s:7:"pa_size";s:5:"value";s:0:"";s:8:"position";s:2:"12";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_time";a:6:{s:4:"name";s:7:"pa_time";s:5:"value";s:0:"";s:8:"position";s:2:"13";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_fraction";a:6:{s:4:"name";s:11:"pa_fraction";s:5:"value";s:0:"";s:8:"position";s:2:"14";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:10:"pa_measure";a:6:{s:4:"name";s:10:"pa_measure";s:5:"value";s:0:"";s:8:"position";s:2:"15";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:8:"pa_shape";a:6:{s:4:"name";s:8:"pa_shape";s:5:"value";s:0:"";s:8:"position";s:2:"16";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_casing";a:6:{s:4:"name";s:9:"pa_casing";s:5:"value";s:0:"";s:8:"position";s:2:"17";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_twists";a:6:{s:4:"name";s:9:"pa_twists";s:5:"value";s:0:"";s:8:"position";s:2:"18";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:10:"pa_handles";a:6:{s:4:"name";s:10:"pa_handles";s:5:"value";s:0:"";s:8:"position";s:2:"19";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:7:"pa_lacq";a:6:{s:4:"name";s:7:"pa_lacq";s:5:"value";s:0:"";s:8:"position";s:2:"20";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_fittings";a:6:{s:4:"name";s:11:"pa_fittings";s:5:"value";s:0:"";s:8:"position";s:2:"21";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_manual";a:6:{s:4:"name";s:9:"pa_manual";s:5:"value";s:0:"";s:8:"position";s:2:"22";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_finish";a:6:{s:4:"name";s:9:"pa_finish";s:5:"value";s:0:"";s:8:"position";s:2:"23";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:6:"pa_cap";a:6:{s:4:"name";s:6:"pa_cap";s:5:"value";s:0:"";s:8:"position";s:2:"24";s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}';
 
-        echo $object_id;
-        $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_product_attributes' LIMIT 1", $object_id);
+        $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_product_attributes' LIMIT 1", $post_id);
         if (!$res->justVar()) {
             echo " Свойство не отображается" . "<br>";
         } else {
             echo " Свойство уже отображается" . "<br>";
         }
         if (!$res->justVar()) {
-            echo $object_id . '- Установлено отображение' . "<br>";
-            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_product_attributes','" . $meta_value . "')", $object_id);
-            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_visibility','visible')", $object_id);
+            echo $post_id . '- Установлено отображение' . "<br>";
+            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_product_attributes','" . $meta_value . "')", $post_id);
+            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_visibility','visible')", $post_id);
         }
-
-
-        //Цена
-        $res = $db->query("SELECT meta_id FROM `wp_postmeta` WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $object_id);
-        if (!$res->justVar()) {
-            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_price','" . $el['price'] . "')", $object_id);
-            $res = $db->query("INSERT INTO `wp_postmeta` (`post_id`,`meta_key`,`meta_value`) VALUES ('%s','_regular_price','" . $el['price'] . "')", $object_id);
-        }else{
-            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_price' LIMIT 1", $el['price'], $object_id);
-            $res = $db->query("UPDATE `wp_postmeta` SET `meta_value` = '%s' WHERE `post_id` = '%s' AND `meta_key` = '_regular_price' LIMIT 1", $el['price'], $object_id);
-        }
-
-        //continue;
-
-        // Категории
-        $res = $db->query("SELECT term_id FROM `wp_terms` WHERE `slug` = '%s' LIMIT 1", $el['cat_slug']);
-        if ($res->justVar()) {
-            $term_id = $res->justVar();
-            $res = $db->query("SELECT term_taxonomy_id FROM `wp_term_taxonomy` WHERE `term_id` = '%s' LIMIT 1", $term_id);
-            if ($res->justVar()) {
-                $term_taxonomy_id = $res->justVar();
-                $res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
-                if (!$res->justVar()) {
-                    $res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
-                }
-            }
-        }
-
 
         // Свойства товара
         foreach ($el['property'] as $prop_name => $prop_value) {
@@ -357,9 +336,9 @@ foreach($cat as $i => $product){
                     $term_taxonomy_id = $res->justVar();
                 }
                 if ($term_taxonomy_id) {
-                    $res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $object_id, $term_taxonomy_id);
+                    $res = $db->query("SELECT object_id FROM `wp_term_relationships` WHERE `object_id` = '%s' AND `term_taxonomy_id` = '%s' LIMIT 1", $post_id, $term_taxonomy_id);
                     if (!$res->justVar()) {
-                        $res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $object_id, $term_taxonomy_id);
+                        $res = $db->query("INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`) VALUES ('%s', '%s')", $post_id, $term_taxonomy_id);
                     }
                 }
             }
@@ -368,16 +347,13 @@ foreach($cat as $i => $product){
 
 
         // Добавляем изображение
-        $iproduct->body['ID'] = $object_id;
+        $iproduct->body['ID'] = $post_id;
         $file_name = $el['title'];
         $img_oldname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
         $file_name = ru2lat($file_name);
         $img_newname = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
 
-        if(copy($img_oldname, $img_newname)){
-            $img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
-            $iproduct->featuredImage = $img_src;
-            $iproduct->saveFeaturedImage();
+        if(copy($img_oldname, $img_newname)){            
             file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']."\r\n", FILE_APPEND);
             //unlink($_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';);
         }else{
@@ -385,10 +361,13 @@ foreach($cat as $i => $product){
             file_put_contents($_SERVER['DOCUMENT_ROOT'].'/tt.txt', $el['title']." - Нет фото\r\n", FILE_APPEND);
         };
 
+		$img_src = 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/uploads/catalog_parcer/'.$file_name.'.png';
+		$iproduct->featuredImage = $img_src;
+		$iproduct->saveFeaturedImage();
+
     }
 }
-$file_name = ru2lat('Комплект ТО 3 светло серый');
-echo $file_name;
+
 // Функция для переименовывания изображений 
 function ru2lat($str){
 	$tr = array(
