@@ -96,14 +96,17 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
                         $extra_total += intval($extra_item['line_total']) / $extra_item['quantity'];
                         $count_extra ++;?>
                         <div class="extra_item">
-                            <div class="img col-md-7">
+                            <div class="title_list col-md-7">
                                 <span class="green_sqr">&nbsp;</span><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $extra_item, $cart_item_key );?>
                             </div>
                             <div class="col-md-2">
                                 <p>1 шт.</p>
                             </div>
                             <div class="col-md-3">
-                                <p><?=apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?></p>
+                                <p>
+                                    <? $price = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $extra_item, $cart_item_key );?>
+                                    <span class="amount"><?=price_format($price);?></span>
+                                </p>
                             </div>
                         </div>
                     <?endif?>

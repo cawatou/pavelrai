@@ -118,10 +118,24 @@ jQuery(document).ready(function($){
         calculateQuantity();
     })
 
-    // Переход на 2 шаг корзины
+    // Переход на 3 шаг корзины
     $('.add_order').on('click', function(){
-        $('#terms').attr('checked', 'checked');
-        $('#place_order').click();
+        var url = location.origin + '/ajax/cart.php';
+        var product_id = $('#delivery_city option:selected').val();
+        $.ajax({
+            'type': 'post',
+            'url': url,
+            'data': {
+                'act': 'add',
+                'product_id': product_id,
+                'quantity': 1
+            },
+            success: function() {
+                $('#terms').attr('checked', 'checked');
+                $('#place_order').click();
+            }
+        })
+
     })
 
     // Добавление товара в корзину
@@ -140,6 +154,7 @@ jQuery(document).ready(function($){
         $('#modal_fence').hide();
     })
 
+    // Подсчет количества (п.м) оградок
     $('.l_fence, .w_fence').keyup(function () {
         var l_fence = Number($('.l_fence').val());
         var w_fence = Number($('.w_fence').val());

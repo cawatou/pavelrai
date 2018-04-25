@@ -25,7 +25,7 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
     }
 }
 
-$delivery = get_posts("post_type=product&numberposts=100&product_cat=delivery&orderby='ID'&order='ASC'");
+$delivery = get_posts("post_type=product&numberposts=100&product_cat=delivery");
 //echo "<pre>".print_r($extra_id, 1)."</pre>";
 ?>
 
@@ -43,23 +43,30 @@ $delivery = get_posts("post_type=product&numberposts=100&product_cat=delivery&or
     <div class="col-md-12 service_extra" data-delete="0">
         <p><strong>1. Где и как вы хотите получить заказ?</strong></p>
 
-        <div class="col-md-3 checked" data-id="0">
+        <div class="col-md-4 checked" data-id="0">
             <div class="col-md-1"><input type="radio" name="del" checked/></div>
             <div class="col-md-10">
                 <label>Самовывоз Некрасова, 22, офис 219</label>
                 <p class="price">Бесплатно</p></div>
         </div>
 
-        <?foreach($delivery as $k => $del):
-            $tax = get_post_custom( $del->ID );?>
-            <div class="col-md-3" data-id="<?=$del->ID?>">
-                <div class="col-md-1"><input type="radio" name="del" /></div>
-                <div class="col-md-10">
-                    <label><?=$del->post_title?></label>
-                    <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
-                </div>
+        <div class="col-md-4" data-id="0">
+            <div class="col-md-1"><input type="radio" name="del" checked/></div>
+            <div class="col-md-10">
+                <label>Оформить доставку</label>
+                <p class="price">от 800 &#8381;</p>
             </div>
-        <?endforeach?>
+        </div>
+        <div class="col-md-12">
+            <select id="delivery_city">
+                <option value="0">Выберите место доставки</option>
+                <?foreach($delivery as $k => $del):
+                    $tax = get_post_custom( $del->ID );?>
+                    <option value="<?=$del->ID?>"><?=$del->post_title?>, <?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</option>
+                <?endforeach?>
+            </select>
+        </div>
+
     </div>
 
     <div class="col-md-12 service_extra user_form">

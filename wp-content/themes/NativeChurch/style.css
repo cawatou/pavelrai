@@ -5013,6 +5013,12 @@ p.cart_total {
 	padding-left: 32px;
 }
 
+.cart_extraitem .extra_item,
+.cart_extraitem p {
+	font-size: 15px;
+	color: #333;
+}
+
 .cart_extraitem .amount{
 	margin-top: 30px;
 }
@@ -5083,7 +5089,8 @@ p.cart_total {
 	height: 100%;
 }
 
-.wrap_services .col-md-3 {
+.wrap_services .col-md-3,
+.service_extra .col-md-4 {
 	text-align: left;
 	padding: 15px;
 	height: 120px;
@@ -5116,7 +5123,8 @@ p.cart_total {
 	border: 2px solid #08c138 !important;
 }
 
-.wrap_services .col-md-3 .price {
+.wrap_services .col-md-3 .price,
+.wrap_services .col-md-4 .price {
 	font-weight: 700;
 	text-align: left;
 	position: absolute;
