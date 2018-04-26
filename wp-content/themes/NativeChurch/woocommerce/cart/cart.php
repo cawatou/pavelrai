@@ -32,9 +32,6 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
     }
 
     if($category[0]->parent == 839) {
-        foreach($_SESSION['extra'] as $extra){
-            $extra_arr = explode(',', $extra);
-        }
         $extra_items[$cart_item_key] = $cart_item;
     }else{
         $items[$cart_item_key] = $cart_item;

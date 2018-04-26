@@ -288,6 +288,19 @@ jQuery(document).ready(function($){
         var extra_text = declOfNum(extra_count, ['услуга', 'услуги', 'услуг']);
         $('.exitem_measure').empty();
         $('.exitem_measure').text(extra_text);
+
+        var pathname = location.pathname;
+        if(pathname == '/checkout/'){
+            var item_count = $('.items_block .items_count').text();
+            var item_text = declOfNum(item_count, ['товар', 'товара', 'товаров']);
+            $('.items_block .items_measure').empty();
+            $('.items_block .items_measure').text(item_text);
+
+            var extra_count = $('.service_block .service_count').text();
+            var extra_text = declOfNum(extra_count, ['услуга', 'услуги', 'услуг']);
+            $('.service_block .service_measure').empty();
+            $('.service_block .service_measure').text(extra_text);
+        }
     }
 
     $('#billing_first_name').attr('placeholder', 'Введите ваше имя');

@@ -5889,14 +5889,15 @@ p.double_row {
 
 .woocommerce-checkout .sticky-cart {
 	margin-right: 0;
-	padding: 0;;
+	padding: 0;
+	width: 245px;
 	float: right;
 	height: fit-content;
 	border: none;
 }
 
 .woocommerce-checkout .sticky-cart .col-md-12 {
-	padding: 15px 20px;
+	padding: 10px 20px 0 20px;
 	color: #333;
 	border: 2px solid #ededed;
 }
@@ -5904,16 +5905,60 @@ p.double_row {
 .woocommerce-checkout .sticky-cart p.items,
 .woocommerce-checkout .sticky-cart p.services {
 	font-size: 18px !important;
+	margin: 5px 0 !important;
+}
+
+.woocommerce-checkout .sticky-cart p.items {
+	background: url(images/ico_items.png) no-repeat;
+	background-position-y: 1px;
+	padding-left: 30px;
+
+}
+
+.woocommerce-checkout .sticky-cart p.services {
+	background: url(images/ico_extra.png) no-repeat;
+	background-position-y: 1px;
+	background-position-x: 2px;
+	padding-left: 25px;
+}
+
+.woocommerce-checkout .sticky-cart .item {
+	margin-bottom: 5px;
 }
 
 .woocommerce-checkout .sticky-cart .item p,
 .woocommerce-checkout .sticky-cart .service_block p {
 	font-size: 14px;
+	color: #000 !important;
+	margin-bottom: 0;
 }
 
 
+.service_extra .col-md-4 {
+	width: 253px !important;
+}
 
 
+.woocommerce-checkout .sticky-cart:hover {
+	cursor: default;
+}
+
+.woocommerce-checkout .items_block {
+	margin-bottom:10px;
+}
+
+.woocommerce-checkout .service_block {
+	margin-bottom:20px;
+}
+
+
+.separateCheckout {
+	border-bottom: 1px solid #ededed;
+	height: 1px;
+	width: 220px;
+	margin-bottom: 10px;
+	margin-left: -10px;
+}
 
 #modal_extra h3 {
 	font-size: 34px;

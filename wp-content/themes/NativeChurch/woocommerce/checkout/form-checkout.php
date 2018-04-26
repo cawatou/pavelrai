@@ -12,6 +12,8 @@ wc_print_notices();
 
 $cart_items = WC()->cart->get_cart();
 $items = array();
+
+$items_count = $extra_count = 0;
 foreach ($cart_items  as $cart_item_key => $cart_item ){
     $category = get_the_terms( $cart_item['product_id'], 'product_cat' );
     if($category[0]->parent > 0) $cat_id = $category[0]->parent;
@@ -20,8 +22,10 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
     if($cat_id == 839) {
         $extra_items[$cart_item_key] = $cart_item;
         $extra_id[] = $cart_item['product_id'];
+        $extra_count += $cart_item['quantity'];
     }else{
         $items[$cart_item_key] = $cart_item;
+        $items_count += $cart_item['quantity'];
     }
 }
 
@@ -30,7 +34,7 @@ $total = $woocommerce->cart->get_cart_total();
 $total_wdel = price_format($total);
 $price_notformat = price_notformat($total);
 
-//echo "<pre>".print_r($extra_id, 1)."</pre>";
+//echo "<pre>".print_r($extra_items, 1)."</pre>";
 ?>
 
 
@@ -79,24 +83,30 @@ $price_notformat = price_notformat($total);
             
             <div class="items_block">
                 <p class="items">
-                    <span class="items_count">2</span>
-                    <span class="items_measure">товара</span>:
+                    <span class="items_count"><?=$items_count?></span>
+                    <span class="items_measure"></span>:
                 </p>
-                <div class="item">
-                    <p>Наименование товара</p>
-                    <p>1шт, 10 000 Р</p>
-                </div>
-            </div> 
-            
+                <?foreach($items as $item):?>
+                    <div class="item">
+                        <p><?=$item['data']->post->post_title?></p>
+                        <p><?=$item['quantity']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;</p>
+                    </div>
+                <?endforeach?>
+            </div>
+
+            <div class="separateCheckout"></div>
+
             <div class="service_block">
                 <p class="services">
-                    <span class="service_count">3</span>
-                    <span class="service_measure">услуги</span>:
+                    <span class="service_count"><?=$extra_count?></span>
+                    <span class="service_measure"></span>:
                 </p>
-                <div class="item">
-                    <p>Наименование товара</p>
-                    <p>1шт, 10 000 Р</p>
-                </div>
+                <?foreach($extra_items as $item):?>
+                    <div class="item">
+                        <p><?=$item['data']->post->post_title?></p>
+                        <p><?=$item['quantity']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;</p>
+                    </div>
+                <?endforeach?>
             </div>
            
         </div>
