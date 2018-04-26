@@ -113,7 +113,9 @@ jQuery(document).ready(function($){
         var cart_key = $(this).attr('data-key');
         var product_id = $(this).attr('data-id');
         ajax_cart('delete', product_id, 0, cart_key);
-        $(this).parents(".cart_item").next().remove();
+        if($(this).parents(".cart_item").attr('data-have-extra') == '1'){
+            $(this).parents(".cart_item").next().remove();
+        }
         $(this).parents(".cart_item").remove();
         calculateQuantity();
     })
