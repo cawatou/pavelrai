@@ -16,8 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $product, $wpdb;
 $category_obj = get_the_terms( $product->id, 'product_cat' );
 foreach ($category_obj as $obj){
-    if($obj->parent > 0) $cat_id = $obj->parent;
-    else $cat_id = $obj->term_id;
+    $cat_id = $obj->term_id;
 }
 
 
@@ -86,7 +85,7 @@ foreach ($attributes_tax as $tax => $data){
         </div>
     </div>
 </div>
-<?$memorials = array(50, 57, 743, 332, 59, 39, 360, 361);
+<?$memorials = array(52, 53, 54, 56, 58, 57, 743, 332, 59, 39, 360, 361);
 if(in_array($cat_id, $memorials)):?>
     <div class="col-md-9 extra_service extra_service_fst">
         <h5>Художественные работы на памятник</h5>

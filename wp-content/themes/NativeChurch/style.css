@@ -600,7 +600,8 @@ label {
 	-o-transition:all 0.3s ease 0.2s;
 	transition:all 0.3s ease 0.1s;
 }
-.img-thumbnail img:hover, .img-thumbnail:hover{
+.img-thumbnail img:hover, .img-thumbnail:hover,
+.bwg_standart_thumb_img_0:hover {
 	opacity:.9
 }
 .media-box:hover .zoom, .media-box:hover .expand{
@@ -1455,6 +1456,7 @@ html[xmlns] .slides {
 	font-size:12px;
 	font-family:circe-regular !important;;
 	color:#999999;
+	width: 1070px;
 }
 .site-footer-bottom p{
 	margin-bottom:0;
@@ -3852,7 +3854,7 @@ div.images {
 	display: block !important;
 }
 .related {
-	width: 1085px;
+	width: 1078px;
 	float: left;
 	padding-top: 20px;
 	border-top: 1px solid #ededed !important;
@@ -4201,7 +4203,8 @@ li.product a img {
 .product_price {
 	color: #08c138;
 	font-weight: 700;
-	float: right;
+	position: absolute;
+	right: 10px;
 }
 
 li.product:hover {
@@ -4675,7 +4678,7 @@ li.product:hover .detail_view {
 	border: 2px solid #ededed;
 	height: 290px;
 	padding: 15px;
-	width: 250px;
+	width: 252px;
 	color: #333;
 	background: #fff;
 }
@@ -4727,7 +4730,7 @@ li.product:hover .detail_view {
 	text-align: center;
 	text-transform: none;
 	font-family: circe-regular !important;
-	width: 215px;
+	width: 217px;
 	height: 41px;
 	background-color: #07c137 !important;
 }
@@ -4744,7 +4747,8 @@ li.product:hover .detail_view {
 	width: 100% !important;
 }
 
-woocommerce-cart .page-section {
+.woocommerce-cart .page-section,
+.woocommerce-checkout .page-section {
 	margin-bottom: 20px;
 	padding-bottom: 40px;
 	border-bottom: 1px solid #ededed;
@@ -4939,6 +4943,10 @@ p.cart_total {
 	padding-bottom: 10px;
 	margin: 0;
 	line-height: 44px;
+}
+
+.sticky-cart {
+	padding: 0;
 }
 
 .cart_total_block {
@@ -5606,9 +5614,13 @@ cursor: pointer;
 	height: 75px;
 
 }
+
 .product-carousel .owl-item {
 	margin-left: 24px;
+}
 
+.product-carousel .owl-item:hover {
+	opacity: 0.9;
 }
 
 .product-carousel .owl-item:first-child {
@@ -5654,7 +5666,7 @@ cursor: pointer;
 	box-shadow: none !important;
 	right: 20px;
 	position: absolute;
-	bottom: 100px;
+	bottom: 115px;
 }
 
 .no_gallery {

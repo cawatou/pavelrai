@@ -306,7 +306,7 @@ jQuery(document).ready(function($){
 
 })
 
-// Плавающий блок
+// Плавающий блок в карточке товара
 jQuery(window).scroll(function() {
     if (jQuery('.sticky-block').hasClass("col-md-5")){
         console.log('scroll');
@@ -330,6 +330,32 @@ jQuery(window).scroll(function() {
         }
     }
 });
+
+// Плавающий блок в корзине
+jQuery(window).scroll(function() {
+    if (jQuery('.sticky-cart').hasClass("col-md-3")){
+        var sb_m = 80;
+        /* отступ сверху и снизу */
+        var mb = 140;
+        /* высота подвала с запасом */
+        var st = jQuery(window).scrollTop();
+        var sb = jQuery(".sticky-cart");
+        var sb_ot = sb.offset().top;
+        var sb_h = sb.height();
+
+        if (sb_h + jQuery(document).scrollTop() + sb_m + mb < jQuery(document).height()) {
+            if (st > sb_ot) {
+                var h = Math.round(st - sb_ot) + sb_m;
+                sb.css({"paddingTop": h});
+            }
+            else {
+                sb.css({"paddingTop": 0});
+            }
+        }
+    }
+});
+
+
 
 //    declOfNum(count, ['найдена', 'найдено', 'найдены']);
 function declOfNum(number, titles) {

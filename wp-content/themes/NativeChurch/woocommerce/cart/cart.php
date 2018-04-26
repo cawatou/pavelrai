@@ -125,19 +125,21 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
 </div>
 
 
-<div class="col-md-3 cart_total_block">
-    <p class="cart_total">
-        <?$price = WC()->cart->get_total();
-        $price = price_format($price);?>
-        <span class="amount"><?=$price?></span>
-    </p>
+<div class="col-md-3 sticky-cart">
+    <div class="cart_total_block">
+        <p class="cart_total">
+            <?$price = WC()->cart->get_total();
+            $price = price_format($price);?>
+            <span class="amount"><?=$price?></span>
+        </p>
 
-    <div class="cart_count">
-        <span class="item_count"></span> <span class="item_measure"></span>
-    </div>
+        <div class="cart_count">
+            <span class="item_count"></span> <span class="item_measure"></span>
+        </div>
 
-    <div class="cart_excount">
-        <span class="exitem_count"></span> <span class="exitem_measure"></span>
-    </div>
-    <a href="/checkout" class="btn">Оформить заказ</a>
+        <div class="cart_excount">
+            <span class="exitem_count"></span> <span class="exitem_measure"></span>
+        </div>
+        <a href="/checkout" class="btn">Оформить заказ</a>
+    </div>   
 </div>
