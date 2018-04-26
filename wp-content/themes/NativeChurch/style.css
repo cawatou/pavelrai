@@ -4869,6 +4869,10 @@ woocommerce-cart .page-section {
 	padding-left: 40px;
 }
 
+.total_ex {
+	padding-left: 40px;
+}
+
 .price_block .amount,
 .total_ex .amount{
 	font-size: 34px;
@@ -5054,6 +5058,7 @@ p.cart_total {
 
 .service_extra {
 	padding-top: 20px !important;
+	padding-left:0;
 	margin-bottom: 20px;
 	border-top: 1px solid #ededed;
 }
@@ -5074,7 +5079,8 @@ p.cart_total {
 	font-family: circe-regular;
 }
 
-.wrap_services .col-md-12 {
+.wrap_services .col-md-12,
+.wrap_services .col-md-9 {
 	padding: 0;
 }
 
@@ -5107,7 +5113,9 @@ p.cart_total {
 
 
 .wrap_services .col-md-3:hover,
-.wrap_services .col-md-3:hover label{
+.wrap_services .col-md-3:hover label,
+.wrap_services .col-md-4:hover,
+.wrap_services .col-md-4:hover label {
 	cursor: pointer;
 }
 
@@ -5815,6 +5823,56 @@ p.double_row {
 
 .onsale {
 	display: none;
+}
+
+.checkout input {
+	font-size: 18px !important;
+	color: #999898 !important;
+}
+
+.delivery_select {
+	display: none;
+	padding-left:0;
+}
+
+#delivery_city {
+	padding-left: 20px;
+	width: 330px;
+	height: 39px;
+	border-radius: 3px;
+	background-color: #ffffff;
+	border: 2px solid #ededed;
+	color: #999898;
+	font-size: 18px;
+}
+
+.end_order p,
+.end_order span {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.row_total {
+	margin-bottom: 55px;
+}
+
+.row_total .col-md-2:first-child {
+	padding-left: 0;
+	width: 150px;
+}
+
+.row_total .raw_val {
+	width: 130px;
+	text-align: right;
+}
+
+.end_order .disclaimer a {
+	text-decoration: none;
+	color: #0071ff;
+}
+
+.end_order .disclaimer a:hover {
+	color: red;
 }
 
 #modal_extra h3 {

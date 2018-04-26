@@ -210,7 +210,7 @@ jQuery(document).ready(function($){
         });
     });
 
-    $(document).on('click', '.wrap_services .col-md-3', function(){
+    $(document).on('click', '.wrap_services .col-md-3, .wrap_services .col-md-4', function(){
         $(this).find('input[type=radio]').attr('checked', 'checked');
         $(this).siblings().removeClass('checked');
         $(this).addClass('checked');
@@ -225,14 +225,17 @@ jQuery(document).ready(function($){
             totalPrice += Number(current_price);
             extra_id.push(id);
         })
-        console.log(extra_id);
+        //console.log(extra_id);
 
         $('.modal_total').text(number_format(totalPrice, 0, '', ' '));
         $('#extra_id').val(extra_id.join(','));
 
-        /*
-            ajax_cart('add', id, 1, 0);
-        */
+        // 2 Шаг корзины
+        if($(this).hasClass('delivery')){
+            $('.delivery_select').show();
+        }else{
+            $('.delivery_select').hide();
+        }
     })
 
     $(document).on('click', '.accept_extra', function(){
@@ -254,6 +257,17 @@ jQuery(document).ready(function($){
         console.log(product_id, extra_id);
     })
 
+    $('#delivery_city').change(function () {
+        var price_delivery = $('#delivery_city option:selected').attr('data-price');
+        var price_dformat = $('#delivery_city option:selected').attr('data-price-format');
+        var total_wdel = $('.total_wdel').attr('data-price');
+
+        var total_price = Number(price_delivery) + Number(total_wdel);
+        total_price = number_format(total_price, 0, '', ' ') + " ₽";
+        $('.del_price').text(price_dformat);
+        $('.total_price').text(total_price);
+        console.log(price_delivery, total_wdel, total_price);
+    })
 
     calculateQuantity();
     function calculateQuantity(){

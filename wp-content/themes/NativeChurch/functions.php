@@ -302,6 +302,15 @@ function price_format($price){
     return $price;
 }
 
+function price_notformat($price){
+    $price = mb_substr($price,21); // вырезаем <span class="amount">
+    $price = explode('&nbsp;', $price);
+    $price = strtr($price[0],array(','=>'')); // вырезаем запятую в цене
+    $price = intval($price);
+    $price = number_format($price, 0, '', '');
+    return $price;
+}
+
 // Убираем ненужные поля
 add_filter( 'woocommerce_checkout_fields' , 'remove_extra_checkout_fields' );
 function remove_extra_checkout_fields( $fields ) {

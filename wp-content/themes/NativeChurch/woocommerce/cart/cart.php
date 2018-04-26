@@ -13,10 +13,9 @@ $cart_items = WC()->cart->get_cart();
 $items = array();
 foreach ($cart_items  as $cart_item_key => $cart_item ){
     $category = get_the_terms( $cart_item['product_id'], 'product_cat' );
-    if($category[0]->parent > 0) $cat_id = $category[0]->parent;
-    else $cat_id = $category[0]->term_id;
+    $cat_id = $category[0]->term_id;
 
-    $memorials = [50, 57, 332, 59, 39];
+    $memorials = [52, 53, 54, 56, 58, 57, 332, 59, 39, 360, 361];
     if(in_array($cat_id, $memorials)) {
         foreach($category as $key => $cat){
             if($cat->term_id == 39) continue;
@@ -28,7 +27,7 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
         }
     }
 
-    if($cat_id == 839) $extra_items[$cart_item_key] = $cart_item;
+    if($category[0]->parent == 839) $extra_items[$cart_item_key] = $cart_item;
     else $items[$cart_item_key] = $cart_item;
 
     //echo "<pre>".print_r($category, 1)."</pre>";
