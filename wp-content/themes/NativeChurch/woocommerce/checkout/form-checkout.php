@@ -73,6 +73,34 @@ $price_notformat = price_notformat($total);
         </div>
 
     </div>
+    
+    <div class="col-md-3 sticky-cart">
+        <div class="col-md-12">
+            
+            <div class="items_block">
+                <p class="items">
+                    <span class="items_count">2</span>
+                    <span class="items_measure">товара</span>:
+                </p>
+                <div class="item">
+                    <p>Наименование товара</p>
+                    <p>1шт, 10 000 Р</p>
+                </div>
+            </div> 
+            
+            <div class="service_block">
+                <p class="services">
+                    <span class="service_count">3</span>
+                    <span class="service_measure">услуги</span>:
+                </p>
+                <div class="item">
+                    <p>Наименование товара</p>
+                    <p>1шт, 10 000 Р</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
 
     <div class="col-md-9 service_extra user_form">
         <p><strong>2. Контактные данные</strong></p>

@@ -5887,6 +5887,34 @@ p.double_row {
 	color: red;
 }
 
+.woocommerce-checkout .sticky-cart {
+	margin-right: 0;
+	padding: 0;;
+	float: right;
+	height: fit-content;
+	border: none;
+}
+
+.woocommerce-checkout .sticky-cart .col-md-12 {
+	padding: 15px 20px;
+	color: #333;
+	border: 2px solid #ededed;
+}
+
+.woocommerce-checkout .sticky-cart p.items,
+.woocommerce-checkout .sticky-cart p.services {
+	font-size: 18px !important;
+}
+
+.woocommerce-checkout .sticky-cart .item p,
+.woocommerce-checkout .sticky-cart .service_block p {
+	font-size: 14px;
+}
+
+
+
+
+
 #modal_extra h3 {
 	font-size: 34px;
 }
