@@ -58,7 +58,7 @@ $count_item = $count_extra = 0;
 if($_REQUEST['dev']){
     echo "<pre>".print_r($cart_items, 1)."</pre>";
 }
-echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";
+//echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";
 ;?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">

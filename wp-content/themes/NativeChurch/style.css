@@ -5119,6 +5119,40 @@ p.cart_total {
 	margin-right: 0;
 }
 
+.service_extra input {
+	display: none;
+}
+
+.service_extra .radio-span {
+	width: 15px;
+	display: block;
+	height: 15px;
+	border-radius: 8px;
+	background-color: #ededed;
+	margin-top: 4px;
+}
+
+.service_extra .checked .radio-span {
+	background-color: #07c137;
+}
+
+.service_extra .radio-span:before {
+	content: ' ';
+	width: 7px;
+	height: 7px;
+	border-radius: 3px;
+	background-color: #999797;
+	display: block;
+	position: absolute;
+	top: 8px;
+	left: 4px;
+}
+
+.service_extra .checked .radio-span:before {
+	background-color: #077323;
+}
+
+
 
 .wrap_services .col-md-3:hover,
 .wrap_services .col-md-3:hover label,
@@ -5809,7 +5843,15 @@ p.double_row {
 	color: #333;
 	display: inline-block;
 	margin-top: 40px;
+}
+
+.gocat {
 	margin-bottom: 550px;
+}
+
+
+.gocat:hover {
+	color: #fff
 }
 
 .fence_calc {
@@ -6007,7 +6049,8 @@ p.double_row {
 	width: 120px;
 }
 
-.thankyou .gohome {
+.thankyou .gohome,
+.gocat {
 	clear: both;
 	display: block;
 	text-align: center;
@@ -6020,10 +6063,17 @@ p.double_row {
 	font-size: 18px;
 	font-family: circe-regular;
 	border-radius: 0;
+	text-decoration: none;
+	font-weight: 700;
+	padding-top: 8px;
 }
 
 #modal_extra h3 {
 	font-size: 34px;
+}
+
+#modal_extra .col-md-3:hover label {
+	color: #0071ff;
 }
 
 #modal_fence {

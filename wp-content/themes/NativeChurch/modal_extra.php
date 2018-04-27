@@ -17,7 +17,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
         <p><strong>1. Выбрать портрет</strong></p>
 
         <div class="col-md-3 checked">
-            <div class="col-md-1"><input type="radio" name="picture" checked/></div>
+            <div class="col-md-1">
+                <span class="radio-span"></span>
+                <input type="radio" name="picture" checked/>
+            </div>
             <div class="col-md-10"><label>Без портрета</label></div>
         </div>
 
@@ -26,7 +29,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
             if(in_array($cat_id, $category)):
                 $tax = get_post_custom( $picture->ID );?>
                 <div class="col-md-3" data-id="<?=$picture->ID?>" data-price="<?=$tax['_price'][0]?>">
-                    <div class="col-md-1"><input type="radio" name="picture" /></div>
+                    <div class="col-md-1">
+                        <span class="radio-span"></span>
+                        <input type="radio" name="picture" />
+                    </div>
                     <div class="col-md-10">
                         <label><?=$picture->post_title?></label>
                         <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
@@ -39,7 +45,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
         <p><strong>2. Выбрать вид ФИО и дат</strong></p>
 
         <div class="col-md-3 checked">
-            <div class="col-md-1"><input type="radio" name="lable" checked/></div>
+            <div class="col-md-1">
+                <input type="radio" name="lable" checked/>
+                <span class="radio-span"></span>
+            </div>
             <div class="col-md-10"><label>Без ФИО и дат</label></div>
         </div>
 
@@ -48,7 +57,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
             if(in_array($cat_id, $category)):
                 $tax = get_post_custom( $lable->ID );?>
                 <div class="col-md-3" data-id="<?=$lable->ID?>" data-price="<?=$tax['_price'][0]?>">
-                    <div class="col-md-1"><input type="radio" name="lable" /></div>
+                    <div class="col-md-1">
+                        <input type="radio" name="lable" />
+                        <span class="radio-span"></span>
+                    </div>
                     <div class="col-md-10">
                         <label><?=$lable->post_title?></label>
                         <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
@@ -63,7 +75,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
         <p><strong>3. Установка памятника</strong></p>
 
         <div class="col-md-3 checked">
-            <div class="col-md-1"><input type="radio" name="install" checked/></div>
+            <div class="col-md-1">
+                <input type="radio" name="install" checked/>
+                <span class="radio-span"></span>
+            </div>
             <div class="col-md-10"><label>Без установки</label></div>
         </div>
 
@@ -72,7 +87,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
             if(in_array($cat_id, $category)):
                 $tax = get_post_custom( $install->ID );?>
                 <div class="col-md-3" data-id="<?=$install->ID?>" data-price="<?=$tax['_price'][0]?>">
-                    <div class="col-md-1"><input type="radio" name="install" /></div>
+                    <div class="col-md-1">
+                        <input type="radio" name="install" />
+                        <span class="radio-span"></span>
+                    </div>
                     <div class="col-md-10">
                         <label><?=$install->post_title?></label>
                         <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
@@ -87,7 +105,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
         <p><strong>4. Нужен ли вам демонтаж памятника?</strong></p>
 
         <div class="col-md-3 checked">
-            <div class="col-md-1"><input type="radio" name="uninstall" checked/></div>
+            <div class="col-md-1">
+                <input type="radio" name="uninstall" checked/>
+                <span class="radio-span"></span>
+            </div>
             <div class="col-md-10">
                 <label>Не требуется</label>
                 <p class="price">Бесплатно</p>
@@ -99,7 +120,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
             if(in_array($cat_id, $category)):
                 $tax = get_post_custom( $uninstall->ID );?>
                 <div class="col-md-3" data-id="<?=$uninstall->ID?>" data-price="<?=$tax['_price'][0]?>">
-                    <div class="col-md-1"><input type="radio" name="uninstall" /></div>
+                    <div class="col-md-1">
+                        <input type="radio" name="uninstall" />
+                        <span class="radio-span"></span>
+                    </div>
                     <div class="col-md-10">
                         <label><?=$uninstall->post_title?></label>
                         <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
@@ -116,7 +140,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
         <p>а также для удаления пятен от птичьего помета и иных органических загрязнений</p>
 
         <div class="col-md-3 checked">
-            <div class="col-md-1"><input type="radio" name="rain" checked/></div>
+            <div class="col-md-1">
+                <input type="radio" name="rain" checked/>
+                <span class="radio-span"></span>
+            </div>
             <div class="col-md-10"><label>Без покрытия</label></div>
         </div>
 
@@ -125,7 +152,10 @@ $uninstalls = get_posts("post_type=product&numberposts=1000&product_cat=uninstal
             if(in_array($cat_id, $category)):
                 $tax = get_post_custom( $rain->ID );?>
                 <div class="col-md-3" data-id="<?=$rain->ID?>" data-price="<?=$tax['_price'][0]?>">
-                    <div class="col-md-1"><input type="radio" name="rain" /></div>
+                    <div class="col-md-1">
+                        <input type="radio" name="rain" />
+                        <span class="radio-span"></span>
+                    </div>
                     <div class="col-md-10">
                         <label><?=$rain->post_title?></label>
                         <p class="price"><?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</p>
