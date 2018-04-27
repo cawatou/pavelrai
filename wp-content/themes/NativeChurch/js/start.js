@@ -72,7 +72,8 @@ $('.add_to_cart_button').click(function(event){
 $('.fence_calc').click(function(event){
 	var price = $(this).attr('data-price');
 	var title = $(this).attr('data-title');
-	$('#modal_fence .fence_price').text(price);
+	$('#modal_fence .fence_price').text(number_format(price, 0, '', ' '));
+	$('#modal_fence .fence_price').attr('data-price', price);
     $('#modal_fence .fence_title').text(title);
 	event.preventDefault();
 	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку

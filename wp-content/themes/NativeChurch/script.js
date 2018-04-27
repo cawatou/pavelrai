@@ -160,9 +160,10 @@ jQuery(document).ready(function($){
     $('.l_fence, .w_fence').keyup(function () {
         var l_fence = Number($('.l_fence').val());
         var w_fence = Number($('.w_fence').val());
-        var fence_price = Number($('.fence_price').text());
+        var fence_price = Number($('.fence_price').attr('data-price'));
         var quantity = (l_fence + w_fence) * 2;
         var total_price = fence_price * quantity;
+        total_price = number_format(total_price, 0, '', ' ');
         $('#modal_fence .total_price').text(total_price);
         $('#modal_fence .quantity').text(quantity + ' м.п');
     })

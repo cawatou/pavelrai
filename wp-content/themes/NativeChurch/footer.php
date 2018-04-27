@@ -191,10 +191,10 @@ if($show_works):?>
     <div class="col-md-12">
         <p class="title">Калькулятор стоимости оградки</p>
         <div class="col-md-4">
-            <p class="fence_title">Ограда №1</p>
+            <p class="fence_title"></p>
         </div>
         <div class="col-md-8">
-            <p>Цена за м.п.: <span class="fence_price">2000</span> Р</p>
+            <p>Цена за м.п.: <span class="fence_price" data-price=""></span> &#8381;</p>
         </div>
     </div>
 
