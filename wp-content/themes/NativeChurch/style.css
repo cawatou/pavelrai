@@ -5163,11 +5163,6 @@ p.cart_total {
 	display: none;
 }
 
-.thankyou .col-md-3 {
-	height: fit-content;
-	margin-bottom: 40px;
-}
-
 #billing_first_name_field,
 #billing_email_field input {
 	margin-bottom: 10px;
@@ -5902,32 +5897,33 @@ p.double_row {
 	border: 2px solid #ededed;
 }
 
-.woocommerce-checkout .sticky-cart p.items,
-.woocommerce-checkout .sticky-cart p.services {
+.woocommerce-checkout p.items,
+.woocommerce-checkout p.services {
 	font-size: 18px !important;
 	margin: 5px 0 !important;
 }
 
-.woocommerce-checkout .sticky-cart p.items {
+.woocommerce-checkout p.items,
+.woocommerce-checkout p.items {
 	background: url(images/ico_items.png) no-repeat;
 	background-position-y: 1px;
 	padding-left: 30px;
 
 }
 
-.woocommerce-checkout .sticky-cart p.services {
+.woocommerce-checkout p.services {
 	background: url(images/ico_extra.png) no-repeat;
 	background-position-y: 1px;
 	background-position-x: 2px;
 	padding-left: 25px;
 }
 
-.woocommerce-checkout .sticky-cart .item {
+.woocommerce-checkout .item {
 	margin-bottom: 5px;
 }
 
-.woocommerce-checkout .sticky-cart .item p,
-.woocommerce-checkout .sticky-cart .service_block p {
+.woocommerce-checkout .item p,
+.woocommerce-checkout .service_block p {
 	font-size: 14px;
 	color: #000 !important;
 	margin-bottom: 0;
@@ -5958,6 +5954,72 @@ p.double_row {
 	width: 220px;
 	margin-bottom: 10px;
 	margin-left: -10px;
+}
+
+.thankyou .order_num {
+	font-size: 24px;
+	color: #333;
+	font-weight: 700;
+	margin-bottom:15px;
+}
+
+.thankyou .row_total span {
+	color: #333;
+}
+
+
+.thankyou p {
+	color: #333;
+	font-size: 18px;
+	margin-bottom:5px;
+}
+
+.thankyou .col-md-3 {
+	height: fit-content;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 20px;
+	width: 245px;
+}
+
+.thankyou .col-md-3:hover {
+	cursor: default;
+}
+
+.thankyou .separateCheckout {
+	margin-bottom: 15px;
+	margin-left: -6px;
+	width: 214px;
+}
+
+.thankyou .row_total {
+	margin-bottom: 45px;
+}
+.thankyou .col-md-12 {
+	margin-top: 20px;
+}
+
+.thankyou .row_total .raw_val {
+	width: 85px;
+}
+
+.thankyou .row_total .col-md-2:first-child {
+	width: 120px;
+}
+
+.thankyou .gohome {
+	clear: both;
+	display: block;
+	text-align: center;
+	width: 245px;
+	height: 41px;
+	text-transform: none;
+	background-color: #07c137;
+	border: 3px solid #07c137;
+	color: #fff;
+	font-size: 18px;
+	font-family: circe-regular;
+	border-radius: 0;
 }
 
 #modal_extra h3 {

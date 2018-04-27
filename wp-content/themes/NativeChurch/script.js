@@ -290,7 +290,7 @@ jQuery(document).ready(function($){
         $('.exitem_measure').text(extra_text);
 
         var pathname = location.pathname;
-        if(pathname == '/checkout/'){
+        if(pathname.indexOf('/checkout/') == 0){
             var item_count = $('.items_block .items_count').text();
             var item_text = declOfNum(item_count, ['товар', 'товара', 'товаров']);
             $('.items_block .items_measure').empty();
