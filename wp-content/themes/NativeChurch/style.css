@@ -5469,7 +5469,7 @@ cursor: pointer;
 .modal_close:hover,
 .close:hover {
 	cursor: pointer;
-	color: #0071ff;
+	color: #0071ff !important;
 }
 
 .breadcrumb a, .breadcrumb span {
@@ -5851,7 +5851,13 @@ p.double_row {
 
 
 .gocat:hover {
-	color: #fff
+	color: #fff;
+}
+
+
+.calc_ico {
+	float: left;
+	margin-top: 57px;
 }
 
 .fence_calc {
@@ -5859,6 +5865,8 @@ p.double_row {
 	margin-top: 60px;
 	font-weight: 700;
 	border-bottom: 1px dotted #ededed;
+	float: left;
+	margin-left:10px;
 }
 
 .fence_calc:hover {
@@ -6080,10 +6088,16 @@ p.double_row {
 	width: 640px;
     height: 360px;
     border-radius: 0;
-    margin-left: 551px;
+    margin-left: 350px;
     margin-top: -185px;
     background: #fff;
     padding: 30px;
+}
+
+#modal_fence span,
+#modal_fence p {
+	color: #333;
+	font-size: 18px;
 }
 
 #modal_fence .f_title {
@@ -6104,6 +6118,29 @@ p.double_row {
 	padding-left: 0;
 }
 
+.calc_total {
+	margin: 40px 0 20px 0;
+	font-size: 22px;
+	color: #333;
+	font-weight: 700;
+}
+.calc_total .total_price{
+	font-weight: 700 !important;
+}
+
+.calc_total span {
+	font-size: 22px !important;
+	color: #333;
+	font-weight: 400 !important;
+}
+
+.perim {
+	padding-top: 5px;
+}
+
+.perim .quantity {
+	font-weight: 700;
+}
 
 #modal_fence p.title {
 	font-size: 24px;
@@ -6116,11 +6153,11 @@ p.double_row {
 
 #modal_fence .separateFence {
 	border-top: 1px solid #ededed;
-	position: absolute;
-	width: 100%;
+	margin-left: -30px;
+	width: 640px;
+	margin-bottom: 20px;
 	height: 1px;
-	left: 0;
-	top: 118px;
+	float: left;
 }
 
 #modal_fence a {
@@ -6133,9 +6170,14 @@ p.double_row {
     width: 215px;
     height: 41px;
     background-color: #07c137 !important;
+	border-radius: 0;
+	margin-left: 15px;
 }
 
 #modal_fence input {
 	width: 40px;
     height: 30px;
+	margin: 0 5px;
+	text-align: right;
+	padding-right: 10px;
 }

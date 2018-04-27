@@ -64,7 +64,8 @@ foreach ($attributes_tax as $tax => $data){
                 <?endif;?>
             <?php endforeach; ?>
 
-            <?if($cat_id == 253):?>
+            <?if($cat_id == 254 || $cat_id == 256 || $cat_id == 257 ):?>
+                <img class="calc_ico" src="/wp-content/themes/NativeChurch/images/calc_fence.png" alt="">
                 <p class="fence_calc" data-price="<?=number_format($price_value, 0, '', '');?>" data-title="<?=$product->post->post_title?>" data-id="<?=$product->id?>">
                     Калькулятор стоимости
                 </p>

@@ -203,22 +203,22 @@ if($show_works):?>
     <div class="col-md-12">
         <p>Укажите размеры сторон:</p>
         <div class="col-md-4">   
-            <p>Длина</p>
+            <span>Длина</span>
             <input class='l_fence' type="text" value="">
-            <p>м</p>
+            <span>м</span>
         </div>
         <div class="col-md-4">
-            <p>Ширина</p>
+            <span>Ширина</span>
             <input class="w_fence" type="text" value="">
-            <p>м</p>
+            <span>м</span>
         </div>
-        <div class="col-md-4">
-            <p>Периметр</p> <span class="quantity"></span>
+        <div class="col-md-4 perim">
+            <span>Периметр</span> <span class="quantity"></span>
         </div>
     </div>
 
-    <div class="col-md-12">
-        <p>Стоимость</p> 
+    <div class="col-md-12 calc_total">
+        <span>Стоимость</span>
         <span class="total_price">0</span>  &#8381;
     </div>
 
