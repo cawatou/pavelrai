@@ -2,6 +2,8 @@
 <!--// OPEN HTML //-->
 <html <?php language_attributes(); ?> class="no-js">
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <?php
     $options = get_option('imic_options');
     /** Theme layout design * */
@@ -30,17 +32,9 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><?php } ?>
     <meta name="format-detection" content="telephone=no">
-    <!--// PINGBACK & FAVICON //-->
+    <!--// PINGBACK//-->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-    <?php if (isset($options['custom_favicon']) && $options['custom_favicon'] != "") { ?>
-        <link rel="shortcut icon" href="<?php echo $options['custom_favicon']['url']; ?>" /><?php
-    }
-    $offset = get_option('timezone_string');
-    if ($offset == '') {
-        $offset = "Australia/Melbourne";
-    }
-    date_default_timezone_set($offset);
-    ?>
+    
     <!-- CSS
     ================================================== -->
     <!--[if lte IE 8]>

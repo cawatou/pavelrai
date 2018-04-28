@@ -207,11 +207,10 @@ $cat_match = Array(
 
 
 
-
-//$parse = 'price';
 $parse = 'img';
 //$parse = 'all';
 $cat = file("csv/new2.csv");
+//$cat = file("csv/miss.csv");
 
 foreach($cat as $i => $product){
 	$ar = explode(";",$product);
