@@ -59,7 +59,7 @@ $price_notformat = price_notformat($total);
             </div>
         </div>
 
-        <div class="col-md-4 checked">
+        <div class="col-md-4 himself checked">
             <div class="col-md-1"><input type="radio" name="del" checked/></div>
             <div class="col-md-10">
                 <label>Самовывоз Некрасова, 22, офис 219</label>
@@ -68,7 +68,7 @@ $price_notformat = price_notformat($total);
 
         <div class="col-md-9 delivery_select">
             <select id="delivery_city">
-                <option value="0" data-price="0">Выберите место доставки</option>
+                <option value="0" data-price="0" data-price-format="0">Выберите место доставки</option>
                 <?foreach($delivery as $k => $del):
                     $tax = get_post_custom( $del->ID );?>
                     <option value="<?=$del->ID?>" data-price="<?=number_format($tax['_price'][0], 0, '', '')?>" data-price-format="<?=number_format($tax['_price'][0], 0, '', ' ')?>"><?=$del->post_title?>, <?=number_format($tax['_price'][0], 0, '', ' ')?> &#8381;</option>
@@ -94,21 +94,22 @@ $price_notformat = price_notformat($total);
                 <?endforeach?>
             </div>
 
-            <div class="separateCheckout"></div>
-
-            <div class="service_block">
-                <p class="services">
-                    <span class="service_count"><?=$extra_count?></span>
-                    <span class="service_measure"></span>:
-                </p>
-                <?foreach($extra_items as $item):?>
-                    <div class="item">
-                        <p><?=$item['data']->post->post_title?></p>
-                        <p><?=$item['quantity']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;</p>
-                    </div>
-                <?endforeach?>
-            </div>
-           
+            <?if($extra_count > 0):?>
+                <div class="separateCheckout"></div>
+    
+                <div class="service_block">
+                    <p class="services">
+                        <span class="service_count"><?=$extra_count?></span>
+                        <span class="service_measure"></span>:
+                    </p>
+                    <?foreach($extra_items as $item):?>
+                        <div class="item">
+                            <p><?=$item['data']->post->post_title?></p>
+                            <p><?=$item['quantity']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;</p>
+                        </div>
+                    <?endforeach?>
+                </div>
+            <?endif?>
         </div>
     </div>
 

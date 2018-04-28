@@ -72,19 +72,21 @@ if ( $order ) : ?>
                     <?endforeach?>
                 </div>
 
-                <div class="service_block">
-                    <p class="services">
-                        <span class="service_count"><?=$extra_count?></span>
-                        <span class="service_measure"></span>:
-                    </p>
-                    <?foreach($extra_items as $item):?>
-                        <div class="item">
-                            <p><?=$item['name']?></p>
-                            <p><?=$item['qty']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;</p>
-                        </div>
-                    <?endforeach?>
-                </div>
-
+                <?if($extra_count > 0):?>
+                    <div class="service_block">
+                        <p class="services">
+                            <span class="service_count"><?=$extra_count?></span>
+                            <span class="service_measure"></span>:
+                        </p>
+                        <?foreach($extra_items as $item):?>
+                            <div class="item">
+                                <p><?=$item['name']?></p>
+                                <p><?=$item['qty']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;</p>
+                            </div>
+                        <?endforeach?>
+                    </div>
+                <?endif?>
+                
                 <div class="separateCheckout"></div>
 
                 <div class="row_total">

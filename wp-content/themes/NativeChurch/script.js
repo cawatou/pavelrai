@@ -214,6 +214,9 @@ jQuery(document).ready(function($){
     });
 
     $(document).on('click', '.wrap_services .col-md-3, .wrap_services .col-md-4', function(){
+        if($(this).hasClass('sticky-cart')) return;
+
+
         $(this).find('input[type=radio]').attr('checked', 'checked');
         $(this).siblings().removeClass('checked');
         $(this).addClass('checked');
@@ -238,6 +241,8 @@ jQuery(document).ready(function($){
             $('.delivery_select').show();
         }else{
             $('.delivery_select').hide();
+            $('.del_price').text(0);
+            $('.total_price').text($('.total_wdel').text());
         }
     })
 

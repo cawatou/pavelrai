@@ -741,7 +741,7 @@ body.boxed .body{
 .navigation > ul > li{
 	display:inline-block;
 	position:relative;
-	padding: 0 30px;
+	padding: 0 29px;
 }
 .navigation > ul > li i{
 	font-size:13px;
@@ -2750,12 +2750,12 @@ p.demo_store{
 		border-radius: 3px;
 		color: #333;
 		text-shadow: none;
-		border: 1px solid #ccc;
+		border: none;
 		background: #fff;
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
-	text-transform:uppercase;
+		text-transform:uppercase;
 }
 .widget input[type="button"], .widget input[type="reset"], .widget input[type="submit"]{
 	margin-top:15px;
@@ -3408,7 +3408,7 @@ p.demo_store{
 	padding-left: 0 !important;
 }
 
-#modal_1, #modal_2, #modal_3, #modal_4, #modal_extra, #modal_contact {
+#modal_1, #modal_2, #modal_3, #modal_4 {
 	display: none;
 	position: fixed;
 	z-index: 9999;
@@ -3423,6 +3423,11 @@ p.demo_store{
 	border-radius: 5px;
 }
 
+.ffox_extra {
+	height: 300% !important;
+	overflow: scroll !important;
+}
+
 #modal_2 {
 	height: 350px !important;
 	padding-top: 20px;
@@ -3430,14 +3435,6 @@ p.demo_store{
 
 #modal_4 {
 	height: auto !important;
-}
-
-#modal_extra {
-	width: 1080px;
-	margin-left: -540px;
-	height: fit-content;
-	margin-top: -200px;
-	border-radius: 0!important;
 }
 
 #modal_contact {
@@ -4085,7 +4082,10 @@ li.product a img {
 	margin: 10px 0 0 140px;
 }
 
-.header_contacts { margin-top: 10px}
+.header_contacts {
+	margin-top: 10px;
+	padding-right: 0;
+}
 
 .site-header .callback {
 	margin-top: 15px !important;
@@ -4129,7 +4129,7 @@ li.product a img {
 .site-header .tel {
 	margin-top: 10px;
 	color: black;
-	margin-left: 25px;
+	margin-left: 19px;
 	text-decoration: none;
 }
 
@@ -4153,7 +4153,7 @@ li.product a img {
 
 .site-header .cart{
 	color: black;
-	margin-left: 40px;
+	margin-left: 37px;
 	margin-top: 3px;
 	height: 40px;
 	width: 40px;
@@ -4687,7 +4687,7 @@ li.product:hover .detail_view {
 	text-align: left;
 	font-weight: 700;
 	margin-bottom: 15px !important;
-	font-size: 44px !important;
+	font-size: 40px !important;
 	margin-top: 15px !important;
 }
 
@@ -5049,12 +5049,20 @@ p.cart_total {
 	padding: 60px;
 	text-align: left;
 	position: absolute;
+	width: 1080px;
+	margin-left: -540px;
+	height: fit-content !important;
+	margin-top: -200px;
+	border-radius: 0!important;
+	left: 50%;
+	background: #fff;
+	overflow: hidden !important;
 }
 
 #modal_extra .close {
- top: 20px;
- position: absolute;
- right: 20px;
+	top: 20px;
+	position: absolute;
+	right: 20px;
 }
 
 #modal_extra h3 {
@@ -5097,6 +5105,7 @@ p.cart_total {
 }
 
 .wrap_services .col-md-10 {
+	padding-right: 0;
 	padding-left: 5px;
 	padding-top: 3px;
 	font-weight: 700;
@@ -5119,7 +5128,7 @@ p.cart_total {
 	margin-right: 0;
 }
 
-.service_extra input {
+.service_extra input[type=radio] {
 	display: none;
 }
 
@@ -5766,7 +5775,7 @@ cursor: pointer;
 	background-color: #07c137;
 	border: 3px solid #07c137;
 	font-family: circe-regular;
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: none;
 	color: #fff;
 	margin-left: 20px;
@@ -5883,6 +5892,7 @@ p.double_row {
 }
 
 .checkout input {
+	display: inline-block;
 	font-size: 18px !important;
 	color: #999898 !important;
 }
