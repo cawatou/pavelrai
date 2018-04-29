@@ -15,16 +15,6 @@ $(function(){
 
 $(".bwg_standart_thumb_0").wrap("<a class='img-thumbnail'></a>");
 
-
-$('.manager_call').click(function(event){
-	event.preventDefault();
-	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
-		function(){ // после выполнения предъидущей анимации
-			$('#modal_1').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
-		});
-});
-
-
 $('.question').click(function(event){
 	event.preventDefault();
 	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
@@ -122,7 +112,7 @@ function modal_close() {
 }
 
 
-function message($y, $title){
+/*function message($y, $title){
 	var $x=0;
 	$y="#"+$y+" .required_filds"
 	$($y).each(function(){
@@ -174,7 +164,7 @@ function sendmsg($title){
 	  alert("Ошибка данных формы");
 	}
   })
-} 
+} */
 
 // Убираем эффект галлереи из карточки товара
 $("img.attachment-shop_single").unwrap();

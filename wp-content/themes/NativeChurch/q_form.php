@@ -4,13 +4,16 @@
     <p class="text-center">Наш специалист свяжется с вами и ответит на все вопросы</p>
     <div class="col-md-6">
         <div class="form-group">
-            <input type="text" class="form-control newreq_field" id="q_name" aria-describedby="emailHelp" placeholder="Введите ваше имя">
+            <input type="text" class="form-control newreq_field" name="name" id="q_name" aria-describedby="emailHelp" placeholder="Введите ваше имя">
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            <input type="text" class="form-control newreq_field" id="q_phone" aria-describedby="emailHelp" placeholder="Введите номер телефона">
+            <input type="text" class="form-control newreq_field" name="phone" id="q_phone" aria-describedby="emailHelp" placeholder="Введите номер телефона">
         </div>
     </div>
+
+    <input type="hidden" name="action" value="question">
+
     <button type="submit" class="btn btn-primary center-block">Задать вопрос</button>
 </form>

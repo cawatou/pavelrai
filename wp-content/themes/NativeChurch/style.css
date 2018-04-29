@@ -4324,6 +4324,7 @@ li.product:hover .detail_view {
 #q_form {
 	border-top: 1px solid #ededed !important;
 	padding: 70px;
+	width: 100%;
 }
 
 #q_form h2 {
@@ -5600,7 +5601,7 @@ cursor: pointer;
 	border-radius: 3px;
 	border: 2px solid #ededed;
 	font-size: 18px;
-	color: #999898;
+	/*color: #999898;*/
 }
 
 #agent_form button {
@@ -6191,4 +6192,29 @@ p.double_row {
 	margin: 0 5px;
 	text-align: right;
 	padding-right: 10px;
+}
+
+
+.modal input:focus,
+#q_form input:focus,
+#agent_form input:focus {
+	border-color: #000;
+}
+
+.req_done {
+	border-color: green !important;
+}
+
+.req_error {
+	border-color: red !important;
+}
+
+#modal_success {
+	top: 45%;
+	background: #fff;
+	width: 300px;
+	height: 50px;
+	font-size: 18px;
+	left: 42%;
+	opacity: 1;
 }

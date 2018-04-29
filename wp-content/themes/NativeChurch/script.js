@@ -325,6 +325,65 @@ jQuery(document).ready(function($){
            $('.single_prod .zoom_img').attr('src', '/wp-content/themes/NativeChurch/images/zoom.png');
         });
 
+    $('.modal form, #q_form ,#agent_form').on('submit', function(e){
+        e.preventDefault();
+        var inputs = $(this).find('.newreq_field');
+        $.each(inputs, function(){
+            if($(this).val() == '') {
+                $(this).removeClass('req_done');
+                $(this).addClass('req_error');
+            }else{
+                $(this).removeClass('req_error');
+                $(this).addClass('req_done');
+            }
+        })
+        var err = $(this).find('.req_error').length;
+
+        if(err == 0){
+            var data = $(this).serialize();
+            var action = $(this).find('input[name=action]').val();
+            console.log(data);
+            $.ajax({
+                type: "POST",
+                url: "/wp-content/themes/NativeChurch/mail/send.php",
+                data: data,
+                success: function (res) {
+                    if(res == 'done'){
+                        if(action == 'question'){
+                            $('#q_form').empty();
+                            var h2 = "<h2 class='text-center'>Спасибо,</h2>";
+                            var p1 = "<p class='text-center'>Ваш вопрос отправлен,</p>";
+                            var p2 = "<p class='text-center'>мы свяжемся с вами в ближайшее время</p>";
+                            $('#q_form').empty();
+                            $('#q_form').append(h2);
+                            $('#q_form').append(p1);
+                            $('#q_form').append(p2);
+                        }else{
+                            $(this).find('input').val('');
+                            $(this).find('textarea').text('');
+
+                            $('.modal').animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
+                                function(){ // после анимации
+                                    $(this).css('display', 'none'); // делаем ему display: none;
+                                    $('#overlay').fadeIn(400);
+                                    $('#modal_success').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
+                                }
+                            );
+                        }
+                    }
+
+                    if(res == 'error'){
+                        alert('error')
+                    }
+
+                }
+            })
+        }
+
+    });
+
+
+
 })
 
 // Плавающий блок в карточке товара

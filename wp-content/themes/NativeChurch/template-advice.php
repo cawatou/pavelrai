@@ -30,7 +30,7 @@ get_header();
         <p>— После обсуждения всех деталей и условий менеджер подготовит договор,<br>
             учтет скидки и примет оплату за заказ.</p>
 
-        <button type="button" class="btn btn-primary tel manager_call">Вызвать менеджера</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='/vse-uslugi/vyzov-agenta/';">Вызвать менеджера</button>
      
         
         <h3><strong>3. Оформить заказ через наш сайт</strong></h3>
