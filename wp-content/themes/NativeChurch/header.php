@@ -3,7 +3,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://<?=$_SERVER['HTTP_HOST']?>/favicon.ico" type="image/x-icon" />
     <?php
     $options = get_option('imic_options');
     /** Theme layout design * */

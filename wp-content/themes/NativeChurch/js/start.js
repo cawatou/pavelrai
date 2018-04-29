@@ -16,13 +16,13 @@ $(function(){
 $(".bwg_standart_thumb_0").wrap("<a class='img-thumbnail'></a>");
 
 
-/*$('.tel').click(function(event){ 
+$('.manager_call').click(function(event){
 	event.preventDefault();
 	$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
 		function(){ // после выполнения предъидущей анимации
 			$('#modal_1').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
 		});
-});*/
+});
 
 
 $('.question').click(function(event){

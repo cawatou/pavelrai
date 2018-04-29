@@ -3441,8 +3441,9 @@ p.demo_store{
 	width: 500px;
 	height: 481px;
 	border-radius: 0;
-	margin-left: -250px;
+	margin-left: 385px;
 	margin-top: -225px;
+	background: #fff;
 }
 
 .modal {
@@ -5052,7 +5053,7 @@ p.cart_total {
 	width: 1080px;
 	margin-left: -540px;
 	height: fit-content !important;
-	margin-top: -200px;
+	margin-top: -350px;
 	border-radius: 0!important;
 	left: 50%;
 	background: #fff;

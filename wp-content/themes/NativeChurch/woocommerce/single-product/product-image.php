@@ -28,6 +28,9 @@ $image_link  = wp_get_attachment_url( get_post_thumbnail_id() );
 if(!$image_link) $image_link = '/wp-content/plugins/woocommerce/assets/images/placeholder.png';
 $dir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/product-gallery/'.$post->post_title;
 $files = scandir($dir);
+if($_REQUEST['dev']){
+    echo "<pre>".print_r($files, 1)."</pre>";
+}
 ?>
 <div class="images">
     <a href="<?=$image_link?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
@@ -37,8 +40,7 @@ $files = scandir($dir);
     <?if($files):?>
         <div class="owl-carousel product-carousel">
             <?foreach($files as $img):
-                $check = explode('.', $img);
-                if(count($check) == 2 && $check[1] != 'db' && $check[1] != ''):?>
+                if($img != '.' && $img != '..' && $img != 'Thumbs.db'):?>
                     <a href="/wp-content/uploads/product-gallery/<?=$post->post_title?>/<?=$img?>" class="zoom" data-rel="prettyPhoto[product-gallery]">
                         <img src="/wp-content/uploads/product-gallery/<?=$post->post_title?>/<?=$img?>" alt="">
                     </a>

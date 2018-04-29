@@ -333,7 +333,7 @@ jQuery(window).scroll(function() {
         console.log('scroll');
         var sb_m = 80;
         /* отступ сверху и снизу */
-        var mb = 550;
+        var mb = 600;
         /* высота подвала с запасом */
         var st = jQuery(window).scrollTop();
         var sb = jQuery(".sticky-block");

@@ -30,7 +30,7 @@ get_header();
         <p>— После обсуждения всех деталей и условий менеджер подготовит договор,<br>
             учтет скидки и примет оплату за заказ.</p>
 
-        <button type="button" class="btn btn-primary tel">Вызвать менеджера</button>
+        <button type="button" class="btn btn-primary tel manager_call">Вызвать менеджера</button>
      
         
         <h3><strong>3. Оформить заказ через наш сайт</strong></h3>
@@ -44,7 +44,7 @@ get_header();
         <p>— В течении рабочего времени с вами свяжется представитель компании и<br>
             обговорит с вами детали получения заказа.</p>
 
-        <button type="button" class="btn btn-primary" onclick="location.href='/shop';">
+        <button type="button" class="btn btn-primary" onclick="location.href='/shop-category/granit_memorials/';">
             Перейти в каталог
         </button>        
         <span class="order_text">

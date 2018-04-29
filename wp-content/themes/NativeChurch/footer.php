@@ -75,8 +75,8 @@ if($show_works):?>
 <div id="modal_1" class="modal modal_window">
 	<span class="modal_close">X</span>
 	<form method="post">
-		<input type="text" id="user_name" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
-		<input type="text" id="user_phone" class="required_filds" placeholder="Введите Ваш телефон" /><br/>
+		<input type="text" id="user_name" class="required_filds user_name newreq_field" placeholder="Введите Ваше имя"/><br/>
+		<input type="text" id="user_phone" class="required_filds newreq_field" placeholder="Введите Ваш телефон" /><br/>
 		<input class="btn btn-primary snd_btn" type="submit" name="submit" value="Подать заявку">
 	</form>
 </div>
@@ -84,9 +84,9 @@ if($show_works):?>
 <div id="modal_2" class="modal modal_window">
 	<span class="modal_close">X</span>
 	<form method="post">
-		<input type="text" id="user_name_2m" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
-		<input type="text" id="user_phone_2m" class="required_filds" placeholder="Введите Ваш телефон" /><br/>
-		<input type="text" id="user_mail_2m" class="required_filds" placeholder="Введите Ваш email" /><br/>
+		<input type="text" id="user_name_2m" class="required_filds user_name newreq_field" placeholder="Введите Ваше имя"/><br/>
+		<input type="text" id="user_phone_2m" class="required_filds newreq_field" placeholder="Введите Ваш телефон" /><br/>
+		<input type="text" id="user_mail_2m" class="required_filds newreq_field" placeholder="Введите Ваш email" /><br/>
 		<p>Дополнительные пожелания:</p>
 		<textarea id="user_msg_2m" class="required_filds msg_modal"></textarea>
 		<input class="btn btn-primary snd_btn" type="submit" value="Подать заявку">							
@@ -96,8 +96,8 @@ if($show_works):?>
 <div id="modal_3" class="modal modal_window">
 	<span class="modal_close">X</span>
 	<form method="post">
-		<input type="text" id="user_name_3m" class="required_filds user_name" placeholder="Введите Ваше имя"/><br/>
-		<input type="text" id="user_phone_3m" class="required_filds" placeholder="Введите Ваш телефон или email" /><br/>
+		<input type="text" id="user_name_3m" class="required_filds user_name newreq_field" placeholder="Введите Ваше имя"/><br/>
+		<input type="text" id="user_phone_3m" class="required_filds newreq_field" placeholder="Введите Ваш телефон или email" /><br/>
 		<input class="btn btn-primary snd_btn" type="submit" name="submit" value="Подать заявку">
 	</form>
 </div>
@@ -117,14 +117,14 @@ if($show_works):?>
                 <p>Имя</p>
             </div>
             <div class="col-md-8 form-group">
-                <input type="text" id="name" name="name"  class="form-control input-lg" placeholder="Имя">
+                <input type="text" id="name" name="name"  class="form-control input-lg newreq_field" placeholder="Имя">
             </div>
 
            <div class="col-md-4">
                 <p>Телефон</p>
             </div>
             <div class="col-md-8 form-group">
-                <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Телефон">
+                <input type="text" id="phone" name="phone" class="form-control input-lg newreq_field" placeholder="Телефон">
                 <input type ="hidden" name ="image_path" id="image_path" value ="<?php echo get_template_directory_uri() ?>">
                 <input id="admin_email" name="admin_email" type="hidden" value ="<?php echo $admin_email; ?>">
                 <input id="subject" name="subject" type="hidden" value ="<?php echo $subject_email; ?>">
@@ -134,14 +134,14 @@ if($show_works):?>
                 <p>Почта</p>
             </div>
             <div class="col-md-8 form-group">
-                <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email">
+                <input type="email" id="email" name="email"  class="form-control input-lg newreq_field" placeholder="Email">
             </div>
 
            <div class="col-md-4">
                 <p>Вопрос</p>
             </div>
             <div class="col-md-8 form-group">
-                <textarea cols="6" rows="7" id="comments" name="comments" class="form-control input-lg" placeholder="Ваш вопрос"></textarea>
+                <textarea cols="6" rows="7" id="comments" name="comments" class="form-control input-lg newreq_field" placeholder="Ваш вопрос"></textarea>
             </div>
 
             <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Задать вопрос">
@@ -157,15 +157,15 @@ if($show_works):?>
             <p class="title">Нашли дешевле? Снизим цену!</p>
             <p class="descr">Если у конкурента цена ниже - вернем разницу!</p>
             <div class="form-group">
-                <input type="text" name="price"  class="form-control input-lg" placeholder="Цена товара в другой сети">
+                <input type="text" name="price"  class="form-control input-lg newreq_field" placeholder="Цена товара в другой сети">
             </div>
 
             <div class="form-group">
-                <input type="text" name="link"  class="form-control input-lg" placeholder="Ссылка на найденый товар">
+                <input type="text" name="link"  class="form-control input-lg newreq_field" placeholder="Ссылка на найденый товар">
             </div>
 
             <div class="form-group">
-                <input type="text" name="phone"  class="form-control input-lg" placeholder="Ваш телефон">
+                <input type="text" name="phone"  class="form-control input-lg newreq_field" placeholder="Ваш телефон">
             </div>
 
             <input class="submit_btn" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Отправить">

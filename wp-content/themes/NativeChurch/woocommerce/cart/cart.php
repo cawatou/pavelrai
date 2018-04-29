@@ -8,12 +8,9 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
-wc_print_notices();
 
-//session_start();
-/*if(count($_SESSION['extra']) < 1) {
-    WC()->cart->empty_cart();
-}*/
+session_start();
+file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/tt.txt', print_r($_SESSION['extrai'], 1)." - in cart", FILE_APPEND);
 //file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/extra_delete.txt', 1);
 $cart_items = WC()->cart->get_cart();
 $items = array();
@@ -41,27 +38,31 @@ foreach ($cart_items  as $cart_item_key => $cart_item ){
 
     //echo "<pre>".print_r($category, 1)."</pre>";
 }
-if(count($extra_items) < 1) session_destroy();
-if(count($items) < 1)  {
-    WC()->cart->empty_cart();
-    echo "<script type='text/javascript'>
-            window.location=document.location.href;
-        </script>";
-} // Удаляем все услуги из корзины если нет товара
-
-    /*if(count($_SESSION['extra']) < 1) {
+//if(count($extra_items) < 1) session_destroy();
+//if(count($items) < 1)  {
+//    WC()->cart->empty_cart();
+//    echo "<script type='text/javascript'>
+//            window.location=document.location.href;
+//        </script>";
+//}
+// Удаляем все услуги из корзины если нет товара
+/*if(count($_SESSION['extrai']) < 1 && count($extra_items) > 0) {
     WC()->cart->empty_cart();
 }*/
 
-
+//WC()->cart->empty_cart();
+//session_destroy();
 
 $count_item = $count_extra = 0;
 //echo count($extra_items);
 if($_REQUEST['dev']){
     echo "<pre>".print_r($cart_items, 1)."</pre>";
+    WC()->cart->empty_cart();
+    session_destroy();
 }
-//echo "<pre>".print_r($_SESSION['extra'], 1)."</pre>";
-;?>
+if($_REQUEST['sess']) echo "<pre>".print_r($_SESSION['extrai'], 1)."</pre>";
+//if(!$_SESSION['extrai']) $_SESSION['extrai'] = array();
+?>
 <div class="cart_steps">
     <img src="/wp-content/themes/NativeChurch/images/cart_1.png" alt="">
     <p>
@@ -79,14 +80,14 @@ $product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['p
 if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) :?>
     <?$count_item += $cart_item['quantity'];
     //echo "<pre>".print_r($cart_item, 1)."</pre>";?>
-    <div class="cart_item col-md-12" data-have-extra="<?=(array_key_exists($cart_item['product_id'], $_SESSION['extra']))?'1':'';?>">
+    <div class="cart_item col-md-12" data-have-extra="<?=(array_key_exists($cart_item['product_id'], $_SESSION['extrai']))?'1':'';?>">
         <div class="img col-md-3">
             <?=apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );?>
         </div>
 
         <div class="attr col-md-5">
             <p class="item_name"><?=apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );?></p>
-            <?if($cart_item['extra'] && !array_key_exists ($cart_item['product_id'], $_SESSION['extra'])):?>
+            <?if($cart_item['extra'] && !array_key_exists ($cart_item['product_id'], $_SESSION['extrai'])):?>
                 <p class="extra">К данному товару рекомендуем</p>
                 <p class="add_extra" data-id = "<?=$cart_item['product_id']?>" data-cat-id = "<?=$cart_item['category']?>"><span>добавить дополнительные услуги</span> <span class="plus"> + </span></p>
             <?endif?>
@@ -104,8 +105,8 @@ if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_fil
         </div>
     </div>
     <?//================ EXTRA ITEMS ==============?>
-    <?if($_SESSION['extra'] && array_key_exists ($cart_item['product_id'], $_SESSION['extra'])):
-        $extra_id = explode(',', $_SESSION['extra'][$cart_item['product_id']]);?>
+    <?if($_SESSION['extrai'] && array_key_exists ($cart_item['product_id'], $_SESSION['extrai'])):
+        $extra_id = explode(',', $_SESSION['extrai'][$cart_item['product_id']]);?>
         <div class="col-md-12 cart_extraitem">
             <div class="col-md-8">
                 <p class="title">Дополнительные услуги :</p>
