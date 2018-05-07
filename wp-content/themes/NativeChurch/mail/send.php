@@ -54,8 +54,33 @@ switch ($action){
             <p><b>Почта: </b>".$_REQUEST['email']."</p>
             <p><b>Вопрос: </b>".$_REQUEST['comments']."</p>";
         break;
-        break;
 
+    case 'order':
+        $mail->Subject = "сообщение с сайта №$n";
+        $msg = "<p><b>Оформлен новый заказ</b></p>
+            <p><b>Товары:</b><br>";
+
+        for($i=0; ;$i++) {
+            $key = 'item_'.$i;
+            if($_REQUEST[$key]) $msg .= $_REQUEST[$key]."<br>";
+            else break;
+        }
+
+        $msg .= "</p>";
+        if($_REQUEST['extra_0']){
+            $msg .= "<p><b>Услуги:</b><br>";
+            for($i=0; ;$i++) {
+                $key = 'extra_' . $i;
+                if ($_REQUEST[$key]) $msg .= $_REQUEST[$key] . "<br>";
+                else break;
+            }
+        }
+
+        $msg .= "<p><b>Имя: </b>".$_REQUEST['name']."</p>
+            <p><b>Почта: </b>".$_REQUEST['email']."</p>
+            <p><b>Телефон: </b>".$_REQUEST['phone']."</p>";
+
+        break;
 }
 
 $mail->Body = $msg;

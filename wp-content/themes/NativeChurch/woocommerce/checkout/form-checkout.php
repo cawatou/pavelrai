@@ -139,5 +139,19 @@ $price_notformat = price_notformat($total);
     </div>
 </div>
 
+<form id="order" style="display:none">
+    <?$i=0;
+    foreach($items as $k => $item):?>
+        <input type="text" name="item_<?=$i?>" value="<?=$item['data']->post->post_title?>, <?=$item['quantity']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;">
+        <?$i++?>
+    <?endforeach?>
 
+    <?$i=0;
+    foreach($extra_items as $k => $item):?>
+        <input type="text" name="extra_<?=$i?>" value="<?=$item['data']->post->post_title?>, <?=$item['quantity']?>шт, <?=number_format($item['line_total'], 0, '', ' ')?> &#8381;">
+        <?$i++?>
+    <?endforeach?>
+
+    <input type="hidden" name="action" value="order">
+</form>
 

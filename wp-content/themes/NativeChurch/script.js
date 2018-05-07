@@ -133,8 +133,25 @@ jQuery(document).ready(function($){
                 'quantity': 1
             },
             success: function() {
-                $('#terms').attr('checked', 'checked');
-                $('#place_order').click();
+                var data = $('#order').serialize();
+                var name = $('#billing_first_name').val();
+                var email = $('#billing_email').val();
+                var phone = $('#billing_phone').val();
+                data += "&name="+name+"&email="+email+"&phone="+phone;
+                $.ajax({
+                    type: "POST",
+                    url: "/wp-content/themes/NativeChurch/mail/send.php",
+                    data: data,
+                    success: function (res) {
+                        if(res == 'done'){
+                            $('#terms').attr('checked', 'checked');
+                            $('#place_order').click();
+                        }else{
+                            alert('Произошла ошибка');
+                        }
+
+                    }
+                })
             }
         })
 
@@ -239,6 +256,7 @@ jQuery(document).ready(function($){
         // 2 Шаг корзины
         if($(this).hasClass('delivery')){
             $('.delivery_select').show();
+            $('#delivery_city').val(0);
         }else{
             $('.delivery_select').hide();
             $('.del_price').text(0);
