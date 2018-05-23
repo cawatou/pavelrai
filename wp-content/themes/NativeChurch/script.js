@@ -124,37 +124,42 @@ jQuery(document).ready(function($){
     $('.add_order').on('click', function(){
         var url = location.origin + '/ajax/cart.php';
         var product_id = $('#delivery_city option:selected').val();
-        $.ajax({
-            'type': 'post',
-            'url': url,
-            'data': {
-                'act': 'add',
-                'product_id': product_id,
-                'quantity': 1
-            },
-            success: function() {
-                var data = $('#order').serialize();
-                var name = $('#billing_first_name').val();
-                var email = $('#billing_email').val();
-                var phone = $('#billing_phone').val();
-                data += "&name="+name+"&email="+email+"&phone="+phone;
-                $.ajax({
-                    type: "POST",
-                    url: "/wp-content/themes/NativeChurch/mail/send.php",
-                    data: data,
-                    success: function (res) {
-                        if(res == 'done'){
-                            $('#terms').attr('checked', 'checked');
-                            $('#place_order').click();
-                        }else{
-                            alert('Произошла ошибка');
+        var data = $('#order').serialize();
+        var name = $('#billing_first_name').val();
+        var email = $('#billing_email').val();
+        var phone = $('#billing_phone').val();
+        if(name != '' && email != '' && phone != ''){
+            $.ajax({
+                'type': 'post',
+                'url': url,
+                'data': {
+                    'act': 'add',
+                    'product_id': product_id,
+                    'quantity': 1
+                },
+                success: function() {
+                    data += "&name="+name+"&email="+email+"&phone="+phone;
+                    $.ajax({
+                        type: "POST",
+                        url: "/wp-content/themes/NativeChurch/mail/send.php",
+                        data: data,
+                        success: function (res) {
+                            if(res == 'done'){
+                                $('#terms').attr('checked', 'checked');
+                                $('#place_order').click();
+                            }else{
+                                alert('Произошла ошибка');
+                            }
+
                         }
+                    })
 
-                    }
-                })
-            }
-        })
-
+                }
+            })
+        }else{
+            $('#terms').attr('checked', 'checked');
+            $('#place_order').click();
+        }
     })
 
     // Добавление товара в корзину

@@ -113,7 +113,7 @@ echo $style; ?>>
                     <div class="col-md-8 col-sm-6 col-xs-4">
                         <div class="col-md-4 header_contacts">
                             <span>Электронная почта</span><br>
-                            <a class="email" href="mailto:7pavelrai@mail.ru">7pavelrai@mail.ru</a>
+                            <a class="email" href="mailto:7pavel7@mail.ru">7pavel7@mail.ru</a>
                         </div>
                         <div class="col-md-3 header_contacts">
                             <span>Усурийск</span><br>

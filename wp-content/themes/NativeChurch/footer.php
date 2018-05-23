@@ -24,7 +24,7 @@ if($show_works):?>
 			</div>	
 			<div class="col-md-6">
                     <div class="col-md-4 header_contacts footer_email">
-                        <a href="mailto:7pavelrai@mail.ru" class="email footer_email">7pavelrai@mail.ru</a>
+                        <a href="mailto:7pavel7@mail.ru" class="email footer_email">7pavel7@mail.ru</a>
                     </div>
                     <div class="col-md-4">
                         <p class="phone footer_phone"> +7 914 711-28-20 </p>
