@@ -162,7 +162,7 @@ $db = new mysql(array(
 	"host"=>"localhost",
 	"user"=>"root",
 	"pass"=>"d[jlyfhfpLDF3",
-	"name"=>"pavelrai"	
+	"name"=>"pavelrai"
 ));
 
 // wp_terms - значения свойств
@@ -207,10 +207,11 @@ $cat_match = Array(
 
 
 
-$parse = 'img';
+//$parse = 'img';
 //$parse = 'all';
-$cat = file("csv/new2.csv");
-//$cat = file("csv/miss.csv");
+$parse = 'price';
+//$cat = file("csv/new2.csv");
+$cat = file("csv/price.csv");
 
 foreach($cat as $i => $product){
 	$ar = explode(";",$product);
@@ -247,6 +248,11 @@ foreach($cat as $i => $product){
 	$el['extraprice']					= trim($ar[29]);
 
 	//if($i == 1) break;
+
+    if($parse == 'price') {
+        $el['title'] = trim($ar[0]);
+        $el['price'] = trim($ar[1]);
+    }
 	
     $item = get_page_by_title($el['title'], 'OBJECT', 'product');
 
@@ -265,6 +271,12 @@ foreach($cat as $i => $product){
 
 
 	if(!$el['title']) continue;
+
+    if($parse == 'price') {
+        update_post_meta($post_id, '_regular_price', $el['price']);
+        update_post_meta($post_id, '_price', $el['price']);
+    }
+
 
     if($parse == 'all') {
 		if (!$post_id) continue;
